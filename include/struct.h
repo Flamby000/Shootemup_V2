@@ -6,6 +6,8 @@ struct _Game;
 struct _Animation;
 struct _Settings;
 struct _Player;
+struct _Shooter;
+struct _SpaceShip;
 
 struct _Settings* settings;
 
@@ -16,6 +18,7 @@ typedef struct _Settings {
 
 typedef struct _Game {
     struct _EntityLink* entities;
+    struct _Ennemy* ennemies;
     struct _Player *player;
 } Game;
 
@@ -23,6 +26,12 @@ typedef struct _EntityLink {
     struct _Entity* entity;
     struct _EntityLink* next;
 } EntityLink;
+
+typedef enum _EntityType {
+    ENNEMY,
+    PLAYER,
+    LABEL
+} EntityType;
 
 typedef struct _Entity{
     struct _Animation* sprite;
@@ -32,6 +41,9 @@ typedef struct _Entity{
     int height;
     int rotation;
     struct _Speed* speed;
+
+    void* parent;
+    EntityType type;
 } Entity;
 
 typedef struct _Speed {
@@ -47,10 +59,32 @@ typedef struct _Life{
     int shield;
 } Life;
 
+typedef struct _Shooter{
+    void (*update_shoot)(struct _Game*, struct _Entity*);
+    int last_shoot_time;
+    int cooldown;
+} Shooter;
+
+typedef struct _SpaceShip {
+    struct _Life life;
+    struct _Shooter shooter;
+} SpaceShip;
+
 typedef struct _Player {
     struct _Entity* entity;
-    struct _Life* life;
+    struct _SpaceShip* ship;
+    int score;
 } Player;
+
+/* Ennemy type */
+#define BASIC_ENNEMY '1'
+
+typedef struct _Ennemy {
+    struct _Entity* entity;
+    struct _SpaceShip* ship;
+    char type;
+    int score;
+} Ennemy;
 
 typedef enum _Direction {
     FORWARD,

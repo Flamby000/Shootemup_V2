@@ -8,7 +8,9 @@
 
 Entity* create_entity(int x, int y, int width, int height, 
                       int speed, void (*update_speed)(struct _Entity*),
-                      Animation* animation) {
+                      Animation* animation,
+                      void* parent, EntityType type
+                      ) {
 
     Entity* entity = malloc(sizeof(Entity));
     entity->x = x;
@@ -23,7 +25,10 @@ Entity* create_entity(int x, int y, int width, int height,
     entity->speed->speed_y = 0;
     entity->speed->speed = speed;  
     entity->speed->update_speed = update_speed;  
-        
+
+    entity->parent = parent;
+    entity->type = type;
+    
     return entity;
 }    
 

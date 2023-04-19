@@ -172,7 +172,5 @@ void draw_entity(Entity* entity) {
             break;
         default:
             break;
-        
     }
-
 }
