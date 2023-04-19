@@ -8,24 +8,17 @@
 #include "../include/frame.h"
 
 
-void init_frame() {
-    MLV_create_window(GAME_NAME, GAME_NAME, WIN_WIDTH, WIN_HEIGHT);
+void init_frame() {    
+    MLV_create_window(GAME_NAME, GAME_NAME, settings->win_width, settings->win_height   );
 }
 
 void update_frame(Game* game) {
     EntityLink* current = game->entities;
-    MLV_clear_window(MLV_COLOR_BLACK);
 
-
-    while (current != NULL) {
+    while(current != NULL) {
         draw_entity(current->entity);
         current = current->next;
     }
-
-
-    MLV_wait_milliseconds(12);
-
-    MLV_actualise_window();
 }
 
 void free_frame() {

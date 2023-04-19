@@ -7,80 +7,58 @@
 #include "../include/game.h"
 #include "../include/background.h"
 
-typedef struct _Game {
-    struct _EntityLink* entities;
-} Game;
 
-typedef struct _EntityLink {
-    struct _Entity* entity;
-    struct _EntityLink* next;
-} EntityLink;
-
-Game init_game() {
-    Game game;
-
-    init_background(&game);
+Game* init_game() {
+    Game *game = malloc(sizeof(Game));
+    game->entities = NULL;
+    init_background(game);
+    
     return game;
 }
 
-void update_game() {
-    
+void update_game(Game *game) {
+    EntityLink* current = game->entities;
+    while(current != NULL) {
+        update_entity(current->entity);
+        current = current->next;
+    }
 }
 
 void free_game(Game* game) {
     EntityLink* current = game->entities;
-    EntityLink* next = NULL;
-    while (current != NULL) {
-        next = current->next;
+    while(current != NULL) {
+        EntityLink* next = current->next;
         free_entity(current->entity);
         free(current);
         current = next;
     }
+    free(game);
 }
 
 
-
 void insert_entity(Game* game, Entity* entity) {
-    EntityLink* link = malloc(sizeof(EntityLink));
-    link->entity = entity;
-    link->next = NULL;
-    if (game->entities == NULL) {
-        game->entities = link;
+
+    EntityLink* new_entity = malloc(sizeof(EntityLink));
+    new_entity->entity = entity;
+    new_entity->next = NULL;
+
+    if(game->entities == NULL) {
+        game->entities = new_entity;
     } else {
         EntityLink* current = game->entities;
-        while (current->next != NULL) {
+        while(current->next != NULL) {
             current = current->next;
         }
-        current->next = link;
+        current->next = new_entity;
     }
 }
 
 int entity_count(Game *game) {
-
+    return 0;
 }
 
-
-
 void print_entities(Game *game) {
-    
-
 }
 
 void remove_entity(Game* game, Entity* entity) {
-    EntityLink* current = game->entities;
-    EntityLink* previous = NULL;
-    while (current != NULL) {
-        if (current->entity == entity) {
-            if (previous == NULL) {
-                game->entities = current->next;
-            } else {
-                previous->next = current->next;
-            }
-            free_entity(current->entity);
-            free(current);
-            return;
-        }
-        previous = current;
-        current = current->next;
-    }
 }

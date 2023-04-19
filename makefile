@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc
 CFLAGS=-Wall -ansi -pedantic -pthread
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -14,7 +14,7 @@ all: ${OBJ}
 	${CC} -o ${OUT} ${OBJ} ${CFLAGS} ${LDFLAGS} 
 
 #Règles de dépendances des fichiers sources :
-${BLD}main.o: ${SP}main.c ${SP}frame.c 
+${BLD}main.o: ${SP}main.c ${SP}frame.c ${SP}settings.c
 	${CC} -c ${SP}main.c -o ${BLD}main.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c  
@@ -29,9 +29,14 @@ ${BLD}entity.o: ${SP}entity.c ${SP}animation.c
 ${BLD}animation.o: ${SP}animation.c ${SP}entity.c 
 	${CC} -c ${SP}animation.c -o ${BLD}animation.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}background.o: ${SP}background.c ${SP}entity.c ${SP}game.c
+${BLD}background.o: ${SP}background.c ${SP}entity.c ${SP}game.c ${SP}movement.c
 	${CC} -c ${SP}background.c -o ${BLD}background.o ${CFLAGS} ${LDFLAGS}
 
+${BLD}movement.o: ${SP}movement.c
+	${CC} -c ${SP}movement.c -o ${BLD}movement.o ${CFLAGS} ${LDFLAGS}
+
+${BLD}settings.o: ${SP}settings.c
+	${CC} -c ${SP}settings.c -o ${BLD}settings.o ${CFLAGS} ${LDFLAGS}
 
 
 #Règle pour effacer les fichiers compilés
