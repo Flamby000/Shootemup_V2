@@ -14,7 +14,6 @@ void init_frame() {
 
 void update_frame(Game* game) {
     EntityLink* current = game->entities;
-
     while(current != NULL) {
         draw_entity(current->entity);
         current = current->next;

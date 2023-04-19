@@ -5,6 +5,7 @@
 #include "../include/struct.h"
 #include "../include/entity.h"
 #include "../include/game.h"
+#include "../include/player.h"
 #include "../include/background.h"
 
 
@@ -12,6 +13,8 @@ Game* init_game() {
     Game *game = malloc(sizeof(Game));
     game->entities = NULL;
     init_background(game);
+
+    game->player = create_player(game);
     
     return game;
 }
@@ -32,6 +35,8 @@ void free_game(Game* game) {
         free(current);
         current = next;
     }
+
+    free_player(game->player);
     free(game);
 }
 

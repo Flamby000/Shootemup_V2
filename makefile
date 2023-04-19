@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc
 CFLAGS=-Wall -ansi -pedantic -pthread
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -17,7 +17,7 @@ all: ${OBJ}
 ${BLD}main.o: ${SP}main.c ${SP}frame.c ${SP}settings.c
 	${CC} -c ${SP}main.c -o ${BLD}main.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c  
+${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c ${SP}player.c
 	${CC} -c ${SP}game.c -o ${BLD}game.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}frame.o: ${SP}frame.c ${SP}game.c 
@@ -37,6 +37,10 @@ ${BLD}movement.o: ${SP}movement.c
 
 ${BLD}settings.o: ${SP}settings.c
 	${CC} -c ${SP}settings.c -o ${BLD}settings.o ${CFLAGS} ${LDFLAGS}
+
+
+${BLD}player.o : ${SP}player.c ${SP}entity.c ${SP}animation.c ${SP}movement.c
+	${CC} -c ${SP}player.c -o ${BLD}player.o ${CFLAGS} ${LDFLAGS}
 
 
 #Règle pour effacer les fichiers compilés

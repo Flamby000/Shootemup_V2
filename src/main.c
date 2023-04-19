@@ -31,9 +31,7 @@ int main() {
     srand(time(NULL));
 
     load_settings(settings);
-    printf("Settings loaded\n");
     init_frame();
-    printf("frame loaded\n");
     game = init_game();
     
     
