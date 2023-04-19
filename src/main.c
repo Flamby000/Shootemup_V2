@@ -5,8 +5,7 @@
 #include <signal.h>
 #include <unistd.h>
 
-struct _Settings;
-extern struct _Settings* settings;
+
 
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
@@ -17,9 +16,11 @@ extern struct _Settings* settings;
 #include "../include/game.h"
 
 int quit = 0;   
+Settings* settings;
 void sigint_handler(int sig) {
     quit = 1;
 }
+
 
 int main() {
     struct timespec start_frame_time;
@@ -29,7 +30,8 @@ int main() {
     
     signal(SIGINT, sigint_handler);
     srand(time(NULL));
-
+    
+    
     load_settings(settings);
     init_frame();
     game = init_game();

@@ -5,7 +5,7 @@
 #include "../include/struct.h"
 #include "../include/spaceship.h"
 
-SpaceShip* create_spaceship(int life, int shoot_cooldown, void (*update_shoot)(struct _Game*, struct _Entity*)) {
+SpaceShip* create_spaceship(int life, int shoot_cooldown, int (*update_shoot)(struct _Game*, struct _Entity*)) {
     SpaceShip* ship = malloc(sizeof(SpaceShip));
     (&ship->life)->hp = life;
     (&ship->life)->max_hp = life; 
@@ -19,19 +19,21 @@ SpaceShip* create_spaceship(int life, int shoot_cooldown, void (*update_shoot)(s
 }
 
 void update_spaceship(Game *game, Entity* entity) {
-
+    /* Update spaceship shoot*/
+    Shooter *shooter;
     if(entity->type == PLAYER) {
-        Player *player = (Player*)entity->parent;
-        /*printf("TEST %d\n", player->ship->life.hp);*/
-        Shooter *shooter = &player->ship->shooter;
-        
-        if(MLV_get_time() - shooter->last_shoot_time > shooter->cooldown) {
-            printf("SHOOT\n");
-            shooter->update_shoot(game, entity);
+        shooter = &((Player*)entity->parent)->ship->shooter; 
+    } else if(entity->type == ENNEMY) {
+        shooter = &((Ennemy*)entity->parent)->ship->shooter;
+    } else return;
+
+    if(MLV_get_time() - shooter->last_shoot_time > shooter->cooldown) {
+        if(shooter->update_shoot(game, entity)) {
             shooter->last_shoot_time = MLV_get_time();
         }
-
     }
+
+    
 }
 
 void free_spaceship(SpaceShip* spaceship) {

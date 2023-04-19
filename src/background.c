@@ -10,6 +10,7 @@
 #include "../include/movement.h"
 #include "../include/background.h"
 
+
 void init_background(Game *game) {
     int i;
     int size;

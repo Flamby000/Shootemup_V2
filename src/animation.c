@@ -20,7 +20,7 @@ Animation* init_square(MLV_Color color) {
 Animation* init_animation(char* path) {
     Animation* animation = malloc(sizeof(Animation));
     int i;
-    char path_i[100];
+    char path_i[1000];
     animation->nb_frames = 1;  
     animation->type = ANIMATED;
 
@@ -47,7 +47,7 @@ Animation* init_animation(char* path) {
 Animation* init_multiple_animation(char* forward_path, char* backward_path, char* left_path, char* right_path) {
         Animation* animation = malloc(sizeof(Animation));
     int i;
-    char path_i[100];
+    char path_i[1000];
     animation->nb_frames = 1;  
     animation->type = MULTIPLE_ANIMATED;
 

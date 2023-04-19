@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc
 CFLAGS=-Wall -ansi -pedantic -pthread
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -38,15 +38,22 @@ ${BLD}movement.o: ${SP}movement.c
 ${BLD}settings.o: ${SP}settings.c
 	${CC} -c ${SP}settings.c -o ${BLD}settings.o ${CFLAGS} ${LDFLAGS}
 
-
-${BLD}player.o : ${SP}player.c ${SP}entity.c ${SP}animation.c ${SP}movement.c ${SP}spaceship.c
+${BLD}player.o : ${SP}player.c ${SP}entity.c ${SP}animation.c ${SP}movement.c ${SP}spaceship.c ${SP}shooter.c
 	${CC} -c ${SP}player.c -o ${BLD}player.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}ennemy.o : ${SP}ennemy.c ${SP}entity.c ${SP}animation.c ${SP}movement.c ${SP}spaceship.c
+${BLD}ennemy.o : ${SP}ennemy.c ${SP}entity.c ${SP}animation.c ${SP}movement.c ${SP}spaceship.c ${SP}shooter.c
 	${CC} -c ${SP}ennemy.c -o ${BLD}ennemy.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}spaceship.o : ${SP}spaceship.c
 	${CC} -c ${SP}spaceship.c -o ${BLD}spaceship.o ${CFLAGS} ${LDFLAGS}
+
+${BLD}missile.o : ${SP}missile.c ${SP}entity.c
+	${CC} -c ${SP}missile.c -o ${BLD}missile.o ${CFLAGS} ${LDFLAGS}
+
+
+${BLD}shooter.o : ${SP}shooter.c ${SP}entity.c ${SP}missile.o
+	${CC} -c ${SP}shooter.c -o ${BLD}shooter.o ${CFLAGS} ${LDFLAGS}
+
 
 
 #Règle pour effacer les fichiers compilés

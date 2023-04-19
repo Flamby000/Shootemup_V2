@@ -6,8 +6,10 @@
 #include "../include/animation.h"
 #include "../include/entity.h"
 
+
+
 Entity* create_entity(int x, int y, int width, int height, 
-                      int speed, void (*update_speed)(struct _Entity*),
+                      int speed, void (*update_speed)(struct _Game*, struct _Entity*),
                       Animation* animation,
                       void* parent, EntityType type
                       ) {
@@ -46,8 +48,8 @@ void avoid_collide_border(Entity *entity) {
     }      
 }
 
-void update_entity(Entity *entity) {
-    entity->speed->update_speed(entity);
+void update_entity(Game* game, Entity *entity) {
+    entity->speed->update_speed(game, entity);
     entity->x += entity->speed->speed_x;
     entity->y += entity->speed->speed_y;
 }

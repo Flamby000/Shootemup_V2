@@ -8,7 +8,10 @@
 #include "../include/spaceship.h"
 #include "../include/entity.h"
 #include "../include/player.h"
+#include "../include/shooter.h"
 #include "../include/movement.h"
+
+
 
 Player* create_player(Game *game) {
     Player* player = malloc(sizeof(Player));
@@ -29,7 +32,7 @@ Player* create_player(Game *game) {
         PLAYER
     );
     insert_entity(game, player->entity);
-    player->ship = create_spaceship(3, 1000, NULL);
+    player->ship = create_spaceship(3, 1000, shoot_player_basic);
     return player;
 }
 

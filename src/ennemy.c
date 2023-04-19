@@ -9,35 +9,39 @@
 
 #include "../include/entity.h"
 #include "../include/player.h"
+#include "../include/shooter.h"
 #include "../include/movement.h"
-
 
 Ennemy* create_ennemy(Game *game, char type, int x) {
     Ennemy* ennemy = malloc(sizeof(Ennemy));
-    int width, height;
-    ennemy->type = type;
+    int width, height, speed, cooldown, life, score;
+    void (*movement)(struct _Game*, struct _Entity*);
+    int (*shoot)(struct _Game*, struct _Entity*);
+    Animation *animation;
 
     switch (type) {
         case BASIC_ENNEMY:
-        height = 60;
-        width = 43;
-        insert_entity(game,
-            create_entity(
-                x,
-                -height,
-                width,
-                height,
-                1,
-                movement_forward,
-                init_sprite(MLV_load_image("resources/ennemies/ennemy1-forward-1.png")),
-                ennemy, ENNEMY));
-        ennemy->ship = create_spaceship(1, 1000, NULL);
+            height = 60;
+            width = 43;
+            speed = 1;
+            cooldown = 1000;
+            life = 1;
+            score = 10;
+            animation = init_animation("resources/ennemies/ennemy1-forward-%d.png");
+            movement = movement_forward;
+            shoot = shoot_basic;
             break;
         default:
-        printf("Error : Ennemy type not found\n");
+            printf("Error : Ennemy type not found\n");
             break;
     }
-    ennemy->score = 10;
+
+
+    insert_entity(game, create_entity(x, -height, width, height, speed, movement, animation, ennemy, ENNEMY));
+    ennemy->ship = create_spaceship(life, cooldown, shoot);
+    ennemy->score = score;
+    ennemy->type = type;
+
     return ennemy;
 }
 

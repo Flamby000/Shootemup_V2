@@ -12,6 +12,7 @@
 #include "../include/background.h"
 
 
+
 Game* init_game() {
     Game *game = malloc(sizeof(Game));
     game->entities = NULL;
@@ -33,7 +34,7 @@ void update_game(Game *game) {
     while(current != NULL) {
         entity = current->entity;
         /* Update movement entity*/
-        update_entity(entity);
+        update_entity(game, entity);
 
         /* Update shoot of players/ennemies*/
         if(entity->type == PLAYER || entity->type == ENNEMY) {
@@ -62,6 +63,7 @@ void free_game(Game* game) {
 
 
 void insert_entity(Game* game, Entity* entity) {
+
     EntityLink* new_entity = malloc(sizeof(EntityLink));
     new_entity->entity = entity;
     new_entity->next = NULL;
@@ -75,6 +77,7 @@ void insert_entity(Game* game, Entity* entity) {
         }
         current->next = new_entity;
     }
+    
 }
 
 int entity_count(Game *game) {

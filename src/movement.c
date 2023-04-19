@@ -7,26 +7,33 @@
 #include "../include/entity.h"
 #include "../include/movement.h"
 
-void movement_none(Entity *entity) {
+void movement_none(Game *game, Entity *entity) {
     Speed *speed = entity->speed;
     speed->speed_x = 0;
     speed->speed_y = 0;
 }
 
-void movement_forward(Entity *entity) {
+void movement_forward(Game *game, Entity *entity) {
     Speed *speed = entity->speed;
     speed->speed_x = 0;
     speed->speed_y = speed->speed;
 }
 
-void movement_infinite_scroll(Entity *entity) {
-    movement_forward(entity);
+void movement_backward(Game *game, Entity *entity) {
+    Speed *speed = entity->speed;
+    speed->speed_x = 0;
+    speed->speed_y = -speed->speed;
+}
+
+
+void movement_infinite_scroll(Game *game, Entity *entity) {
+    movement_forward(game, entity);
     if(entity->y > WIN_HEIGHT) {
         entity->y = -entity->height;
     }
 }
 
-void movement_controller(Entity *entity) {
+void movement_controller(Game *game, Entity *entity) {
     Speed *speed = entity->speed;
 
     if(MLV_get_keyboard_state(MLV_KEYBOARD_UP) == MLV_PRESSED) {

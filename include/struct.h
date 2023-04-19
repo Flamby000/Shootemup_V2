@@ -1,3 +1,6 @@
+#ifndef STRUCT_H 
+#define STRUCT_H 
+
 struct _Entity;
 struct _Life;
 struct _Speed;
@@ -8,8 +11,9 @@ struct _Settings;
 struct _Player;
 struct _Shooter;
 struct _SpaceShip;
+struct _Missile;
 
-struct _Settings* settings;
+extern struct _Settings *settings;
 
 typedef struct _Settings {
     int win_width;
@@ -30,6 +34,7 @@ typedef struct _EntityLink {
 typedef enum _EntityType {
     ENNEMY,
     PLAYER,
+    MISSILE,
     LABEL
 } EntityType;
 
@@ -50,7 +55,7 @@ typedef struct _Speed {
     int speed_x;
     int speed_y;
     int speed;
-    void (*update_speed)(struct _Entity*);
+    void (*update_speed)(struct _Game*, struct _Entity*);
 } Speed;
 
 typedef struct _Life{
@@ -60,7 +65,7 @@ typedef struct _Life{
 } Life;
 
 typedef struct _Shooter{
-    void (*update_shoot)(struct _Game*, struct _Entity*);
+    int (*update_shoot)(struct _Game*, struct _Entity*);
     int last_shoot_time;
     int cooldown;
 } Shooter;
@@ -85,6 +90,16 @@ typedef struct _Ennemy {
     char type;
     int score;
 } Ennemy;
+
+typedef enum _MissileType {
+    BASIC_PLAYER_MISSILE,
+    BASIC_MISSILE
+} MissileType;
+
+typedef struct _Missile {
+    struct _Entity* entity;
+    int damage;
+} Missile;
 
 typedef enum _Direction {
     FORWARD,
@@ -116,3 +131,6 @@ typedef struct _Animation {
     int last_frame_time;
     
 } Animation;
+
+
+#endif 
