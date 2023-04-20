@@ -31,6 +31,7 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
             movement = movement_forward;
             shoot = shoot_basic;
             break;
+
         default:
             printf("Error : Ennemy type not found\n");
             break;

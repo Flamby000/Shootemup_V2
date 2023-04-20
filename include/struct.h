@@ -22,7 +22,6 @@ typedef struct _Settings {
 
 typedef struct _Game {
     struct _EntityLink* entities;
-    struct _Ennemy* ennemies;
     struct _Player *player;
 } Game;
 
@@ -98,6 +97,7 @@ typedef enum _MissileType {
 
 typedef struct _Missile {
     struct _Entity* entity;
+    struct _Entity target;
     int damage;
 } Missile;
 

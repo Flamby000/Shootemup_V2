@@ -41,7 +41,6 @@ void update_game(Game *game) {
             update_spaceship(game, entity);
         }
     
-    
         current = current->next;
     }
 

@@ -12,11 +12,14 @@ int shoot_player_basic(Game *game, Entity *entity) {
        create_missile(game, entity, BASIC_PLAYER_MISSILE);
        return 1;
     }
-
     return 0;
 }
 
 int shoot_basic(Game *game, Entity *entity) {
     create_missile(game, entity, BASIC_MISSILE);
     return 1;
+}
+
+int shoot_target(Game *game, Entity *entity) {
+    create_missile(game, entity, TARGETING_MISSILE);
 }
