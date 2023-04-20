@@ -96,8 +96,8 @@ typedef struct _Missile {
 } Missile;
 
 typedef enum _Direction {
-    FORWARD,
-    BACKWARD,
+    TOP,
+    BOTTOM,
     LEFT,
     RIGHT,
     NONE

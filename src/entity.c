@@ -49,7 +49,6 @@ void avoid_collide_border(Entity *entity) {
         entity->y = settings->win_height - entity->height;
     }      
 }
-
 void update_entity(Game* game, Entity *entity) {
     EntityLink* current;
 
@@ -60,63 +59,52 @@ void update_entity(Game* game, Entity *entity) {
     entity->x += entity->speed->speed_x;
     entity->y += entity->speed->speed_y;
 
-    /* Détection des collisions*/
-    for(current = game->entities; current != NULL; current = current->next) 
-        if(entity != current->entity) on_entity_collide(game, entity, current->entity, get_entity_collide(entity, current->entity));  
-
     /* Libération de la mémoire lorsque l'entity quitte l'écran*/
     free_out_of_screen(game, entity);
+
+    /* Détection des collisions*/
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(entity != NULL && current->entity != NULL && entity != current->entity) {
+            if(on_entity_collide(game, entity, current->entity, get_entity_collide(entity, current->entity))) return;
+        }
+    }
 }
 
 Direction get_entity_collide(Entity* entity, Entity* other) {
-  /* The 0, 0 start from top left window corner
-    *  The window height is settings->win_height and the width is settings->win_width
-    *  In an entity, we have a field x and y which are the top left corner of the entity and a field width and height
-    */
-    /* Detect the collision between entity and return the DIRECTION of the "entity" element of the collide*/
-    if(entity->x + entity->width > other->x && entity->x < other->x + other->width) {
-        if(entity->y + entity->height > other->y && entity->y < other->y + other->height) {
-            if(entity->y + entity->height - other->y < other->y + other->height - entity->y) {
-                if(entity->x + entity->width - other->x < other->x + other->width - entity->x) {
-                    if(entity->y + entity->height - other->y < entity->x + entity->width - other->x) {
-                        return FORWARD;
-                    } else {
-                        return LEFT;
-                    }
-                } else {
-                    if(entity->y + entity->height - other->y < other->x + other->width - entity->x) {
-                        return FORWARD;
-                    } else {
-                        return RIGHT;
-                    }
-                }
+    int entity_right = entity->x + entity->width;
+    int entity_bottom = entity->y + entity->height;
+    int other_right = other->x + other->width;
+    int other_bottom = other->y + other->height;
+    if(entity->type == LABEL) return NONE;
+
+    if(entity->x < other_right && entity_right > other->x && 
+    entity->y < other_bottom && entity_bottom > other->y) {
+        int horiz_dist = (entity->x + entity->width/2) - (other->x + other->width/2);
+        int vert_dist = (entity->y + entity->height/2) - (other->y + other->height/2);
+        if(abs(horiz_dist) > abs(vert_dist)) {
+            if(horiz_dist < 0) {
+                return RIGHT;
             } else {
-                if(entity->x + entity->width - other->x < other->x + other->width - entity->x) {
-                    if(entity->y + entity->height - other->y < entity->x + entity->width - other->x) {
-                        return BACKWARD;
-                    } else {
-                        return LEFT;
-                    }
-                } else {
-                    if(entity->y + entity->height - other->y < other->x + other->width - entity->x) {
-                        return BACKWARD;
-                    } else {
-                        return RIGHT;
-                    }
-                }
+                return LEFT;
+            }
+        } else {
+            if(vert_dist < 0) {
+                return TOP;
+            } else {
+                return BOTTOM;
             }
         }
     }
-    
-    return NONE;    
+    return NONE;
 }
 
-void on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direction) {
-    if(direction == NONE) return;   
+int on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direction) {
+    if(direction == NONE) return 0;   
+    else if(entity->type == PLAYER) return on_collide_player(game, (Player*)entity->parent, other, direction);
+    else if(entity->type == ENNEMY) return on_collide_ennemy(game, (Ennemy*)entity->parent, other, direction);
+    else if(entity->type == MISSILE) return on_collide_missile(game, (Missile*)entity->parent, other, direction);
 
-    if(entity->type == PLAYER) on_collide_player(game, (Player*)entity->parent, other);
-    if(entity->type == ENNEMY) on_collide_ennemy(game, (Ennemy*)entity->parent, other);
-    if(entity->type == MISSILE) on_collide_missile(game, (Missile*)entity->parent, other);
+    return 0;
 }
 
 void free_out_of_screen(Game *game, Entity *entity) {
@@ -151,6 +139,6 @@ void free_entity(Entity *entity) {
 Direction get_direction(Entity *entity) {
     if(entity->speed->speed_x > 0) return RIGHT;
     else if(entity->speed->speed_x < 0) return LEFT;
-    else if(entity->speed->speed_y > 0) return BACKWARD;
-    else return FORWARD;
+    else if(entity->speed->speed_y > 0) return BOTTOM;
+    else return TOP;
 }

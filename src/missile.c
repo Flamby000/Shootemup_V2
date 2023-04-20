@@ -71,14 +71,17 @@ void free_missile(Missile *missile) {
     free(missile);
 }
 
-void on_collide_missile(Game *game, Missile *missile, Entity *collide) {
+int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction direction) {
     if(collide->type == PLAYER && !missile->is_from_player) {
         deals_damage(game, collide, missile->damage);
         remove_entity(game, missile->entity);
+        return 1;
     }
     else if(collide->type == ENNEMY && missile->is_from_player) {
         deals_damage(game, collide, missile->damage);
         remove_entity(game, missile->entity);
+        return 1;
     }
 
+    return 0;
 }

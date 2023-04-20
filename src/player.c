@@ -36,9 +36,12 @@ Player* create_player(Game *game) {
     return player;
 }
 
-void on_collide_player(Game *game, Player *player, Entity *collide) {
-    if(collide->type == ENNEMY) deals_damage(game, collide, 1);
-
+int on_collide_player(Game *game, Player *player, Entity *collide, Direction direction) {
+    if(collide->type == ENNEMY) {
+        deals_damage(game, collide, 1);
+        return 1;
+    }
+    return 0;
 }
 
 void free_player(Player* player) {

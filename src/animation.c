@@ -153,11 +153,11 @@ void draw_entity(Entity* entity) {
             break;
         case MULTIPLE_ANIMATED:
             switch(get_direction(entity)) {
-                case FORWARD:
+                case TOP:
                     MLV_resize_image(animation->forward_images[animation->current_frame], entity->width, entity->height);
                     MLV_draw_image(animation->forward_images[animation->current_frame], entity->x, entity->y);
                     break;
-                case BACKWARD:
+                case BOTTOM:
                     MLV_resize_image(animation->backward_images[animation->current_frame], entity->width, entity->height);
                     MLV_draw_image(animation->backward_images[animation->current_frame], entity->x, entity->y);
                     break;

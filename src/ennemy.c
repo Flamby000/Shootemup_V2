@@ -75,6 +75,10 @@ void free_ennemy(Ennemy *ennemy) {
 }
 
 
-void on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide) {
-    if(collide->type == PLAYER) deals_damage(game, collide, 1);
+int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction direction) {
+    if(collide->type == PLAYER) {
+        deals_damage(game, collide, 1);
+        return 1;
+    }
+    return 0;
 }

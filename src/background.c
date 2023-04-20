@@ -12,8 +12,7 @@
 
 
 void init_background(Game *game) {
-    int i;
-    int size;
+    int size, speed, i;
 
     /* The background image */
     insert_entity(game, 
@@ -33,6 +32,7 @@ void init_background(Game *game) {
     /* Adding squares for stars*/
     for(i = 0; i < NB_STAR; i++) {
         size = rand() % STAR_MAX_SIZE + 1;
+        speed = size;
 
         insert_entity(game, 
             create_entity(
@@ -40,9 +40,9 @@ void init_background(Game *game) {
                 rand() % settings->win_height, 
                 size, 
                 size,
-                size, /* TODO : find a way to STOP the background movement */
+                speed, /* TODO : find a way to STOP the background movement */
                 movement_infinite_scroll,  
-                init_square(MLV_rgba(rand() % 254 + 1,rand() % 254 + 1, rand() % 254 + 1, 255)),
+                init_square(MLV_rgba(255, 255, rand() % 254 + 1, 255)),
                 NULL,
                 LABEL
             )

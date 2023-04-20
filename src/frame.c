@@ -7,7 +7,6 @@
 #include "../include/game.h"
 #include "../include/frame.h"
 
-
 void init_frame() {    
     MLV_create_window(GAME_NAME, GAME_NAME, settings->win_width, settings->win_height   );
 }
