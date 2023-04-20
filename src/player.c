@@ -32,10 +32,14 @@ Player* create_player(Game *game) {
         PLAYER
     );
     insert_entity(game, player->entity);
-    player->ship = create_spaceship(3, 1000, shoot_player_basic);
+    player->ship = create_spaceship(5, 1000, 1000, shoot_player_basic);
     return player;
 }
 
+void on_collide_player(Game *game, Player *player, Entity *collide) {
+    if(collide->type == ENNEMY) deals_damage(game, collide, 1);
+
+}
 
 void free_player(Player* player) {
     free_spaceship(player->ship);

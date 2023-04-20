@@ -39,7 +39,7 @@ void movement_backward(Game *game, Entity *entity) {
 
 void movement_infinite_scroll(Game *game, Entity *entity) {
     movement_forward(game, entity);
-    if(entity->y > WIN_HEIGHT) {
+    if(entity->y > settings->win_height) {
         entity->y = -entity->height;
     }
 }
@@ -65,7 +65,3 @@ void movement_controller(Game *game, Entity *entity) {
 
     avoid_collide_border(entity);
 }
-
-
-
-

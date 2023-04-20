@@ -5,13 +5,11 @@
 #include "../include/struct.h"
 #include "../include/frame.h"
 
-
-
 void load_settings() {
     unsigned int width, height;
     MLV_get_desktop_size(&width, &height);
-    height -= 100;
-    width -= 100;
+    width = 800;
+    height = 600;
 
     settings = malloc(sizeof(Settings));
     settings->win_width = width;

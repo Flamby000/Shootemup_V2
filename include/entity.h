@@ -8,3 +8,7 @@ Entity* create_entity(int x, int y, int width, int height,
 void avoid_collide_border(Entity *entity);
                       
 Direction get_direction(Entity *entity);
+
+
+Direction get_entity_collide(Entity* entity, Entity* other);
+void on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direction);

@@ -3,3 +3,4 @@
 
 Player* create_player(Game *game);
 void free_player(Player* player);
+void on_collide_player(Game *game, Player *player, Entity *collide);

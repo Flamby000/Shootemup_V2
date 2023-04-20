@@ -31,7 +31,6 @@ int main() {
     signal(SIGINT, sigint_handler);
     srand(time(NULL));
     
-    
     load_settings(settings);
     init_frame();
     game = init_game();
@@ -46,8 +45,8 @@ int main() {
 
         clock_gettime(CLOCK_MONOTONIC, &end_frame_time);
         frame_time = (end_frame_time.tv_sec - start_frame_time.tv_sec) + (end_frame_time.tv_nsec - start_frame_time.tv_nsec) / 1000000000.0;
-        if(frame_time < (1.0/60.0)) {
-            MLV_wait_milliseconds((int)(((1.0/60.0) - frame_time) * 1000));
+        if(frame_time < (1.0/GAME_SPEED)) {
+            MLV_wait_milliseconds((int)(((1.0/GAME_SPEED) - frame_time) * 1000));
         }
         MLV_actualise_window();
 

@@ -61,6 +61,8 @@ typedef struct _Life{
     int max_hp;
     int hp;
     int shield;
+    int last_damage_time;
+    int invincibility_duration;
 } Life;
 
 typedef struct _Shooter{
@@ -90,13 +92,15 @@ typedef struct _Missile {
     struct _Entity* entity;
     struct _Entity target;
     int damage;
+    int is_from_player;
 } Missile;
 
 typedef enum _Direction {
     FORWARD,
     BACKWARD,
     LEFT,
-    RIGHT
+    RIGHT,
+    NONE
 } Direction;
 
 typedef enum _AnimationType {

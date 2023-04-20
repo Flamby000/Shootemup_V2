@@ -5,6 +5,7 @@ height:60
 speed:2
 score:10
 life:1
+invincibility:0
 cooldown:1000
 animation:resources/ennemies/ennemy1-forward-%d.png
 movement:1

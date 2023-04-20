@@ -6,13 +6,9 @@
 #include "../include/entity.h"
 #include "../include/animation.h"
 
-
 Animation* init_animation_wrapper(char* str) {
-    if(strstr(str, "%d")) {
-        return init_animation(str);
-    } else {
-        return init_sprite(MLV_load_image(str));
-    }
+    if(strstr(str, "%d")) return init_animation(str);
+    else return init_sprite(MLV_load_image(str));
 }
 
 Animation* init_sprite(MLV_Image* sprite) {
@@ -128,6 +124,8 @@ void free_animation(Animation* animation) {
 
 void draw_entity(Entity* entity) {
     Animation *animation = entity->sprite;
+    
+    if(animation == NULL) return; /* Don't draw entities without animation*/
 
     switch(animation->type) {
         case SQUARE:
