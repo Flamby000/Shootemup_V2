@@ -8,8 +8,13 @@
 
 
 void load_settings() {
+    unsigned int width, height;
+    MLV_get_desktop_size(&width, &height);
+    height -= 100;
+    width -= 100;
+
     settings = malloc(sizeof(Settings));
-    settings->win_width = WIN_WIDTH;
-    settings->win_height = WIN_HEIGHT;        
+    settings->win_width = width;
+    settings->win_height = height;        
 }
 

@@ -1,9 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
 #include "../include/entity.h"
 #include "../include/animation.h"
+
+
+Animation* init_animation_wrapper(char* str) {
+    if(strstr(str, "%d")) {
+        return init_animation(str);
+    } else {
+        return init_sprite(MLV_load_image(str));
+    }
+}
 
 Animation* init_sprite(MLV_Image* sprite) {
     Animation* animation = malloc(sizeof(Animation));

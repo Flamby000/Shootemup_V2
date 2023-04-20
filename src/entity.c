@@ -10,8 +10,6 @@
 #include "../include/ennemy.h"
 #include "../include/entity.h"
 
-
-
 Entity* create_entity(int x, int y, int width, int height, 
                       int speed, void (*update_speed)(struct _Game*, struct _Entity*),
                       Animation* animation,

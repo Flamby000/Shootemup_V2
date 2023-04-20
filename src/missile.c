@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
@@ -9,43 +10,60 @@
 #include "../include/entity.h"
 #include "../include/missile.h"
 
-Missile* create_missile(Game *game, Entity *sender, MissileType type) {
-    Missile *missile = malloc(sizeof(Missile));
-    int width, height, x, y, speed, damage;
+Missile* create_missile(Game *game, Entity *sender, int type) {
+    Missile *missile;
+    int width, height, speed, damage, x, y;
     void (*movement)(struct _Game*, struct _Entity*);
     Animation *animation;
-    
-    switch(type) {
-        case BASIC_MISSILE:
-            width = sender->width/5;
-            height = sender->width/5;
-            x = sender->x + sender->width/2 - width/2;
-            y = sender->y + sender->height/2;
-            speed = 5;
-            damage = 1;
-            animation = init_sprite(MLV_load_image("resources/missiles/missile6_1.png"));
-            movement = movement_forward;
-            break;
+    char key[200];
+    char value[200];
+    char line[400];
+    int current_id = -1;
+    FILE *file = fopen(MISSILE_DATA_PATH, "r");
 
-        case BASIC_PLAYER_MISSILE:
-            width = sender->width/3;
-            height = sender->height/3;
-            x = sender->x + sender->width/2 - width/2;
-            y = sender->y + sender->height/2;
-            speed = 5;
-            damage = 1;
-            animation = init_animation("resources/missiles/missile1_%d.png");
-            movement = movement_backward;
-            break;
-            
-        default:
-            printf("Error : Missile type not found\n");
-            break;
+    if(file == NULL) {
+        printf("Error : Cannot open file %s\n", MISSILE_DATA_PATH);
+        return NULL;
+    }
+    while(fscanf(file, "%s", line) != EOF) {
+        if(strchr(line, ':') != NULL) {
+            char *token = strtok(line, ":");
+            strcpy(key, token);
+            token = strtok(NULL, ":");
+            strcpy(value, token);
+            if(strcmp(key, "id") == 0) {
+                current_id = atoi(value);
+            }
+
+            if(current_id == type) {
+                if(     strcmp(key, "width") == 0)     width = atoi(value);
+                else if(strcmp(key, "height") == 0)    height = atoi(value);
+                else if(strcmp(key, "animation") == 0) animation = init_animation_wrapper(value);
+                else if(strcmp(key, "speed") == 0)     speed = atoi(value);
+                else if(strcmp(key, "damage") == 0)    damage = atoi(value);
+                else if(strcmp(key, "movement") == 0){ movement = get_movement_function(atoi(value));
+                    break;
+                }
+
+                
+            }
+        }
     }
 
+    if(current_id == -1) {
+        printf("Error : Cannot find missile with id %d\n", type);
+        return NULL;
+    }
+
+    x = sender->x + sender->width/2 - width/2;
+    y = sender->y + sender->height/2 - height/2;
+
+    missile = malloc(sizeof(Missile));
     missile->entity = create_entity(x, y, width, height, speed, movement, animation, missile, MISSILE);
-    insert_entity(game, missile->entity);
     missile->damage = damage;
+
+    fclose(file);
+    insert_entity(game, missile->entity);
     return missile;
 }
 

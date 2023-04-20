@@ -11,6 +11,7 @@
 #include "../include/player.h"
 #include "../include/shooter.h"
 #include "../include/movement.h"
+#include "../include/ennemy.h"
 
 Ennemy* create_ennemy(Game *game, char type, int x) {
     Ennemy* ennemy = malloc(sizeof(Ennemy));
@@ -18,31 +19,52 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     void (*movement)(struct _Game*, struct _Entity*);
     int (*shoot)(struct _Game*, struct _Entity*);
     Animation *animation;
+    char key[200];
+    char value[200];
+    char line[400];
+    char current_id = '0';
+    FILE *file = fopen(ENNEMY_DATA_PATH, "r");
 
-    switch (type) {
-        case BASIC_ENNEMY:
-            height = 60;
-            width = 43;
-            speed = 5;
-            cooldown = 1000;
-            life = 1;
-            score = 10;
-            animation = init_animation("resources/ennemies/ennemy1-forward-%d.png");
-            movement = movement_forward;
-            shoot = shoot_basic;
-            break;
-
-        default:
-            printf("Error : Ennemy type not found\n");
-            break;
+    if(file == NULL) {
+        printf("Error : Cannot open file %s", ENNEMY_DATA_PATH);
+        return NULL;
     }
 
+    while(fscanf(file, "%s", line) != EOF) {
+        if(strchr(line, ':') != NULL) {
+            char *token = strtok(line, ":");
+            strcpy(key, token);
+            token = strtok(NULL, ":");
+            strcpy(value, token);
+
+            if(strcmp(key, "id") == 0)  current_id = value[0];
+
+            if(current_id == type) {
+                if(     strcmp(key, "width") == 0)     width = atoi(value);
+                else if(strcmp(key, "height") == 0)    height = atoi(value);
+                else if(strcmp(key, "animation") == 0) animation = init_animation_wrapper(value);
+                else if(strcmp(key, "speed") == 0)     speed = atoi(value);
+                else if(strcmp(key, "movement") == 0)  movement = get_movement_function(atoi(value));
+                else if(strcmp(key, "life") == 0)      life = atoi(value);
+                else if(strcmp(key, "cooldown") == 0)  cooldown = atoi(value);
+                else if(strcmp(key, "score") == 0)     score = atoi(value);
+                else if(strcmp(key, "shoot") == 0) {   shoot = get_shoot_function(atoi(value));
+                    break;
+                }
+            }
+        }
+    }
+
+    if(current_id == '0') {
+        printf("Error : Ennemy type not found\n");
+        return NULL;
+    }
+
+    fclose(file);
 
     insert_entity(game, create_entity(x, -height, width, height, speed, movement, animation, ennemy, ENNEMY));
     ennemy->ship = create_spaceship(life, cooldown, shoot);
     ennemy->score = score;
-    ennemy->type = type;
-
     return ennemy;
 }
 

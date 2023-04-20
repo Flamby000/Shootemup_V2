@@ -80,20 +80,11 @@ typedef struct _Player {
     int score;
 } Player;
 
-/* Ennemy type */
-#define BASIC_ENNEMY '1'
-
 typedef struct _Ennemy {
     struct _Entity* entity;
     struct _SpaceShip* ship;
-    char type;
     int score;
 } Ennemy;
-
-typedef enum _MissileType {
-    BASIC_PLAYER_MISSILE,
-    BASIC_MISSILE
-} MissileType;
 
 typedef struct _Missile {
     struct _Entity* entity;

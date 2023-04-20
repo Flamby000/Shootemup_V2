@@ -1,5 +1,5 @@
-#define WIN_WIDTH 800
-#define WIN_HEIGHT 600
+#define WIN_WIDTH 1200
+#define WIN_HEIGHT 800
 
 void init_frame();
 void update_frame(Game* game);
