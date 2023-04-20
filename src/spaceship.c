@@ -11,7 +11,7 @@ SpaceShip* create_spaceship(int life, int shoot_cooldown, int (*update_shoot)(st
     (&ship->life)->max_hp = life; 
     (&ship->life)->shield = 0; 
 
-    (&ship->shooter)->last_shoot_time = MLV_get_time();
+    (&ship->shooter)->last_shoot_time = 0;
     (&ship->shooter)->update_shoot = update_shoot;
     (&ship->shooter)->cooldown = shoot_cooldown;
     

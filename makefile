@@ -2,7 +2,7 @@
 SP=src/
 HD=include/
 BLD=bin/
-CC=gcc
+CC=gcc -g
 CFLAGS=-Wall -ansi -pedantic -pthread
 OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o
 LDFLAGS=-lMLV -lm 
@@ -51,7 +51,7 @@ ${BLD}missile.o : ${SP}missile.c ${SP}entity.c
 	${CC} -c ${SP}missile.c -o ${BLD}missile.o ${CFLAGS} ${LDFLAGS}
 
 
-${BLD}shooter.o : ${SP}shooter.c ${SP}entity.c ${SP}missile.o
+${BLD}shooter.o : ${SP}shooter.c ${SP}entity.c ${SP}missile.c
 	${CC} -c ${SP}shooter.c -o ${BLD}shooter.o ${CFLAGS} ${LDFLAGS}
 
 

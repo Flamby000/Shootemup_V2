@@ -25,7 +25,6 @@ Missile* create_missile(Game *game, Entity *sender, MissileType type) {
             damage = 1;
             animation = init_sprite(MLV_load_image("resources/missiles/missile6_1.png"));
             movement = movement_forward;
-            target = game->player->entity;
             break;
 
         case BASIC_PLAYER_MISSILE:
@@ -52,7 +51,6 @@ Missile* create_missile(Game *game, Entity *sender, MissileType type) {
 
 
 
-void free_missile(Game *game, Missile *missile) {
-    remove_entity(game, missile->entity);
+void free_missile(Missile *missile) {
     free(missile);
 }

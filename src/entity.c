@@ -6,6 +6,7 @@
 #include "../include/animation.h"
 #include "../include/game.h"
 #include "../include/missile.h"
+#include "../include/player.h"
 #include "../include/ennemy.h"
 #include "../include/entity.h"
 
@@ -63,29 +64,32 @@ void update_entity(Game* game, Entity *entity) {
 }
 
 void free_out_of_screen(Game *game, Entity *entity) {
-    /* Free entity when out of screen*/
-    if(entity->y > settings->win_height) {
-        if(entity->type == ENNEMY) {
-            printf("free ennemy\n");
-            free_ennemy(game, entity->parent);
-        }
+
+    /* Free ennemy when reach bottom border*/
+    if(entity->type == ENNEMY && entity->y > settings->win_height) {
+            remove_entity(game, entity);
     }
-    if(entity->y - entity->height > settings->win_height ||
-       entity->y > settings->win_height || 
-       entity->x - entity->width > settings->win_width ||
-       entity->x + entity->width < 0) {
-        if(entity->type == MISSILE) {
-            printf("free missile\n");
-            free_missile(game, entity->parent);
-        }
+
+    /*Free missiles when out of screen*/
+    if(entity->type == MISSILE && (
+        entity->y  > settings->win_height || 
+        entity->y + entity->height < 0 ||
+        entity->x > settings->win_width ||
+        entity->x + entity->width < 0)
+    ) {
+        remove_entity(game, entity);
     }
 }
 
 void free_entity(Entity *entity) {
+
+    if(entity->type == MISSILE) free_missile((Missile*)entity->parent);
+    if(entity->type == ENNEMY) free_ennemy((Ennemy*)entity->parent);
+    if(entity->type == PLAYER) free_player((Player*)entity->parent);
+    
     free_animation(entity->sprite);
     free(entity->speed);
     free(entity);
-    
 }
 
 Direction get_direction(Entity *entity) {

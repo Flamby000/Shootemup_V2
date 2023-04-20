@@ -9,6 +9,7 @@
 #include "../include/spaceship.h"
 #include "../include/animation.h"
 #include "../include/ennemy.h"
+#include "../include/missile.h"
 #include "../include/background.h"
 
 
@@ -51,12 +52,9 @@ void free_game(Game* game) {
     EntityLink* current = game->entities;
     while(current != NULL) {
         EntityLink* next = current->next;
-        free_entity(current->entity);
-        free(current);
+        remove_entity(game, current->entity);
         current = next;
     }
-
-    free_player(game->player);
     free(game);
 }
 
@@ -81,10 +79,9 @@ void insert_entity(Game* game, Entity* entity) {
 
 int entity_count(Game *game) {
     int count = 0;
-    EntityLink* current = game->entities;
-    while(current != NULL) {
+    EntityLink* current;
+    for(current = game->entities; current != NULL; current = current->next) {
         count++;
-        current = current->next;
     }
     return count;
 }
@@ -93,20 +90,27 @@ void print_entities(Game *game) {
 }
 
 void remove_entity(Game* game, Entity* entity) {
-    EntityLink* current = game->entities;
-    EntityLink* previous = NULL;
-    while(current != NULL) {
+    EntityLink* current;
+    for(current = game->entities; current != NULL; current = current->next) {
+
         if(current->entity == entity) {
-            if(previous == NULL) {
+            /* if entity is the first element of the list */
+            if(current == game->entities) {
                 game->entities = current->next;
+          
             } else {
+                EntityLink* previous = game->entities;
+                while(previous->next != current) {
+                    previous = previous->next;
+                }
                 previous->next = current->next;
             }
+            
             free_entity(current->entity);
             free(current);
-            break;
+            return;
         }
-        previous = current;
-        current = current->next;
     }
+
+    printf("Error : Entity not found\n");
 }

@@ -34,7 +34,7 @@ Animation* init_animation(char* path) {
 
     animation->forward_images = malloc(animation->nb_frames * sizeof(MLV_Image*));
 
-    for(i = 1; i < animation->nb_frames; i++) {
+    for(i = 1; i <= animation->nb_frames; i++) {
         sprintf(path_i, path, i);
         animation->forward_images[i-1] = MLV_load_image(path_i);
     }
@@ -45,7 +45,7 @@ Animation* init_animation(char* path) {
 }
 
 Animation* init_multiple_animation(char* forward_path, char* backward_path, char* left_path, char* right_path) {
-        Animation* animation = malloc(sizeof(Animation));
+    Animation* animation = malloc(sizeof(Animation));
     int i;
     char path_i[1000];
     animation->nb_frames = 1;  
@@ -60,22 +60,22 @@ Animation* init_multiple_animation(char* forward_path, char* backward_path, char
     }
 
     animation->forward_images = malloc(animation->nb_frames * sizeof(MLV_Image*));
-    for(i = 1; i < animation->nb_frames; i++) {
+    for(i = 1; i <= animation->nb_frames; i++) {
         sprintf(path_i, forward_path, i);
         animation->forward_images[i-1] = MLV_load_image(path_i);
     }
     animation->backward_images = malloc(animation->nb_frames * sizeof(MLV_Image*));
-    for(i = 1; i < animation->nb_frames; i++) {
+    for(i = 1; i <= animation->nb_frames; i++) {
         sprintf(path_i, backward_path, i);
         animation->backward_images[i-1] = MLV_load_image(path_i);
     }
     animation->left_images = malloc(animation->nb_frames * sizeof(MLV_Image*));
-    for(i = 1; i < animation->nb_frames; i++) {
+    for(i = 1; i <= animation->nb_frames; i++) {
         sprintf(path_i, left_path, i);
         animation->left_images[i-1] = MLV_load_image(path_i);
     }
     animation->right_images = malloc(animation->nb_frames * sizeof(MLV_Image*));
-    for(i = 1; i < animation->nb_frames; i++) {
+    for(i = 1; i <= animation->nb_frames; i++) {
         sprintf(path_i, right_path, i);
         animation->right_images[i-1] = MLV_load_image(path_i);
     }

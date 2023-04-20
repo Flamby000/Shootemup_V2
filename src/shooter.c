@@ -20,6 +20,3 @@ int shoot_basic(Game *game, Entity *entity) {
     return 1;
 }
 
-int shoot_target(Game *game, Entity *entity) {
-    create_missile(game, entity, TARGETING_MISSILE);
-}

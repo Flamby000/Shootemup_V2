@@ -53,7 +53,6 @@ int main() {
 
     }
 
-    printf("Free memory\n");
     free_game(game);
     free_frame();
     free(settings);

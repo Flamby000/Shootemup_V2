@@ -23,7 +23,7 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
         case BASIC_ENNEMY:
             height = 60;
             width = 43;
-            speed = 1;
+            speed = 5;
             cooldown = 1000;
             life = 1;
             score = 10;
@@ -46,9 +46,8 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     return ennemy;
 }
 
-void free_ennemy(Game *game, Ennemy *ennemy) {
+void free_ennemy(Ennemy *ennemy) {
     free_spaceship(ennemy->ship);
-    remove_entity(game, ennemy->entity);
     free(ennemy);
 }
 
