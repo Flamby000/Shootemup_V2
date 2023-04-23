@@ -29,6 +29,7 @@ Entity* create_entity(int x, int y, int width, int height,
     entity->speed->speed_y = 0;
     entity->speed->speed = speed;  
     entity->speed->update_speed = update_speed;  
+
     entity->parent = parent;
     entity->type = type;
     
@@ -50,10 +51,8 @@ void avoid_collide_border(Entity *entity) {
 }
 void update_entity(Game* game, Entity *entity) {
     EntityLink* current;
-    if(entity == NULL) return;
 
     /* Mis à jour de la vitesse */
-    if(entity == NULL) printf("update_speed is NULL\n");
     entity->speed->update_speed(game, entity);
     
     /* Mise à jour de la position à partir de la vitesse*/
@@ -101,8 +100,8 @@ Direction get_entity_collide(Entity* entity, Entity* other) {
 
 int on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direction) {
     if(direction == NONE) return 0;   
-    else if(entity->type == PLAYER)  return on_collide_player(game, (Player*)entity->parent, other, direction);
-    else if(entity->type == ENNEMY)  return on_collide_ennemy(game, (Ennemy*)entity->parent, other, direction);
+    else if(entity->type == PLAYER) return on_collide_player(game, (Player*)entity->parent, other, direction);
+    else if(entity->type == ENNEMY) return on_collide_ennemy(game, (Ennemy*)entity->parent, other, direction);
     else if(entity->type == MISSILE) return on_collide_missile(game, (Missile*)entity->parent, other, direction);
 
     return 0;
@@ -147,7 +146,7 @@ Direction get_direction(Entity *entity) {
 Entity * closest_enemy(Game *game) {
     EntityLink *closest = NULL;
     EntityLink *current = NULL;
-
+    
     for(current=game->entities; current!=NULL; current=current->next) {
         if(current->entity->type == ENNEMY) {
             if(closest == NULL) {
