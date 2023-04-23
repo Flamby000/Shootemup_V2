@@ -12,6 +12,8 @@ struct _Player;
 struct _Shooter;
 struct _SpaceShip;
 struct _Missile;
+struct _Level;
+struct _Wave;
 
 extern struct _Settings *settings;
 
@@ -23,6 +25,7 @@ typedef struct _Settings {
 typedef struct _Game {
     struct _EntityLink* entities;
     struct _Player *player;
+    struct _Level *level;
 } Game;
 
 typedef struct _EntityLink {
@@ -36,7 +39,7 @@ typedef enum _EntityType {
     MISSILE,
     LABEL
 } EntityType;
-
+ 
 typedef struct _Entity{
     struct _Animation* sprite;
     int x;
@@ -95,6 +98,27 @@ typedef struct _Missile {
     int is_from_player;
 } Missile;
 
+typedef struct _Wave {
+    int nb_line;
+    int current_line;
+    char** object_lines;
+} Wave;
+
+typedef struct _Level {
+    int nb_wave;
+    struct _Wave* waves;
+
+    int current_wave;
+
+    int last_line_time;
+    int line_cooldown;
+
+    int last_wave_time;
+    int wave_cooldown;
+} Level;
+
+
+
 typedef enum _Direction {
     TOP,
     BOTTOM,
@@ -109,6 +133,8 @@ typedef enum _AnimationType {
     SQUARE,
     MULTIPLE_ANIMATED
 } AnimationType;
+
+
 
 typedef struct _Animation {
     AnimationType type;

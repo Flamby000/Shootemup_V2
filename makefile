@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc -g
 CFLAGS=-Wall -ansi -pedantic -pthread
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -17,7 +17,7 @@ all: ${OBJ}
 ${BLD}main.o: ${SP}main.c ${SP}frame.c ${SP}settings.c
 	${CC} -c ${SP}main.c -o ${BLD}main.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c ${SP}player.c ${SP}ennemy.c
+${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c ${SP}player.c ${SP}ennemy.c ${SP}level.c
 	${CC} -c ${SP}game.c -o ${BLD}game.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}frame.o: ${SP}frame.c ${SP}game.c 
@@ -53,6 +53,9 @@ ${BLD}missile.o : ${SP}missile.c ${SP}entity.c
 
 ${BLD}shooter.o : ${SP}shooter.c ${SP}entity.c ${SP}missile.c
 	${CC} -c ${SP}shooter.c -o ${BLD}shooter.o ${CFLAGS} ${LDFLAGS}
+
+${BLD}level.o : ${SP}level.c 
+	${CC} -c ${SP}level.c -o ${BLD}level.o ${CFLAGS} ${LDFLAGS}
 
 
 

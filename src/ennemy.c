@@ -23,6 +23,7 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     char value[200];
     char line[400];
     char current_id = '0';
+
     FILE *file = fopen(ENNEMY_DATA_PATH, "r");
 
     if(file == NULL) {
@@ -40,7 +41,7 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
             if(strcmp(key, "id") == 0) current_id = value[0];
 
             if(current_id == type) {
-                if(     strcmp(key, "width") == 0)        width = atoi(value);
+                if(     strcmp(key, "width") == 0)         width = atoi(value);
                 else if(strcmp(key, "height") == 0)        height = atoi(value);
                 else if(strcmp(key, "animation") == 0)     animation = init_animation_wrapper(value);
                 else if(strcmp(key, "speed") == 0)         speed = atoi(value);
@@ -73,7 +74,6 @@ void free_ennemy(Ennemy *ennemy) {
     free_spaceship(ennemy->ship);
     free(ennemy);
 }
-
 
 int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction direction) {
     if(collide->type == PLAYER) {

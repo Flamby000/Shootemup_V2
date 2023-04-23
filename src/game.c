@@ -7,6 +7,7 @@
 #include "../include/game.h"
 #include "../include/player.h"
 #include "../include/spaceship.h"
+#include "../include/level.h"
 #include "../include/animation.h"
 #include "../include/ennemy.h"
 #include "../include/missile.h"
@@ -16,20 +17,21 @@
 
 Game* init_game() {
     Game *game = malloc(sizeof(Game));
+    game->level = create_level("data/level/level-1.lvl");
     game->entities = NULL;
 
     init_background(game);
     game->player = create_player(game);
 
     create_ennemy(game, BASIC_ENNEMY, settings->win_width/2);
+    create_ennemy(game, BASIC_ENNEMY, settings->win_width/5);
 
+    
 
     return game;
 }
 
 void update_game(Game *game) {
-
-    
     EntityLink* current = game->entities;
     Entity* entity;
     while(current != NULL) {
@@ -41,11 +43,11 @@ void update_game(Game *game) {
         if(entity->type == PLAYER || entity->type == ENNEMY) {
             update_spaceship(game, entity);
         }
-    
         current = current->next;
     }
 
-
+    /* Update the level */
+    update_level(game, game->level);
 }
 
 void free_game(Game* game) {
@@ -94,7 +96,7 @@ void remove_entity(Game* game, Entity* entity) {
             /* if entity is the first element of the list */
             if(current == game->entities) {
                 game->entities = current->next;
-          
+
             } else {
                 EntityLink* previous = game->entities;
                 while(previous->next != current) {

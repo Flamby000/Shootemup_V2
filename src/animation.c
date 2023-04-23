@@ -124,8 +124,8 @@ void free_animation(Animation* animation) {
 
 void draw_entity(Entity* entity) {
     Animation *animation = entity->sprite;
-    
     if(animation == NULL) return; /* Don't draw entities without animation*/
+
 
     switch(animation->type) {
         case SQUARE:
