@@ -4,6 +4,7 @@
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
 #include "../include/game.h"
+#include "../include/movement.h"
 #include "../include/spaceship.h"
 
 SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration,  SHOOT_FUNC update_shoot) {
@@ -48,6 +49,7 @@ int deals_damage(Game *game, Entity *entity, int damage) {
     
     life->last_damage_time = MLV_get_time();
     life->hp -= damage;
+    push_entity(game, entity);
 
     if(life->hp <= 0) {
         life->hp = 0;

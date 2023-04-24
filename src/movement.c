@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
@@ -48,50 +49,85 @@ void movement_controller(Game *game, Entity *entity) {
     Speed *speed = entity->speed;
 
     if(MLV_get_keyboard_state(MLV_KEYBOARD_z) == MLV_PRESSED) {
-        speed->speed_y = -speed->speed;
+        if(speed->speed_y > -speed->speed) {
+            speed->speed_y -= 2;
+            if(speed->speed_y < -speed->speed) {
+                speed->speed_y = -speed->speed;
+            }
+        }
     } else if(MLV_get_keyboard_state(MLV_KEYBOARD_s) == MLV_PRESSED) {
-        speed->speed_y = speed->speed;
+        if(speed->speed_y < speed->speed) {
+            speed->speed_y += 2;
+            if(speed->speed_y > speed->speed) {
+                speed->speed_y = speed->speed;
+            }
+        }
     } else {
-        speed->speed_y = 0;
+        if(speed->speed_y > 0) {
+            speed->speed_y -= 0.1;
+            if(speed->speed_y < 0) {
+                speed->speed_y = 0;
+            }
+        } else if(speed->speed_y < 0) {
+            speed->speed_y += 0.1;
+            if(speed->speed_y > 0) {
+                speed->speed_y = 0;
+            }
+        }
     }
     
     if(MLV_get_keyboard_state(MLV_KEYBOARD_q) == MLV_PRESSED) {
-        speed->speed_x = -speed->speed;
+        if(speed->speed_x > -speed->speed) {
+            speed->speed_x -= 2;
+            if(speed->speed_x < -speed->speed) {
+                speed->speed_x = -speed->speed;
+            }
+        }
     } else if(MLV_get_keyboard_state(MLV_KEYBOARD_d) == MLV_PRESSED) {
+        if(speed->speed_x < speed->speed) {
+            speed->speed_x += 2;
+            if(speed->speed_x > speed->speed) {
+                speed->speed_x = speed->speed;
+            }
+        }
         speed->speed_x = speed->speed;
     } else {
-        speed->speed_x = 0;
+        if(speed->speed_x > 0) {
+            speed->speed_x -= 0.1;
+            if(speed->speed_x < 0) {
+                speed->speed_x = 0;
+            }
+        } else if(speed->speed_x < 0) {
+            speed->speed_x += 0.1;
+            if(speed->speed_x > 0) {
+                speed->speed_x = 0;
+            }
+        }
     }
 
     avoid_collide_border(entity);
 }
 
+
+void movement_follow_player(Game *game, Entity *entity) {
+    movement_follow_entity(game, entity, closest_entity(game, entity, PLAYER));
+}
+
 void movement_follow_entity(Game *game, Entity *entity, Entity *target) {
+    float angle;
+
     if(target != NULL) {
-        Speed *speed = entity->speed;
-        int target_x = target->x + target->width / 2;
-        int target_y = target->y + target->height / 2;
-
-        if(entity->x + entity->width / 2 < target_x) {
-            speed->speed_x = speed->speed;
-        } else if(entity->x + entity->width / 2 > target_x) {
-            speed->speed_x = -speed->speed;
-        } else {
-            speed->speed_x = 0;
-        }
-
-        if(entity->y + entity->height / 2 < target_y) {
-            speed->speed_y = speed->speed;
-        } else if(entity->y + entity->height / 2 > target_y) {
-            speed->speed_y = -speed->speed;
-        } else {
-            speed->speed_y = 0;
-        }
-    } else {
+        angle = atan2((target->y + target->height/2) - entity->y, (target->x + target->width/2)  - entity->x);
+        entity->speed->speed_x = entity->speed->speed * cos(angle);
+        entity->speed->speed_y = entity->speed->speed * sin(angle);
+    }
+     else {
         movement_forward(game, entity);
     }
 }
 
-void movement_follow_player(Game *game, Entity *entity) {
-    movement_follow_entity(game, entity, closest_entity(game, entity, PLAYER));
+
+void push_entity(Game *game, Entity *entity) {
+    Speed *speed = entity->speed;
+    speed->speed_y +=20;
 }
