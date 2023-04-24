@@ -40,7 +40,8 @@ int main() {
         clock_gettime(CLOCK_MONOTONIC, &start_frame_time);
         MLV_clear_window(MLV_COLOR_BLACK);
 
-        update_frame(game);
+        
+        update_frame(game); /*Temporize ?*/
         update_game(game);
 
         clock_gettime(CLOCK_MONOTONIC, &end_frame_time);

@@ -1,4 +1,4 @@
-void (*get_movement_function(int id)) (Game*, Entity*);
+SPEED_FUNC get_movement_function(int id);
 
 #define MOVEMENT_NONE 0
 void movement_none(Game* game, Entity *entity);

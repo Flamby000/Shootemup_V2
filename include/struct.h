@@ -1,6 +1,8 @@
 #ifndef STRUCT_H 
 #define STRUCT_H 
 
+/*#define return printf("== %s finished\n", __FUNCTION__); return*/
+
 struct _Entity;
 struct _Life;
 struct _Speed;
@@ -14,6 +16,11 @@ struct _SpaceShip;
 struct _Missile;
 struct _Level;
 struct _Wave;
+
+#define NONE -1
+
+typedef void (*SPEED_FUNC)(struct _Game*, struct _Entity*);
+typedef int (*SHOOT_FUNC)(struct _Game*, struct _Entity*);
 
 extern struct _Settings *settings;
 
@@ -37,7 +44,9 @@ typedef enum _EntityType {
     ENNEMY,
     PLAYER,
     MISSILE,
-    LABEL
+    LABEL,
+    BONUS
+    
 } EntityType;
  
 typedef struct _Entity{
@@ -57,7 +66,7 @@ typedef struct _Speed {
     int speed_x;
     int speed_y;
     int speed;
-    void (*update_speed)(struct _Game*, struct _Entity*);
+    SPEED_FUNC update_speed;
 } Speed;
 
 typedef struct _Life{
@@ -69,7 +78,7 @@ typedef struct _Life{
 } Life;
 
 typedef struct _Shooter{
-    int (*update_shoot)(struct _Game*, struct _Entity*);
+    SHOOT_FUNC update_shoot;
     int last_shoot_time;
     int cooldown;
 } Shooter;
@@ -123,8 +132,7 @@ typedef enum _Direction {
     TOP,
     BOTTOM,
     LEFT,
-    RIGHT,
-    NONE
+    RIGHT
 } Direction;
 
 typedef enum _AnimationType {
@@ -152,6 +160,5 @@ typedef struct _Animation {
     int last_frame_time;
     
 } Animation;
-
 
 #endif 

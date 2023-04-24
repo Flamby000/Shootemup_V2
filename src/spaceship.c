@@ -6,7 +6,7 @@
 #include "../include/game.h"
 #include "../include/spaceship.h"
 
-SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration, int (*update_shoot)(struct _Game*, struct _Entity*)) {
+SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration,  SHOOT_FUNC update_shoot) {
     SpaceShip* ship = malloc(sizeof(SpaceShip));
     (&ship->life)->hp = life;
     (&ship->life)->max_hp = life; 

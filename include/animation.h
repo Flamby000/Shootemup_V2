@@ -1,3 +1,6 @@
+#ifndef ANIMATION_H
+#define ANIMATION_H
+
 Animation* init_sprite(MLV_Image* sprite);
 Animation* init_square(MLV_Color color);
 Animation* init_animation(char* path);
@@ -6,3 +9,5 @@ Animation* init_animation_wrapper(char* str);
 
 void free_animation(Animation* animation);
 void draw_entity(Entity* entity);
+
+#endif

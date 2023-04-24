@@ -1,6 +1,4 @@
-
-
-int (*get_shoot_function(int id))(Game*, Entity*);
+SHOOT_FUNC get_shoot_function(int id);
 
 #define SHOOT_PLAYER_BASIC 0
 int shoot_player_basic(Game *game, Entity *entity);

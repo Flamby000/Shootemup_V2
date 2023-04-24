@@ -6,30 +6,6 @@
 #include "../include/ennemy.h"
 #include "../include/level.h"
 
-/*
-
-typedef struct _Wave {
-    int nb_line;
-    int current_line;
-    char** object_lines;
-} Wave;
-
-typedef struct _Level {
-    int nb_wave;
-    struct _Wave* waves;
-
-    int current_wave;
-
-    int last_line_time;
-    int line_cooldown;
-
-    int last_wave_time;
-    int wave_cooldown;
-} Level;
-*/
-
-
-
 Level* create_level(char* level_file) {
     char line[200];
     int line_size;
@@ -65,17 +41,34 @@ Level* create_level(char* level_file) {
     return level;
 }
 
-
 void create_object_line(Game *game, char* object_line) {
     int line_size = strlen(object_line);
     int i;
+
     for(i = 0; i < line_size; i++) {
-        if(object_line[i] == 'X') continue;
-        create_ennemy(game, object_line[i], (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
+        switch(get_object_type(object_line[i])) {
+            case ENNEMY:
+                create_ennemy(game, object_line[i], (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
+                break;
+            default :
+                break;
+        }    
     }
 }
 
-void update_level(Game* game, Level* level) {
+EntityType get_object_type(char object) {
+    if(object == 'X') return NONE;
+    else if('0' <= object && object <= '9') return ENNEMY;
+    else return BONUS;
+}
+
+void update_level(Game* game, Level* level, int infinite) {
+
+    if(!infinite && level->current_wave == level->nb_wave) return;
+    else if(infinite && level->current_wave == level->nb_wave) {
+        level->current_wave = 0;
+        level->last_wave_time = MLV_get_time();
+    } 
 
     if(MLV_get_time() - level->last_line_time > level->line_cooldown) {
         level->last_line_time = MLV_get_time();

@@ -11,7 +11,7 @@
 #include "../include/entity.h"
 
 Entity* create_entity(int x, int y, int width, int height, 
-                      int speed, void (*update_speed)(struct _Game*, struct _Entity*),
+                      int speed, SPEED_FUNC update_speed,
                       Animation* animation,
                       void* parent, EntityType type
                       ) {
@@ -49,6 +49,7 @@ void avoid_collide_border(Entity *entity) {
         entity->y = settings->win_height - entity->height;
     }      
 }
+
 void update_entity(Game* game, Entity *entity) {
     EntityLink* current;
 
@@ -143,21 +144,24 @@ Direction get_direction(Entity *entity) {
     else return TOP;
 }
 
-Entity * closest_enemy(Game *game) {
+Entity* closest_entity(Game *game, Entity *entity, EntityType filter) {
     EntityLink *closest = NULL;
     EntityLink *current = NULL;
-    
     for(current=game->entities; current!=NULL; current=current->next) {
-        if(current->entity->type == ENNEMY) {
+        if(current->entity->type == filter) {
             if(closest == NULL) {
                 closest = current;
             } else {
-                if(abs(current->entity->x - game->player->entity->x) < abs(closest->entity->x - game->player->entity->x)) {
+                if(abs(current->entity->x - entity->x) < abs(closest->entity->x - entity->x)) {
                     closest = current;
                 }
             }
-        }
+        } 
     }
+    if(closest == NULL) return NULL;
+    return closest->entity;
+}
 
-    return closest;
+Entity* closest_ennemy(Game *game) {
+    return closest_entity(game, game->player, ENNEMY);
 }

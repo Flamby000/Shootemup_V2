@@ -23,31 +23,37 @@ Game* init_game() {
     init_background(game);
     game->player = create_player(game);
 
+    /*
     create_ennemy(game, BASIC_ENNEMY, settings->win_width/2);
     create_ennemy(game, BASIC_ENNEMY, settings->win_width/5);
-
+    */
     
-
     return game;
 }
 
 void update_game(Game *game) {
-    EntityLink* current = game->entities;
+    EntityLink* current;
     Entity* entity;
-    while(current != NULL) {
+
+    for(current = game->entities; current != NULL; current = current->next) {
         entity = current->entity;
         /* Update movement entity*/
         update_entity(game, entity);
-
+        
         /* Update shoot of players/ennemies*/
         if(entity->type == PLAYER || entity->type == ENNEMY) {
             update_spaceship(game, entity);
         }
-        current = current->next;
+
+        if(entity->type == PLAYER) {
+            Entity *closest = closest_entity(game, entity, ENNEMY);
+            /*printf("Closest ennemy : %d\n", get_entity_id(game, closest));*/
+        } 
     }
 
+
     /* Update the level */
-    update_level(game, game->level);
+    update_level(game, game->level, 0);
 }
 
 void free_game(Game* game) {
@@ -60,9 +66,7 @@ void free_game(Game* game) {
     free(game);
 }
 
-
 void insert_entity(Game* game, Entity* entity) {
-
     EntityLink* new_entity = malloc(sizeof(EntityLink));
     new_entity->entity = entity;
     new_entity->next = NULL;
@@ -70,13 +74,27 @@ void insert_entity(Game* game, Entity* entity) {
     if(game->entities == NULL) {
         game->entities = new_entity;
     } else {
-        EntityLink* current = game->entities;
-        while(current->next != NULL) {
-            current = current->next;
+        EntityLink* current;
+        for(current = game->entities; current != NULL; current = current->next) {
+            if(current->next == NULL) {
+                current->next = new_entity;
+                update_entity(game, entity);
+                return;
+            }
         }
-        current->next = new_entity;
     }
-    
+}
+
+int get_entity_id(Game* game, Entity* entity) {
+    int id = 0;
+    EntityLink* current;
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(current->entity == entity) {
+            return id;
+        }
+        id++;
+    }
+    return -1;
 }
 
 int entity_count(Game *game) {

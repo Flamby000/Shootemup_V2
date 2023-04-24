@@ -16,8 +16,8 @@
 Ennemy* create_ennemy(Game *game, char type, int x) {
     Ennemy* ennemy = malloc(sizeof(Ennemy));
     int width, height, speed, cooldown, life, score, invincibility;
-    void (*movement)(struct _Game*, struct _Entity*);
-    int (*shoot)(struct _Game*, struct _Entity*);
+    SPEED_FUNC movement;
+    SHOOT_FUNC shoot;
     Animation *animation;
     char key[200];
     char value[200];
@@ -63,10 +63,10 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     }
 
     fclose(file);
-
-    insert_entity(game, create_entity(x, -height, width, height, speed, movement, animation, ennemy, ENNEMY));
+    ennemy->entity = create_entity(x, -height, width, height, speed, movement, animation, ennemy, ENNEMY);
     ennemy->ship = create_spaceship(life, cooldown, invincibility, shoot);
     ennemy->score = score;
+    insert_entity(game, ennemy->entity);
     return ennemy;
 }
 

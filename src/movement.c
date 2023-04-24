@@ -7,7 +7,7 @@
 #include "../include/entity.h"
 #include "../include/movement.h"
 
-void (*get_movement_function(int id)) (Game*, Entity*) {
+SPEED_FUNC get_movement_function(int id) {
     switch(id) {
         case MOVEMENT_NONE:            return movement_none;            /* id : 0 */
         case MOVEMENT_FORWARD:         return movement_forward;         /* id : 1 */
@@ -35,7 +35,6 @@ void movement_backward(Game *game, Entity *entity) {
     speed->speed_x = 0;
     speed->speed_y = -speed->speed;
 }
-
 
 void movement_infinite_scroll(Game *game, Entity *entity) {
     movement_forward(game, entity);

@@ -7,7 +7,7 @@
 #include "../include/missile.h"
 #include "../include/shooter.h"
 
-int (*get_shoot_function(int id))(Game*, Entity*) {
+SHOOT_FUNC get_shoot_function(int id) {
     switch(id) {
         case SHOOT_PLAYER_BASIC:  return shoot_player_basic; /* id : 0 */
         case SHOOT_BASIC:         return shoot_basic;        /* id : 1 */

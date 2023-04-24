@@ -7,3 +7,5 @@ void free_missile(Missile *missile);
 Missile* create_missile(Game *game, Entity *sender, int type);
 Missile* load_missile(int id, Entity *sender);
 int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction direction);
+
+

@@ -11,8 +11,6 @@
 #include "../include/shooter.h"
 #include "../include/movement.h"
 
-
-
 Player* create_player(Game *game) {
     Player* player = malloc(sizeof(Player));
     player->score = 0;
