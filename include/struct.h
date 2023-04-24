@@ -14,6 +14,7 @@ struct _Player;
 struct _Shooter;
 struct _SpaceShip;
 struct _Missile;
+struct _Bonus;
 struct _Level;
 struct _Wave;
 
@@ -21,6 +22,7 @@ struct _Wave;
 
 typedef void (*SPEED_FUNC)(struct _Game*, struct _Entity*);
 typedef int (*SHOOT_FUNC)(struct _Game*, struct _Entity*);
+typedef void (*BONUS_FUNC)(struct _Game*, struct _Player*, int);
 
 extern struct _Settings *settings;
 
@@ -58,6 +60,7 @@ typedef struct _Entity{
     int rotation;
     struct _Speed* speed;
 
+    EntityLink *followers;
     void* parent;
     EntityType type;
 } Entity;
@@ -70,6 +73,7 @@ typedef struct _Speed {
 } Speed;
 
 typedef struct _Life{
+    struct _Entity *shield_entity;
     int max_hp;
     int hp;
     int shield;
@@ -109,6 +113,13 @@ typedef struct _Missile {
     int fuel;
     int creation_time;
 } Missile;
+
+typedef struct _Bonus {
+    struct _Entity* entity;
+    BONUS_FUNC effect;
+    int type;
+} Bonus;
+
 
 typedef struct _Wave {
     int nb_line;

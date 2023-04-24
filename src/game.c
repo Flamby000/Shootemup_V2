@@ -7,6 +7,7 @@
 #include "../include/game.h"
 #include "../include/player.h"
 #include "../include/spaceship.h"
+#include "../include/bonus.h"
 #include "../include/level.h"
 #include "../include/animation.h"
 #include "../include/ennemy.h"
@@ -112,7 +113,7 @@ void remove_entity(Game* game, Entity* entity) {
                 previous->next = current->next;
             }
             
-            free_entity(current->entity);
+            free_entity(game, current->entity);
             free(current);
             return;
         }

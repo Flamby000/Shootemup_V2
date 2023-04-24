@@ -66,12 +66,13 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     ennemy->entity = create_entity(x, -height, width, height, speed, movement, animation, ennemy, ENNEMY);
     ennemy->ship = create_spaceship(life, cooldown, invincibility, shoot);
     ennemy->score = score;
+    
     insert_entity(game, ennemy->entity);
     return ennemy;
 }
 
-void free_ennemy(Ennemy *ennemy) {
-    free_spaceship(ennemy->ship);
+void free_ennemy(Game* game, Ennemy *ennemy) {
+    free_spaceship(game, ennemy->ship);
     free(ennemy);
 }
 

@@ -2,5 +2,5 @@
 #define PLAYER_HEIGHT 74    
 
 Player* create_player(Game *game);
-void free_player(Player* player);
+void free_player(Game* game, Player* player);
 int on_collide_player(Game *game, Player *player, Entity *collide, Direction direction);

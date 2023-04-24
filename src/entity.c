@@ -7,6 +7,7 @@
 #include "../include/game.h"
 #include "../include/missile.h"
 #include "../include/player.h"
+#include "../include/bonus.h"
 #include "../include/ennemy.h"
 #include "../include/entity.h"
 
@@ -55,14 +56,15 @@ int update_entity(Game* game, Entity *entity) {
 
     /* Mis à jour de la vitesse */
     entity->speed->update_speed(game, entity);
-    
+
     /* Mise à jour de la position à partir de la vitesse*/
     entity->x += entity->speed->speed_x;
     entity->y += entity->speed->speed_y;
 
     /* Manage missile update (for fuel)*/
     if(entity->type == MISSILE) 
-    if(update_missile(game, (Missile*)entity->parent)) return 1;
+        if(update_missile(game, (Missile*)entity->parent)) return 1;
+
 
     /* Libération de la mémoire lorsque l'entity quitte l'écran*/
     if(free_out_of_screen(game, entity)) return 1;
@@ -109,6 +111,7 @@ int on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direc
     else if(entity->type == PLAYER) return on_collide_player(game, (Player*)entity->parent, other, direction);
     else if(entity->type == ENNEMY) return on_collide_ennemy(game, (Ennemy*)entity->parent, other, direction);
     else if(entity->type == MISSILE) return on_collide_missile(game, (Missile*)entity->parent, other, direction);
+    else if(entity->type == BONUS) return on_collide_bonus(game, (Bonus*)entity->parent, other, direction);
 
     return 0;
 }
@@ -135,16 +138,7 @@ int free_out_of_screen(Game *game, Entity *entity) {
     return 0;
 }
 
-void free_entity(Entity *entity) {
 
-    if(entity->type == MISSILE) free_missile((Missile*)entity->parent);
-    if(entity->type == ENNEMY) free_ennemy((Ennemy*)entity->parent);
-    if(entity->type == PLAYER) free_player((Player*)entity->parent);
-    
-    free_animation(entity->sprite);
-    free(entity->speed);
-    free(entity);
-}
 
 Direction get_direction(Entity *entity) {
     if(entity->speed->speed_x > 0) return RIGHT;
@@ -173,4 +167,15 @@ Entity* closest_entity(Game *game, Entity *entity, EntityType filter) {
 
 Entity* closest_ennemy(Game *game) {
     return closest_entity(game, game->player->entity, ENNEMY);
+}
+
+void free_entity(Game* game, Entity *entity) {
+    if(entity->type == MISSILE) free_missile((Missile*)entity->parent);
+    if(entity->type == ENNEMY) free_ennemy(game, (Ennemy*)entity->parent);
+    if(entity->type == PLAYER) free_player(game, (Player*)entity->parent);
+    
+    free_animation(entity->sprite);
+    free(entity->speed);
+    
+    free(entity);
 }

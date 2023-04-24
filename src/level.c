@@ -3,6 +3,7 @@
 
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
+#include "../include/bonus.h"
 #include "../include/ennemy.h"
 #include "../include/level.h"
 
@@ -49,6 +50,9 @@ void create_object_line(Game *game, char* object_line) {
         switch(get_object_type(object_line[i])) {
             case ENNEMY:
                 create_ennemy(game, object_line[i], (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
+                break;
+            case BONUS :
+                create_bonus(game, object_line[i], (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
                 break;
             default :
                 break;

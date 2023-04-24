@@ -5,8 +5,6 @@
 #include <signal.h>
 #include <unistd.h>
 
-
-
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
 #include "../include/frame.h"
@@ -20,7 +18,6 @@ Settings* settings;
 void sigint_handler(int sig) {
     quit = 1;
 }
-
 
 int main() {
     struct timespec start_frame_time;
@@ -41,8 +38,8 @@ int main() {
         MLV_clear_window(MLV_COLOR_BLACK);
 
         
-        update_frame(game); /*Temporize ?*/
-        update_game(game);
+        draw_frame(game); 
+        update_game(game); /*Temporize ?*/
 
         clock_gettime(CLOCK_MONOTONIC, &end_frame_time);
         frame_time = (end_frame_time.tv_sec - start_frame_time.tv_sec) + (end_frame_time.tv_nsec - start_frame_time.tv_nsec) / 1000000000.0;
@@ -56,7 +53,6 @@ int main() {
     free_game(game);
     free_frame();
     free(settings);
-    
 
     return EXIT_SUCCESS;
 }

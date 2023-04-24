@@ -1,0 +1,6 @@
+=====Shield bonus=====
+id:S
+width:10
+height:10
+effect:1
+animation:resources/utils/shield-%d.png
