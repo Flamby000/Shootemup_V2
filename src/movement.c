@@ -14,6 +14,7 @@ SPEED_FUNC get_movement_function(int id) {
         case MOVEMENT_BACKWARD:        return movement_backward;        /* id : 2 */
         case MOVEMENT_INFINITE_SCROLL: return movement_infinite_scroll; /* id : 3 */
         case MOVEMENT_CONTROLLER:      return movement_controller;      /* id : 4 */
+        case MOVEMENT_FOLLOW_PLAYER:   return movement_follow_player;   /* id : 5 */
         default:                       return movement_none;
     }
 }
@@ -63,4 +64,34 @@ void movement_controller(Game *game, Entity *entity) {
     }
 
     avoid_collide_border(entity);
+}
+
+void movement_follow_entity(Game *game, Entity *entity, Entity *target) {
+    if(target != NULL) {
+        Speed *speed = entity->speed;
+        int target_x = target->x + target->width / 2;
+        int target_y = target->y + target->height / 2;
+
+        if(entity->x + entity->width / 2 < target_x) {
+            speed->speed_x = speed->speed;
+        } else if(entity->x + entity->width / 2 > target_x) {
+            speed->speed_x = -speed->speed;
+        } else {
+            speed->speed_x = 0;
+        }
+
+        if(entity->y + entity->height / 2 < target_y) {
+            speed->speed_y = speed->speed;
+        } else if(entity->y + entity->height / 2 > target_y) {
+            speed->speed_y = -speed->speed;
+        } else {
+            speed->speed_y = 0;
+        }
+    } else {
+        movement_forward(game, entity);
+    }
+}
+
+void movement_follow_player(Game *game, Entity *entity) {
+    movement_follow_entity(game, entity, closest_entity(game, entity, PLAYER));
 }

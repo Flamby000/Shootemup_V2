@@ -105,6 +105,9 @@ typedef struct _Missile {
     struct _Entity target;
     int damage;
     int is_from_player;
+
+    int fuel;
+    int creation_time;
 } Missile;
 
 typedef struct _Wave {

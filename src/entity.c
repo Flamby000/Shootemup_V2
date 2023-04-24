@@ -50,7 +50,7 @@ void avoid_collide_border(Entity *entity) {
     }      
 }
 
-void update_entity(Game* game, Entity *entity) {
+int update_entity(Game* game, Entity *entity) {
     EntityLink* current;
 
     /* Mis à jour de la vitesse */
@@ -60,15 +60,20 @@ void update_entity(Game* game, Entity *entity) {
     entity->x += entity->speed->speed_x;
     entity->y += entity->speed->speed_y;
 
+    /* Manage missile update (for fuel)*/
+    if(entity->type == MISSILE) 
+    if(update_missile(game, (Missile*)entity->parent)) return 1;
+
     /* Libération de la mémoire lorsque l'entity quitte l'écran*/
-    free_out_of_screen(game, entity);
+    if(free_out_of_screen(game, entity)) return 1;
 
     /* Détection des collisions*/
     for(current = game->entities; current != NULL; current = current->next) {
         if(entity != NULL && current->entity != NULL && entity != current->entity) {
-            if(on_entity_collide(game, entity, current->entity, get_entity_collide(entity, current->entity))) return;
+            if(on_entity_collide(game, entity, current->entity, get_entity_collide(entity, current->entity))) return 1;
         }
     }
+    return 0;
 }
 
 Direction get_entity_collide(Entity* entity, Entity* other) {
@@ -108,11 +113,12 @@ int on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direc
     return 0;
 }
 
-void free_out_of_screen(Game *game, Entity *entity) {
+int free_out_of_screen(Game *game, Entity *entity) {
 
     /* Libération des ennemies lorsqu'ils dépassent le bas de l'écran*/
     if(entity->type == ENNEMY && entity->y > settings->win_height) {
         remove_entity(game, entity);
+        return 1;
     }
 
     /* Libération des missiles quand ils quittent l'écran*/
@@ -123,7 +129,10 @@ void free_out_of_screen(Game *game, Entity *entity) {
         entity->x + entity->width < 0)
     ) {
         remove_entity(game, entity);
+        return 1;
     }
+
+    return 0;
 }
 
 void free_entity(Entity *entity) {
@@ -163,5 +172,5 @@ Entity* closest_entity(Game *game, Entity *entity, EntityType filter) {
 }
 
 Entity* closest_ennemy(Game *game) {
-    return closest_entity(game, game->player, ENNEMY);
+    return closest_entity(game, game->player->entity, ENNEMY);
 }

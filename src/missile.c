@@ -13,7 +13,7 @@
 
 Missile* create_missile(Game *game, Entity *sender, int type) {
     Missile *missile;
-    int width, height, speed, damage, x, y;
+    int width, height, speed, damage, x, y, fuel;
     void (*movement)(struct _Game*, struct _Entity*);
     Animation *animation;
     char key[200];
@@ -41,6 +41,7 @@ Missile* create_missile(Game *game, Entity *sender, int type) {
                 else if(strcmp(key, "animation") == 0) animation = init_animation_wrapper(value);
                 else if(strcmp(key, "speed") == 0)     speed = atoi(value);
                 else if(strcmp(key, "damage") == 0)    damage = atoi(value);
+                else if(strcmp(key, "fuel") == 0)    fuel = atoi(value);
                 else if(strcmp(key, "movement") == 0){ movement = get_movement_function(atoi(value));
                     break;
                 } 
@@ -60,6 +61,8 @@ Missile* create_missile(Game *game, Entity *sender, int type) {
     missile = malloc(sizeof(Missile));
     missile->entity = create_entity(x, y, width, height, speed, movement, animation, missile, MISSILE);
     missile->damage = damage;
+    missile->creation_time = MLV_get_time();
+    missile->fuel = fuel;
     if(sender->type == PLAYER) missile->is_from_player = 1;
     else missile->is_from_player = 0;
 
@@ -69,6 +72,16 @@ Missile* create_missile(Game *game, Entity *sender, int type) {
 
 void free_missile(Missile *missile) {
     free(missile);
+}
+
+int update_missile(Game *game, Missile *missile) {
+    if(missile->fuel > 0) {
+        if(MLV_get_time() - missile->creation_time > missile->fuel) {
+            remove_entity(game, missile->entity);
+            return 1;
+        }
+    }
+    return 0;
 }
 
 int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction direction) {

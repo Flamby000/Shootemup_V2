@@ -10,3 +10,16 @@ cooldown:1000
 animation:resources/ennemies/ennemy1-forward-%d.png
 movement:1
 shoot:1
+
+=====Simple targeting ennemy=====
+id:2
+width:43
+height:60
+speed:2
+score:10
+life:1
+invincibility:0
+cooldown:1000
+animation:resources/ennemies/ennemy1-forward-%d.png
+movement:1
+shoot:2

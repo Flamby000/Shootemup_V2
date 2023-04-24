@@ -17,3 +17,8 @@ void movement_controller(Game* game, Entity *entity);
 
 #define MOVEMENT_FOLLOW_PLAYER 5
 void movement_follow_player(Game* game, Entity *entity);
+
+
+
+
+void movement_follow_entity(Game *game, Entity *entity, Entity *target);

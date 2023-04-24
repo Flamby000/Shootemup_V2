@@ -23,11 +23,6 @@ Game* init_game() {
     init_background(game);
     game->player = create_player(game);
 
-    /*
-    create_ennemy(game, BASIC_ENNEMY, settings->win_width/2);
-    create_ennemy(game, BASIC_ENNEMY, settings->win_width/5);
-    */
-    
     return game;
 }
 
@@ -38,19 +33,13 @@ void update_game(Game *game) {
     for(current = game->entities; current != NULL; current = current->next) {
         entity = current->entity;
         /* Update movement entity*/
-        update_entity(game, entity);
+        if(update_entity(game, entity)) return;
         
         /* Update shoot of players/ennemies*/
         if(entity->type == PLAYER || entity->type == ENNEMY) {
             update_spaceship(game, entity);
         }
-
-        if(entity->type == PLAYER) {
-            Entity *closest = closest_entity(game, entity, ENNEMY);
-            /*printf("Closest ennemy : %d\n", get_entity_id(game, closest));*/
-        } 
     }
-
 
     /* Update the level */
     update_level(game, game->level, 0);
