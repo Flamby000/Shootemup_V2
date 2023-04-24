@@ -8,6 +8,6 @@ Animation* init_multiple_animation(char* forward_path, char* backward_path, char
 Animation* init_animation_wrapper(char* str);
 
 void free_animation(Animation* animation);
-void draw_entity(Entity* entity);
+void draw_entity(Entity* entity, Entity* parent);
 
 #endif

@@ -13,3 +13,7 @@ Direction get_entity_collide(Entity* entity, Entity* other);
 int on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direction);
 Entity* closest_entity(Game *game, Entity *entity, EntityType filter);
 Entity* closest_ennemy(Game *game);
+
+
+void add_child(Entity* parent, Entity* child);
+void remove_child(Game* game, Entity* parent, Entity* child);

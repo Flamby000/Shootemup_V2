@@ -52,7 +52,8 @@ void create_object_line(Game *game, char* object_line) {
                 create_ennemy(game, object_line[i], (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
                 break;
             case BONUS :
-                create_bonus(game, object_line[i], (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
+                if(object_line[i] == 'R') create_random_bonus(game, (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
+                else create_bonus(game, object_line[i], (settings->win_width / line_size) * i + (settings->win_width / line_size) / 2);
                 break;
             default :
                 break;

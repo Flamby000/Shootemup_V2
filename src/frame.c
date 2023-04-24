@@ -18,7 +18,7 @@ void draw_frame(Game* game) {
         entity = current->entity;
         if(entity->type == PLAYER) {
             draw_player(game, (Player*)entity->parent);
-        } else draw_entity(entity);
+        } else draw_entity(entity, NULL);
         
         current = current->next;
     }
@@ -52,8 +52,8 @@ void draw_player(Game *game, Player* player) {
 
     /* Invincibility frame */
     if(MLV_get_time() - (&player->ship->life)->last_damage_time < (&player->ship->life)->invincibility_duration) {
-        if(MLV_get_time() % 500 < 250) draw_entity(player->entity);
-    } else draw_entity(player->entity);
+        if(MLV_get_time() % 500 < 250) draw_entity(player->entity, NULL);
+    } else draw_entity(player->entity, NULL);
 
 }
 

@@ -19,10 +19,11 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     SPEED_FUNC movement;
     SHOOT_FUNC shoot;
     Animation *animation;
+    char* token;
     char key[200];
     char value[200];
     char line[400];
-    char current_id = '0';
+    char current_id = 'X';
 
     FILE *file = fopen(ENNEMY_DATA_PATH, "r");
 
@@ -33,7 +34,7 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
 
     while(fscanf(file, "%s", line) != EOF) {
         if(strchr(line, ':') != NULL) {
-            char *token = strtok(line, ":");
+            token = strtok(line, ":");
             strcpy(key, token);
             token = strtok(NULL, ":");
             strcpy(value, token);
@@ -56,13 +57,13 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
             }
         }
     }
+    fclose(file);
 
-    if(current_id == '0') {
+    if(current_id == 'X') {
         printf("Error : Ennemy type not found\n");
         return NULL;
     }
 
-    fclose(file);
     ennemy->entity = create_entity(x, -height, width, height, speed, movement, animation, ennemy, ENNEMY);
     ennemy->ship = create_spaceship(life, cooldown, invincibility, shoot);
     ennemy->score = score;

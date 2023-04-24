@@ -122,10 +122,19 @@ void free_animation(Animation* animation) {
     free(animation);
 }
 
-void draw_entity(Entity* entity) {
+void draw_entity(Entity* entity, Entity* parent) {
+    EntityLink *child;
     Animation *animation = entity->sprite;
+    int parent_x = 0;
+    int parent_y = 0;
+
     if(animation == NULL) return; /* Don't draw entities without animation*/
 
+    if(parent != NULL) {
+        parent_x = parent->x;
+        parent_y = parent->y;
+    }
+    
 
     switch(animation->type) {
         case SQUARE:
@@ -139,11 +148,11 @@ void draw_entity(Entity* entity) {
             break;
         case SPRITE:
             MLV_resize_image(animation->sprite, entity->width, entity->height);
-            MLV_draw_image(animation->sprite, entity->x, entity->y);
+            MLV_draw_image(animation->sprite, parent_x+entity->x, parent_y+entity->y);
             break;
         case ANIMATED:
             MLV_resize_image(animation->forward_images[animation->current_frame], entity->width, entity->height);
-            MLV_draw_image(animation->forward_images[animation->current_frame], entity->x, entity->y);
+            MLV_draw_image(animation->forward_images[animation->current_frame], parent_x+entity->x, parent_y+entity->y);
 
             if(MLV_get_time() - animation->last_frame_time > animation->frame_duration) {
                 animation->current_frame++;
@@ -155,19 +164,19 @@ void draw_entity(Entity* entity) {
             switch(get_direction(entity)) {
                 case TOP:
                     MLV_resize_image(animation->forward_images[animation->current_frame], entity->width, entity->height);
-                    MLV_draw_image(animation->forward_images[animation->current_frame], entity->x, entity->y);
+                    MLV_draw_image(animation->forward_images[animation->current_frame], parent_x+entity->x, parent_y+entity->y);
                     break;
                 case BOTTOM:
                     MLV_resize_image(animation->backward_images[animation->current_frame], entity->width, entity->height);
-                    MLV_draw_image(animation->backward_images[animation->current_frame], entity->x, entity->y);
+                    MLV_draw_image(animation->backward_images[animation->current_frame], parent_x+entity->x, parent_y+entity->y);
                     break;
                 case LEFT:
                     MLV_resize_image(animation->left_images[animation->current_frame], entity->width, entity->height);
-                    MLV_draw_image(animation->left_images[animation->current_frame], entity->x, entity->y);
+                    MLV_draw_image(animation->left_images[animation->current_frame], parent_x+entity->x, parent_y+entity->y);
                     break;
                 case RIGHT:
                     MLV_resize_image(animation->right_images[animation->current_frame], entity->width, entity->height);
-                    MLV_draw_image(animation->right_images[animation->current_frame], entity->x, entity->y);
+                    MLV_draw_image(animation->right_images[animation->current_frame], parent_x+entity->x, parent_y+entity->y);
                     break;
                 default:
                     break;
@@ -181,4 +190,8 @@ void draw_entity(Entity* entity) {
         default:
             break;
     }
+        for(child = entity->children; child != NULL; child = child->next) {
+            draw_entity(child->entity, entity);
+        }
+    
 }

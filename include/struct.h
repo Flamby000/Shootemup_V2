@@ -15,6 +15,7 @@ struct _Shooter;
 struct _SpaceShip;
 struct _Missile;
 struct _Bonus;
+struct _BonusLink;
 struct _Level;
 struct _Wave;
 
@@ -60,7 +61,7 @@ typedef struct _Entity{
     int rotation;
     struct _Speed* speed;
 
-    EntityLink *followers;
+    struct _EntityLink* children;
     void* parent;
     EntityType type;
 } Entity;
@@ -87,9 +88,15 @@ typedef struct _Shooter{
     int cooldown;
 } Shooter;
 
+typedef struct _BonusLink {
+    struct _Bonus* bonus;
+    struct _BonusLink* next;
+} BonusLink;
+
 typedef struct _SpaceShip {
     struct _Life life;
     struct _Shooter shooter;
+    struct _BonusLink* bonus;
 } SpaceShip;
 
 typedef struct _Player {
@@ -117,7 +124,7 @@ typedef struct _Missile {
 typedef struct _Bonus {
     struct _Entity* entity;
     BONUS_FUNC effect;
-    int type;
+    char type;
 } Bonus;
 
 
