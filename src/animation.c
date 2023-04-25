@@ -62,7 +62,7 @@ Animation* init_animation(char* path) {
         animation->forward_images[i-1] = MLV_load_image(path_i);
     }
     animation->current_frame = 0;
-    animation->last_frame_time = MLV_get_time();
+    animation->last_frame_time = 0;
     animation->frame_duration = 100;
     return animation;
 }
@@ -186,6 +186,8 @@ void draw_entity(Game *game, Entity* entity, Entity* parent) {
 
             if(MLV_get_time() - animation->last_frame_time > animation->frame_duration) {
                 animation->current_frame++;
+                animation->last_frame_time = MLV_get_time();
+
                 if(animation->current_frame >= animation->nb_frames-1) {
                     remove_entity(game, entity);
                     return;

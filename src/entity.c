@@ -118,8 +118,8 @@ int on_entity_collide(Game* game, Entity* entity, Entity* other, Direction direc
     if(direction == NONE) return 0;   
     else if(entity->type == PLAYER)  return on_collide_player(game, (Player*)entity->parent, other, direction);
     else if(entity->type == ENNEMY)  return on_collide_ennemy(game, (Ennemy*)entity->parent, other, direction);
-    else if(entity->type == MISSILE) return on_collide_missile(game, (Missile*)entity->parent, other, direction);
-    else if(entity->type == BONUS)   return on_collide_bonus(game, (Bonus*)entity->parent, other, direction);
+    else if(entity->type == MISSILE) return on_collide_missile(game,(Missile*)entity->parent, other, direction);
+    else if(entity->type == BONUS)   return on_collide_bonus(game,  (Bonus*)entity->parent, other, direction);
 
     return 0;
 }
@@ -183,6 +183,9 @@ void free_entity(Game* game, Entity *entity) {
     if(entity->type == ENNEMY) free_ennemy(game, (Ennemy*)entity->parent);
     if(entity->type == PLAYER) free_player(game, (Player*)entity->parent);
     if(entity->type == BONUS) free_bonus((Bonus*)entity->parent);
+
+    /* Free children */
+
     free_animation(entity->sprite);
     free(entity->speed);
     

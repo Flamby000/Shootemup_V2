@@ -19,26 +19,25 @@ Settings* settings;
 void sigint_handler(int sig) {
     quit = 1;
 }
+long get_timestamp_ms()
+{
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    return ts.tv_sec * 1000 + ts.tv_nsec / 1000000;
+}
 
-int temporize(struct timespec  *update_time, unsigned int space_time) {
-    struct timespec  current_time;
-    clock_gettime(CLOCK_MONOTONIC_RAW, &current_time);
-    printf("%ld\n", current_time.tv_nsec/1000000 - update_time->tv_nsec/1000000);
-
-    if(current_time.tv_nsec/1000000 - update_time->tv_nsec/1000000 > space_time) {
-        clock_gettime(CLOCK_MONOTONIC_RAW, update_time);
-        return 1;
-    }
-
-    return 0;
+int temporize(long *update_time, long space_time) {
+    long now_time = get_timestamp_ms();
+    if((now_time- (*update_time)) > space_time) {
+        *update_time = get_timestamp_ms();
+        return 0;
+    }    
+    return 1;
 }
 
 int main() {
     Game *game;
-    struct timespec update_time, draw_time;
-    clock_gettime(CLOCK_MONOTONIC_RAW, &update_time);
-    clock_gettime(CLOCK_MONOTONIC_RAW, &draw_time);
-
+    long update_time = get_timestamp_ms();
     
     signal(SIGINT, sigint_handler);
     srand(time(NULL));
@@ -48,15 +47,15 @@ int main() {
     game = init_game();
     
     while(!quit) {
-        if(temporize(&update_time, 12)) {
-            update_game(game); 
-        }
 
-        if(temporize(&draw_time, 12)) {
-            MLV_clear_window(MLV_COLOR_BLACK);
-            draw_frame(game); 
-            MLV_actualise_window();
-        }
+        if(temporize(&update_time, 12)) continue ;
+
+        update_game(game);
+        MLV_clear_window(MLV_COLOR_BLACK);
+        draw_frame(game); 
+        MLV_actualise_window();
+        
+        
     }
 
     free_game(game);

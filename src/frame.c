@@ -37,14 +37,14 @@ void draw_player(Game *game, Player* player) {
     int bar_count = 0;
 
     /* Health bar */
-    /*
+    
     draw_bar(
         settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
         bar_width, bar_height, 
         (&player->ship->life)->hp, (&player->ship->life)->max_hp, 
         MLV_COLOR_RED, 1, ""
     );   
-    */
+    
     bar_count++;
     
     /* Cooldown bar */
@@ -55,6 +55,7 @@ void draw_player(Game *game, Player* player) {
         MLV_COLOR_GREEN, 0, ""
     );
 
+    /*
     draw_image_progress(
         MLV_load_image("resources/player/backward-1.png"), 
         MLV_load_image("resources/player/backward-1-dark.png"),
@@ -62,6 +63,7 @@ void draw_player(Game *game, Player* player) {
         42, 74, 
         (&player->ship->life)->hp, (&player->ship->life)->max_hp
     );
+    */
 
     /* Invincibility frame */
     if(MLV_get_time() - (&player->ship->life)->last_damage_time < (&player->ship->life)->invincibility_duration) {
