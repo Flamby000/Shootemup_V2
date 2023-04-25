@@ -19,7 +19,8 @@ void movement_controller(Game* game, Entity *entity);
 void movement_follow_player(Game* game, Entity *entity);
 
 
-
+#define MOVEMENT_SINUSOIDAL 6
+void movement_sinusoidal(Game* game, Entity *entity);
 
 void push_entity(Game *game, Entity *entity);
 void movement_follow_entity(Game *game, Entity *entity, Entity *target);

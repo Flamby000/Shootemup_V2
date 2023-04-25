@@ -118,6 +118,7 @@ typedef struct _Missile {
     int damage;
     int is_from_player;
 
+    int invincible;
     int fuel;
     int creation_time;
 } Missile;
@@ -162,7 +163,8 @@ typedef enum _AnimationType {
     SPRITE,
     ANIMATED,
     SQUARE,
-    MULTIPLE_ANIMATED
+    MULTIPLE_ANIMATED,
+    ONE_SHOT_ANIMATION
 } AnimationType;
 
 

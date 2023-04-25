@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
 #include "../include/entity.h"
+#include "../include/movement.h"
+#include "../include/game.h"
 #include "../include/animation.h"
 
 Animation* init_animation_wrapper(char* str) {
@@ -23,6 +26,20 @@ Animation* init_square(MLV_Color color) {
     animation->color = color;
     return animation;
 }
+
+void create_one_shot_animation(Game *game, char *path, Entity *entity) {
+    Entity *entity_new = create_entity(
+        entity->x, entity->y, 
+        entity->width*1.4, entity->height*1.4,
+        0, movement_none,
+        init_animation(path),
+        NULL, LABEL);
+    entity_new->sprite->type = ONE_SHOT_ANIMATION;
+    entity_new->sprite->frame_duration = 100;
+
+    insert_entity(game, entity_new);
+}
+
 Animation* init_animation(char* path) {
     Animation* animation = malloc(sizeof(Animation));
     int i;
@@ -95,7 +112,7 @@ Animation* init_multiple_animation(char* forward_path, char* backward_path, char
 void free_animation(Animation* animation) {
     int i;
     switch(animation->type) {
-        case ANIMATED:
+        case ANIMATED || ONE_SHOT_ANIMATION:
             for(i = 0; i < animation->nb_frames; i++) {
                 MLV_free_image(animation->forward_images[i]);
             }
@@ -122,7 +139,7 @@ void free_animation(Animation* animation) {
     free(animation);
 }
 
-void draw_entity(Entity* entity, Entity* parent) {
+void draw_entity(Game *game, Entity* entity, Entity* parent) {
     EntityLink *child;
     Animation *animation = entity->sprite;
     int parent_x = 0;
@@ -151,12 +168,28 @@ void draw_entity(Entity* entity, Entity* parent) {
             break;
         case ANIMATED:
             MLV_resize_image(animation->forward_images[animation->current_frame], entity->width, entity->height);
+            /*int speed_x = entity->speed->speed_x;
+            int speed_y = entity->speed->speed_y;
+            MLV_rotate_image(animation->forward_images[animation->current_frame], atan2(speed_y, speed_x));
+            */
             MLV_draw_image(animation->forward_images[animation->current_frame], parent_x+entity->x, parent_y+entity->y);
 
             if(MLV_get_time() - animation->last_frame_time > animation->frame_duration) {
                 animation->current_frame++;
                 if(animation->current_frame >= animation->nb_frames-1) animation->current_frame = 0; 
                 animation->last_frame_time = MLV_get_time();
+            }
+            break;
+        case ONE_SHOT_ANIMATION :
+            MLV_resize_image(animation->forward_images[animation->current_frame], entity->width, entity->height);
+            MLV_draw_image(animation->forward_images[animation->current_frame], parent_x+entity->x, parent_y+entity->y);
+
+            if(MLV_get_time() - animation->last_frame_time > animation->frame_duration) {
+                animation->current_frame++;
+                if(animation->current_frame >= animation->nb_frames-1) {
+                    remove_entity(game, entity);
+                    return;
+                }
             }
             break;
         case MULTIPLE_ANIMATED:
@@ -190,7 +223,7 @@ void draw_entity(Entity* entity, Entity* parent) {
             break;
     }
         for(child = entity->children; child != NULL; child = child->next) {
-            draw_entity(child->entity, entity);
+            draw_entity(game, child->entity, entity);
         }
     
 }

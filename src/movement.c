@@ -16,6 +16,7 @@ SPEED_FUNC get_movement_function(int id) {
         case MOVEMENT_INFINITE_SCROLL: return movement_infinite_scroll; /* id : 3 */
         case MOVEMENT_CONTROLLER:      return movement_controller;      /* id : 4 */
         case MOVEMENT_FOLLOW_PLAYER:   return movement_follow_player;   /* id : 5 */
+        case MOVEMENT_SINUSOIDAL:      return movement_sinusoidal;      /* id : 6 */
         default:                       return movement_none;
     }
 }
@@ -43,6 +44,12 @@ void movement_infinite_scroll(Game *game, Entity *entity) {
     if(entity->y > settings->win_height) {
         entity->y = -entity->height;
     }
+}
+
+void movement_sinusoidal(Game *game, Entity *entity) {
+    Speed *speed = entity->speed;
+    speed->speed_x = (speed->speed*2) * sin (entity->y * 0.01);
+    speed->speed_y = speed->speed;
 }
 
 void movement_controller(Game *game, Entity *entity) {
@@ -125,7 +132,6 @@ void movement_follow_entity(Game *game, Entity *entity, Entity *target) {
         movement_forward(game, entity);
     }
 }
-
 
 void push_entity(Game *game, Entity *entity) {
     Speed *speed = entity->speed;

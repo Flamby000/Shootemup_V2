@@ -13,17 +13,32 @@
 #include "../include/entity.h"
 #include "../include/game.h"
 
+
 int quit = 0;   
 Settings* settings;
 void sigint_handler(int sig) {
     quit = 1;
 }
 
+int temporize(struct timespec  *update_time, unsigned int space_time) {
+    struct timespec  current_time;
+    clock_gettime(CLOCK_MONOTONIC_RAW, &current_time);
+    printf("%ld\n", current_time.tv_nsec/1000000 - update_time->tv_nsec/1000000);
+
+    if(current_time.tv_nsec/1000000 - update_time->tv_nsec/1000000 > space_time) {
+        clock_gettime(CLOCK_MONOTONIC_RAW, update_time);
+        return 1;
+    }
+
+    return 0;
+}
+
 int main() {
-    struct timespec start_frame_time;
-    struct timespec end_frame_time;
-    int frame_time;
     Game *game;
+    struct timespec update_time, draw_time;
+    clock_gettime(CLOCK_MONOTONIC_RAW, &update_time);
+    clock_gettime(CLOCK_MONOTONIC_RAW, &draw_time);
+
     
     signal(SIGINT, sigint_handler);
     srand(time(NULL));
@@ -32,22 +47,16 @@ int main() {
     init_frame();
     game = init_game();
     
-    
     while(!quit) {
-        clock_gettime(CLOCK_MONOTONIC, &start_frame_time);
-        MLV_clear_window(MLV_COLOR_BLACK);
-
-        
-        draw_frame(game); 
-        update_game(game); /*Temporize ?*/
-
-        clock_gettime(CLOCK_MONOTONIC, &end_frame_time);
-        frame_time = (end_frame_time.tv_sec - start_frame_time.tv_sec) + (end_frame_time.tv_nsec - start_frame_time.tv_nsec) / 1000000000.0;
-        if(frame_time < (1.0/GAME_SPEED)) {
-            MLV_wait_milliseconds((int)(((1.0/GAME_SPEED) - frame_time) * 1000));
+        if(temporize(&update_time, 12)) {
+            update_game(game); 
         }
-        MLV_actualise_window();
 
+        if(temporize(&draw_time, 12)) {
+            MLV_clear_window(MLV_COLOR_BLACK);
+            draw_frame(game); 
+            MLV_actualise_window();
+        }
     }
 
     free_game(game);

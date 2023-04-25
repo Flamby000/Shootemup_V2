@@ -19,6 +19,14 @@ height:30
 consumer:false
 animation:resources/bonus/max-life-%d.png
 
+
+=== SPEED UP ===
+id:V
+width:30
+height:30
+consumer:false
+animation:resources/bonus/speed_up_%d.png
+
 =====Get 1 HP====
 id:H
 width:30

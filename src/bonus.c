@@ -6,6 +6,7 @@
 #include "../include/entity.h"
 #include "../include/animation.h"
 #include "../include/movement.h"
+#include "../include/shooter.h"
 #include "../include/entity.h"
 #include "../include/game.h"
 #include "../include/spaceship.h"
@@ -113,6 +114,7 @@ BONUS_FUNC get_bonus_effect_by_id(char id) {
         case MAX_LIFE_INCREASE_EFFECT: return max_life_increase_effect;
         case POWER_UP_SHOOT_EFFECT: return power_up_shoot_effect; 
         case LIFE_INCREASE_EFFECT: return life_increase_effect;
+        case POWER_UP_SPEED_EFFECT: return power_up_speed_effect;
         default: return NULL;
     } 
 }
@@ -133,8 +135,16 @@ void max_life_increase_effect(Game *game, Player* eater, int reverse) {
     }
 }
 
+void power_up_speed_effect(Game *game, Player* eater, int reverse) {
+    if(!reverse) eater->entity->speed->speed += 3;
+    else eater->entity->speed->speed -= 3;
+}
+
 void power_up_shoot_effect(Game *game, Player* eater, int reverse) {
-    printf("power_up_shoot_effect :%d\n", reverse);
+    SpaceShip *ship = eater->ship;
+    Shooter *shooter = &ship->shooter;
+    if(!reverse) shooter->update_shoot = shoot_player_perforing;
+    else shooter->update_shoot = shoot_player_basic;
 }
 
 void life_increase_effect(Game *game, Player* eater, int reverse) {

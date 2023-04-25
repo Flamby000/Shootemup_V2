@@ -76,8 +76,7 @@ void remove_bonus(Game *game, Entity *entity, Bonus *bonus) {
     BonusLink *previous = NULL;
 
     if(ship == NULL) return;
-
-    bonus->effect(game, entity->parent, 1);
+    if(bonus->effect != NULL) bonus->effect(game, entity->parent, 1);
 
     current = ship->bonus;
     while(current != NULL) {

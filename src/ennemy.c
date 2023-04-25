@@ -6,7 +6,7 @@
 #include "../include/animation.h"
 #include "../include/game.h"
 #include "../include/spaceship.h"
-
+#include "../include/bonus.h"
 #include "../include/entity.h"
 #include "../include/player.h"
 #include "../include/shooter.h"
@@ -82,5 +82,12 @@ int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction dir
         deals_damage(game, collide, 1);
         return 1;
     }
+
+    if(collide->type == BONUS  && is_bonus_reachable(game, (Bonus*)collide->parent)) {
+        create_one_shot_animation(game, EXPLOSION_1, collide);
+        remove_entity(game, collide);
+        return 1;
+    }
+    
     return 0;
 }
