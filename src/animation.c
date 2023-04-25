@@ -129,7 +129,6 @@ void draw_entity(Entity* entity, Entity* parent) {
     int parent_y = 0;
 
     if(animation == NULL) return; /* Don't draw entities without animation*/
-
     if(parent != NULL) {
         parent_x = parent->x;
         parent_y = parent->y;

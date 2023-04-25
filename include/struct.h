@@ -30,6 +30,7 @@ extern struct _Settings *settings;
 typedef struct _Settings {
     int win_width;
     int win_height;
+    MLV_Font *small_font;
 } Settings;
 
 typedef struct _Game {
@@ -125,6 +126,7 @@ typedef struct _Bonus {
     struct _Entity* entity;
     BONUS_FUNC effect;
     char type;
+    int consumer;
 } Bonus;
 
 

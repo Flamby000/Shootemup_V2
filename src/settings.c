@@ -13,6 +13,7 @@ void load_settings() {
 
     settings = malloc(sizeof(Settings));
     settings->win_width = width;
-    settings->win_height = height;        
+    settings->win_height = height;
+
 }
 

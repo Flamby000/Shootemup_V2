@@ -100,13 +100,3 @@ void free_level(Level* level) {
     free(level->waves);
     free(level);
 }
-
-void print_level(Level* level) {
-    int i, j;
-    for(i = 0; i < level->nb_wave; i++) {
-        printf("Wave %d\n", i);
-        for(j = 0; j < level->waves[i].nb_line; j++) {
-            printf("%s\n", level->waves[i].object_lines[j]);
-        }
-    }
-}

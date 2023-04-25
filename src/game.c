@@ -96,7 +96,6 @@ int entity_count(Game *game) {
     return count;
 }
 
-
 void remove_entity(Game* game, Entity* entity) {
     EntityLink* current;
     for(current = game->entities; current != NULL; current = current->next) {

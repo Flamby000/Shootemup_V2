@@ -2,5 +2,26 @@
 id:S
 width:30
 height:30
-effect:1
+consumer:false
 animation:resources/utils/shield-%d.png
+
+=====Increase shoot power=====
+id:P
+width:30
+height:30
+consumer:false
+animation:resources/bonus/power_up_%d.png
+
+=====Increase max life====
+id:M
+width:30
+height:30
+consumer:false
+animation:resources/bonus/max-life-%d.png
+
+=====Get 1 HP====
+id:H
+width:30
+height:30
+consumer:true
+animation:resources/bonus/health-%d.png

@@ -10,43 +10,6 @@
 #include "../include/bonus.h"
 #include "../include/ennemy.h"
 #include "../include/entity.h"
-/*
-
-typedef struct _Game {
-    struct _EntityLink* entities;
-    struct _Player *player;
-    struct _Level *level;
-} Game;
-
-typedef struct _EntityLink {
-    struct _Entity* entity;
-    struct _EntityLink* next;
-    struct _EntityLink* children;
-} EntityLink;
-
-typedef enum _EntityType {
-    ENNEMY,
-    PLAYER,
-    MISSILE,
-    LABEL,
-    BONUS
-    
-} EntityType;
- 
-typedef struct _Entity{
-    struct _Animation* sprite;
-    int x;
-    int y;
-    int width;
-    int height;
-    int rotation;
-    struct _Speed* speed;
-
-    EntityLink *children;
-    void* parent;
-    EntityType type;
-} Entity;
-*/
 
 Entity* create_entity(int x, int y, int width, int height, 
                       int speed, SPEED_FUNC update_speed,

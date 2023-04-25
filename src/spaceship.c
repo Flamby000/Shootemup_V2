@@ -9,19 +9,6 @@
 #include "../include/entity.h"
 #include "../include/spaceship.h"
 
-/*
-typedef struct _BonusLink {
-    struct _Bonus* bonus;
-    struct _BonusLink* next;
-} BonusLink;
-
-typedef struct _SpaceShip {
-    struct _Life life;
-    struct _Shooter shooter;
-    struct _BonusLink* bonus;
-} SpaceShip;
-*/
-
 SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration,  SHOOT_FUNC update_shoot) {
     SpaceShip* ship = malloc(sizeof(SpaceShip));
     (&ship->life)->hp = life;
@@ -59,8 +46,9 @@ void add_bonus(Game *game, Entity *entity, Bonus *bonus) {
     if(ship == NULL) return;
     bonus->effect(game, entity->parent, 0);
     
+    /* TODO : adjust position when remove/add */
     bonus->entity->speed->update_speed = movement_none;
-    bonus->entity->x = settings->win_width/100 + count_bonus(entity) * settings->win_width/100;
+    bonus->entity->x = settings->win_width/100 + count_bonus(entity) * entity->width;
     bonus->entity->y = settings->win_width/100;
 
     new_bonus = malloc(sizeof(BonusLink));
@@ -145,12 +133,23 @@ void free_spaceship(Game* game, SpaceShip* spaceship) {
     free(spaceship);
 }
 
+
+Life* get_life(Entity *entity) {
+    if(entity->type == PLAYER)      return &((Player*)entity->parent)->ship->life;
+    else if(entity->type == ENNEMY) return &((Ennemy*)entity->parent)->ship->life;
+    else return NULL;
+}
+
 int deals_damage(Game *game, Entity *entity, int damage) {
-    Life *life;
+    Life *life = get_life(entity);
     
-    if(entity->type == ENNEMY)      life = &((Ennemy*)entity->parent)->ship->life;
-    else if(entity->type == PLAYER) life = &((Player*)entity->parent)->ship->life;
-    else return 0;
+    if(life == NULL) return 0;
+
+    if(damage <= 0) {
+        life->hp -= damage;
+        if(life->hp > life->max_hp) life->hp = life->max_hp;
+        return 0;
+    }
 
     if(MLV_get_time() - life->last_damage_time < life->invincibility_duration) return 0;
 
@@ -159,8 +158,9 @@ int deals_damage(Game *game, Entity *entity, int damage) {
         return 1;
     }
 
-    life->last_damage_time = MLV_get_time();
     life->hp -= damage;
+
+    life->last_damage_time = MLV_get_time();
 
     if(entity->type == PLAYER) push_entity(game, entity);
 

@@ -4,6 +4,7 @@ void update_spaceship(Game *game, Entity* entity);
 int deals_damage(Game *game, Entity *entity, int damage);
 int enable_shield(Game *game, Entity *entity);
 void disable_shield(Game *game, Entity *entity);
+Life* get_life(Entity *entity);
 
 void add_bonus(Game *game, Entity *entity, Bonus *bonus);
 void remove_bonus(Game *game, Entity *entity, Bonus *bonus);

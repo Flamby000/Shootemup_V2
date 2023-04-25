@@ -28,7 +28,7 @@ Player* create_player(Game *game) {
         player, PLAYER
     );
     insert_entity(game, player->entity);
-    player->ship = create_spaceship(5, 1000, 2000, shoot_player_basic);
+    player->ship = create_spaceship(5, 500, 2000, shoot_player_basic);
 
     return player;
 }

@@ -15,7 +15,6 @@
 Bonus *create_bonus(Game *game, char type, int x) {
     Bonus* bonus = malloc(sizeof(Bonus));
     int width, height, speed;
-    BONUS_FUNC effect;
     Animation *animation;
     char *token;
     char key[200];
@@ -42,7 +41,7 @@ Bonus *create_bonus(Game *game, char type, int x) {
             if(current_id == type) {
                 if(     strcmp(key, "width") == 0)         width = atoi(value);
                 else if(strcmp(key, "height") == 0)        height = atoi(value);
-                else if(strcmp(key, "effect") == 0)        effect = get_bonus_effect_by_id(atoi(value));
+                else if(strcmp(key, "consumer") == 0)      if(strcmp(value, "true") == 0) bonus->consumer = 1; else bonus->consumer = 0;
                 else if(strcmp(key, "animation") == 0) {   animation = init_animation_wrapper(value);
                     break;
                 }
@@ -58,7 +57,7 @@ Bonus *create_bonus(Game *game, char type, int x) {
     speed = rand() % 7 + 2;
 
     bonus->entity = create_entity(x, -height, width, height, speed, movement_forward, animation, bonus, BONUS);
-    bonus->effect = effect;
+    bonus->effect = get_bonus_effect_by_id(current_id);
     bonus->type = type;
     insert_entity(game, bonus->entity);
     return bonus;
@@ -69,15 +68,15 @@ Bonus *create_random_bonus(Game *game, int x) {
     return create_bonus(game, types[MLV_get_random_integer(0, strlen(types) - 1)], x);
 }
 
-BONUS_FUNC get_bonus_effect_by_id(int id) {
-    switch(id) {
-        case SHIELD_EFFECT: return shield_effect; /* ID : 1*/
-        default: return NULL;
-    } 
-}
 
 int on_collide_bonus(Game *game, Bonus *bonus, Entity *collide, Direction direction) {
     if(collide->type == PLAYER) {
+        if(bonus->consumer) {
+            bonus->effect(game, (Player*)collide->parent, 0);
+            remove_entity(game, bonus->entity);
+            return 1;
+        }
+
         if(is_bonus_reachable(game, bonus)) {
             if(have_bonus(collide, bonus->type)) {
                 remove_entity(game, bonus->entity);
@@ -108,11 +107,36 @@ void free_bonus(Bonus *bonus) {
     free(bonus);
 }
 
+BONUS_FUNC get_bonus_effect_by_id(char id) {
+    switch(id) {
+        case SHIELD_EFFECT: return shield_effect; 
+        case MAX_LIFE_INCREASE_EFFECT: return max_life_increase_effect;
+        case POWER_UP_SHOOT_EFFECT: return power_up_shoot_effect; 
+        case LIFE_INCREASE_EFFECT: return life_increase_effect;
+        default: return NULL;
+    } 
+}
+
 void shield_effect(Game *game, Player* eater, int reverse) {
     if(reverse) return;
     else enable_shield(game, eater->entity);
 }
 
 void max_life_increase_effect(Game *game, Player* eater, int reverse) {
-    printf("max_life_increase_effect :%d\n", reverse);    
+    Life* life = get_life(eater->entity);
+    if(life == NULL) return;
+    if(!reverse) {
+        life->max_hp++;
+        life->hp = life->max_hp;
+    } else {
+        life->max_hp--;
+    }
+}
+
+void power_up_shoot_effect(Game *game, Player* eater, int reverse) {
+    printf("power_up_shoot_effect :%d\n", reverse);
+}
+
+void life_increase_effect(Game *game, Player* eater, int reverse) {
+    deals_damage(game, eater->entity, -1);
 }
