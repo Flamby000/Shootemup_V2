@@ -3,6 +3,7 @@
 
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
+#include "../include/game.h"
 #include "../include/bonus.h"
 #include "../include/ennemy.h"
 #include "../include/level.h"
@@ -10,6 +11,8 @@
 Level* create_level(char* level_file) {
     char line[200];
     int line_size;
+    int boss_id = 'X';
+    int i;
     Level *level = malloc(sizeof(Level));
     FILE *file = fopen(level_file, "r");
     if(file == NULL) {
@@ -27,15 +30,26 @@ Level* create_level(char* level_file) {
 
     while(fscanf(file, "%s", line) != EOF) {
         if(line[0] == '#') continue;
-        if(line[0] == '=') {
+        if(line[0] == '=' || line[0] == '-') {
             line_size = strlen(line);
             level->nb_wave++;
             level->waves = realloc(level->waves, level->nb_wave * sizeof(Wave));
+            if(line[0] == '=') boss_id = 'X';
+            else {
+                for(i = 0; line[i] != '\0'; i++){
+                    if(line[i] != '-') {
+                        boss_id = line[i];
+                        break;
+                    }
+                } 
+            }
         } else {
             level->waves[level->nb_wave - 1].nb_line++;
             level->waves[level->nb_wave - 1].current_line = 0;
             level->waves[level->nb_wave - 1].object_lines = realloc(level->waves[level->nb_wave - 1].object_lines, level->waves[level->nb_wave - 1].nb_line * sizeof(char*));
             level->waves[level->nb_wave - 1].object_lines[level->waves[level->nb_wave - 1].nb_line - 1] = malloc(line_size * sizeof(char));
+            level->waves[level->nb_wave - 1].boss_id = boss_id;
+            level->waves[level->nb_wave - 1].boss = NULL;
             strcpy(level->waves[level->nb_wave - 1].object_lines[level->waves[level->nb_wave - 1].nb_line - 1], line);
         }
     }
@@ -69,6 +83,8 @@ EntityType get_object_type(char object) {
 
 void update_level(Game* game, Level* level, int infinite) {
 
+    if(!game->is_match_on) return;
+
     if(!infinite && level->current_wave == level->nb_wave) return;
     else if(infinite && level->current_wave == level->nb_wave) {
         level->current_wave = 0;
@@ -77,17 +93,33 @@ void update_level(Game* game, Level* level, int infinite) {
 
     if(MLV_get_time() - level->last_line_time > level->line_cooldown) {
         level->last_line_time = MLV_get_time();
-        create_object_line(game, level->waves[level->current_wave].object_lines[level->waves[level->current_wave].current_line]);
+        if(level->waves[level->current_wave].boss_id == 'X') {
+            create_object_line(game, level->waves[level->current_wave].object_lines[level->waves[level->current_wave].current_line]);
 
-        level->waves[level->current_wave].current_line++;
+            level->waves[level->current_wave].current_line++;
 
-        if(level->waves[level->current_wave].current_line == level->waves[level->current_wave].nb_line) {
-            level->waves[level->current_wave].current_line = 0;
-            level->current_wave++;
-            level->last_wave_time = MLV_get_time();
+            if(level->waves[level->current_wave].current_line == level->waves[level->current_wave].nb_line) {
+                level->waves[level->current_wave].current_line = 0;
+                level->current_wave++;
+                level->last_wave_time = MLV_get_time();
+            }
+        } else {            
+
+            if(!is_boss_alive(game) && game->is_match_on) {
+                level->waves[level->current_wave].boss = create_ennemy(game, level->waves[level->current_wave].boss_id, settings->win_width / 2);
+            } else {
+                create_shoot_line(game, level->waves[level->current_wave].boss, level->waves[level->current_wave].object_lines[level->waves[level->current_wave].current_line]);
+                level->waves[level->current_wave].current_line++;
+                if(level->waves[level->current_wave].current_line == level->waves[level->current_wave].nb_line) {
+                    level->waves[level->current_wave].current_line = 0;
+                }
+            }
+
+            /*level->current_wave++;*/
         }
     }
 }
+
 
 void free_level(Level* level) {
     int i, j;

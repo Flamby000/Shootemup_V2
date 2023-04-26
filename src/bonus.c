@@ -155,6 +155,6 @@ void life_increase_effect(Game *game, Player* eater, int reverse) {
 
 void spawn_unit_effect(Game *game, Player* eater, int reverse) {
     if(!reverse) {
-        create_missile(game, eater->entity, PROTECTING_MISSILE);
+        create_missile(game, eater->entity, PROTECTING_MISSILE, -1);
     }
 }

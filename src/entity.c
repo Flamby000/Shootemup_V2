@@ -187,6 +187,8 @@ Entity* closest_ennemy(Game *game) {
 }
 
 void free_entity(Game* game, Entity *entity) {
+    EntityLink* current;
+    EntityLink* next = NULL;
     if(entity->type == MISSILE) free_missile((Missile*)entity->parent);
     if(entity->type == ENNEMY) free_ennemy(game, (Ennemy*)entity->parent);
     if(entity->type == PLAYER) free_player(game, (Player*)entity->parent);
@@ -194,6 +196,14 @@ void free_entity(Game* game, Entity *entity) {
     free(entity->destruction_img_path);
 
     /* Free children */
+    current = entity->children;
+    while(current != NULL) {
+        next = current->next;
+        free_entity(game, current->entity);
+        free(current);
+        current = next;
+    }
+
     free_animation(entity->sprite);
     free(entity->speed);
     

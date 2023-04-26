@@ -37,6 +37,7 @@ typedef struct _Game {
     struct _EntityLink* entities;
     struct _Player *player;
     struct _Level *level;
+    int is_match_on;
 } Game;
 
 typedef struct _EntityLink {
@@ -99,7 +100,6 @@ typedef struct _SpaceShip {
     struct _Life life;
     struct _Shooter shooter;
     struct _BonusLink* bonus;
-
     struct _Shooter super_shooter;
 } SpaceShip;
 
@@ -113,6 +113,7 @@ typedef struct _Ennemy {
     struct _Entity* entity;
     struct _SpaceShip* ship;
     int score;
+    int is_boss;
 } Ennemy;
 
 typedef struct _Missile {
@@ -138,6 +139,9 @@ typedef struct _Wave {
     int nb_line;
     int current_line;
     char** object_lines;
+
+    char boss_id;
+    struct _Ennemy *boss;
 } Wave;
 
 typedef struct _Level {
@@ -145,6 +149,7 @@ typedef struct _Level {
     struct _Wave* waves;
 
     int current_wave;
+
 
     int last_line_time;
     int line_cooldown;

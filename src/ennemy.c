@@ -5,6 +5,7 @@
 #include "../include/struct.h"
 #include "../include/animation.h"
 #include "../include/game.h"
+#include "../include/missile.h"
 #include "../include/spaceship.h"
 #include "../include/bonus.h"
 #include "../include/entity.h"
@@ -19,6 +20,7 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     SPEED_FUNC movement;
     SHOOT_FUNC shoot;
     Animation *animation;
+    int is_boss = 0;
     char* token;
     char key[200];
     char value[200];
@@ -49,6 +51,7 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
                 else if(strcmp(key, "movement") == 0)      movement = get_movement_function(atoi(value));
                 else if(strcmp(key, "life") == 0)          life = atoi(value);
                 else if(strcmp(key, "cooldown") == 0)      cooldown = atoi(value);
+                else if(strcmp(key, "is_boss") == 0) {     if(strcmp(value, "true") == 0) is_boss = 1; }
                 else if(strcmp(key, "score") == 0)         score = atoi(value);
                 else if(strcmp(key, "invincibility") == 0) invincibility = atoi(value);
                 else if(strcmp(key, "shoot") == 0) {       shoot = get_shoot_function(atoi(value));
@@ -67,9 +70,26 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     ennemy->entity = create_entity(x, -height, width, height, speed, movement, animation, EXPLOSION_1, ennemy, ENNEMY);
     ennemy->ship = create_spaceship(life, cooldown, invincibility, shoot, shoot_none);
     ennemy->score = score;
+    ennemy->is_boss = is_boss;
     
     insert_entity(game, ennemy->entity);
     return ennemy;
+}
+
+
+void create_shoot_line(Game* game, Ennemy *ennemy, char* shootline) {
+    int i;
+    int line_size = strlen(shootline);
+    printf("shootline : %s\n", shootline);
+
+    for(i = 0; i < line_size; i++) {
+        if(shootline[i] == 'X') continue;
+        create_missile(game,
+            ennemy->entity, 
+            shootline[i] - '0', 
+            ennemy->entity->x + (ennemy->entity->width / line_size) * i + (ennemy->entity->width / line_size) / 2
+            );
+    }
 }
 
 void free_ennemy(Game* game, Ennemy *ennemy) {

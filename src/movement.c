@@ -21,6 +21,7 @@ SPEED_FUNC get_movement_function(int id) {
         case MOVEMENT_SINUSOIDAL:      return movement_sinusoidal;      /* id : 6 */
         case MOVEMENT_CIRCLE_ENTITY:   return movement_circle_entity;   /* id : 7 */
         case MOVEMENT_FOLLOW_X:        return movement_follow_x;        /* id : 8 */
+        case MOVEMENT_LEFT_RIGHT:      return movement_left_right;      /* id : 9 */
         default:                       return movement_none;
     }
 }
@@ -150,9 +151,33 @@ void movement_follow_x(Game *game, Entity *entity) {
     entity->y = player_entity->y - entity->height;
 }
 
+void movement_go_on_screen_from_top(Game *game, Entity *entity) {
+    Speed *speed = entity->speed;
+    if(entity->y < entity->height/2) {
+        speed->speed_y = speed->speed/2;
+    } else {
+        speed->speed_y = 0;
+    }
+}
+
+void movement_left_right(Game *game, Entity *entity) {
+    Speed *speed = entity->speed;
+    movement_go_on_screen_from_top(game, entity);
+    if(speed->speed_y != 0) return;
+
+    if(speed->speed_x == 0) speed->speed_x = speed->speed;
+
+    if(entity->x < 0) {
+        speed->speed_x = speed->speed;
+    } else if(entity->x + entity->width > settings->win_width) {
+        speed->speed_x = -speed->speed;
+    }
+}
+
 void push_entity(Game *game, Entity *entity) {
     Speed *speed = entity->speed;
     speed->speed_y +=20;
 }
+
 
 

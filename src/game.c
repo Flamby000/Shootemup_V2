@@ -23,7 +23,7 @@ Game* init_game() {
 
     init_background(game);
     game->player = create_player(game);
-
+    game->is_match_on = 1;
     return game;
 }
 
@@ -43,7 +43,7 @@ void update_game(Game *game) {
     }
 
     /* Update the level */
-    update_level(game, game->level, 0);
+    update_level(game, game->level, 1);
 }
 
 void free_game(Game* game) {
@@ -54,6 +54,11 @@ void free_game(Game* game) {
         current = next;
     }
     free(game);
+}
+
+void end_match(Game* game) {
+    game->is_match_on = 0;
+    printf("Game Over\n");
 }
 
 void insert_entity(Game* game, Entity* entity) {
@@ -87,6 +92,18 @@ int get_entity_id(Game* game, Entity* entity) {
     return -1;
 }
 
+
+int is_boss_alive(Game* game) {
+    EntityLink* current;
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(current->entity->type == ENNEMY) {
+            Ennemy* ennemy = (Ennemy*) current->entity->parent;
+            if(ennemy->is_boss) return 1;
+        }
+    }
+    return 0;
+}
+
 int entity_count(Game *game) {
     int count = 0;
     EntityLink* current;
@@ -98,6 +115,7 @@ int entity_count(Game *game) {
 
 void remove_entity(Game* game, Entity* entity, int explose) {
     EntityLink* current;
+    int boss_alive = is_boss_alive(game);
     if(explose) create_one_shot_animation(game, entity->destruction_img_path, entity);
 
     for(current = game->entities; current != NULL; current = current->next) {
@@ -116,9 +134,13 @@ void remove_entity(Game* game, Entity* entity, int explose) {
             }
             free_entity(game, current->entity);
             free(current);
+            current = NULL;
+            if(!is_boss_alive(game) && boss_alive) end_match(game);
             return;
         }
     }
+
+    
 
     printf("Error : Entity not found\n");
 }

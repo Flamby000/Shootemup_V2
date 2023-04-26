@@ -12,9 +12,9 @@
 #include "../include/entity.h"
 #include "../include/missile.h"
 
-Missile* create_missile(Game *game, Entity *sender, int type) {
+Missile* create_missile(Game *game, Entity *sender, int type, int x) {
     Missile *missile;
-    int width, height, speed, damage, x, y, fuel, invincible;
+    int width, height, speed, damage, y, fuel, invincible;
     void (*movement)(struct _Game*, struct _Entity*);
     Animation *animation;
     char key[200];
@@ -59,7 +59,8 @@ Missile* create_missile(Game *game, Entity *sender, int type) {
         return NULL;
     }
 
-    x = sender->x + sender->width/2 - width/2;
+
+    if(x == -1) x = sender->x + sender->width/2 - width/2;
     y = sender->y + sender->height/2 - height/2;
 
     missile = malloc(sizeof(Missile));

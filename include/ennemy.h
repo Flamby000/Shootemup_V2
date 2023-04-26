@@ -8,3 +8,4 @@ Ennemy* create_ennemy(Game *game, char type, int x);
 void free_ennemy(Game* game, Ennemy *ennemy);
 int free_out_of_screen(Game *game, Entity *entity);
 int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction direction);
+void create_shoot_line(Game* game, Ennemy *ennemy, char* shootline);
