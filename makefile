@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc -g
 CFLAGS=-Wall -ansi -pedantic -pthread
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -14,7 +14,7 @@ all: ${OBJ}
 	${CC} -o ${OUT} ${OBJ} ${CFLAGS} ${LDFLAGS} 
 
 #Règles de dépendances des fichiers sources :
-${BLD}main.o: ${SP}main.c ${SP}frame.c ${SP}settings.c
+${BLD}main.o: ${SP}main.c ${SP}frame.c ${SP}settings.c ${SP}utils.c
 	${CC} -c ${SP}main.c -o ${BLD}main.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c ${SP}player.c ${SP}ennemy.c ${SP}level.c ${SP}bonus.c
@@ -32,7 +32,7 @@ ${BLD}animation.o: ${SP}animation.c ${SP}entity.c
 ${BLD}background.o: ${SP}background.c ${SP}entity.c ${SP}game.c ${SP}movement.c
 	${CC} -c ${SP}background.c -o ${BLD}background.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}movement.o: ${SP}movement.c
+${BLD}movement.o: ${SP}movement.c ${SP}utils.c
 	${CC} -c ${SP}movement.c -o ${BLD}movement.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}settings.o: ${SP}settings.c
@@ -59,6 +59,8 @@ ${BLD}level.o : ${SP}level.c
 ${BLD}bonus.o : ${SP}bonus.c 
 	${CC} -c ${SP}bonus.c -o ${BLD}bonus.o ${CFLAGS} ${LDFLAGS}
 
+${BLD}utils.o : ${SP}utils.c 
+	${CC} -c ${SP}utils.c -o ${BLD}utils.o ${CFLAGS} ${LDFLAGS}
 
 
 

@@ -4,6 +4,7 @@
 #define BASIC_MISSILE 1
 #define TARGET_PLAYER_MISSILE 2
 #define PERFORING_PLAYER_MISSILE 3
+#define PROTECTING_MISSILE 4
 
 void free_missile(Missile *missile);
 Missile* create_missile(Game *game, Entity *sender, int type);

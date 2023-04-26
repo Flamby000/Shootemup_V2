@@ -7,7 +7,7 @@
 #include "../include/animation.h"
 #include "../include/movement.h"
 #include "../include/shooter.h"
-#include "../include/entity.h"
+#include "../include/missile.h"
 #include "../include/game.h"
 #include "../include/spaceship.h"
 #include "../include/bonus.h"
@@ -55,7 +55,7 @@ Bonus *create_bonus(Game *game, char type, int x) {
         printf("Error : Ennemy type not found\n");
         return NULL;
     }
-    speed = rand() % 7 + 2;
+    speed = rand() % 5 + 2;
 
     bonus->entity = create_entity(x, -height, width, height, speed, movement_forward, animation, bonus, BONUS);
     bonus->effect = get_bonus_effect_by_id(current_id);
@@ -115,6 +115,7 @@ BONUS_FUNC get_bonus_effect_by_id(char id) {
         case POWER_UP_SHOOT_EFFECT: return power_up_shoot_effect; 
         case LIFE_INCREASE_EFFECT: return life_increase_effect;
         case POWER_UP_SPEED_EFFECT: return power_up_speed_effect;
+        case SPAWN_UNIT_EFFECT: return spawn_unit_effect;
         default: return NULL;
     } 
 }
@@ -149,4 +150,11 @@ void power_up_shoot_effect(Game *game, Player* eater, int reverse) {
 
 void life_increase_effect(Game *game, Player* eater, int reverse) {
     deals_damage(game, eater->entity, -1);
+}
+
+
+void spawn_unit_effect(Game *game, Player* eater, int reverse) {
+    if(!reverse) {
+        create_missile(game, eater->entity, PROTECTING_MISSILE);
+    }
 }

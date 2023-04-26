@@ -28,7 +28,7 @@ shoot:2
 id:3
 width:43
 height:60
-speed:5
+speed:2
 score:10
 life:1
 invincibility:0

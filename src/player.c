@@ -19,7 +19,7 @@ Player* create_player(Game *game) {
         settings->win_height - PLAYER_HEIGHT * 2, 
         PLAYER_WIDTH, 
         PLAYER_HEIGHT,
-        10, movement_controller,  
+        5, movement_controller,  
         init_multiple_animation(
             "resources/player/forward-%d.png", 
             "resources/player/backward-%d.png", 
@@ -34,10 +34,7 @@ Player* create_player(Game *game) {
 }
 
 int on_collide_player(Game *game, Player *player, Entity *collide, Direction direction) {
-    if(collide->type == ENNEMY) {
-        deals_damage(game, collide, 1);
-        return 1;
-    }
+
     return 0;
 }
 

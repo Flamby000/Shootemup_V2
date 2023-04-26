@@ -41,3 +41,15 @@ fuel:1500
 invincible:false
 animation:resources/missiles/missile6_1.png
 movement:5
+
+
+==Missile protecting player===
+id:4
+width:30
+height:30
+speed:5
+damage:1
+fuel:0
+invincible:true
+animation:resources/bonus/support-%d.png
+movement:7

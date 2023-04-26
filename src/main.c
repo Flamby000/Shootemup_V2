@@ -11,28 +11,13 @@
 #include "../include/settings.h"
 #include "../include/animation.h"
 #include "../include/entity.h"
+#include "../include/utils.h"
 #include "../include/game.h"
-
 
 int quit = 0;   
 Settings* settings;
 void sigint_handler(int sig) {
     quit = 1;
-}
-long get_timestamp_ms()
-{
-    struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);
-    return ts.tv_sec * 1000 + ts.tv_nsec / 1000000;
-}
-
-int temporize(long *update_time, long space_time) {
-    long now_time = get_timestamp_ms();
-    if((now_time- (*update_time)) > space_time) {
-        *update_time = get_timestamp_ms();
-        return 0;
-    }    
-    return 1;
 }
 
 int main() {

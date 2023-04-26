@@ -7,6 +7,8 @@
 #include "../include/frame.h"
 #include "../include/entity.h"
 #include "../include/movement.h"
+#include "../include/utils.h"
+
 
 SPEED_FUNC get_movement_function(int id) {
     switch(id) {
@@ -17,6 +19,7 @@ SPEED_FUNC get_movement_function(int id) {
         case MOVEMENT_CONTROLLER:      return movement_controller;      /* id : 4 */
         case MOVEMENT_FOLLOW_PLAYER:   return movement_follow_player;   /* id : 5 */
         case MOVEMENT_SINUSOIDAL:      return movement_sinusoidal;      /* id : 6 */
+        case MOVEMENT_CIRCLE_ENTITY:   return movement_circle_entity;   /* id : 7 */
         default:                       return movement_none;
     }
 }
@@ -133,7 +136,14 @@ void movement_follow_entity(Game *game, Entity *entity, Entity *target) {
     }
 }
 
+void movement_circle_entity(Game *game, Entity *entity) {
+    Entity *player_entity = closest_entity(game, entity, PLAYER);
+    entity->x = player_entity->x + (player_entity->width/2)  + (cos(get_timestamp_ms()/1000.0) * 100);
+    entity->y = player_entity->y + (player_entity->height/2) + (sin(get_timestamp_ms()/1000.0) * 100);
+}
+
 void push_entity(Game *game, Entity *entity) {
     Speed *speed = entity->speed;
     speed->speed_y +=20;
 }
+

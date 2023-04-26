@@ -80,6 +80,7 @@ void free_ennemy(Game* game, Ennemy *ennemy) {
 int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction direction) {
     if(collide->type == PLAYER) {
         deals_damage(game, collide, 1);
+        deals_damage(game, ennemy->entity, 1);
         return 1;
     }
 
@@ -88,6 +89,5 @@ int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction dir
         remove_entity(game, collide);
         return 1;
     }
-    
     return 0;
 }

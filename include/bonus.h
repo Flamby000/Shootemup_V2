@@ -9,7 +9,7 @@ int on_collide_bonus(Game *game, Bonus *bonus, Entity *collide, Direction direct
 int is_bonus_reachable(Game *game, Bonus *bonus);
 
 
-#define RANDOM_BONUSES "SPHVM"
+#define RANDOM_BONUSES "SPHVMU"
 
 #define RANDOM_BONUS 'R'
 Bonus *create_random_bonus(Game *game, int x);
@@ -28,3 +28,6 @@ void power_up_shoot_effect(Game *game, Player* eater, int reverse);
 
 #define POWER_UP_SPEED_EFFECT 'V'
 void power_up_speed_effect(Game *game, Player* eater, int reverse);
+
+#define SPAWN_UNIT_EFFECT 'U'
+void spawn_unit_effect(Game *game, Player* eater, int reverse);

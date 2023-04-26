@@ -27,6 +27,14 @@ height:30
 consumer:false
 animation:resources/bonus/speed_up_%d.png
 
+=== Support unit ===
+id:U
+width:30
+height:30
+consumer:false
+animation:resources/bonus/support-%d.png
+
+
 =====Get 1 HP====
 id:H
 width:30
