@@ -50,7 +50,7 @@ void free_game(Game* game) {
     EntityLink* current = game->entities;
     while(current != NULL) {
         EntityLink* next = current->next;
-        remove_entity(game, current->entity);
+        remove_entity(game, current->entity, 0);
         current = next;
     }
     free(game);
@@ -96,8 +96,10 @@ int entity_count(Game *game) {
     return count;
 }
 
-void remove_entity(Game* game, Entity* entity) {
+void remove_entity(Game* game, Entity* entity, int explose) {
     EntityLink* current;
+    if(explose) create_one_shot_animation(game, entity->destruction_img_path, entity);
+
     for(current = game->entities; current != NULL; current = current->next) {
 
         if(current->entity == entity) {
@@ -112,7 +114,6 @@ void remove_entity(Game* game, Entity* entity) {
                 }
                 previous->next = current->next;
             }
-            
             free_entity(game, current->entity);
             free(current);
             return;

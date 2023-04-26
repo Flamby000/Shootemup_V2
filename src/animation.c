@@ -28,11 +28,14 @@ Animation* init_square(MLV_Color color) {
 }
 
 void create_one_shot_animation(Game *game, char *path, Entity *entity) {
-    Entity *entity_new = create_entity(
+    Entity *entity_new;
+
+    if(path == NULL) return;
+    entity_new = create_entity(
         entity->x, entity->y, 
         entity->width*1.4, entity->height*1.4,
         0, movement_none,
-        init_animation(path),
+        init_animation(path), NULL,
         NULL, LABEL);
     entity_new->sprite->type = ONE_SHOT_ANIMATION;
     entity_new->sprite->frame_duration = 100;
@@ -189,7 +192,7 @@ void draw_entity(Game *game, Entity* entity, Entity* parent) {
                 animation->last_frame_time = MLV_get_time();
 
                 if(animation->current_frame >= animation->nb_frames-1) {
-                    remove_entity(game, entity);
+                    remove_entity(game, entity, 0);
                     return;
                 }
             }

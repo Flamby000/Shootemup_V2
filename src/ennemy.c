@@ -64,8 +64,8 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
         return NULL;
     }
 
-    ennemy->entity = create_entity(x, -height, width, height, speed, movement, animation, ennemy, ENNEMY);
-    ennemy->ship = create_spaceship(life, cooldown, invincibility, shoot);
+    ennemy->entity = create_entity(x, -height, width, height, speed, movement, animation, EXPLOSION_1, ennemy, ENNEMY);
+    ennemy->ship = create_spaceship(life, cooldown, invincibility, shoot, shoot_none);
     ennemy->score = score;
     
     insert_entity(game, ennemy->entity);
@@ -85,8 +85,7 @@ int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction dir
     }
 
     if(collide->type == BONUS  && is_bonus_reachable(game, (Bonus*)collide->parent)) {
-        create_one_shot_animation(game, EXPLOSION_1, collide);
-        remove_entity(game, collide);
+        remove_entity(game, collide, 1);
         return 1;
     }
     return 0;

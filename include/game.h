@@ -6,6 +6,6 @@ void update_game(Game *game);
 void free_game(Game* game);
 
 void insert_entity(Game* game, struct _Entity* entity);
-void remove_entity(Game* game, struct _Entity* entity);
+void remove_entity(Game* game, struct _Entity* entity, int explose);
 int get_entity_id(Game* game, Entity* entity);
 

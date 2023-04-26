@@ -25,6 +25,7 @@ void init_background(Game *game) {
             movement_none,  
             init_sprite(MLV_load_image("resources/background.png")),
             NULL,
+            NULL,
             LABEL
             )
     );
@@ -42,7 +43,7 @@ void init_background(Game *game) {
                 size,
                 speed, /* TODO : find a way to STOP the background movement */
                 movement_infinite_scroll,  
-                init_square(MLV_rgba(255, 255, rand() % 254 + 1, 255)),
+                init_square(MLV_rgba(255, 255, rand() % 254 + 1, 255)), NULL,
                 NULL,
                 LABEL
             )
@@ -58,7 +59,7 @@ void init_background(Game *game) {
             settings->win_width/5,
             1,
             movement_infinite_scroll,  
-            init_sprite(MLV_load_image("resources/utils/planet.png")),
+            init_sprite(MLV_load_image("resources/utils/planet.png")), NULL,
             NULL, LABEL
         )
     );

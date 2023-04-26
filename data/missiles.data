@@ -6,6 +6,7 @@ speed:10
 damage:1
 fuel:0
 invincible:false
+explosion:resources/explosions/explosion%d.png
 animation:resources/missiles/missile4.png
 movement:1
 
@@ -17,6 +18,7 @@ speed:10
 damage:1
 fuel:0
 invincible:false
+explosion:resources/explosions/explosion%d.png
 animation:resources/missiles/missile1_%d.png
 movement:2
 
@@ -28,6 +30,7 @@ speed:10
 damage:1
 fuel:0
 invincible:true
+explosion:resources/explosions/explosion%d.png
 animation:resources/missiles/missile7.png
 movement:2
 
@@ -39,9 +42,9 @@ speed:5
 damage:1
 fuel:1500
 invincible:false
+explosion:resources/explosions/explosion%d.png
 animation:resources/missiles/missile6_1.png
 movement:5
-
 
 ==Missile protecting player===
 id:4
@@ -51,5 +54,18 @@ speed:5
 damage:1
 fuel:0
 invincible:true
+explosion:resources/explosions/explosion%d.png
 animation:resources/bonus/support-%d.png
 movement:7
+
+===Laser missile===
+id:5
+width:75
+height:500
+speed:0
+damage:1
+fuel:2000
+invincible:true
+explosion:resources/missiles/blast/explosion_blast_%d.png
+animation:resources/missiles/blast/blast%d.png
+movement:8

@@ -1,4 +1,4 @@
-SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration, SHOOT_FUNC update_shoot);
+SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration, SHOOT_FUNC update_shoot, SHOOT_FUNC update_super_shoot);
 void free_spaceship(Game* game, SpaceShip* spaceship);
 void update_spaceship(Game *game, Entity* entity);  
 int deals_damage(Game *game, Entity *entity, int damage);

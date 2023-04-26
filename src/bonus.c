@@ -57,7 +57,7 @@ Bonus *create_bonus(Game *game, char type, int x) {
     }
     speed = rand() % 5 + 2;
 
-    bonus->entity = create_entity(x, -height, width, height, speed, movement_forward, animation, bonus, BONUS);
+    bonus->entity = create_entity(x, -height, width, height, speed, movement_forward, animation, EXPLOSION_1, bonus, BONUS);
     bonus->effect = get_bonus_effect_by_id(current_id);
     bonus->type = type;
     insert_entity(game, bonus->entity);
@@ -74,13 +74,13 @@ int on_collide_bonus(Game *game, Bonus *bonus, Entity *collide, Direction direct
     if(collide->type == PLAYER) {
         if(bonus->consumer) {
             bonus->effect(game, (Player*)collide->parent, 0);
-            remove_entity(game, bonus->entity);
+            remove_entity(game, bonus->entity, 0);
             return 1;
         }
 
         if(is_bonus_reachable(game, bonus)) {
             if(have_bonus(collide, bonus->type)) {
-                remove_entity(game, bonus->entity);
+                remove_entity(game, bonus->entity, 0);
                 return 1;
             }
             add_bonus(game, collide, bonus);

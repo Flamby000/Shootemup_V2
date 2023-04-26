@@ -13,7 +13,8 @@
 
 Entity* create_entity(int x, int y, int width, int height, 
                       int speed, SPEED_FUNC update_speed,
-                      Animation* animation,
+                      Animation* animation, 
+                      char* destruction_img_path,
                       void* parent, EntityType type
                       ) {
 
@@ -24,6 +25,13 @@ Entity* create_entity(int x, int y, int width, int height,
     entity->height = height;
     entity->rotation = 0;
     entity->sprite = animation;
+    if(destruction_img_path != NULL) {
+        entity->destruction_img_path = malloc(sizeof(char) * strlen(destruction_img_path) + 1);
+        strcpy(entity->destruction_img_path, destruction_img_path);
+    } else {
+        entity->destruction_img_path = NULL;
+    }
+
 
     entity->speed = malloc(sizeof(Speed));
     entity->speed->speed_x = 0;
@@ -128,7 +136,7 @@ int free_out_of_screen(Game *game, Entity *entity) {
 
     /* Libération des ennemies lorsqu'ils dépassent le bas de l'écran*/
     if(entity->type == ENNEMY && entity->y > settings->win_height) {
-        remove_entity(game, entity);
+        remove_entity(game, entity, 0);
         return 1;
     }
 
@@ -139,7 +147,7 @@ int free_out_of_screen(Game *game, Entity *entity) {
         entity->x > settings->win_width ||
         entity->x + entity->width < 0)
     ) {
-        remove_entity(game, entity);
+        remove_entity(game, entity, 0);
 
         return 1;
     }
@@ -183,9 +191,9 @@ void free_entity(Game* game, Entity *entity) {
     if(entity->type == ENNEMY) free_ennemy(game, (Ennemy*)entity->parent);
     if(entity->type == PLAYER) free_player(game, (Player*)entity->parent);
     if(entity->type == BONUS) free_bonus((Bonus*)entity->parent);
+    free(entity->destruction_img_path);
 
     /* Free children */
-
     free_animation(entity->sprite);
     free(entity->speed);
     

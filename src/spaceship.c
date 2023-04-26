@@ -9,7 +9,7 @@
 #include "../include/entity.h"
 #include "../include/spaceship.h"
 
-SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration,  SHOOT_FUNC update_shoot) {
+SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration, SHOOT_FUNC update_shoot, SHOOT_FUNC update_super_shoot) {
     SpaceShip* ship = malloc(sizeof(SpaceShip));
     (&ship->life)->hp = life;
     (&ship->life)->max_hp = life; 
@@ -21,16 +21,26 @@ SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_dura
     (&ship->shooter)->update_shoot = update_shoot;
     (&ship->shooter)->cooldown = shoot_cooldown;
 
+    (&ship->super_shooter)->last_shoot_time = 0;
+    (&ship->super_shooter)->update_shoot = update_super_shoot;
+    (&ship->super_shooter)->cooldown = shoot_cooldown*10;
+
     ship->bonus = NULL;
 
     return ship;
 }
 
 void update_spaceship(Game *game, Entity* entity) {
-    Shooter *shooter;
-    if(entity->type == PLAYER)      shooter = &((Player*)entity->parent)->ship->shooter; 
-    else if(entity->type == ENNEMY) shooter = &((Ennemy*)entity->parent)->ship->shooter;
-    else return;
+    SpaceShip *ship = get_spaceship(entity);
+    Shooter *shooter = &ship->shooter;
+    Shooter *super_shooter = &ship->super_shooter;
+
+    if(MLV_get_time() - super_shooter->last_shoot_time > super_shooter->cooldown) {
+        if(super_shooter->update_shoot(game, entity)) {
+            super_shooter->last_shoot_time = MLV_get_time();
+        }
+    }
+    
 
     if(MLV_get_time() - shooter->last_shoot_time > shooter->cooldown) {
         if(shooter->update_shoot(game, entity)) {
@@ -83,7 +93,7 @@ void remove_bonus(Game *game, Entity *entity, Bonus *bonus) {
         if(current->bonus == bonus) {
             if(previous == NULL) ship->bonus = current->next;
             else previous->next = current->next;
-            remove_entity(game, current->bonus->entity);
+            remove_entity(game, current->bonus->entity, 0);
             return;
         }
         previous = current;
@@ -115,7 +125,7 @@ void free_bonuses(Game *game, Entity *entity) {
     current = ship->bonus;
     while(current != NULL) {
         next = current->next;
-        remove_entity(game, current->bonus->entity);
+        remove_entity(game, current->bonus->entity, 0);
         current = next;
     }
     ship->bonus = NULL;
@@ -165,7 +175,7 @@ int deals_damage(Game *game, Entity *entity, int damage) {
 
     if(life->hp <= 0) {
         life->hp = 0;
-        remove_entity(game, entity);
+        remove_entity(game, entity, 1);
         return 1;
     } 
 
@@ -229,7 +239,7 @@ int enable_shield(Game *game, Entity *entity) {
         -entity->width * 0.1, -entity->height * 0.1,
         entity->width * 1.2, entity->height * 1.2,
         entity->speed->speed, entity->speed->update_speed,  
-        init_animation_wrapper("resources/utils/shield-%d.png"),
+        init_animation_wrapper("resources/utils/shield-%d.png"), EXPLOSION_1,
         NULL, LABEL
     );
     add_child(entity, life->shield_entity);

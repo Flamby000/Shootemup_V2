@@ -55,6 +55,7 @@ typedef enum _EntityType {
  
 typedef struct _Entity{
     struct _Animation* sprite;
+    char* destruction_img_path;
     int x;
     int y;
     int width;
@@ -98,6 +99,8 @@ typedef struct _SpaceShip {
     struct _Life life;
     struct _Shooter shooter;
     struct _BonusLink* bonus;
+
+    struct _Shooter super_shooter;
 } SpaceShip;
 
 typedef struct _Player {

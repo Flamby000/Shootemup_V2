@@ -20,6 +20,7 @@ Missile* create_missile(Game *game, Entity *sender, int type) {
     char key[200];
     char value[200];
     char line[400];
+    char explosion[1000];
     int current_id = -1;
     FILE *file = fopen(MISSILE_DATA_PATH, "r");
 
@@ -42,7 +43,8 @@ Missile* create_missile(Game *game, Entity *sender, int type) {
                 else if(strcmp(key, "animation") == 0) animation = init_animation_wrapper(value);
                 else if(strcmp(key, "speed") == 0)     speed = atoi(value);
                 else if(strcmp(key, "damage") == 0)    damage = atoi(value);
-                else if(strcmp(key, "fuel") == 0)    fuel = atoi(value);
+                else if(strcmp(key, "fuel") == 0)      fuel = atoi(value);
+                else if(strcmp(key, "explosion") == 0) strcpy(explosion, value);
                 else if(strcmp(key, "invincible") == 0){ if(strcmp(value, "true") == 0) invincible = 1; else invincible = 0;}
                 else if(strcmp(key, "movement") == 0){ movement = get_movement_function(atoi(value));
                     break;
@@ -61,7 +63,7 @@ Missile* create_missile(Game *game, Entity *sender, int type) {
     y = sender->y + sender->height/2 - height/2;
 
     missile = malloc(sizeof(Missile));
-    missile->entity = create_entity(x, y, width, height, speed, movement, animation, missile, MISSILE);
+    missile->entity = create_entity(x, y, width, height, speed, movement, animation, explosion, missile, MISSILE);
     missile->damage = damage;
     missile->creation_time = MLV_get_time();
     missile->fuel = fuel;
@@ -80,8 +82,7 @@ void free_missile(Missile *missile) {
 int update_missile(Game *game, Missile *missile) {
     if(missile->fuel > 0) {
         if(MLV_get_time() - missile->creation_time > missile->fuel) {
-            create_one_shot_animation(game, EXPLOSION_1, missile->entity);
-            remove_entity(game, missile->entity);
+            remove_entity(game, missile->entity, 1);
             return 1;
         }
     }
@@ -92,30 +93,26 @@ int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction 
     if(collide->type == PLAYER && !missile->is_from_player) {
         deals_damage(game, collide, missile->damage);
         if(!missile->invincible) {
-            remove_entity(game, missile->entity);
+            remove_entity(game, missile->entity, 1);
             return 1;
         }
     }
     else if(collide->type == ENNEMY && missile->is_from_player) {
-        create_one_shot_animation(game, EXPLOSION_1, collide);
         deals_damage(game, collide, missile->damage);
         if(!missile->invincible) {
-                create_one_shot_animation(game, EXPLOSION_1, missile->entity);
-                remove_entity(game, missile->entity);
+                remove_entity(game, missile->entity, 1);
             return 1;
             }
     } else if(collide->type == MISSILE) {
         Missile* collided = (Missile*)collide->parent;
         
         if(!collided->invincible) {
-            create_one_shot_animation(game, EXPLOSION_1, collide);
-            remove_entity(game, collide);
+            remove_entity(game, collide, 1);
             return 1;
         }
     } else if(collide->type == BONUS) {
         if(!missile->is_from_player && is_bonus_reachable(game, (Bonus*)collide->parent)) {
-            create_one_shot_animation(game, EXPLOSION_1, collide);
-            remove_entity(game, collide);
+            remove_entity(game, collide, 1);
             return 1;
         }
     }

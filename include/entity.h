@@ -3,6 +3,7 @@ void free_entity(Game* game, Entity *entity);
 Entity* create_entity(int x, int y, int width, int height, 
                       int speed, SPEED_FUNC update_speed,
                       Animation* animation,
+                      char* destruction_img_path,
                       void* parent, EntityType type
                     );
 void avoid_collide_border(Entity *entity);

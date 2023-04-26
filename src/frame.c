@@ -44,7 +44,6 @@ void draw_player(Game *game, Player* player) {
         (&player->ship->life)->hp, (&player->ship->life)->max_hp, 
         MLV_COLOR_RED, 1, ""
     );   
-    
     bar_count++;
     
     /* Cooldown bar */
@@ -54,6 +53,16 @@ void draw_player(Game *game, Player* player) {
         MLV_get_time() - (&player->ship->shooter)->last_shoot_time, (&player->ship->shooter)->cooldown, 
         MLV_COLOR_GREEN, 0, ""
     );
+    bar_count++;
+    
+    /* Cooldown bar */
+    draw_bar(
+        settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
+        bar_width, bar_height, 
+        MLV_get_time() - (&player->ship->super_shooter)->last_shoot_time, (&player->ship->super_shooter)->cooldown, 
+        MLV_COLOR_BLUE, 0, ""
+    );
+
 
     /*
     draw_image_progress(
@@ -69,6 +78,8 @@ void draw_player(Game *game, Player* player) {
     if(MLV_get_time() - (&player->ship->life)->last_damage_time < (&player->ship->life)->invincibility_duration) {
         if(MLV_get_time() % 500 < 250) draw_entity(game, player->entity, NULL);
     } else draw_entity(game, player->entity, NULL);
+
+
 
 }
 

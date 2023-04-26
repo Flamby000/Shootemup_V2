@@ -11,3 +11,10 @@ int shoot_target_player(Game *game, Entity *entity);
 
 #define SHOOT_PERFORING_PLAYER 3
 int shoot_player_perforing(Game *game, Entity *entity);
+
+#define SHOOT_NONE 4
+int shoot_none(Game *game, Entity *entity);
+
+
+#define SHOOT_SUPER_LASER 5
+int shoot_super_laser(Game *game, Entity *entity);

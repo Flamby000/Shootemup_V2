@@ -25,6 +25,8 @@ void movement_sinusoidal(Game* game, Entity *entity);
 #define MOVEMENT_CIRCLE_ENTITY 7
 void movement_circle_entity(Game *game, Entity *entity);
 
+#define MOVEMENT_FOLLOW_X 8
+void movement_follow_x(Game *game, Entity *entity);
 
 void push_entity(Game *game, Entity *entity);
 void movement_follow_entity(Game *game, Entity *entity, Entity *target);
