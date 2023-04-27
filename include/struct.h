@@ -12,6 +12,7 @@ struct _Animation;
 struct _Settings;
 struct _Player;
 struct _Shooter;
+struct _Boost;
 struct _SpaceShip;
 struct _Missile;
 struct _Bonus;
@@ -96,10 +97,24 @@ typedef struct _BonusLink {
     struct _BonusLink* next;
 } BonusLink;
 
+typedef struct _Boost {
+    int speed;
+    int energy;
+    int max_energy;
+
+    int end_of_use_time;
+    int cooldown_before_regen;
+    int regen_speed;
+    int consumption_speed;
+    int enabled;
+} Boost;
+
+
 typedef struct _SpaceShip {
     struct _Life life;
     struct _Shooter shooter;
     struct _BonusLink* bonus;
+    struct _Boost boost;
     struct _Shooter super_shooter;
 } SpaceShip;
 
@@ -125,6 +140,8 @@ typedef struct _Missile {
     int invincible;
     int fuel;
     int creation_time;
+
+    int last_damage_time;
 } Missile;
 
 typedef struct _Bonus {

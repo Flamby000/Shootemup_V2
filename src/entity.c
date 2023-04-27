@@ -71,8 +71,7 @@ int update_entity(Game* game, Entity *entity) {
     entity->y += entity->speed->speed_y;
 
     /* Manage missile update (for fuel)*/
-    if(entity->type == MISSILE) 
-        if(update_missile(game, (Missile*)entity->parent)) return 1;
+    if(entity->type == MISSILE) if(update_missile(game, (Missile*)entity->parent)) return 1;
 
 
     /* Libération de la mémoire lorsque l'entity quitte l'écran*/
@@ -83,12 +82,6 @@ int update_entity(Game* game, Entity *entity) {
         if(entity != NULL && current->entity != NULL && entity != current->entity) {
             if(on_entity_collide(game, entity, current->entity, get_entity_collide(entity, current->entity))) return 1;
         }
-    }
-    
-    /* Mise à jour des enfants */
-    if(entity->children == NULL) return 0;
-    for(current = entity->children; current != NULL; current = current->next) {
-        /*if(update_entity(game, current->entity)) return 1;*/
     }
 
     return 0;

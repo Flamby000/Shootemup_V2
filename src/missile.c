@@ -21,6 +21,7 @@ Missile* create_missile(Game *game, Entity *sender, int type, int x) {
     char value[200];
     char line[400];
     char explosion[1000];
+    
     int current_id = -1;
     FILE *file = fopen(MISSILE_DATA_PATH, "r");
 
@@ -69,6 +70,7 @@ Missile* create_missile(Game *game, Entity *sender, int type, int x) {
     missile->creation_time = MLV_get_time();
     missile->fuel = fuel;
     missile->invincible = invincible;
+    missile->last_damage_time = 0;
     if(sender->type == PLAYER) missile->is_from_player = 1;
     else missile->is_from_player = 0;
 
@@ -90,8 +92,21 @@ int update_missile(Game *game, Missile *missile) {
     return 0;
 }
 
+int can_deals_damage(Missile *missile) {
+    if(missile->invincible) {
+        if(MLV_get_time() - missile->last_damage_time > 1000) {
+            missile->last_damage_time = MLV_get_time();
+            return 1;
+        }
+        return 0;
+    }
+    return 1;
+}
+
 int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction direction) {
+    Missile* collided;
     if(collide->type == PLAYER && !missile->is_from_player) {
+        if(!can_deals_damage(missile)) return 0;
         deals_damage(game, collide, missile->damage);
         if(!missile->invincible) {
             remove_entity(game, missile->entity, 1);
@@ -99,14 +114,15 @@ int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction 
         }
     }
     else if(collide->type == ENNEMY && missile->is_from_player) {
+        if(!can_deals_damage(missile)) return 0;
         deals_damage(game, collide, missile->damage);
         if(!missile->invincible) {
                 remove_entity(game, missile->entity, 1);
-            return 1;
+                return 1;
             }
     } else if(collide->type == MISSILE) {
-        Missile* collided = (Missile*)collide->parent;
-        
+        if(!can_deals_damage(missile)) return 0;
+        collided = (Missile*)collide->parent;
         if(!collided->invincible) {
             remove_entity(game, collide, 1);
             return 1;

@@ -80,7 +80,6 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
 void create_shoot_line(Game* game, Ennemy *ennemy, char* shootline) {
     int i;
     int line_size = strlen(shootline);
-    printf("shootline : %s\n", shootline);
 
     for(i = 0; i < line_size; i++) {
         if(shootline[i] == 'X') continue;

@@ -4,6 +4,7 @@
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
 #include "../include/game.h"
+#include "../include/utils.h"
 #include "../include/movement.h"
 #include "../include/animation.h"
 #include "../include/entity.h"
@@ -25,6 +26,15 @@ SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_dura
     (&ship->super_shooter)->update_shoot = update_super_shoot;
     (&ship->super_shooter)->cooldown = shoot_cooldown*10;
 
+    (&ship->boost)->speed = 5;
+    (&ship->boost)->max_energy = 100;
+    (&ship->boost)->energy = 100;
+    (&ship->boost)->end_of_use_time = 0;
+    (&ship->boost)->cooldown_before_regen = 1000;
+    (&ship->boost)->regen_speed = 1;
+    (&ship->boost)->consumption_speed = 2;
+    (&ship->boost)->enabled = 0;
+
     ship->bonus = NULL;
 
     return ship;
@@ -40,13 +50,48 @@ void update_spaceship(Game *game, Entity* entity) {
             super_shooter->last_shoot_time = MLV_get_time();
         }
     }
-    
+
+    if(entity->type == PLAYER) update_boost(game, entity);
+
 
     if(MLV_get_time() - shooter->last_shoot_time > shooter->cooldown) {
         if(shooter->update_shoot(game, entity)) {
             shooter->last_shoot_time = MLV_get_time();
         }
     }    
+}
+
+void update_boost(Game *game, Entity* entity) {
+    SpaceShip *ship = get_spaceship(entity);
+    Boost *boost = &ship->boost;
+
+    if(MLV_get_keyboard_state(MLV_KEYBOARD_LCTRL) == MLV_PRESSED) {
+        if(!boost->enabled && boost->energy > 0) {
+
+            entity->speed->speed += boost->speed;
+            boost->enabled = 1;
+        }
+        if(boost->enabled) {
+            if(boost->energy > 0) {
+                boost->energy -= boost->consumption_speed;
+            } else {
+                boost->energy = 0;
+                boost->end_of_use_time = get_timestamp_ms();
+                entity->speed->speed -= boost->speed;
+                boost->enabled = 0;
+            }
+        }
+    } else if(boost->enabled) {
+        entity->speed->speed -= boost->speed;
+        boost->enabled = 0;
+        boost->end_of_use_time = get_timestamp_ms();
+
+    } else {
+        if(get_timestamp_ms() - boost->end_of_use_time > boost->cooldown_before_regen) {
+            boost->energy += boost->regen_speed;
+            if(boost->energy > boost->max_energy) boost->energy = boost->max_energy;
+        }
+    }
 }
 
 void add_bonus(Game *game, Entity *entity, Bonus *bonus) {

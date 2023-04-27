@@ -14,3 +14,4 @@ int count_bonus(Entity *entity);
 Bonus *get_bonus(Entity *entity, char type);
 int remove_random_bonus(Game* game, Entity *entity);
 SpaceShip* get_spaceship(Entity *entity);
+void update_boost(Game *game, Entity* entity);

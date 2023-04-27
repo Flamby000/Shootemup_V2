@@ -42,7 +42,7 @@ void draw_player(Game *game, Player* player) {
         settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
         bar_width, bar_height, 
         (&player->ship->life)->hp, (&player->ship->life)->max_hp, 
-        MLV_COLOR_RED, 1, ""
+        MLV_COLOR_RED, 1, "", 0, MLV_COLOR_PINK
     );   
     bar_count++;
     
@@ -51,7 +51,7 @@ void draw_player(Game *game, Player* player) {
         settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
         bar_width, bar_height, 
         MLV_get_time() - (&player->ship->shooter)->last_shoot_time, (&player->ship->shooter)->cooldown, 
-        MLV_COLOR_GREEN, 0, ""
+        MLV_COLOR_GREEN, 0, "", 0, MLV_COLOR_PINK
     );
     bar_count++;
     
@@ -60,9 +60,17 @@ void draw_player(Game *game, Player* player) {
         settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
         bar_width, bar_height, 
         MLV_get_time() - (&player->ship->super_shooter)->last_shoot_time, (&player->ship->super_shooter)->cooldown, 
-        MLV_COLOR_BLUE, 0, ""
+        MLV_COLOR_BLUE, 0, "", 0, MLV_COLOR_PINK
     );
-
+    bar_count++;
+    
+    /* stamina bar */
+    draw_bar(
+        settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
+        bar_width, bar_height, 
+        (&player->ship->boost)->energy, (&player->ship->boost)->max_energy, 
+        MLV_COLOR_YELLOW, 1, "", (&player->ship->boost)->enabled, MLV_COLOR_ORANGE
+    );
 
     /*
     draw_image_progress(
@@ -107,11 +115,13 @@ void draw_image_progress(MLV_Image* image, MLV_Image *dark_image, int x, int y, 
 
 }
 
-void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color, int display_value, char* name) {
+void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color, int display_value, char* name,  int flash, MLV_Color flash_color) {
     int bar_width = width;
     int bar_height = height;
     char text[10];
     int text_width, text_height;
+
+    if(flash) color = flash_color;
 
     if(value >= max_value) value = max_value;
     if(width > height) { 

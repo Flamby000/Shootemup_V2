@@ -33,7 +33,7 @@ void create_one_shot_animation(Game *game, char *path, Entity *entity) {
     if(path == NULL) return;
     entity_new = create_entity(
         entity->x, entity->y, 
-        entity->width*1.4, entity->height*1.4,
+        entity->width, entity->height,
         0, movement_none,
         init_animation(path), NULL,
         NULL, LABEL);
