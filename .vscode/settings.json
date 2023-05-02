@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "game.h": "c",
-        "ios": "c"
+        "ios": "c",
+        "background.h": "c"
     }
 }
