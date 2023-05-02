@@ -108,7 +108,7 @@ void update_level(Game* game, Level* level, int infinite) {
             if(!is_boss_alive(game) && game->is_match_on) {
                 level->waves[level->current_wave].boss = create_ennemy(game, level->waves[level->current_wave].boss_id, settings->win_width / 2);
             } else {
-                create_shoot_line(game, level->waves[level->current_wave].boss, level->waves[level->current_wave].object_lines[level->waves[level->current_wave].current_line]);
+                create_shoot_line(game, level->waves[level->current_wave].boss->entity, level->waves[level->current_wave].object_lines[level->waves[level->current_wave].current_line]);
                 level->waves[level->current_wave].current_line++;
                 if(level->waves[level->current_wave].current_line == level->waves[level->current_wave].nb_line) {
                     level->waves[level->current_wave].current_line = 0;

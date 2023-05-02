@@ -30,14 +30,28 @@ void free_frame() {
     MLV_free_font(settings->small_font);
     MLV_free_window();
 }
+
+void draw_ennemy(Game *game, Ennemy *ennemy) {
+    Entity *entity = ennemy->entity;
+    Life *life = &ennemy->ship->life;
+    if(life->max_hp <= 1) return;
+    draw_bar(
+        entity->x , entity->y - entity->height/10, 
+        entity->width, entity->height/10, 
+        life->hp, life->max_hp, 
+        MLV_COLOR_RED, 0, "", 0, MLV_COLOR_PINK
+    );
+}
+
 void draw_player(Game *game, Player* player) {
     int bar_height = 100;
     int bar_width = 30;
     int bar_margin = 10;
     int bar_count = 0;
+    char buffer[255];
+    int text_width, text_height;
 
     /* Health bar */
-    
     draw_bar(
         settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
         bar_width, bar_height, 
@@ -64,7 +78,7 @@ void draw_player(Game *game, Player* player) {
     );
     bar_count++;
     
-    /* stamina bar */
+    /*Stamina bar */
     draw_bar(
         settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
         bar_width, bar_height, 
@@ -72,15 +86,11 @@ void draw_player(Game *game, Player* player) {
         MLV_COLOR_YELLOW, 1, "", (&player->ship->boost)->enabled, MLV_COLOR_ORANGE
     );
 
-    /*
-    draw_image_progress(
-        MLV_load_image("resources/player/backward-1.png"), 
-        MLV_load_image("resources/player/backward-1-dark.png"),
-        settings->win_width/100, settings->win_height - settings->win_height/100 - bar_height, 
-        42, 74, 
-        (&player->ship->life)->hp, (&player->ship->life)->max_hp
-    );
-    */
+    /* Draw score */
+    sprintf(buffer, "%d", player->score);
+    MLV_get_size_of_text(buffer, &text_width, &text_height);
+    MLV_draw_text_with_font(settings->win_width - text_width - 10, 10, buffer, settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);    
+
 
     /* Invincibility frame */
     if(MLV_get_time() - (&player->ship->life)->last_damage_time < (&player->ship->life)->invincibility_duration) {
@@ -95,6 +105,7 @@ void draw_image_progress(MLV_Image* image, MLV_Image *dark_image, int x, int y, 
     int progress_height = (height * value) / max_value;
     char text[10];
     int text_width, text_height;
+
     MLV_resize_image(image, width, height);
     MLV_resize_image(dark_image, width, height);
     MLV_draw_image(dark_image, x, y);
@@ -111,8 +122,6 @@ void draw_image_progress(MLV_Image* image, MLV_Image *dark_image, int x, int y, 
     sprintf(text, "%d", value);
     MLV_get_size_of_text(text, &text_width, &text_height);
     MLV_draw_text_with_font(x + width/2 - text_width/1.5, y - text_width*3, text, settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
-
-
 }
 
 void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color, int display_value, char* name,  int flash, MLV_Color flash_color) {

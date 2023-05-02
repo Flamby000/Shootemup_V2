@@ -69,3 +69,15 @@ invincible:true
 explosion:resources/missiles/blast/explosion_blast_%d.png
 animation:resources/missiles/blast/blast%d.png
 movement:8
+
+=====Missile targeting ennemy=====
+id:6
+width:15
+height:15
+speed:6
+damage:1
+fuel:5000
+invincible:false
+explosion:resources/explosions/explosion%d.png
+animation:resources/missiles/missile5.png
+movement:10

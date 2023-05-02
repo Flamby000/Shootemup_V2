@@ -77,16 +77,16 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
 }
 
 
-void create_shoot_line(Game* game, Ennemy *ennemy, char* shootline) {
+void create_shoot_line(Game* game, Entity *entity, char* shootline) {
     int i;
     int line_size = strlen(shootline);
 
     for(i = 0; i < line_size; i++) {
         if(shootline[i] == 'X') continue;
         create_missile(game,
-            ennemy->entity, 
+            entity, 
             shootline[i] - '0', 
-            ennemy->entity->x + (ennemy->entity->width / line_size) * i + (ennemy->entity->width / line_size) / 2
+            entity->x + (entity->width / line_size) * i + (entity->width / line_size) / 2
             );
     }
 }
@@ -98,8 +98,12 @@ void free_ennemy(Game* game, Ennemy *ennemy) {
 
 int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction direction) {
     if(collide->type == PLAYER) {
+            
         deals_damage(game, collide, 1);
-        deals_damage(game, ennemy->entity, 1);
+        if(deals_damage(game, ennemy->entity, 1)){
+            ((Player*)collide->parent)->score += ennemy->score;
+
+        }
         return 1;
     }
 

@@ -144,7 +144,7 @@ void power_up_speed_effect(Game *game, Player* eater, int reverse) {
 void power_up_shoot_effect(Game *game, Player* eater, int reverse) {
     SpaceShip *ship = eater->ship;
     Shooter *shooter = &ship->shooter;
-    if(!reverse) shooter->update_shoot = shoot_player_perforing;
+    if(!reverse) shooter->update_shoot = shoot_multidirectional;
     else shooter->update_shoot = shoot_player_basic;
 }
 

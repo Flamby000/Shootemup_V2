@@ -140,7 +140,5 @@ void remove_entity(Game* game, Entity* entity, int explose) {
         }
     }
 
-    
-
     printf("Error : Entity not found\n");
 }

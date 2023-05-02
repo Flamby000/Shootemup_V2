@@ -22,6 +22,7 @@ SPEED_FUNC get_movement_function(int id) {
         case MOVEMENT_CIRCLE_ENTITY:   return movement_circle_entity;   /* id : 7 */
         case MOVEMENT_FOLLOW_X:        return movement_follow_x;        /* id : 8 */
         case MOVEMENT_LEFT_RIGHT:      return movement_left_right;      /* id : 9 */
+        case MOVEMENT_FOLLOW_ENNEMY:   return movement_follow_ennemy;        /* id : 10 */
         default:                       return movement_none;
     }
 }
@@ -123,6 +124,12 @@ void movement_controller(Game *game, Entity *entity) {
 
 void movement_follow_player(Game *game, Entity *entity) {
     movement_follow_entity(game, entity, closest_entity(game, entity, PLAYER));
+}
+
+void movement_follow_ennemy(Game *game, Entity *entity) {
+    Entity *ennemy = closest_entity(game, entity, ENNEMY);
+    if(ennemy == NULL) movement_backward(game, entity);
+    else movement_follow_entity(game, entity, ennemy);
 }
 
 void movement_follow_entity(Game *game, Entity *entity, Entity *target) {

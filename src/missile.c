@@ -71,6 +71,7 @@ Missile* create_missile(Game *game, Entity *sender, int type, int x) {
     missile->fuel = fuel;
     missile->invincible = invincible;
     missile->last_damage_time = 0;
+    missile->sender = sender;
     if(sender->type == PLAYER) missile->is_from_player = 1;
     else missile->is_from_player = 0;
 
@@ -81,6 +82,7 @@ Missile* create_missile(Game *game, Entity *sender, int type, int x) {
 void free_missile(Missile *missile) {
     free(missile);
 }
+
 
 int update_missile(Game *game, Missile *missile) {
     if(missile->fuel > 0) {
@@ -115,7 +117,11 @@ int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction 
     }
     else if(collide->type == ENNEMY && missile->is_from_player) {
         if(!can_deals_damage(missile)) return 0;
-        deals_damage(game, collide, missile->damage);
+        if(deals_damage(game, collide, missile->damage)) {
+            if(missile->sender->type == PLAYER) {
+                ((Player*)missile->sender->parent)->score += ((Ennemy*)collide->parent)->score;
+            }
+        }
         if(!missile->invincible) {
                 remove_entity(game, missile->entity, 1);
                 return 1;
@@ -123,6 +129,7 @@ int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction 
     } else if(collide->type == MISSILE) {
         if(!can_deals_damage(missile)) return 0;
         collided = (Missile*)collide->parent;
+        if(collided->is_from_player && missile->is_from_player) return 0;
         if(!collided->invincible) {
             remove_entity(game, collide, 1);
             return 1;

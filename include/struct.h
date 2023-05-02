@@ -28,6 +28,8 @@ typedef void (*BONUS_FUNC)(struct _Game*, struct _Player*, int);
 
 extern struct _Settings *settings;
 
+
+
 typedef struct _Settings {
     int win_width;
     int win_height;
@@ -116,6 +118,7 @@ typedef struct _SpaceShip {
     struct _BonusLink* bonus;
     struct _Boost boost;
     struct _Shooter super_shooter;
+    int total_shoots;
 } SpaceShip;
 
 typedef struct _Player {
@@ -133,6 +136,7 @@ typedef struct _Ennemy {
 
 typedef struct _Missile {
     struct _Entity* entity;
+    struct _Entity *sender;
     struct _Entity target;
     int damage;
     int is_from_player;

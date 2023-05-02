@@ -34,7 +34,6 @@ height:30
 consumer:false
 animation:resources/bonus/support-%d.png
 
-
 =====Get 1 HP====
 id:H
 width:30

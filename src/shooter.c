@@ -4,6 +4,7 @@
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
 #include "../include/entity.h"
+#include "../include/ennemy.h"
 #include "../include/missile.h"
 #include "../include/shooter.h"
 
@@ -15,6 +16,8 @@ SHOOT_FUNC get_shoot_function(int id) {
         case SHOOT_PERFORING_PLAYER: return shoot_player_perforing;/* id : 3 */
         case SHOOT_NONE:             return shoot_none;         /* id : 4 */
         case SHOOT_SUPER_LASER:      return shoot_super_laser;  /* id : 5 */
+        case SHOOT_MULTIDIRECTIONAL: return shoot_multidirectional; /* id : 6 */
+        case SHOOT_360_DIRECTION:    return shoot_360_direction;    /* id : 7 */
         default: return shoot_basic;
     }
 }
@@ -57,5 +60,18 @@ int shoot_super_laser(Game *game, Entity *entity) {
         create_missile(game, entity, SUPER_LASER_MISSILE, -1);
        return 1;
     }
+    return 0;
+}
+
+
+int shoot_multidirectional(Game *game, Entity *entity) {
+    if(MLV_get_keyboard_state(MLV_KEYBOARD_SPACE) == MLV_PRESSED) {
+        create_shoot_line(game, entity, "00600");
+        return 1;
+    }
+    return 0;
+}
+
+int shoot_360_direction(Game *game, Entity *entity) {
     return 0;
 }

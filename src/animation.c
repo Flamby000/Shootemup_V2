@@ -7,6 +7,7 @@
 #include "../include/entity.h"
 #include "../include/movement.h"
 #include "../include/game.h"
+#include "../include/frame.h"
 #include "../include/animation.h"
 
 Animation* init_animation_wrapper(char* str) {
@@ -227,8 +228,12 @@ void draw_entity(Game *game, Entity* entity, Entity* parent) {
         default:
             break;
     }
-        for(child = entity->children; child != NULL; child = child->next) {
-            draw_entity(game, child->entity, entity);
-        }
+
+    if(entity->type == ENNEMY) draw_ennemy(game, (Ennemy*)entity->parent);
+
+    for(child = entity->children; child != NULL; child = child->next) {
+        draw_entity(game, child->entity, entity);
+    }
+    
     
 }
