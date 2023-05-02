@@ -1,0 +1,8 @@
+#Visual Studio Files
+.vscode
+
+#Object Files
+bin/*.o
+
+#Executable Files
+shootemup
