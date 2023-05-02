@@ -18,7 +18,7 @@
 
 Game* init_game() {
     Game *game = malloc(sizeof(Game));
-    game->level = create_level("data/level/level-2.lvl");
+    game->level = create_level("data/level/level-1.lvl");
     game->entities = NULL;
 
     init_background(game);

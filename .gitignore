@@ -6,3 +6,6 @@ bin/*.o
 
 #Executable Files
 shootemup
+
+#Texture pack
+pack.zip

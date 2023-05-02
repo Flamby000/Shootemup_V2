@@ -1,4 +1,4 @@
-#Simple ennemy
+=====Simple ennemy=====
 id:1
 width:43
 height:60
@@ -40,7 +40,7 @@ animation:resources/ennemies/ennemy2-forward-%d.png
 movement:6
 shoot:1
 
-====First Boss=====
+=====First Boss=====
 id:4
 width:150
 height:200
@@ -51,5 +51,19 @@ invincibility:0
 cooldown:1000
 is_boss:true
 animation:resources/ennemies/boss/planes_08B_%d.png
+movement:9
+shoot:4
+
+====Second Boss====
+id:5
+width:150
+height:200
+speed:8
+score:100
+life:3
+invincibility:0
+cooldown:1000
+is_boss:true
+animation:resources/ennemies/boss/spaceship9-%d.png
 movement:9
 shoot:4
