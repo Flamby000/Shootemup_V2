@@ -9,21 +9,32 @@
 #include "../include/spaceship.h"
 #include "../include/bonus.h"
 #include "../include/level.h"
+#include "../include/interface/menu.h"
 #include "../include/animation.h"
 #include "../include/ennemy.h"
+#include "../include/interface/menu.h"
+#include "../include/settings.h"
 #include "../include/missile.h"
 #include "../include/background.h"
 
 
-
 Game* init_game() {
     Game *game = malloc(sizeof(Game));
-    game->level = create_level("data/level/level-1.lvl");
+    /*Menu main_menu;*/
+    game->level = NULL;
+    game->level = create_level("data/level/test.lvl");
+
     game->entities = NULL;
 
     init_background(game);
-    game->player = create_player(game);
-    game->is_match_on = 1;
+    set_background_speed(game, 1);
+    settings->game_phase = MAIN_MENU_PHASE;
+
+
+    create_player(game);
+    /*main_menu = create_game_over_menu(game);*/
+    /*remove_menu(game, &main_menu);*/
+
     return game;
 }
 
@@ -40,10 +51,44 @@ void update_game(Game *game) {
         if(entity->type == PLAYER || entity->type == ENNEMY) {
             update_spaceship(game, entity);
         }
+
+        if(entity->type == BUTTON) {
+            update_button(game, (Button*)entity->parent);
+        }
     }
 
     /* Update the level */
-    update_level(game, game->level, 1);
+    if(game->level != NULL) {
+        if(remaining_players(game) == 0) end_match(game, 0);
+        if(boss_kill_count(game)) end_match(game, 1);
+        if(update_level(game, game->level, settings->infinite_mode) && remaining_ennemies(game) == 0) {
+            end_match(game, 1);
+        }
+    }
+}
+
+int boss_kill_count(Game* game) {
+    EntityLink* current;
+    Player* player;
+    int count = 0;
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(current->entity->type == PLAYER) {
+            player = (Player*) current->entity->parent;
+            count += player->boss_kill_count;
+        }
+    }
+    return count;
+}
+
+int is_boss_alive(Game* game) {
+    EntityLink* current;
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(current->entity->type == ENNEMY) {
+            Ennemy* ennemy = (Ennemy*) current->entity->parent;
+            if(ennemy->is_boss) return 1;
+        }
+    }
+    return 0;
 }
 
 void free_game(Game* game) {
@@ -56,9 +101,32 @@ void free_game(Game* game) {
     free(game);
 }
 
-void end_match(Game* game) {
-    game->is_match_on = 0;
-    printf("Game Over\n");
+int remaining_ennemies(Game* game) {
+    EntityLink* current;
+    int count = 0;
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(current->entity->type == ENNEMY) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int remaining_players(Game* game) {
+    EntityLink* current;
+    int count = 0;
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(current->entity->type == PLAYER) {
+            count++;
+        }
+    }
+    return count;
+}
+
+void end_match(Game* game, int win) {
+    free_level(game->level);
+    game->level = NULL;
+    printf("Game Over %d\n", win);
 }
 
 void insert_entity(Game* game, Entity* entity) {
@@ -93,17 +161,6 @@ int get_entity_id(Game* game, Entity* entity) {
 }
 
 
-int is_boss_alive(Game* game) {
-    EntityLink* current;
-    for(current = game->entities; current != NULL; current = current->next) {
-        if(current->entity->type == ENNEMY) {
-            Ennemy* ennemy = (Ennemy*) current->entity->parent;
-            if(ennemy->is_boss) return 1;
-        }
-    }
-    return 0;
-}
-
 int entity_count(Game *game) {
     int count = 0;
     EntityLink* current;
@@ -115,7 +172,6 @@ int entity_count(Game *game) {
 
 void remove_entity(Game* game, Entity* entity, int explose) {
     EntityLink* current;
-    int boss_alive = is_boss_alive(game);
     if(explose) create_one_shot_animation(game, entity->destruction_img_path, entity);
 
     for(current = game->entities; current != NULL; current = current->next) {
@@ -135,7 +191,6 @@ void remove_entity(Game* game, Entity* entity, int explose) {
             free_entity(game, current->entity);
             free(current);
             current = NULL;
-            if(!is_boss_alive(game) && boss_alive) end_match(game);
             return;
         }
     }

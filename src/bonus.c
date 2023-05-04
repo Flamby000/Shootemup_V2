@@ -116,8 +116,13 @@ BONUS_FUNC get_bonus_effect_by_id(char id) {
         case LIFE_INCREASE_EFFECT: return life_increase_effect;
         case POWER_UP_SPEED_EFFECT: return power_up_speed_effect;
         case SPAWN_UNIT_EFFECT: return spawn_unit_effect;
+        case LIFE_DECREASE_EFFECT : return life_decrease_effect;
         default: return NULL;
     } 
+}
+
+void life_decrease_effect(Game *game, Player* eater, int reverse) {
+    deals_damage(game, eater->entity, 1);
 }
 
 void shield_effect(Game *game, Player* eater, int reverse) {

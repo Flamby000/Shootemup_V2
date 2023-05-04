@@ -5,9 +5,10 @@
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
 #include "../include/entity.h"
+#include "../include/frame.h"
 #include "../include/movement.h"
 #include "../include/game.h"
-#include "../include/frame.h"
+#include "../include/interface/menu.h"
 #include "../include/animation.h"
 
 Animation* init_animation_wrapper(char* str) {
@@ -115,6 +116,7 @@ Animation* init_multiple_animation(char* forward_path, char* backward_path, char
 
 void free_animation(Animation* animation) {
     int i;
+    if(animation == NULL) return;
     switch(animation->type) {
         case ANIMATED || ONE_SHOT_ANIMATION:
             for(i = 0; i < animation->nb_frames; i++) {
@@ -148,6 +150,8 @@ void draw_entity(Game *game, Entity* entity, Entity* parent) {
     Animation *animation = entity->sprite;
     int parent_x = 0;
     int parent_y = 0;
+
+    if(entity->type == BUTTON) draw_button(game, (Button*)entity->parent);
 
     if(animation == NULL) return; /* Don't draw entities without animation*/
     if(parent != NULL) {

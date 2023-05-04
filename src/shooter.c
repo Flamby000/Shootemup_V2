@@ -66,7 +66,7 @@ int shoot_super_laser(Game *game, Entity *entity) {
 
 int shoot_multidirectional(Game *game, Entity *entity) {
     if(MLV_get_keyboard_state(MLV_KEYBOARD_SPACE) == MLV_PRESSED) {
-        create_shoot_line(game, entity, "00600");
+        create_shoot_line(game, entity, "0X6X0");
         return 1;
     }
     return 0;

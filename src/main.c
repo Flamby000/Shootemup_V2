@@ -29,18 +29,17 @@ int main() {
     
     load_settings(settings);
     init_frame();
-    game = init_game();
     
-    while(!quit) {
+    game = init_game();
 
-        if(temporize(&update_time, 12)) continue ;
+    while(!quit) {
+        if(temporize(&update_time, 12)) continue;
 
         update_game(game);
+
         MLV_clear_window(MLV_COLOR_BLACK);
         draw_frame(game); 
         MLV_actualise_window();
-        
-        
     }
 
     free_game(game);

@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc -g
 CFLAGS=-Wall -ansi -pedantic -pthread
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o ${BLD}menu.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -17,7 +17,7 @@ all: ${OBJ}
 ${BLD}main.o: ${SP}main.c ${SP}frame.c ${SP}settings.c ${SP}utils.c
 	${CC} -c ${SP}main.c -o ${BLD}main.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c ${SP}player.c ${SP}ennemy.c ${SP}level.c ${SP}bonus.c
+${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c ${SP}player.c ${SP}ennemy.c ${SP}level.c ${SP}bonus.c ${SP}interface/menu.c
 	${CC} -c ${SP}game.c -o ${BLD}game.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}frame.o: ${SP}frame.c ${SP}game.c 
@@ -26,7 +26,7 @@ ${BLD}frame.o: ${SP}frame.c ${SP}game.c
 ${BLD}entity.o: ${SP}entity.c ${SP}animation.c 
 	${CC} -c ${SP}entity.c -o ${BLD}entity.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}animation.o: ${SP}animation.c ${SP}entity.c 
+${BLD}animation.o: ${SP}animation.c ${SP}entity.c ${SP}interface/menu.c
 	${CC} -c ${SP}animation.c -o ${BLD}animation.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}background.o: ${SP}background.c ${SP}entity.c ${SP}game.c ${SP}movement.c
@@ -59,10 +59,11 @@ ${BLD}level.o : ${SP}level.c
 ${BLD}bonus.o : ${SP}bonus.c 
 	${CC} -c ${SP}bonus.c -o ${BLD}bonus.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}utils.o : ${SP}utils.c 
+${BLD}utils.o : ${SP}utils.c
 	${CC} -c ${SP}utils.c -o ${BLD}utils.o ${CFLAGS} ${LDFLAGS}
 
-
+${BLD}menu.o : ${SP}interface/menu.c
+	${CC} -c ${SP}interface/menu.c -o ${BLD}menu.o ${CFLAGS} ${LDFLAGS}
 
 #Règle pour effacer les fichiers compilés
 clean :

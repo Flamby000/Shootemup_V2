@@ -29,7 +29,7 @@ Player* create_player(Game *game) {
     );
     insert_entity(game, player->entity);
     player->ship = create_spaceship(5, 500, 2000, shoot_player_basic, shoot_super_laser);
-
+    player->boss_kill_count = 0;
     return player;
 }
 

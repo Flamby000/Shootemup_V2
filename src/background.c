@@ -11,12 +11,21 @@
 #include "../include/background.h"
 
 
+void set_background_speed(Game *game, double factor) {
+    int i;
+    for(i = 0; i < NB_STAR+2; i++) {
+        game->background[i]->speed->speed = game->background[i]->speed->default_speed;
+        game->background[i]->speed->speed = game->background[i]->speed->speed * factor;
+    }
+}
+
 void init_background(Game *game) {
     int size, speed, i;
+    int element_count = 0;
+    Entity *tmp;
 
     /* The background image */
-    insert_entity(game, 
-        create_entity(
+    tmp = create_entity(
             0, 
             0, 
             settings->win_width, 
@@ -27,16 +36,16 @@ void init_background(Game *game) {
             NULL,
             NULL,
             LABEL
-            )
-    );
+        );
+    game->background[element_count] = tmp;
+    element_count++;
+    insert_entity(game, tmp);
 
     /* Adding squares for stars*/
     for(i = 0; i < NB_STAR; i++) {
         size = rand() % STAR_MAX_SIZE + 1;
         speed = size;
-
-        insert_entity(game, 
-            create_entity(
+        tmp = create_entity(
                 rand() % settings->win_width, 
                 rand() % settings->win_height, 
                 size, 
@@ -46,13 +55,14 @@ void init_background(Game *game) {
                 init_square(MLV_rgba(255, 255, rand() % 254 + 1, 255)), NULL,
                 NULL,
                 LABEL
-            )
-        );
+            );
+        game->background[element_count] = tmp;
+        element_count++;
+        insert_entity(game, tmp);
     }
 
     /* Add big planet */
-    insert_entity(game, 
-        create_entity(
+    tmp = create_entity(
             -settings->win_width/100, 
             0, 
             settings->win_width/5, 
@@ -61,6 +71,8 @@ void init_background(Game *game) {
             movement_infinite_scroll,  
             init_sprite(MLV_load_image("resources/utils/planet.png")), NULL,
             NULL, LABEL
-        )
-    );
+        );
+    game->background[element_count] = tmp;
+    element_count++;
+    insert_entity(game, tmp);
 }

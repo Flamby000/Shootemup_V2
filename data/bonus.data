@@ -40,3 +40,11 @@ width:30
 height:30
 consumer:true
 animation:resources/bonus/health-%d.png
+
+
+===Rock deals damage==
+id:L
+width:25
+height:25
+consumer:true
+animation:resources/bonus/rock-%d.png

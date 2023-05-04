@@ -1,6 +1,9 @@
 #ifndef STRUCT_H 
 #define STRUCT_H 
 
+#define NB_STAR 100
+#define STAR_MAX_SIZE 3
+
 /*#define return printf("== %s finished\n", __FUNCTION__); return*/
 
 struct _Entity;
@@ -19,6 +22,7 @@ struct _Bonus;
 struct _BonusLink;
 struct _Level;
 struct _Wave;
+struct _Button;
 
 #define NONE -1
 
@@ -33,15 +37,34 @@ extern struct _Settings *settings;
 typedef struct _Settings {
     int win_width;
     int win_height;
+    int coop_mode;
+    int infinite_mode;
+
+
     MLV_Font *small_font;
+    MLV_Font *medium_font;
+    MLV_Font *big_font;
+    MLV_Font *huge_font;
+    
+
+    int game_phase;
 } Settings;
 
 typedef struct _Game {
     struct _EntityLink* entities;
-    struct _Player *player;
     struct _Level *level;
-    int is_match_on;
+    struct _Entity *background[NB_STAR+2];
 } Game;
+
+typedef struct _Button {
+    struct _Entity* entity;
+    char* text;
+    int (*action)(struct _Game*);
+    struct _Button* next;
+    MLV_Color background_color;
+    MLV_Color color;
+    MLV_Font *font;
+} Button, *Menu;
 
 typedef struct _EntityLink {
     struct _Entity* entity;
@@ -53,9 +76,10 @@ typedef enum _EntityType {
     PLAYER,
     MISSILE,
     LABEL,
-    BONUS
-    
+    BONUS,
+    BUTTON
 } EntityType;
+
  
 typedef struct _Entity{
     struct _Animation* sprite;
@@ -76,8 +100,12 @@ typedef struct _Speed {
     int speed_x;
     int speed_y;
     int speed;
+    int default_speed;
     SPEED_FUNC update_speed;
 } Speed;
+
+
+
 
 typedef struct _Life{
     struct _Entity *shield_entity;
@@ -125,6 +153,7 @@ typedef struct _Player {
     struct _Entity* entity;
     struct _SpaceShip* ship;
     int score;
+    int boss_kill_count;
 } Player;
 
 typedef struct _Ennemy {

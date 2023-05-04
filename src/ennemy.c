@@ -102,6 +102,8 @@ int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction dir
         deals_damage(game, collide, 1);
         if(deals_damage(game, ennemy->entity, 1)){
             ((Player*)collide->parent)->score += ennemy->score;
+            ((Player*)collide->parent)->boss_kill_count += ennemy->is_boss;
+
 
         }
         return 1;

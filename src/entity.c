@@ -6,6 +6,7 @@
 #include "../include/animation.h"
 #include "../include/game.h"
 #include "../include/missile.h"
+#include "../include/interface/menu.h"
 #include "../include/player.h"
 #include "../include/bonus.h"
 #include "../include/ennemy.h"
@@ -37,6 +38,7 @@ Entity* create_entity(int x, int y, int width, int height,
     entity->speed->speed_x = 0;
     entity->speed->speed_y = 0;
     entity->speed->speed = speed;  
+    entity->speed->default_speed = speed;
     entity->speed->update_speed = update_speed;  
     entity->children = NULL;
     entity->parent = parent;
@@ -175,15 +177,14 @@ Entity* closest_entity(Game *game, Entity *entity, EntityType filter) {
     return closest->entity;
 }
 
-Entity* closest_ennemy(Game *game) {
-    return closest_entity(game, game->player->entity, ENNEMY);
-}
+
 
 void free_entity(Game* game, Entity *entity) {
     EntityLink* current;
     EntityLink* next = NULL;
     if(entity->type == MISSILE) free_missile((Missile*)entity->parent);
     if(entity->type == ENNEMY) free_ennemy(game, (Ennemy*)entity->parent);
+    if(entity->type == BUTTON) free_button((Button*)entity->parent);
     if(entity->type == PLAYER) free_player(game, (Player*)entity->parent);
     if(entity->type == BONUS) free_bonus((Bonus*)entity->parent);
     free(entity->destruction_img_path);

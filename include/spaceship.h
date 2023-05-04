@@ -1,3 +1,6 @@
+#ifndef SPACESHIP_H
+#define SPACESHIP_H
+
 SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_duration, SHOOT_FUNC update_shoot, SHOOT_FUNC update_super_shoot);
 void free_spaceship(Game* game, SpaceShip* spaceship);
 void update_spaceship(Game *game, Entity* entity);  
@@ -15,3 +18,5 @@ Bonus *get_bonus(Entity *entity, char type);
 int remove_random_bonus(Game* game, Entity *entity);
 SpaceShip* get_spaceship(Entity *entity);
 void update_boost(Game *game, Entity* entity);
+
+#endif

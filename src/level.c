@@ -81,11 +81,14 @@ EntityType get_object_type(char object) {
     else return BONUS;
 }
 
-void update_level(Game* game, Level* level, int infinite) {
+int update_level(Game* game, Level* level, int infinite) {
 
-    if(!game->is_match_on) return;
 
-    if(!infinite && level->current_wave == level->nb_wave) return;
+    if(!infinite && (!(level->waves[level->current_wave].boss_id == 'X')) && boss_kill_count(game) != 0) return 1;
+
+    if(!infinite && level->current_wave == level->nb_wave
+    && level->waves[level->current_wave].current_line == level->waves[level->current_wave].nb_line) return 1;
+
     else if(infinite && level->current_wave == level->nb_wave) {
         level->current_wave = 0;
         level->last_wave_time = MLV_get_time();
@@ -99,13 +102,13 @@ void update_level(Game* game, Level* level, int infinite) {
             level->waves[level->current_wave].current_line++;
 
             if(level->waves[level->current_wave].current_line == level->waves[level->current_wave].nb_line) {
-                level->waves[level->current_wave].current_line = 0;
+                if(infinite) level->waves[level->current_wave].current_line = 0;
                 level->current_wave++;
                 level->last_wave_time = MLV_get_time();
             }
         } else {            
 
-            if(!is_boss_alive(game) && game->is_match_on) {
+            if(!is_boss_alive(game)) {
                 level->waves[level->current_wave].boss = create_ennemy(game, level->waves[level->current_wave].boss_id, settings->win_width / 2);
             } else {
                 create_shoot_line(game, level->waves[level->current_wave].boss->entity, level->waves[level->current_wave].object_lines[level->waves[level->current_wave].current_line]);
@@ -118,6 +121,7 @@ void update_level(Game* game, Level* level, int infinite) {
             /*level->current_wave++;*/
         }
     }
+    return 0;
 }
 
 

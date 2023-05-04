@@ -120,6 +120,7 @@ int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction 
         if(deals_damage(game, collide, missile->damage)) {
             if(missile->sender->type == PLAYER) {
                 ((Player*)missile->sender->parent)->score += ((Ennemy*)collide->parent)->score;
+                ((Player*)missile->sender->parent)->boss_kill_count += ((Ennemy*)collide->parent)->is_boss;
             }
         }
         if(!missile->invincible) {
