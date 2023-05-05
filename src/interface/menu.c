@@ -3,11 +3,11 @@
 #include <string.h>
 #include <MLV/MLV_all.h>
 #include "../../include/struct.h"
-#include "../../include/movement.h"
-#include "../../include/entity.h"
-#include "../../include/game.h"
-#include "../../include/animation.h"
-#include "../../include/utils.h"
+#include "../../include/utils/movement.h"
+#include "../../include/logic/entity.h"
+#include "../../include/logic/game.h"
+#include "../../include/interface/animation.h"
+#include "../../include/utils/utils.h"
 #include "../../include/interface/click_actions.h"
 #include "../../include/interface/menu.h"
 
@@ -445,9 +445,24 @@ Menu create_main_menu(Game *game, int type) {
             )
         );
         free(buffer);
-
-
         element_count++;
+        element_count++;
+
+        /* Separation */
+        insert_button(&main_menu,
+            create_button(game, 
+                box_x+box_width/20, element_y + (element_count) * space_between_elements - 10,
+                box_width-(box_width/20*2), 2,
+                "",
+                MLV_rgba(0, 0, 0, 0),
+                MLV_rgba(0, 0, 0, 0),
+                MLV_rgba(0, 0, 0, 0),
+                MLV_COLOR_WHITE,
+                NULL,
+                NULL,
+                0
+            )
+        );
 
         /* Difficulty */
         MLV_get_size_of_text_with_font("Difficulty : ", &txt_width, &txt_height, settings->medium_font);
@@ -465,6 +480,9 @@ Menu create_main_menu(Game *game, int type) {
                 0
             )
         );
+
+
+        
         
         /* 4 buttons : easy, medium, hard, custom*/
         MLV_get_size_of_text_with_font("Easy", &txt_width_child, &txt_height_child, settings->medium_font);
@@ -538,22 +556,6 @@ Menu create_main_menu(Game *game, int type) {
         );
         element_count++;
 
-        /* Separation */
-        insert_button(&main_menu,
-            create_button(game, 
-                box_x+box_width/20, element_y + (element_count+1) * space_between_elements - 10,
-                box_width-(box_width/20*2), 2,
-                "",
-                MLV_rgba(0, 0, 0, 0),
-                MLV_rgba(0, 0, 0, 0),
-                MLV_rgba(0, 0, 0, 0),
-                MLV_COLOR_WHITE,
-                NULL,
-                NULL,
-                0
-            )
-        );
-        element_count++;
 
         /* Custom presets setup */
         /* player_life */

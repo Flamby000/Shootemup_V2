@@ -30,7 +30,7 @@ shoot:2
 id:3
 width:20
 height:30
-speed:4
+speed:3
 score:10
 life:1
 invincibility:0

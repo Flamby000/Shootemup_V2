@@ -14,53 +14,53 @@ all: ${OBJ}
 	${CC} -o ${OUT} ${OBJ} ${CFLAGS} ${LDFLAGS} 
 
 #Règles de dépendances des fichiers sources :
-${BLD}main.o: ${SP}main.c ${SP}frame.c ${SP}settings.c ${SP}utils.c
+${BLD}main.o: ${SP}main.c ${SP}interface/frame.c ${SP}settings.c ${SP}utils/utils.c
 	${CC} -c ${SP}main.c -o ${BLD}main.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}game.o: ${SP}game.c ${SP}entity.c ${SP}background.c ${SP}player.c ${SP}ennemy.c ${SP}level.c ${SP}bonus.c ${SP}interface/menu.c
-	${CC} -c ${SP}game.c -o ${BLD}game.o ${CFLAGS} ${LDFLAGS}
+${BLD}game.o: ${SP}logic/game.c ${SP}logic/entity.c ${SP}utils/background.c ${SP}logic/player.c ${SP}logic/ennemy.c ${SP}logic/level.c ${SP}logic/bonus.c ${SP}interface/menu.c
+	${CC} -c ${SP}logic/game.c -o ${BLD}game.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}frame.o: ${SP}frame.c ${SP}game.c 
-	${CC} -c ${SP}frame.c -o ${BLD}frame.o ${CFLAGS} ${LDFLAGS}
+${BLD}frame.o: ${SP}interface/frame.c ${SP}logic/game.c 
+	${CC} -c ${SP}interface/frame.c -o ${BLD}frame.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}entity.o: ${SP}entity.c ${SP}animation.c 
-	${CC} -c ${SP}entity.c -o ${BLD}entity.o ${CFLAGS} ${LDFLAGS}
+${BLD}entity.o: ${SP}logic/entity.c ${SP}interface/animation.c 
+	${CC} -c ${SP}logic/entity.c -o ${BLD}entity.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}animation.o: ${SP}animation.c ${SP}entity.c ${SP}interface/menu.c
-	${CC} -c ${SP}animation.c -o ${BLD}animation.o ${CFLAGS} ${LDFLAGS}
+${BLD}animation.o: ${SP}interface/animation.c ${SP}logic/entity.c ${SP}interface/menu.c
+	${CC} -c ${SP}interface/animation.c -o ${BLD}animation.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}background.o: ${SP}background.c ${SP}entity.c ${SP}game.c ${SP}movement.c
-	${CC} -c ${SP}background.c -o ${BLD}background.o ${CFLAGS} ${LDFLAGS}
+${BLD}background.o: ${SP}utils/background.c ${SP}logic/entity.c ${SP}logic/game.c ${SP}utils/movement.c
+	${CC} -c ${SP}utils/background.c -o ${BLD}background.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}movement.o: ${SP}movement.c ${SP}utils.c
-	${CC} -c ${SP}movement.c -o ${BLD}movement.o ${CFLAGS} ${LDFLAGS}
+${BLD}movement.o: ${SP}utils/movement.c ${SP}utils/utils.c
+	${CC} -c ${SP}utils/movement.c -o ${BLD}movement.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}settings.o: ${SP}settings.c
 	${CC} -c ${SP}settings.c -o ${BLD}settings.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}player.o : ${SP}player.c ${SP}entity.c ${SP}animation.c ${SP}movement.c ${SP}spaceship.c ${SP}shooter.c
-	${CC} -c ${SP}player.c -o ${BLD}player.o ${CFLAGS} ${LDFLAGS}
+${BLD}player.o : ${SP}logic/player.c ${SP}logic/entity.c ${SP}interface/animation.c ${SP}utils/movement.c ${SP}logic/spaceship.c ${SP}utils/shooter.c
+	${CC} -c ${SP}logic/player.c -o ${BLD}player.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}ennemy.o : ${SP}ennemy.c ${SP}entity.c ${SP}animation.c ${SP}movement.c ${SP}spaceship.c ${SP}shooter.c
-	${CC} -c ${SP}ennemy.c -o ${BLD}ennemy.o ${CFLAGS} ${LDFLAGS}
+${BLD}ennemy.o : ${SP}logic/ennemy.c ${SP}logic/entity.c ${SP}interface/animation.c ${SP}utils/movement.c ${SP}logic/spaceship.c ${SP}utils/shooter.c
+	${CC} -c ${SP}logic/ennemy.c -o ${BLD}ennemy.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}spaceship.o : ${SP}spaceship.c
-	${CC} -c ${SP}spaceship.c -o ${BLD}spaceship.o ${CFLAGS} ${LDFLAGS}
+${BLD}spaceship.o : ${SP}logic/spaceship.c
+	${CC} -c ${SP}logic/spaceship.c -o ${BLD}spaceship.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}missile.o : ${SP}missile.c ${SP}entity.c
-	${CC} -c ${SP}missile.c -o ${BLD}missile.o ${CFLAGS} ${LDFLAGS}
+${BLD}missile.o : ${SP}logic/missile.c ${SP}logic/entity.c
+	${CC} -c ${SP}logic/missile.c -o ${BLD}missile.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}shooter.o : ${SP}shooter.c ${SP}entity.c ${SP}missile.c
-	${CC} -c ${SP}shooter.c -o ${BLD}shooter.o ${CFLAGS} ${LDFLAGS}
+${BLD}shooter.o : ${SP}utils/shooter.c ${SP}logic/entity.c ${SP}logic/missile.c
+	${CC} -c ${SP}utils/shooter.c -o ${BLD}shooter.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}level.o : ${SP}level.c 
-	${CC} -c ${SP}level.c -o ${BLD}level.o ${CFLAGS} ${LDFLAGS}
+${BLD}level.o : ${SP}logic/level.c 
+	${CC} -c ${SP}logic/level.c -o ${BLD}level.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}bonus.o : ${SP}bonus.c 
-	${CC} -c ${SP}bonus.c -o ${BLD}bonus.o ${CFLAGS} ${LDFLAGS}
+${BLD}bonus.o : ${SP}logic/bonus.c 
+	${CC} -c ${SP}logic/bonus.c -o ${BLD}bonus.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}utils.o : ${SP}utils.c
-	${CC} -c ${SP}utils.c -o ${BLD}utils.o ${CFLAGS} ${LDFLAGS}
+${BLD}utils.o : ${SP}utils/utils.c
+	${CC} -c ${SP}utils/utils.c -o ${BLD}utils.o ${CFLAGS} ${LDFLAGS}
 
 ${BLD}menu.o : ${SP}interface/menu.c ${SP}interface/click_actions.c
 	${CC} -c ${SP}interface/menu.c -o ${BLD}menu.o ${CFLAGS} ${LDFLAGS}

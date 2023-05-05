@@ -7,12 +7,12 @@
 
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
-#include "../include/frame.h"
+#include "../include/interface/frame.h"
 #include "../include/settings.h"
-#include "../include/animation.h"
-#include "../include/entity.h"
-#include "../include/utils.h"
-#include "../include/game.h"
+#include "../include/interface/animation.h"
+#include "../include/logic/entity.h"
+#include "../include/utils/utils.h"
+#include "../include/logic/game.h"
 
 int quit = 0;   
 Settings* settings;

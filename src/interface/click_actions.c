@@ -3,15 +3,17 @@
 #include <string.h>
 #include <MLV/MLV_all.h>
 #include "../../include/struct.h"
-#include "../../include/game.h"
+#include "../../include/logic/game.h"
 #include "../../include/settings.h"
+#include "../../include/utils/background.h"
 #include "../../include/interface/menu.h"
 #include "../../include/interface/click_actions.h"
 
 int go_main_menu(Game* game, Button* button) {
     EntityLink* current, *next;
     Menu main_menu = create_main_menu(game, MAIN_MENU);
-    
+    set_background_speed(game, 0.5);
+
     for(current = game->entities; current != NULL; current = next) {
         next = current->next;
         if(is_match_entity(current->entity)) {

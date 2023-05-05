@@ -4,7 +4,7 @@
 
 #include <MLV/MLV_all.h>
 #include "../include/struct.h"
-#include "../include/frame.h"
+#include "../include/interface/frame.h"
 #include "../include/settings.h"
 
 
