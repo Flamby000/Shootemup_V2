@@ -28,9 +28,9 @@ shoot:2
 
 =====Sinusoidal=====
 id:3
-width:43
-height:60
-speed:2
+width:20
+height:30
+speed:4
 score:10
 life:1
 invincibility:0

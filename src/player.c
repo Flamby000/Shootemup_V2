@@ -19,7 +19,7 @@ Player* create_player(Game *game) {
         settings->win_height - PLAYER_HEIGHT * 2, 
         PLAYER_WIDTH, 
         PLAYER_HEIGHT,
-        5, movement_controller,  
+        settings->difficulty->player_speed, movement_controller,  
         init_multiple_animation(
             "resources/player/forward-%d.png", 
             "resources/player/backward-%d.png", 
@@ -28,7 +28,7 @@ Player* create_player(Game *game) {
         player, PLAYER
     );
     insert_entity(game, player->entity);
-    player->ship = create_spaceship(1, 500, 2000, shoot_player_basic, shoot_super_laser);
+    player->ship = create_spaceship(settings->difficulty->player_life, settings->difficulty->player_shoot_cooldown, settings->difficulty->player_super_shoot_cooldown, shoot_player_basic, shoot_super_laser);
     player->boss_kill_count = 0;
     return player;
 }

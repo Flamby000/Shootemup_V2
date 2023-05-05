@@ -9,10 +9,11 @@
 
 void init_frame() {    
     MLV_create_window(GAME_NAME, GAME_NAME, settings->win_width, settings->win_height   );
-    settings->small_font = MLV_load_font(FONT_PATH, 15);
+    settings->small_font = MLV_load_font(FONT_PATH, 20);
     settings->medium_font = MLV_load_font(FONT_PATH, 30);
     settings->big_font = MLV_load_font(FONT_PATH, 50);
     settings->huge_font = MLV_load_font(FONT_PATH, 100);
+    
 }
 
 void draw_frame(Game* game) {

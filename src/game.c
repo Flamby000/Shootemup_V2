@@ -12,22 +12,26 @@
 #include "../include/interface/menu.h"
 #include "../include/animation.h"
 #include "../include/ennemy.h"
+#include "../include/movement.h"
 #include "../include/interface/menu.h"
 #include "../include/settings.h"
 #include "../include/missile.h"
 #include "../include/background.h"
 
 Game* init_game() {
+    Menu main_menu;
     Game *game = malloc(sizeof(Game));
     set_level(game, NULL);
     game->entities = NULL;
-    set_menu(game, NULL);
+
     init_background(game);
     set_background_speed(game, 0);
+
+    main_menu = create_main_menu(game, MAIN_MENU);
+    set_menu(game, &main_menu);
+
     game->match_status = NOT_STARTED;
-
-
-    start_match(game, "data/level/test.lvl");
+    game->last_click_action_time = 0;
 
     return game;
 }
@@ -56,7 +60,7 @@ void update_game(Game *game) {
             if(entity->type == PLAYER || entity->type == ENNEMY) {
                 update_spaceship(game, entity);
             }
-        }
+        }        
     }
 
     /* Update the level */
@@ -173,27 +177,27 @@ void remove_entities_by_type(Game* game, EntityType type) {
 }
 
 void end_match(Game* game, MatchStatus status) {
-    /*free_level(game->level);*/
-    /*game->level = NULL;*/
     Menu match_end_menu = create_game_over_menu(game, status);
 
     set_background_speed(game, 0);
     remove_entities_by_type(game, MISSILE);
+
     game->match_status = status;
     set_menu(game, &match_end_menu);
 }
 
 void pause_match(Game* game) {
-    Menu pause_menu = create_game_over_menu(game, PAUSE);
-    set_background_speed(game, 0);
-    set_menu(game, &pause_menu);
-    game->match_status = PAUSE;
-}
+    if(game->match_status == PROCESS) {
+        Menu pause_menu = create_game_over_menu(game, PAUSE);
+        set_background_speed(game, 0);
+        set_menu(game, &pause_menu);
+        game->match_status = PAUSE;
+    } else {
 
-void resume_match(Game* game) {
-    set_background_speed(game, 1);
-    set_menu(game, NULL);
-    game->match_status = PROCESS;
+        set_background_speed(game, 1);
+        set_menu(game, NULL);
+        game->match_status = PROCESS;
+    }
 }
 
 void insert_entity(Game* game, Entity* entity) {

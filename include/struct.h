@@ -23,6 +23,7 @@ struct _BonusLink;
 struct _Level;
 struct _Wave;
 struct _Button;
+struct _Difficulty; 
 
 #define NONE -1
 
@@ -33,11 +34,32 @@ typedef void (*BONUS_FUNC)(struct _Game*, struct _Player*, int);
 typedef int (*CLICK_ACTION)(struct _Game*, struct _Button*);
 extern struct _Settings *settings;
 
+typedef enum _DifficultyPreset {
+    EASY,
+    MEDIUM,
+    HARD,
+    CUSTOM
+} DifficultyPreset;
+
+typedef struct _Difficulty {
+    DifficultyPreset preset;
+    int waves_spawn_cooldown;
+    int ennemy_life_multiplicator;
+    int ennemy_shoot_cooldown_multiplicator;
+    int ennemy_speed_multiplicator;
+    int player_life;
+    int player_shoot_cooldown;
+    int player_super_shoot_cooldown;
+    int player_speed;
+    int player_stamina;
+} Difficulty;
+
+
+
 
 typedef struct _Settings {
     int win_width;
     int win_height;
-    int coop_mode;
     int infinite_mode;
 
     MLV_Font *small_font;
@@ -45,6 +67,9 @@ typedef struct _Settings {
     MLV_Font *big_font;
     MLV_Font *huge_font;
     
+    struct _Difficulty *difficulty;
+    int coop_mode;
+    int volume;
 } Settings;
 
 
@@ -57,11 +82,26 @@ typedef struct _Button {
     MLV_Color background_color;
     MLV_Color color;
     MLV_Color over_color;
+    MLV_Color border_color;
     MLV_Font *font;
 
     int is_over;
     int is_selected;
+    int underline;
+
+    int is_slider;
+    int value;
+    int max_value;
+    int min_value;
 } Button, *Menu;
+
+
+#define MAIN_MENU -1
+#define CAMPAIGN_MENU 0
+#define GARAGE_MENU 2
+#define SETTINGS_MENU 3
+#define TUTORIAL_MENU 4
+#define CREDITS_MENU 5
 
 typedef enum _MatchStatus {
     PAUSE,
@@ -78,6 +118,8 @@ typedef struct _Game {
     
     struct _Level *level;
     MatchStatus match_status;
+
+    int last_click_action_time;
 } Game;
 
 typedef struct _EntityLink {

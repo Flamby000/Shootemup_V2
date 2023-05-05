@@ -27,8 +27,8 @@ SpaceShip* create_spaceship(int life, int shoot_cooldown, int invincibility_dura
     (&ship->super_shooter)->cooldown = shoot_cooldown*10;
 
     (&ship->boost)->speed = 5;
-    (&ship->boost)->max_energy = 100;
-    (&ship->boost)->energy = 100;
+    (&ship->boost)->max_energy = settings->difficulty->player_stamina;
+    (&ship->boost)->energy = (&ship->boost)->max_energy;
     (&ship->boost)->end_of_use_time = 0;
     (&ship->boost)->cooldown_before_regen = 1000;
     (&ship->boost)->regen_speed = 1;

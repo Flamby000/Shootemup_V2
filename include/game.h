@@ -122,8 +122,11 @@ void remove_entities_by_type(Game* game, EntityType type);
 int is_match_entity(Entity *entity);
 
 
-
+/**
+ * @brief Pause or resume a match
+ * 
+ * @param game to pause or resume 
+ */
 void pause_match(Game* game);
-void resume_match(Game* game);
 
 #endif

@@ -44,7 +44,7 @@ int main() {
 
     free_game(game);
     free_frame();
-    free(settings);
+    free_settings();
 
     return EXIT_SUCCESS;
 }

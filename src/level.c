@@ -22,9 +22,9 @@ Level* create_level(char* level_file) {
 
     level->level_file = level_file;
     level->last_line_time = 0;
-    level->line_cooldown = 3000;
+    level->line_cooldown = settings->difficulty->waves_spawn_cooldown;
     level->last_wave_time = 0;
-    level->wave_cooldown = 5000;
+    level->wave_cooldown = settings->difficulty->waves_spawn_cooldown*1.5;
     level->nb_wave = 0;
     level->current_wave = 0;
 

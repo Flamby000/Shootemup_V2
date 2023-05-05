@@ -47,10 +47,10 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
                 if(     strcmp(key, "width") == 0)         width = atoi(value);
                 else if(strcmp(key, "height") == 0)        height = atoi(value);
                 else if(strcmp(key, "animation") == 0)     animation = init_animation_wrapper(value);
-                else if(strcmp(key, "speed") == 0)         speed = atoi(value);
+                else if(strcmp(key, "speed") == 0)         speed = atoi(value)*settings->difficulty->ennemy_speed_multiplicator;
                 else if(strcmp(key, "movement") == 0)      movement = get_movement_function(atoi(value));
-                else if(strcmp(key, "life") == 0)          life = atoi(value);
-                else if(strcmp(key, "cooldown") == 0)      cooldown = atoi(value);
+                else if(strcmp(key, "life") == 0)          life = atoi(value)*settings->difficulty->    ennemy_life_multiplicator;
+                else if(strcmp(key, "cooldown") == 0)      cooldown = atoi(value)*settings->difficulty->ennemy_shoot_cooldown_multiplicator;
                 else if(strcmp(key, "is_boss") == 0) {     if(strcmp(value, "true") == 0) is_boss = 1; }
                 else if(strcmp(key, "score") == 0)         score = atoi(value);
                 else if(strcmp(key, "invincibility") == 0) invincibility = atoi(value);
