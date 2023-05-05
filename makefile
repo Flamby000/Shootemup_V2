@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc -g
 CFLAGS=-Wall -ansi -pedantic -pthread
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o ${BLD}menu.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o ${BLD}menu.o ${BLD}click_actions.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -62,8 +62,12 @@ ${BLD}bonus.o : ${SP}bonus.c
 ${BLD}utils.o : ${SP}utils.c
 	${CC} -c ${SP}utils.c -o ${BLD}utils.o ${CFLAGS} ${LDFLAGS}
 
-${BLD}menu.o : ${SP}interface/menu.c
+${BLD}menu.o : ${SP}interface/menu.c ${SP}interface/click_actions.c
 	${CC} -c ${SP}interface/menu.c -o ${BLD}menu.o ${CFLAGS} ${LDFLAGS}
+
+${BLD}click_actions.o : ${SP}interface/click_actions.c
+	${CC} -c ${SP}interface/click_actions.c -o ${BLD}click_actions.o ${CFLAGS} ${LDFLAGS}
+
 
 #Règle pour effacer les fichiers compilés
 clean :

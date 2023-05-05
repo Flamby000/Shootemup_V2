@@ -202,6 +202,7 @@ void free_entity(Game* game, Entity *entity) {
     free(entity->speed);
     
     free(entity);
+    entity = NULL;
 }
 
 void add_child(Entity* parent, Entity* child) {

@@ -42,4 +42,7 @@ void create_object_line(Game *game, char* object_line);
  */
 EntityType get_object_type(char object);
 
+
+void set_level(Game* game, char* level_file);
+
 #endif

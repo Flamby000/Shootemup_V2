@@ -33,9 +33,9 @@ void free_game(Game* game);
  * @brief End a space crusader match of the game
  * 
  * @param game to end the match
- * @param win if the player won the match 
+ * @param status new status of the match
  */
-void end_match(Game* game, int win);
+void end_match(Game* game, MatchStatus status);
 
 /**
  * @brief Insert an entity into the game
@@ -95,5 +95,35 @@ int boss_kill_count(Game* game);
  * @return 1 if a boss is alive, 0 otherwise
  */
 int is_boss_alive(Game* game);
+
+
+/**
+ * @brief Start a match of the game
+ * 
+ * @param game to start the match
+ * @param level_file to load the level
+ */
+void start_match(Game* game, char* level_file);
+
+/**
+ * @brief Remove all entities of specified type
+ * 
+ * @param game to remove the entities
+ * @param type of the entities to remove
+ */
+void remove_entities_by_type(Game* game, EntityType type);
+
+/**
+ * @brief See if an entity is a match entity
+ * 
+ * @param entity to check
+ * @return 1 if the entity is a match entity, 0 otherwise
+ */
+int is_match_entity(Entity *entity);
+
+
+
+void pause_match(Game* game);
+void resume_match(Game* game);
 
 #endif

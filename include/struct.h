@@ -26,12 +26,12 @@ struct _Button;
 
 #define NONE -1
 
+
 typedef void (*SPEED_FUNC)(struct _Game*, struct _Entity*);
 typedef int (*SHOOT_FUNC)(struct _Game*, struct _Entity*);
 typedef void (*BONUS_FUNC)(struct _Game*, struct _Player*, int);
-
+typedef int (*CLICK_ACTION)(struct _Game*, struct _Button*);
 extern struct _Settings *settings;
-
 
 
 typedef struct _Settings {
@@ -40,31 +40,45 @@ typedef struct _Settings {
     int coop_mode;
     int infinite_mode;
 
-
     MLV_Font *small_font;
     MLV_Font *medium_font;
     MLV_Font *big_font;
     MLV_Font *huge_font;
     
-
-    int game_phase;
 } Settings;
+
+
+typedef struct _Button {
+    struct _Button* next;
+    struct _Entity* entity;
+
+    char* text;
+    CLICK_ACTION on_click;
+    MLV_Color background_color;
+    MLV_Color color;
+    MLV_Color over_color;
+    MLV_Font *font;
+
+    int is_over;
+    int is_selected;
+} Button, *Menu;
+
+typedef enum _MatchStatus {
+    PAUSE,
+    PROCESS,
+    MATCH_LOOSE,
+    MATCH_WIN,
+    NOT_STARTED
+} MatchStatus;
 
 typedef struct _Game {
     struct _EntityLink* entities;
-    struct _Level *level;
     struct _Entity *background[NB_STAR+2];
+    Menu *current_menu;
+    
+    struct _Level *level;
+    MatchStatus match_status;
 } Game;
-
-typedef struct _Button {
-    struct _Entity* entity;
-    char* text;
-    int (*action)(struct _Game*);
-    struct _Button* next;
-    MLV_Color background_color;
-    MLV_Color color;
-    MLV_Font *font;
-} Button, *Menu;
 
 typedef struct _EntityLink {
     struct _Entity* entity;
@@ -103,9 +117,6 @@ typedef struct _Speed {
     int default_speed;
     SPEED_FUNC update_speed;
 } Speed;
-
-
-
 
 typedef struct _Life{
     struct _Entity *shield_entity;
@@ -195,6 +206,8 @@ typedef struct _Wave {
 } Wave;
 
 typedef struct _Level {
+    char* level_file;
+
     int nb_wave;
     struct _Wave* waves;
 

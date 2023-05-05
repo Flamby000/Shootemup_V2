@@ -97,14 +97,17 @@ void free_ennemy(Game* game, Ennemy *ennemy) {
 }
 
 int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction direction) {
+    int ennemy_score = ennemy->score;
+    int ennemy_is_boss = ennemy->is_boss;
+    int player_die = 0;
     if(collide->type == PLAYER) {
             
-        deals_damage(game, collide, 1);
+        player_die = deals_damage(game, collide, 1);
         if(deals_damage(game, ennemy->entity, 1)){
-            ((Player*)collide->parent)->score += ennemy->score;
-            ((Player*)collide->parent)->boss_kill_count += ennemy->is_boss;
-
-
+            if(!player_die) {
+                ((Player*)collide->parent)->score += ennemy_score;
+                ((Player*)collide->parent)->boss_kill_count +=ennemy_is_boss;
+            }
         }
         return 1;
     }

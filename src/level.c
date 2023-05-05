@@ -19,6 +19,8 @@ Level* create_level(char* level_file) {
         printf("Error : Cannot open file %s", level_file);
         return NULL;
     }
+
+    level->level_file = level_file;
     level->last_line_time = 0;
     level->line_cooldown = 3000;
     level->last_wave_time = 0;
@@ -34,6 +36,8 @@ Level* create_level(char* level_file) {
             line_size = strlen(line);
             level->nb_wave++;
             level->waves = realloc(level->waves, level->nb_wave * sizeof(Wave));
+            level->waves[level->nb_wave - 1].nb_line = 0;
+            level->waves[level->nb_wave - 1].object_lines = NULL;
             if(line[0] == '=') boss_id = 'X';
             else {
                 for(i = 0; line[i] != '\0'; i++){
@@ -44,6 +48,7 @@ Level* create_level(char* level_file) {
                 } 
             }
         } else {
+
             level->waves[level->nb_wave - 1].nb_line++;
             level->waves[level->nb_wave - 1].current_line = 0;
             level->waves[level->nb_wave - 1].object_lines = realloc(level->waves[level->nb_wave - 1].object_lines, level->waves[level->nb_wave - 1].nb_line * sizeof(char*));
@@ -53,6 +58,8 @@ Level* create_level(char* level_file) {
             strcpy(level->waves[level->nb_wave - 1].object_lines[level->waves[level->nb_wave - 1].nb_line - 1], line);
         }
     }
+
+    fclose(file);
     return level;
 }
 
@@ -81,10 +88,25 @@ EntityType get_object_type(char object) {
     else return BONUS;
 }
 
+void set_level(Game* game, char* level_file) {
+    if(game->level != NULL) {
+        free_level(game->level);
+        game->level = NULL;
+    }
+    if(level_file == NULL) {
+        game->level = NULL;
+    } else {
+        game->level = create_level(level_file);
+    }
+}
+
 int update_level(Game* game, Level* level, int infinite) {
+    if(level == NULL) return 1;
 
-
-    if(!infinite && (!(level->waves[level->current_wave].boss_id == 'X')) && boss_kill_count(game) != 0) return 1;
+    if(!infinite 
+        && (!(level->waves[level->current_wave].boss_id == 'X')) 
+        && boss_kill_count(game) != 0) 
+        return 1;
 
     if(!infinite && level->current_wave == level->nb_wave
     && level->waves[level->current_wave].current_line == level->waves[level->current_wave].nb_line) return 1;

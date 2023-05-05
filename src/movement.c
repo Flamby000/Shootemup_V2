@@ -154,6 +154,7 @@ void movement_circle_entity(Game *game, Entity *entity) {
 
 void movement_follow_x(Game *game, Entity *entity) {
     Entity *player_entity = closest_entity(game, entity, PLAYER);
+    if(player_entity == NULL) return;
     entity->x = player_entity->x + (player_entity->width/2) - (entity->width/2);
     entity->y = player_entity->y - entity->height;
 }
