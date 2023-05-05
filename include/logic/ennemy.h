@@ -1,3 +1,14 @@
+/**
+ * @file ennemy.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to manage the logic of an ennemy
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef ENNEMY_H
 #define ENNEMY_H
 
@@ -6,10 +17,6 @@
  * 
  */
 #define ENNEMY_DATA_PATH "data/ennemies.data"
-
-#define BASIC_ENNEMY '1'
-#define TIER2_ENNEMY '2'
-#define TIER3_ENNEMY '3'
 
 /**
  * @brief Create an ennemy object

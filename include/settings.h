@@ -1,3 +1,14 @@
+/**
+ * @file settings.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Function to manage the game settings
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef SETTINGS_H
 #define SETTINGS_H
 

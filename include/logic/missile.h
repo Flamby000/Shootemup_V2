@@ -1,3 +1,13 @@
+/**
+ * @file missile.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to manage the logic of a missile
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #ifndef MISSILE_H
 #define MISSILE_H
 

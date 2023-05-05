@@ -102,6 +102,19 @@ int boss_kill_count(Game* game) {
     return count;
 }
 
+int get_score(Game* game) {
+    EntityLink* current;
+    Player* player;
+    int score = 0;
+    for(current = game->entities; current != NULL; current = current->next) {
+        if(current->entity->type == PLAYER) {
+            player = (Player*) current->entity->parent;
+            score += player->score;
+        }
+    }
+    return score;
+}
+
 int is_boss_alive(Game* game) {
     EntityLink* current;
     for(current = game->entities; current != NULL; current = current->next) {
@@ -126,8 +139,10 @@ void start_match(Game* game, char* level_file) {
 
     set_background_speed(game, 1);
     set_level(game, level_file);
-    create_player(game);
-    /*create_player(game);*/
+    create_player(game, 1);
+
+
+    if(settings->coop_mode) create_player(game, 2);
 
     set_menu(game, NULL);
     game->match_status = PROCESS;

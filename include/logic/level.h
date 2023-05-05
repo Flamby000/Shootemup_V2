@@ -1,3 +1,15 @@
+/**
+ * @file level.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to manage the logic of a level
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
+
 #ifndef LEVEL_H
 #define LEVEL_H
 

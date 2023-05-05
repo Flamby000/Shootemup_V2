@@ -1,3 +1,15 @@
+/**
+ * @file bonus.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to manage the logic of a bonus
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
+
 #ifndef BONUS_H
 #define BONUS_H
 

@@ -1,3 +1,14 @@
+/**
+ * @file background.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to manage the game background
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef BACKGROUND_H
 #define BACKGROUND_H
 

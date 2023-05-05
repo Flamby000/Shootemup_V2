@@ -1,3 +1,14 @@
+/**
+ * @file game.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to manage the logic of the game
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef GAME_H
 #define GAME_H
 
@@ -128,5 +139,16 @@ int is_match_entity(Entity *entity);
  * @param game to pause or resume 
  */
 void pause_match(Game* game);
+
+
+/**
+ * @brief Calculate the score of every players
+ * 
+ * @param game to calculate the score
+ * @return the score of every players
+ */
+int get_score(Game* game);
+
+
 
 #endif

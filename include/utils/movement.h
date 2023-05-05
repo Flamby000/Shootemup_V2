@@ -1,3 +1,14 @@
+/**
+ * @file movement.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to update the movement and speed of an entity
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef MOVEMENT_H
 #define MOVEMENT_H
 
@@ -73,7 +84,7 @@ void movement_infinite_scroll(Game* game, Entity *entity);
  * @param game of the entity
  * @param entity to update speed
  */
-void movement_controller(Game* game, Entity *entity);
+void user_movement_controller(Game *game, Entity *entity);
 
 /**
  * @brief ID of the function movement_follow_player

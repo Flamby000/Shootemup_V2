@@ -16,7 +16,7 @@ SPEED_FUNC get_movement_function(int id) {
         case MOVEMENT_FORWARD:         return movement_forward;         /* id : 1 */
         case MOVEMENT_BACKWARD:        return movement_backward;        /* id : 2 */
         case MOVEMENT_INFINITE_SCROLL: return movement_infinite_scroll; /* id : 3 */
-        case MOVEMENT_CONTROLLER:      return movement_controller;      /* id : 4 */
+        case MOVEMENT_CONTROLLER:      return user_movement_controller;      /* id : 4 */
         case MOVEMENT_FOLLOW_PLAYER:   return movement_follow_player;   /* id : 5 */
         case MOVEMENT_SINUSOIDAL:      return movement_sinusoidal;      /* id : 6 */
         case MOVEMENT_CIRCLE_ENTITY:   return movement_circle_entity;   /* id : 7 */
@@ -58,17 +58,47 @@ void movement_sinusoidal(Game *game, Entity *entity) {
     speed->speed_y = speed->speed;
 }
 
-void movement_controller(Game *game, Entity *entity) {
-    Speed *speed = entity->speed;
 
-    if(MLV_get_keyboard_state(MLV_KEYBOARD_z) == MLV_PRESSED) {
+void user_movement_controller(Game *game, Entity *entity) {
+    Speed *speed = entity->speed;
+    Player *player = (Player*)entity->parent;
+
+    if(MLV_get_keyboard_state(player->key_left) == MLV_PRESSED) {
+        if(speed->speed_x > -speed->speed) {
+            speed->speed_x -= 2;
+            if(speed->speed_x < -speed->speed) {
+                speed->speed_x = -speed->speed;
+            }
+        }
+    } else if(MLV_get_keyboard_state(player->key_right) == MLV_PRESSED) {
+        if(speed->speed_x < speed->speed) {
+            speed->speed_x += 2;
+            if(speed->speed_x > speed->speed) {
+                speed->speed_x = speed->speed;
+            }
+        }
+    } else {
+        if(speed->speed_x > 0) {
+            speed->speed_x -= 0.1;
+            if(speed->speed_x < 0) {
+                speed->speed_x = 0;
+            }
+        } else if(speed->speed_x < 0) {
+            speed->speed_x += 0.1;
+            if(speed->speed_x > 0) {
+                speed->speed_x = 0;
+            }
+        }
+    }
+
+    if(MLV_get_keyboard_state(player->key_up) == MLV_PRESSED) {
         if(speed->speed_y > -speed->speed) {
             speed->speed_y -= 2;
             if(speed->speed_y < -speed->speed) {
                 speed->speed_y = -speed->speed;
             }
         }
-    } else if(MLV_get_keyboard_state(MLV_KEYBOARD_s) == MLV_PRESSED) {
+    } else if(MLV_get_keyboard_state(player->key_down) == MLV_PRESSED) {
         if(speed->speed_y < speed->speed) {
             speed->speed_y += 2;
             if(speed->speed_y > speed->speed) {
@@ -88,36 +118,6 @@ void movement_controller(Game *game, Entity *entity) {
             }
         }
     }
-    
-    if(MLV_get_keyboard_state(MLV_KEYBOARD_q) == MLV_PRESSED) {
-        if(speed->speed_x > -speed->speed) {
-            speed->speed_x -= 2;
-            if(speed->speed_x < -speed->speed) {
-                speed->speed_x = -speed->speed;
-            }
-        }
-    } else if(MLV_get_keyboard_state(MLV_KEYBOARD_d) == MLV_PRESSED) {
-        if(speed->speed_x < speed->speed) {
-            speed->speed_x += 2;
-            if(speed->speed_x > speed->speed) {
-                speed->speed_x = speed->speed;
-            }
-        }
-        speed->speed_x = speed->speed;
-    } else {
-        if(speed->speed_x > 0) {
-            speed->speed_x -= 0.1;
-            if(speed->speed_x < 0) {
-                speed->speed_x = 0;
-            }
-        } else if(speed->speed_x < 0) {
-            speed->speed_x += 0.1;
-            if(speed->speed_x > 0) {
-                speed->speed_x = 0;
-            }
-        }
-    }
-
     avoid_collide_border(entity);
 }
 

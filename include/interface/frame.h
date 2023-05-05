@@ -1,3 +1,14 @@
+/**
+ * @file frame.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to create and display the game frame
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef FRAME_H
 #define FRAME_H
 

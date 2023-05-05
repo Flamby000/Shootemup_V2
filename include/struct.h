@@ -1,7 +1,27 @@
+/**
+ * @file struct.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief All the structures of the program
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef STRUCT_H 
 #define STRUCT_H 
 
+/**
+ * @brief Number of stars on the background
+ * 
+ */
 #define NB_STAR 100
+
+/**
+ * @brief Maximum size of a star
+ * 
+ */
 #define STAR_MAX_SIZE 3
 
 /*#define return printf("== %s finished\n", __FUNCTION__); return*/
@@ -28,12 +48,42 @@ struct _Difficulty;
 #define NONE -1
 
 
+/**
+ * @brief Function pointer to update the speed of an entity
+ * First argument is the current game
+ * Second argument is the entity to update speed
+ */ 
 typedef void (*SPEED_FUNC)(struct _Game*, struct _Entity*);
+
+/**
+ * @brief Function pointer to update the shoot of a spaceship
+ * First argument is the current game
+ * Second argument is the entity's spaceship to update
+ * Return 1 if an entity was removed
+ */
 typedef int (*SHOOT_FUNC)(struct _Game*, struct _Entity*);
+
+/**
+ * @brief Function pointer to affect a bonus on a player
+ * First argument is the current game
+ * Second argument is the player to affect
+ * Third argument specify if the bonus will be reversed
+ */
 typedef void (*BONUS_FUNC)(struct _Game*, struct _Player*, int);
+
+/**
+ * @brief Function pointer of a button click action
+ * First argument is the current game
+ * Second argument is the button clicked
+ * Return 1
+ */
 typedef int (*CLICK_ACTION)(struct _Game*, struct _Button*);
 extern struct _Settings *settings;
 
+/**
+ * @brief Enumeration defining a difficulty preset
+ * 
+ */
 typedef enum _DifficultyPreset {
     EASY,
     MEDIUM,
@@ -41,6 +91,10 @@ typedef enum _DifficultyPreset {
     CUSTOM
 } DifficultyPreset;
 
+/**
+ * @brief Structure defining the configuration of a match difficulty
+ * 
+ */
 typedef struct _Difficulty {
     DifficultyPreset preset;
     int waves_spawn_cooldown;
@@ -55,8 +109,10 @@ typedef struct _Difficulty {
 } Difficulty;
 
 
-
-
+/**
+ * @brief Structure defining the settings of the game (used a global variable)
+ * 
+ */
 typedef struct _Settings {
     int win_width;
     int win_height;
@@ -70,9 +126,14 @@ typedef struct _Settings {
     struct _Difficulty *difficulty;
     int coop_mode;
     int volume;
+
 } Settings;
 
 
+/**
+ * @brief Structure defining a button in the game
+ * 
+ */
 typedef struct _Button {
     struct _Button* next;
     struct _Entity* entity;
@@ -96,13 +157,47 @@ typedef struct _Button {
 } Button, *Menu;
 
 
+/**
+ * @brief The ID of the main menu
+ * 
+ */
 #define MAIN_MENU -1
+
+/**
+ * @brief The ID of the campaign menu
+ * 
+ */
 #define CAMPAIGN_MENU 0
+
+/**
+ * @brief The ID of the garage menu
+ * 
+ */
 #define GARAGE_MENU 2
+
+/**
+ * @brief The ID of the settings menu
+ * 
+ */
 #define SETTINGS_MENU 3
+
+/**
+ * @brief The ID of the tutorial menu
+ * 
+ */
 #define TUTORIAL_MENU 4
+
+/**
+ * @brief The ID of the credits menu
+ * 
+ */
 #define CREDITS_MENU 5
 
+
+/**
+ * @brief Enumeration of all possible match status
+ * 
+ */
 typedef enum _MatchStatus {
     PAUSE,
     PROCESS,
@@ -111,6 +206,11 @@ typedef enum _MatchStatus {
     NOT_STARTED
 } MatchStatus;
 
+
+/**
+ * @brief Structure defining the game's data
+ * 
+ */
 typedef struct _Game {
     struct _EntityLink* entities;
     struct _Entity *background[NB_STAR+2];
@@ -122,11 +222,19 @@ typedef struct _Game {
     int last_click_action_time;
 } Game;
 
+/**
+ * @brief Structure defining a linked list of entities
+ * 
+ */
 typedef struct _EntityLink {
     struct _Entity* entity;
     struct _EntityLink* next;
 } EntityLink;
 
+/**
+ * @brief Enumeration of all possible entity types
+ * 
+ */
 typedef enum _EntityType {
     ENNEMY,
     PLAYER,
@@ -136,7 +244,10 @@ typedef enum _EntityType {
     BUTTON
 } EntityType;
 
- 
+/**
+ * @brief Structure defining an entity (every object in the game is an entity) 
+ * 
+ */
 typedef struct _Entity{
     struct _Animation* sprite;
     char* destruction_img_path;
@@ -152,6 +263,10 @@ typedef struct _Entity{
     EntityType type;
 } Entity;
 
+/**
+ * @brief Structure defining a speed data of a spaceship
+ * 
+ */
 typedef struct _Speed {
     int speed_x;
     int speed_y;
@@ -160,6 +275,10 @@ typedef struct _Speed {
     SPEED_FUNC update_speed;
 } Speed;
 
+/**
+ * @brief Structure defining a life data of a spaceship
+ * 
+ */
 typedef struct _Life{
     struct _Entity *shield_entity;
     int max_hp;
@@ -169,17 +288,29 @@ typedef struct _Life{
     int invincibility_duration;
 } Life;
 
+/**
+ * @brief Structure defining a shooter data of a spaceship
+ * It used to manage the missile creaton
+ */
 typedef struct _Shooter{
     SHOOT_FUNC update_shoot;
     int last_shoot_time;
     int cooldown;
 } Shooter;
 
+/**
+ * @brief Structure defining a linked list of a bonus
+ * 
+ */
 typedef struct _BonusLink {
     struct _Bonus* bonus;
     struct _BonusLink* next;
 } BonusLink;
 
+/**
+ * @brief Structure defining a boost of a spaceship
+ * 
+ */
 typedef struct _Boost {
     int speed;
     int energy;
@@ -192,7 +323,10 @@ typedef struct _Boost {
     int enabled;
 } Boost;
 
-
+/**
+ * @brief Structure defininf a spaceship data (for player and ennemy)
+ * 
+ */
 typedef struct _SpaceShip {
     struct _Life life;
     struct _Shooter shooter;
@@ -202,13 +336,31 @@ typedef struct _SpaceShip {
     int total_shoots;
 } SpaceShip;
 
+
+/**
+ * @brief Structure defining a player's data and its controls
+ * 
+ */
 typedef struct _Player {
     struct _Entity* entity;
     struct _SpaceShip* ship;
     int score;
     int boss_kill_count;
+    int player_number;
+
+    MLV_Keyboard_button key_left;
+    MLV_Keyboard_button key_right;
+    MLV_Keyboard_button key_up;
+    MLV_Keyboard_button key_down;
+    MLV_Keyboard_button key_shoot;
+    MLV_Keyboard_button key_super_shoot;
+    MLV_Keyboard_button key_boost;
 } Player;
 
+/**
+ * @brief Structure defining an ennemy's data
+ * 
+ */
 typedef struct _Ennemy {
     struct _Entity* entity;
     struct _SpaceShip* ship;
@@ -216,6 +368,10 @@ typedef struct _Ennemy {
     int is_boss;
 } Ennemy;
 
+/**
+ * @brief Structure defining a missile's data
+ * 
+ */
 typedef struct _Missile {
     struct _Entity* entity;
     struct _Entity *sender;
@@ -230,6 +386,10 @@ typedef struct _Missile {
     int last_damage_time;
 } Missile;
 
+/**
+ * @brief Structure defining a bonus's data
+ * 
+ */
 typedef struct _Bonus {
     struct _Entity* entity;
     BONUS_FUNC effect;
@@ -237,7 +397,10 @@ typedef struct _Bonus {
     int consumer;
 } Bonus;
 
-
+/**
+ * @brief Structure defining a wave in a level.
+ * Each 'object_lines' is a line of objects (bonus or ennemies) the level file.
+ */
 typedef struct _Wave {
     int nb_line;
     int current_line;
@@ -247,6 +410,10 @@ typedef struct _Wave {
     struct _Ennemy *boss;
 } Wave;
 
+/**
+ * @brief Structure defining a level
+ * 
+ */
 typedef struct _Level {
     char* level_file;
 
@@ -264,7 +431,10 @@ typedef struct _Level {
 } Level;
 
 
-
+/**
+ * @brief Enumeration listing all possible directions (for pushing an entity)
+ * 
+ */
 typedef enum _Direction {
     TOP,
     BOTTOM,
@@ -272,6 +442,10 @@ typedef enum _Direction {
     RIGHT
 } Direction;
 
+/**
+ * @brief Enumeration listing all possible animation types for an entity
+ * 
+ */
 typedef enum _AnimationType {
     SPRITE,
     ANIMATED,
@@ -281,7 +455,10 @@ typedef enum _AnimationType {
 } AnimationType;
 
 
-
+/**
+ * @brief Structure defining an animation of every possivble types
+ * 
+ */
 typedef struct _Animation {
     AnimationType type;
     MLV_Image* sprite;

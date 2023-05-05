@@ -1,3 +1,14 @@
+/**
+ * @file animation.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to create and display animations
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef ANIMATION_H
 #define ANIMATION_H
 

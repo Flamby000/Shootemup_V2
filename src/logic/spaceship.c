@@ -65,7 +65,10 @@ void update_boost(Game *game, Entity* entity) {
     SpaceShip *ship = get_spaceship(entity);
     Boost *boost = &ship->boost;
 
-    if(MLV_get_keyboard_state(MLV_KEYBOARD_LCTRL) == MLV_PRESSED) {
+
+    Player *player = (Player*)entity->parent;
+
+    if(MLV_get_keyboard_state(player->key_boost) == MLV_PRESSED) {
         if(!boost->enabled && boost->energy > 0) {
 
             entity->speed->speed += boost->speed;

@@ -23,7 +23,8 @@ SHOOT_FUNC get_shoot_function(int id) {
 }
 
 int shoot_player_basic(Game *game, Entity *entity) {
-    if(MLV_get_keyboard_state(MLV_KEYBOARD_SPACE) == MLV_PRESSED) {
+    Player *player = (Player*)entity->parent;
+    if(MLV_get_keyboard_state(player->key_shoot) == MLV_PRESSED) {
        create_missile(game, entity, BASIC_PLAYER_MISSILE, -1);
        return 1;
     }
@@ -31,7 +32,9 @@ int shoot_player_basic(Game *game, Entity *entity) {
 }
 
 int shoot_player_perforing(Game *game, Entity *entity) {
-    if(MLV_get_keyboard_state(MLV_KEYBOARD_SPACE) == MLV_PRESSED) {
+    Player *player = (Player*)entity->parent;
+
+    if(MLV_get_keyboard_state(player->key_shoot) == MLV_PRESSED) {
        create_missile(game, entity, PERFORING_PLAYER_MISSILE, -1);
        return 1;
     }
@@ -56,7 +59,9 @@ int shoot_none(Game *game, Entity *entity) {
 
 
 int shoot_super_laser(Game *game, Entity *entity) {
-    if(MLV_get_keyboard_state(MLV_KEYBOARD_LSHIFT ) == MLV_PRESSED) {
+    Player *player = (Player*)entity->parent;
+
+    if(MLV_get_keyboard_state(player->key_super_shoot) == MLV_PRESSED) {
         create_missile(game, entity, SUPER_LASER_MISSILE, -1);
        return 1;
     }
@@ -65,7 +70,9 @@ int shoot_super_laser(Game *game, Entity *entity) {
 
 
 int shoot_multidirectional(Game *game, Entity *entity) {
-    if(MLV_get_keyboard_state(MLV_KEYBOARD_SPACE) == MLV_PRESSED) {
+    Player *player = (Player*)entity->parent;
+
+    if(MLV_get_keyboard_state(player->key_shoot) == MLV_PRESSED) {
         create_shoot_line(game, entity, "0X6X0");
         return 1;
     }

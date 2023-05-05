@@ -1,3 +1,15 @@
+/**
+ * @file shooter.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to create the missiles from a sender when it shoot
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
+
 #ifndef SHOOTER_H
 #define SHOOTER_H
 

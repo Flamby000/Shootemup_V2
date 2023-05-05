@@ -1,3 +1,14 @@
+/**
+ * @file entity.h
+ * @author Max Ducoudré & Adam Mehdaoui
+ * @brief Functions to manage the logic of an entity
+ * @version 1.0
+ * @date 2023-05-05
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef ENTITY_H
 #define ENTITY_H
 /**
