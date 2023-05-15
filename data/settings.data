@@ -1,5 +1,5 @@
-volume:77
-coop_mode:false
+volume:100
+coop_mode:true
 waves_spawn_cooldown:2500
 ennemy_life_multiplicator:1
 ennemy_shoot_cooldown_multiplicator:1

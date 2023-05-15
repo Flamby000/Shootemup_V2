@@ -300,7 +300,7 @@ Menu create_main_menu(Game *game, int type) {
     int txt_width_child, txt_height_child;
     int txt_width_previous;
     int element_count = 0;
-    int space_between_elements = box_width/20;
+    int space_between_elements = box_width/25;
     int element_y = box_y + box_height / 7;
     Button* tmp;
     char* buffer;

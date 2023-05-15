@@ -10,7 +10,6 @@
 #include "../../include/utils/movement.h"
 #include "../../include/utils/background.h"
 
-
 void set_background_speed(Game *game, double factor) {
     int i;
     for(i = 0; i < NB_STAR+2; i++) {

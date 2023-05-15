@@ -47,7 +47,7 @@ int open_campaign_map(Game* game, Button* button) {
 
 int start_infinite_game(Game* game, Button* button) {
     settings->infinite_mode = 1;    
-    start_match(game, "data/level/infinite-level.lvl");
+    start_match(game, "data/level/level-3.lvl");
     return 1;
 }
 

@@ -250,7 +250,9 @@ typedef enum _EntityType {
  */
 typedef struct _Entity{
     struct _Animation* sprite;
+
     char* destruction_img_path;
+    
     int x;
     int y;
     int width;

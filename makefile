@@ -2,12 +2,13 @@
 SP=src/
 HD=include/
 BLD=bin/
-CC=gcc -g
-CFLAGS=-Wall -ansi -pedantic -pthread -Werror
+CC=gcc -g 
+CFLAGS=-Wall -ansi -pedantic -pthread -Werror -lrt
 OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o ${BLD}menu.o ${BLD}click_actions.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
+# -lm math, -lMLV pour la librairie graphique, -lrt pour clock_gettime
 
 #Règle pour compiler le programme :
 all: ${OBJ}

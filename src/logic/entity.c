@@ -72,6 +72,8 @@ int update_entity(Game* game, Entity *entity) {
     entity->x += entity->speed->speed_x;
     entity->y += entity->speed->speed_y;
 
+    
+
     /* Manage missile update (for fuel)*/
     if(entity->type == MISSILE) if(update_missile(game, (Missile*)entity->parent)) return 1;
 

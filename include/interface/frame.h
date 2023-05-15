@@ -1,3 +1,5 @@
+
+
 /**
  * @file frame.h
  * @author Max Ducoudré & Adam Mehdaoui
@@ -75,13 +77,8 @@ void draw_ennemy(Game *game, Ennemy *ennemy);
  * @param value of the data to display
  * @param max_value of the data to displaye
  * @param color of the bar
- * @param display_value 1 if the value must be displayed, 0 otherwise
- * @param name of the bar
- * @param flash 1 if the bar must flash, 0 otherwise
- * @param flash_color of the bar when it is flashing
  */
-void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color, int display_value, char* name, int flash, MLV_Color flash_color);
+void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color);
 
-void draw_image_progress(MLV_Image* image, MLV_Image *dark_image, int x, int y, int width, int height, int value, int max_value);
 
 #endif

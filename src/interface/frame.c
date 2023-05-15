@@ -9,10 +9,11 @@
 
 void init_frame() {    
     MLV_create_window(GAME_NAME, GAME_NAME, settings->win_width, settings->win_height   );
-    settings->small_font = MLV_load_font(FONT_PATH, 20);
-    settings->medium_font = MLV_load_font(FONT_PATH, 30);
-    settings->big_font = MLV_load_font(FONT_PATH, 50);
-    settings->huge_font = MLV_load_font(FONT_PATH, 100);
+    printf("%d\n", settings->win_width/15);
+    settings->small_font = MLV_load_font(FONT_PATH, settings->win_width/60);
+    settings->medium_font = MLV_load_font(FONT_PATH, settings->win_width/42);
+    settings->big_font = MLV_load_font(FONT_PATH, settings->win_width/42);
+    settings->huge_font = MLV_load_font(FONT_PATH, settings->win_width/25);
     
 }
 
@@ -45,58 +46,83 @@ void draw_ennemy(Game *game, Ennemy *ennemy) {
         entity->x , entity->y - entity->height/10, 
         entity->width, entity->height/10, 
         life->hp, life->max_hp, 
-        MLV_COLOR_RED, 0, "", 0, MLV_COLOR_PINK
+        MLV_COLOR_RED
     );
 }
 
 void draw_player(Game *game, Player* player) {
+    /*
     int bar_height = 100;
     int bar_width = 30;
     int bar_margin = 10;
     int bar_count = 0;
+    */
+    int win_width = settings->win_width;
+    int win_height = settings->win_height;
     char buffer[255];
     int text_width, text_height;
+    int bar_width = win_width/10;
+    int bar_height = win_height/20;
+    int bar_espace = bar_height/2;
+    int left_margin = player->player_number == 1 ? 10 : win_width - bar_width - 10;
+
+    int current_bar_x, current_bar_y;
+
 
     /* Health bar */
+    current_bar_x = left_margin;
+    current_bar_y = win_height - bar_height  - bar_espace;    
     draw_bar(
-        settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
+        current_bar_x, current_bar_y, 
         bar_width, bar_height, 
         (&player->ship->life)->hp, (&player->ship->life)->max_hp, 
-        MLV_COLOR_RED, 1, "", 0, MLV_COLOR_PINK
-    );   
-    bar_count++;
+        MLV_COLOR_RED
+    );
+    MLV_get_size_of_text("Health", &text_width, &text_height);
+    MLV_draw_text_with_font(current_bar_x - 10, current_bar_y - text_height, "Health", settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
+
     
     /* Cooldown bar */
+    current_bar_y -= bar_height + bar_espace;
     draw_bar(
-        settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
+        current_bar_x, current_bar_y, 
         bar_width, bar_height, 
         MLV_get_time() - (&player->ship->shooter)->last_shoot_time, (&player->ship->shooter)->cooldown, 
-        MLV_COLOR_GREEN, 0, "", 0, MLV_COLOR_PINK
+        MLV_COLOR_GREEN
     );
-    bar_count++;
+    MLV_get_size_of_text("Cooldown", &text_width, &text_height);
+    MLV_draw_text_with_font(current_bar_x -10 , current_bar_y - text_height, "Cooldown", settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
     
     /* Cooldown bar */
+    current_bar_y -= bar_height + bar_espace;
     draw_bar(
-        settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
+        current_bar_x, current_bar_y, 
         bar_width, bar_height, 
         MLV_get_time() - (&player->ship->super_shooter)->last_shoot_time, (&player->ship->super_shooter)->cooldown, 
-        MLV_COLOR_BLUE, 0, "", 0, MLV_COLOR_PINK
+        MLV_COLOR_BLUE
     );
-    bar_count++;
+    MLV_get_size_of_text("Super Cooldown", &text_width, &text_height);
+    MLV_draw_text_with_font(current_bar_x - 10, current_bar_y - text_height, "Super Cooldown", settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
     
     /*Stamina bar */
+    current_bar_y -= bar_height + bar_espace;
     draw_bar(
-        settings->win_width/100 + ((bar_width*bar_count) + (bar_margin*bar_count)), settings->win_height - settings->win_height/100 - bar_height, 
+        current_bar_x, current_bar_y, 
         bar_width, bar_height, 
         (&player->ship->boost)->energy, (&player->ship->boost)->max_energy, 
-        MLV_COLOR_YELLOW, 1, "", (&player->ship->boost)->enabled, MLV_COLOR_ORANGE
+        MLV_COLOR_YELLOW
     );
+    MLV_get_size_of_text("Stamina", &text_width, &text_height);
+    MLV_draw_text_with_font(current_bar_x - 10, current_bar_y - text_height, "Stamina", settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
 
-    /* Draw score */
-    sprintf(buffer, "%d", player->score);
+
+    /* Draw score 
+    player->score
+    */
+    current_bar_y -= bar_height + bar_espace;
+    sprintf(buffer, "Score : %d", player->score);
     MLV_get_size_of_text(buffer, &text_width, &text_height);
-    MLV_draw_text_with_font(settings->win_width - text_width - 10, 10, buffer, settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);    
-
+    MLV_draw_text_with_font(current_bar_x , current_bar_y - text_height, buffer, settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
 
     /* Invincibility frame */
     if(MLV_get_time() - (&player->ship->life)->last_damage_time < (&player->ship->life)->invincibility_duration) {
@@ -107,36 +133,11 @@ void draw_player(Game *game, Player* player) {
 
 }
 
-void draw_image_progress(MLV_Image* image, MLV_Image *dark_image, int x, int y, int width, int height, int value, int max_value) {
-    int progress_height = (height * value) / max_value;
-    char text[10];
-    int text_width, text_height;
 
-    MLV_resize_image(image, width, height);
-    MLV_resize_image(dark_image, width, height);
-    MLV_draw_image(dark_image, x, y);
-
-    /* Draw health_percent of full_heart from the bot*/
-    MLV_draw_partial_image(image,
-        0, height - progress_height, width, progress_height,
-        x, y + height - progress_height
-    );
-
-    MLV_free_image(image);
-    MLV_free_image(dark_image);
-
-    sprintf(text, "%d", value);
-    MLV_get_size_of_text(text, &text_width, &text_height);
-    MLV_draw_text_with_font(x + width/2 - text_width/1.5, y - text_width*3, text, settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
-}
-
-void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color, int display_value, char* name,  int flash, MLV_Color flash_color) {
+void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color) {
     int bar_width = width;
     int bar_height = height;
-    char text[10];
-    int text_width, text_height;
 
-    if(flash) color = flash_color;
 
     if(value >= max_value) value = max_value;
     if(width > height) { 
@@ -151,6 +152,7 @@ void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV
     }
 
     /* Draw text in the top part of the bar*/
+    /*
     if(display_value) {
         sprintf(text, "%d", value);
         MLV_get_size_of_text(text, &text_width, &text_height);
@@ -159,6 +161,7 @@ void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV
 
     MLV_get_size_of_text(name, &text_width, &text_height);
     MLV_draw_text_with_font(x + width/2 - text_width/1.5, y - text_height*1.5, name, settings->small_font, MLV_COLOR_WHITE, MLV_TEXT_CENTER);
-
+    */
+    
     MLV_draw_rectangle(x, y, width, height, MLV_COLOR_BLACK);
 }
