@@ -8,7 +8,6 @@
  * @copyright Copyright (c) 2023
  * 
  */
-
 #ifndef MENU_H
 #define MENU_H
 
@@ -92,6 +91,8 @@ void set_slider(Button* button, int value, int min_value, int max_value);
  * @param menu to set
  */
 void set_menu(Game *game, Menu *menu);
+
+void set_image(Button* button, char* path);
 
 /**
  * @brief Create a game over menu 

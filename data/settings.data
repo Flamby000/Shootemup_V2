@@ -1,11 +1,11 @@
 volume:100
 coop_mode:true
-waves_spawn_cooldown:2500
+waves_spawn_cooldown:1000
 ennemy_life_multiplicator:1
 ennemy_shoot_cooldown_multiplicator:1
 ennemy_speed_multiplicator:1
 player_life:3
-player_shoot_cooldown:500
-player_super_shoot_cooldown:5000
-player_speed:5
-player_stamina:200
+player_shoot_cooldown:750
+player_super_shoot_cooldown:10000
+player_speed:4
+player_stamina:100

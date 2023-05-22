@@ -44,6 +44,8 @@ int update_button(Game* game, Button *button) {
         button->is_over = 0;
     }
 
+    
+
     return entity_removed;
 }
 
@@ -175,6 +177,11 @@ void set_slider(Button* button, int value, int min_value, int max_value) {
     button->min_value = min_value;
 }
 
+void set_image(Button* button, char* path) {
+    button->entity->sprite = init_animation_wrapper(path);
+}   
+
+
 
 void set_menu(Game *game, Menu *menu) {
     Button *current;
@@ -188,6 +195,7 @@ if(game->current_menu != NULL)     remove_entities_by_type(game, BUTTON);
     for(current = *menu; current != NULL; current = current->next) 
         insert_entity(game, current->entity);
 }
+
 
 
 Menu create_match_pause_sample(Game *game, char* text, MLV_Color title_color) {
@@ -305,7 +313,48 @@ Menu create_main_menu(Game *game, int type) {
     Button* tmp;
     char* buffer;
 
-    if(type == SETTINGS_MENU) {
+    if(type == CAMPAIGN_MENU) {
+            
+        /* Big menu square*/
+        insert_button(&main_menu, 
+            create_button(game,
+                box_x, box_y,
+                box_width, box_height,
+                "", 
+                MLV_rgba(25,78,157,100),
+                MLV_rgba(0,0,0,0),
+                MLV_rgba(0,0,0,0),
+                MLV_COLOR_WHITE,
+                NULL,
+                NULL,
+                0
+            )
+        );
+
+        /* I want a campaign map. This map is composed of 3 planets (sprites) and a spaceship is turning around the selected one */
+        /* Menu title */
+        MLV_get_size_of_text_with_font("Campaign", &txt_width, &txt_height, settings->medium_font);
+        insert_button(&main_menu, 
+            create_button(game, 
+                box_x + box_width / 2 - txt_width / 2, box_y,
+                0, 0, 
+                "Campaign", 
+                MLV_rgba(0, 0, 0, 0),
+                MLV_COLOR_WHITE,
+                MLV_COLOR_WHITE,
+                MLV_rgba(0, 0, 0, 0),
+                settings->medium_font,
+                NULL,
+                0
+            )
+        );
+
+
+
+
+        
+
+    } else if(type == SETTINGS_MENU) {
 
         /* Big menu square*/
         insert_button(&main_menu, 

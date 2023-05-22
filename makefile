@@ -4,7 +4,7 @@ HD=include/
 BLD=bin/
 CC=gcc -g 
 CFLAGS=-Wall -ansi -pedantic -pthread -Werror -lrt
-OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o ${BLD}menu.o ${BLD}click_actions.o
+OBJ=${BLD}main.o ${BLD}frame.o ${BLD}game.o ${BLD}animation.o ${BLD}entity.o ${BLD}background.o ${BLD}movement.o ${BLD}settings.o ${BLD}player.o ${BLD}ennemy.o ${BLD}spaceship.o ${BLD}missile.o ${BLD}shooter.o ${BLD}level.o ${BLD}bonus.o ${BLD}utils.o ${BLD}menu.o ${BLD}click_actions.o ${BLD}campaign_menu.o
 LDFLAGS=-lMLV -lm 
 OUT=shootemup
 
@@ -68,6 +68,10 @@ ${BLD}menu.o : ${SP}interface/menu.c ${SP}interface/click_actions.c
 
 ${BLD}click_actions.o : ${SP}interface/click_actions.c
 	${CC} -c ${SP}interface/click_actions.c -o ${BLD}click_actions.o ${CFLAGS} ${LDFLAGS}
+
+${BLD}campaign_menu.o : ${SP}interface/campaign_menu.c
+	${CC} -c ${SP}interface/campaign_menu.c -o ${BLD}campaign_menu.o ${CFLAGS} ${LDFLAGS}
+
 
 
 #Règle pour effacer les fichiers compilés
