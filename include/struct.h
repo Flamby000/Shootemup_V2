@@ -126,7 +126,6 @@ typedef struct _Settings {
     struct _Difficulty *difficulty;
     int coop_mode;
     int volume;
-
 } Settings;
 
 
@@ -145,7 +144,6 @@ typedef struct _Button {
     MLV_Color over_color;
     MLV_Color border_color;
     MLV_Font *font;
-
 
     int is_over;
     int is_selected;

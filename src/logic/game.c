@@ -21,6 +21,8 @@
 Game* init_game() {
     Menu main_menu;
     Game *game = malloc(sizeof(Game));
+    MLV_Music *music;
+    MLV_init_audio();
     set_level(game, NULL);
     game->entities = NULL;
 
@@ -32,6 +34,17 @@ Game* init_game() {
 
     game->match_status = NOT_STARTED;
     game->last_click_action_time = 0;
+
+    music = MLV_load_music("resources/sound/music.mp3");
+    
+    if(music == NULL) {
+        fprintf(stderr, "Erreur: la musique n'a pas été chargé\n");
+        exit(EXIT_FAILURE);
+    }
+    else {
+        fprintf(stdout, "Musique chargée\n");
+        MLV_play_music(music, settings->volume, -1);
+    }
 
     return game;
 }
