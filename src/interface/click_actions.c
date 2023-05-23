@@ -164,7 +164,14 @@ int set_difficulty_custom(Game* game, Button* button) {
 }
 
 int set_volume(Game *game, Button *button) {
+    MLV_Music *music;
+    MLV_stop_music();
+    music = MLV_load_music("resources/sound/music.mp3");
+
     settings->volume = button->value;
+
+    MLV_play_music(music, settings->volume, -1);
+
     update_setting_menu(game);
     return 1;
 }

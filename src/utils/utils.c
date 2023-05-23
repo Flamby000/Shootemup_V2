@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-
 long get_timestamp_ms() {
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);

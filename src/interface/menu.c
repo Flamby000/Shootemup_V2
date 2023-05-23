@@ -181,8 +181,6 @@ void set_image(Button* button, char* path) {
     button->entity->sprite = init_animation_wrapper(path);
 }   
 
-
-
 void set_menu(Game *game, Menu *menu) {
     Button *current;
 
