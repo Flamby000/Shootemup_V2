@@ -311,7 +311,7 @@ Menu create_main_menu(Game *game, int type) {
     int space_between_elements = box_width/25;
     int element_y = box_y + box_height / 7;
     Button* tmp;
-    char* buffer;
+    char buffer[255];
 
     if(type == CAMPAIGN_MENU) {
             
@@ -476,7 +476,6 @@ Menu create_main_menu(Game *game, int type) {
         insert_button(&main_menu, tmp);
 
         /* Draw volume inside slider*/
-        buffer = malloc(sizeof(char) * 15);
         sprintf(buffer, "%d", settings->volume);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -493,7 +492,6 @@ Menu create_main_menu(Game *game, int type) {
                 0
             )
         );
-        free(buffer);
         element_count++;
         element_count++;
 
@@ -646,7 +644,6 @@ Menu create_main_menu(Game *game, int type) {
         txt_width_previous = txt_width_child + 10;
 
         /* Draw value */
-        buffer = malloc(sizeof(char) * 6);
         sprintf(buffer, "%d HP ", settings->difficulty->player_life);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -664,7 +661,6 @@ Menu create_main_menu(Game *game, int type) {
             )
         );
         txt_width_previous += txt_width_child + 10;
-        free(buffer);
 
         /* Draw '+' */
         MLV_get_size_of_text_with_font("+", &txt_width_child, &txt_height_child, settings->small_font);
@@ -725,7 +721,6 @@ Menu create_main_menu(Game *game, int type) {
         txt_width_previous = txt_width_child + 10;
 
         /* Draw value */
-        buffer = malloc(sizeof(char) * 10);
         sprintf(buffer, "%d00 mph", settings->difficulty->player_speed);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -743,7 +738,6 @@ Menu create_main_menu(Game *game, int type) {
             )
         );
         txt_width_previous += txt_width_child + 10;
-        free(buffer);
 
         /* Draw '+' */
         MLV_get_size_of_text_with_font("+", &txt_width_child, &txt_height_child, settings->small_font);
@@ -799,7 +793,6 @@ Menu create_main_menu(Game *game, int type) {
         set_slider(tmp, settings->difficulty->player_shoot_cooldown, 200, 5000);
 
         /* Draw value in the slider */
-        buffer = malloc(sizeof(char) * 10);
         sprintf(buffer, "%d.%d s", settings->difficulty->player_shoot_cooldown/1000, settings->difficulty->player_shoot_cooldown%1000);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -816,7 +809,6 @@ Menu create_main_menu(Game *game, int type) {
                 0
             )
         );
-        free(buffer);
         element_count++;
 
         /* player_super_shoot_cooldown */
@@ -853,7 +845,6 @@ Menu create_main_menu(Game *game, int type) {
         set_slider(tmp, settings->difficulty->player_super_shoot_cooldown, 3000, 23000);
 
         /* Draw value in the slider */
-        buffer = malloc(sizeof(char) * 10);
 
         sprintf(buffer, "%d.%d s", settings->difficulty->player_super_shoot_cooldown/1000, settings->difficulty->player_super_shoot_cooldown%1000);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
@@ -871,7 +862,6 @@ Menu create_main_menu(Game *game, int type) {
                 0
             )
         );
-        free(buffer);
         element_count++;
 
         /* Stamina */
@@ -908,7 +898,6 @@ Menu create_main_menu(Game *game, int type) {
         set_slider(tmp, settings->difficulty->player_stamina, 100, 1000);
 
         /* Draw value in the slider */
-        buffer = malloc(sizeof(char) * 10);
         sprintf(buffer, "%d points", settings->difficulty->player_stamina);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -925,7 +914,6 @@ Menu create_main_menu(Game *game, int type) {
                 0
             )
         );
-        free(buffer);
         element_count++;
 
 
@@ -963,7 +951,6 @@ Menu create_main_menu(Game *game, int type) {
         set_slider(tmp, settings->difficulty->waves_spawn_cooldown, 1000, 10000);
 
         /* Draw value in the slider */
-        buffer = malloc(sizeof(char) * 10);
         sprintf(buffer, "%d.%d s", settings->difficulty->waves_spawn_cooldown/1000, settings->difficulty->waves_spawn_cooldown%1000);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -980,7 +967,6 @@ Menu create_main_menu(Game *game, int type) {
                 0
             )
         );
-        free(buffer);
         element_count++;
 
         element_count -= 6;
@@ -1023,7 +1009,6 @@ Menu create_main_menu(Game *game, int type) {
         txt_width_previous = txt_width_child + 4;
 
         /* Draw value */
-        buffer = malloc(sizeof(char) * 10);
         sprintf(buffer, "x%d", settings->difficulty->ennemy_life_multiplicator);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -1102,7 +1087,6 @@ Menu create_main_menu(Game *game, int type) {
         txt_width_previous = txt_width_child + 4;
 
         /* Draw value */
-        buffer = malloc(sizeof(char) * 10);
         sprintf(buffer, "x%d", settings->difficulty->ennemy_shoot_cooldown_multiplicator);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 
@@ -1181,7 +1165,6 @@ Menu create_main_menu(Game *game, int type) {
         txt_width_previous = txt_width_child + 4;
 
         /* Draw value */
-        buffer = malloc(sizeof(char) * 10);
         sprintf(buffer, "x%d", settings->difficulty->ennemy_speed_multiplicator);
         MLV_get_size_of_text_with_font(buffer, &txt_width_child, &txt_height_child, settings->small_font);
         insert_button(&main_menu, 

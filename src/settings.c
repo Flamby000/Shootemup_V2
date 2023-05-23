@@ -57,7 +57,6 @@ void load_settings() {
             
             }
         }
-        settings->difficulty->preset = CUSTOM;
 
 
     settings->difficulty = difficulty;
