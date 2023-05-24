@@ -170,7 +170,7 @@ int set_volume(Game *game, Button *button) {
 
     settings->volume = button->value;
 
-    MLV_play_music(music, settings->volume, -1);
+    MLV_play_music(music, settings->volume*0.01, -1);
 
     update_setting_menu(game);
     return 1;
