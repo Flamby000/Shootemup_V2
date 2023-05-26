@@ -42,6 +42,9 @@ int main() {
         MLV_actualise_window();
     }
 
+    MLV_stop_all_sounds();
+    MLV_stop_music();
+
     free_game(game);
     free_frame();
     free_settings();
