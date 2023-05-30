@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/include/utils/shooter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_562486684a84167387648fcb79fc05d3.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier shooter.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Functions to create the missiles from a sender when it shoot.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="shooter_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a10f05492911413d7ceb142345764394c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#a10f05492911413d7ceb142345764394c">SHOOT_PLAYER_BASIC</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a10f05492911413d7ceb142345764394c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_player_basic.  <a href="shooter_8h.html#a10f05492911413d7ceb142345764394c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a10f05492911413d7ceb142345764394c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ea9bb1ee50dd2ce4edbe4f9eea054e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#ac2ea9bb1ee50dd2ce4edbe4f9eea054e">SHOOT_BASIC</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ac2ea9bb1ee50dd2ce4edbe4f9eea054e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_basic.  <a href="shooter_8h.html#ac2ea9bb1ee50dd2ce4edbe4f9eea054e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac2ea9bb1ee50dd2ce4edbe4f9eea054e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa26ebe4977f9dde01ef7baa9da0838cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#aa26ebe4977f9dde01ef7baa9da0838cd">SHOOT_TARGET_PLAYER</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:aa26ebe4977f9dde01ef7baa9da0838cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_target_player.  <a href="shooter_8h.html#aa26ebe4977f9dde01ef7baa9da0838cd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa26ebe4977f9dde01ef7baa9da0838cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd228397245342725e04aff28c67d0ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#abd228397245342725e04aff28c67d0ef">SHOOT_PERFORING_PLAYER</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:abd228397245342725e04aff28c67d0ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_perforing_player.  <a href="shooter_8h.html#abd228397245342725e04aff28c67d0ef">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abd228397245342725e04aff28c67d0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed61e0ab814871deed56e46298b3c803"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#aed61e0ab814871deed56e46298b3c803">SHOOT_NONE</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:aed61e0ab814871deed56e46298b3c803"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_none.  <a href="shooter_8h.html#aed61e0ab814871deed56e46298b3c803">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aed61e0ab814871deed56e46298b3c803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8b4b880048af684f551db2e19787f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#add8b4b880048af684f551db2e19787f0">SHOOT_SUPER_LASER</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:add8b4b880048af684f551db2e19787f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_super_laser.  <a href="shooter_8h.html#add8b4b880048af684f551db2e19787f0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:add8b4b880048af684f551db2e19787f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f25feda9a00f47f4147dcead61400af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#a3f25feda9a00f47f4147dcead61400af">SHOOT_MULTIDIRECTIONAL</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a3f25feda9a00f47f4147dcead61400af"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_multidirectional.  <a href="shooter_8h.html#a3f25feda9a00f47f4147dcead61400af">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3f25feda9a00f47f4147dcead61400af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0234cabfbd2a653fb261f51f5a26e5c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#a0234cabfbd2a653fb261f51f5a26e5c6">SHOOT_360_DIRECTION</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a0234cabfbd2a653fb261f51f5a26e5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function shoot_360_direction.  <a href="shooter_8h.html#a0234cabfbd2a653fb261f51f5a26e5c6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0234cabfbd2a653fb261f51f5a26e5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab444f02d90b7eabd936b5d641e84040f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a9ccd98ae84f54489aa55040604ecd8fb">SHOOT_FUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#ab444f02d90b7eabd936b5d641e84040f">get_shoot_function</a> (int id)</td></tr>
+<tr class="memdesc:ab444f02d90b7eabd936b5d641e84040f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shoot function from its ID.  <a href="shooter_8h.html#ab444f02d90b7eabd936b5d641e84040f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab444f02d90b7eabd936b5d641e84040f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783fccdfa6751cf140f0f4b7fd3c2e9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#a783fccdfa6751cf140f0f4b7fd3c2e9a">shoot_player_basic</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a783fccdfa6751cf140f0f4b7fd3c2e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot a basic missile from the player.  <a href="shooter_8h.html#a783fccdfa6751cf140f0f4b7fd3c2e9a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a783fccdfa6751cf140f0f4b7fd3c2e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3fc0d74a904e0c97d5956187ae5aa02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#ac3fc0d74a904e0c97d5956187ae5aa02">shoot_basic</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:ac3fc0d74a904e0c97d5956187ae5aa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot a basic missile from an ennemy.  <a href="shooter_8h.html#ac3fc0d74a904e0c97d5956187ae5aa02">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac3fc0d74a904e0c97d5956187ae5aa02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9f19b321478d863e4191b7511fd716"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#a5f9f19b321478d863e4191b7511fd716">shoot_target_player</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a5f9f19b321478d863e4191b7511fd716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot a missile from an ennemy to the player.  <a href="shooter_8h.html#a5f9f19b321478d863e4191b7511fd716">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5f9f19b321478d863e4191b7511fd716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab943a4cb2fee6509ff0e97387c14d156"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#ab943a4cb2fee6509ff0e97387c14d156">shoot_player_perforing</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:ab943a4cb2fee6509ff0e97387c14d156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot a perforing missile from the player.  <a href="shooter_8h.html#ab943a4cb2fee6509ff0e97387c14d156">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab943a4cb2fee6509ff0e97387c14d156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9177671e9ae9c61063d2796b07120f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#ab9177671e9ae9c61063d2796b07120f0">shoot_none</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:ab9177671e9ae9c61063d2796b07120f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do nothing.  <a href="shooter_8h.html#ab9177671e9ae9c61063d2796b07120f0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab9177671e9ae9c61063d2796b07120f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304ec90f7c0c40e6a27c656998599992"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#a304ec90f7c0c40e6a27c656998599992">shoot_super_laser</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a304ec90f7c0c40e6a27c656998599992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot a super laser from the player.  <a href="shooter_8h.html#a304ec90f7c0c40e6a27c656998599992">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a304ec90f7c0c40e6a27c656998599992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51563763ccfd5c17ce062e07a39cf503"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#a51563763ccfd5c17ce062e07a39cf503">shoot_multidirectional</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a51563763ccfd5c17ce062e07a39cf503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot missiles in multiple direction from the player.  <a href="shooter_8h.html#a51563763ccfd5c17ce062e07a39cf503">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a51563763ccfd5c17ce062e07a39cf503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fc1fe7fbbb739f2ed7fdbb2381fa90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shooter_8h.html#af4fc1fe7fbbb739f2ed7fdbb2381fa90">shoot_360_direction</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:af4fc1fe7fbbb739f2ed7fdbb2381fa90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot missiles in multiple direction from the sender.  <a href="shooter_8h.html#af4fc1fe7fbbb739f2ed7fdbb2381fa90">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af4fc1fe7fbbb739f2ed7fdbb2381fa90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Functions to create the missiles from a sender when it shoot. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Max Ducoudré &amp; Adam Mehdaoui </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2023-05-05</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a0234cabfbd2a653fb261f51f5a26e5c6" name="a0234cabfbd2a653fb261f51f5a26e5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0234cabfbd2a653fb261f51f5a26e5c6">&#9670;&nbsp;</a></span>SHOOT_360_DIRECTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_360_DIRECTION&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_360_direction. </p>
+
+</div>
+</div>
+<a id="ac2ea9bb1ee50dd2ce4edbe4f9eea054e" name="ac2ea9bb1ee50dd2ce4edbe4f9eea054e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ea9bb1ee50dd2ce4edbe4f9eea054e">&#9670;&nbsp;</a></span>SHOOT_BASIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_BASIC&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_basic. </p>
+
+</div>
+</div>
+<a id="a3f25feda9a00f47f4147dcead61400af" name="a3f25feda9a00f47f4147dcead61400af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f25feda9a00f47f4147dcead61400af">&#9670;&nbsp;</a></span>SHOOT_MULTIDIRECTIONAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_MULTIDIRECTIONAL&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_multidirectional. </p>
+
+</div>
+</div>
+<a id="aed61e0ab814871deed56e46298b3c803" name="aed61e0ab814871deed56e46298b3c803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed61e0ab814871deed56e46298b3c803">&#9670;&nbsp;</a></span>SHOOT_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_NONE&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_none. </p>
+
+</div>
+</div>
+<a id="abd228397245342725e04aff28c67d0ef" name="abd228397245342725e04aff28c67d0ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd228397245342725e04aff28c67d0ef">&#9670;&nbsp;</a></span>SHOOT_PERFORING_PLAYER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_PERFORING_PLAYER&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_perforing_player. </p>
+
+</div>
+</div>
+<a id="a10f05492911413d7ceb142345764394c" name="a10f05492911413d7ceb142345764394c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f05492911413d7ceb142345764394c">&#9670;&nbsp;</a></span>SHOOT_PLAYER_BASIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_PLAYER_BASIC&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_player_basic. </p>
+
+</div>
+</div>
+<a id="add8b4b880048af684f551db2e19787f0" name="add8b4b880048af684f551db2e19787f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8b4b880048af684f551db2e19787f0">&#9670;&nbsp;</a></span>SHOOT_SUPER_LASER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_SUPER_LASER&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_super_laser. </p>
+
+</div>
+</div>
+<a id="aa26ebe4977f9dde01ef7baa9da0838cd" name="aa26ebe4977f9dde01ef7baa9da0838cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26ebe4977f9dde01ef7baa9da0838cd">&#9670;&nbsp;</a></span>SHOOT_TARGET_PLAYER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHOOT_TARGET_PLAYER&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function shoot_target_player. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab444f02d90b7eabd936b5d641e84040f" name="ab444f02d90b7eabd936b5d641e84040f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab444f02d90b7eabd936b5d641e84040f">&#9670;&nbsp;</a></span>get_shoot_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a9ccd98ae84f54489aa55040604ecd8fb">SHOOT_FUNC</a> get_shoot_function </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the shoot function from its ID. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>of the shoot function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>SHOOT_FUNCT pointer defining a shoot pattern </dd></dl>
+
+</div>
+</div>
+<a id="af4fc1fe7fbbb739f2ed7fdbb2381fa90" name="af4fc1fe7fbbb739f2ed7fdbb2381fa90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fc1fe7fbbb739f2ed7fdbb2381fa90">&#9670;&nbsp;</a></span>shoot_360_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_360_direction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shoot missiles in multiple direction from the sender. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the sender </td></tr>
+    <tr><td class="paramname">entity</td><td>shooting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if success, 0 overwise </dd></dl>
+
+</div>
+</div>
+<a id="ac3fc0d74a904e0c97d5956187ae5aa02" name="ac3fc0d74a904e0c97d5956187ae5aa02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3fc0d74a904e0c97d5956187ae5aa02">&#9670;&nbsp;</a></span>shoot_basic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_basic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shoot a basic missile from an ennemy. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the sender </td></tr>
+    <tr><td class="paramname">entity</td><td>shooting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if success, 0 overwise </dd></dl>
+
+</div>
+</div>
+<a id="a51563763ccfd5c17ce062e07a39cf503" name="a51563763ccfd5c17ce062e07a39cf503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51563763ccfd5c17ce062e07a39cf503">&#9670;&nbsp;</a></span>shoot_multidirectional()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_multidirectional </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shoot missiles in multiple direction from the player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the sender </td></tr>
+    <tr><td class="paramname">entity</td><td>shooting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if success, 0 overwise </dd></dl>
+
+</div>
+</div>
+<a id="ab9177671e9ae9c61063d2796b07120f0" name="ab9177671e9ae9c61063d2796b07120f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9177671e9ae9c61063d2796b07120f0">&#9670;&nbsp;</a></span>shoot_none()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_none </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Do nothing. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to not shoot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 </dd></dl>
+
+</div>
+</div>
+<a id="a783fccdfa6751cf140f0f4b7fd3c2e9a" name="a783fccdfa6751cf140f0f4b7fd3c2e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783fccdfa6751cf140f0f4b7fd3c2e9a">&#9670;&nbsp;</a></span>shoot_player_basic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_player_basic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shoot a basic missile from the player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the sender </td></tr>
+    <tr><td class="paramname">entity</td><td>shooting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 if success, 1 overwise </dd></dl>
+
+</div>
+</div>
+<a id="ab943a4cb2fee6509ff0e97387c14d156" name="ab943a4cb2fee6509ff0e97387c14d156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab943a4cb2fee6509ff0e97387c14d156">&#9670;&nbsp;</a></span>shoot_player_perforing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_player_perforing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shoot a perforing missile from the player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the sender </td></tr>
+    <tr><td class="paramname">entity</td><td>shooting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if success, 0 overwise </dd></dl>
+
+</div>
+</div>
+<a id="a304ec90f7c0c40e6a27c656998599992" name="a304ec90f7c0c40e6a27c656998599992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a304ec90f7c0c40e6a27c656998599992">&#9670;&nbsp;</a></span>shoot_super_laser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_super_laser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shoot a super laser from the player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the sender </td></tr>
+    <tr><td class="paramname">entity</td><td>shooting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if success, 0 overwise </dd></dl>
+
+</div>
+</div>
+<a id="a5f9f19b321478d863e4191b7511fd716" name="a5f9f19b321478d863e4191b7511fd716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9f19b321478d863e4191b7511fd716">&#9670;&nbsp;</a></span>shoot_target_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shoot_target_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shoot a missile from an ennemy to the player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the sender </td></tr>
+    <tr><td class="paramname">entity</td><td>shooting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if success, 0 overwise </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

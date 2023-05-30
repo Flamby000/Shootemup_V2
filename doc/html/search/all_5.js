@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['easy_0',['EASY',['../struct_8h.html#ad89f38f37ba622058efa81d8f07e0257a26d394b5caf2853dbcef5884f0f068dd',1,'struct.h']]],
+  ['effect_1',['effect',['../struct__Bonus.html#af08df55279f5a777477b81d2a0e93e70',1,'_Bonus']]],
+  ['enable_5fshield_2',['enable_shield',['../spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285',1,'enable_shield(Game *game, Entity *entity):&#160;spaceship.c'],['../spaceship_8h.html#a3dd762274847a6e21b8fa1e49c322285',1,'enable_shield(Game *game, Entity *entity):&#160;spaceship.c']]],
+  ['enabled_3',['enabled',['../struct__Boost.html#af45fc9dff04bb0bcb6a8f7e618fe362c',1,'_Boost']]],
+  ['end_5fmatch_4',['end_match',['../game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5',1,'end_match(Game *game, MatchStatus status):&#160;game.c'],['../game_8h.html#a15a16990ec45f6ed217db14d5daa7fd5',1,'end_match(Game *game, MatchStatus status):&#160;game.c']]],
+  ['end_5fof_5fuse_5ftime_5',['end_of_use_time',['../struct__Boost.html#a31f53a45679bc83f37d32ea87de1433a',1,'_Boost']]],
+  ['energy_6',['energy',['../struct__Boost.html#ac7269e663ff8a389e4b44fe9cf3b7b7b',1,'_Boost']]],
+  ['ennemy_7',['ENNEMY',['../struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca03bd8662dd096bf140411d1d85924241',1,'struct.h']]],
+  ['ennemy_8',['Ennemy',['../struct_8h.html#a79027f4a3483054a5d457de4f16b2fc0',1,'struct.h']]],
+  ['ennemy_2ec_9',['ennemy.c',['../ennemy_8c.html',1,'']]],
+  ['ennemy_2eh_10',['ennemy.h',['../ennemy_8h.html',1,'']]],
+  ['ennemy_5fdata_5fpath_11',['ENNEMY_DATA_PATH',['../ennemy_8h.html#a45c6c516e1a37a218b48307f222db841',1,'ennemy.h']]],
+  ['ennemy_5flife_5fmultiplicator_12',['ennemy_life_multiplicator',['../struct__Difficulty.html#af3b1be0d210c97a3fa78affab554779d',1,'_Difficulty']]],
+  ['ennemy_5fshoot_5fcooldown_5fmultiplicator_13',['ennemy_shoot_cooldown_multiplicator',['../struct__Difficulty.html#a227c3ddee96f12db2043f8c616c07092',1,'_Difficulty']]],
+  ['ennemy_5fspeed_5fmultiplicator_14',['ennemy_speed_multiplicator',['../struct__Difficulty.html#afd2ecd660e0822e1536778a6eb23ba9d',1,'_Difficulty']]],
+  ['entities_15',['entities',['../struct__Game.html#aca43b64dd100818c697e2bbf9b812100',1,'_Game']]],
+  ['entity_16',['Entity',['../struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc',1,'struct.h']]],
+  ['entity_17',['entity',['../struct__Ennemy.html#aab0ba75a78edbee65f875d6fa7609a9f',1,'_Ennemy::entity()'],['../struct__Bonus.html#a10f08a78208a79d1e413378a6eac744b',1,'_Bonus::entity()'],['../struct__Missile.html#a1bbcd1c10be48b3d130acd657071bcb7',1,'_Missile::entity()'],['../struct__Player.html#afd1677f57b922a85a7dd7c9ffd1168e4',1,'_Player::entity()'],['../struct__EntityLink.html#ad73528574efe84813340ea126c675926',1,'_EntityLink::entity()'],['../struct__Button.html#a2926b8607f30fb03810489cea8d7b287',1,'_Button::entity()']]],
+  ['entity_2ec_18',['entity.c',['../entity_8c.html',1,'']]],
+  ['entity_2eh_19',['entity.h',['../entity_8h.html',1,'']]],
+  ['entity_5fcount_20',['entity_count',['../game_8c.html#aa3fb1bb0893f208c9bbdd8cd5caf7b74',1,'game.c']]],
+  ['entitylink_21',['EntityLink',['../struct_8h.html#acf11cd2e009f595a5c543da70e587532',1,'struct.h']]],
+  ['entitytype_22',['EntityType',['../struct_8h.html#a17dcda8db7223a4027a9665ab02b8673',1,'struct.h']]],
+  ['explosion_5f1_23',['EXPLOSION_1',['../animation_8h.html#a7cc1851e7422f904554db401d23480d9',1,'animation.h']]]
+];

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup:  Fichier source de /home/adam/Développement/Shootemup_V2/include/utils/shooter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_562486684a84167387648fcb79fc05d3.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">shooter.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="shooter_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef SHOOTER_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define SHOOTER_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><a class="code hl_typedef" href="struct_8h.html#a9ccd98ae84f54489aa55040604ecd8fb">SHOOT_FUNC</a> <a class="code hl_function" href="shooter_8h.html#ab444f02d90b7eabd936b5d641e84040f">get_shoot_function</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="shooter_8h.html#a10f05492911413d7ceb142345764394c">   28</a></span><span class="preprocessor">#define SHOOT_PLAYER_BASIC 0</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#a783fccdfa6751cf140f0f4b7fd3c2e9a">shoot_player_basic</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="shooter_8h.html#ac2ea9bb1ee50dd2ce4edbe4f9eea054e">   42</a></span><span class="preprocessor">#define SHOOT_BASIC 1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#ac3fc0d74a904e0c97d5956187ae5aa02">shoot_basic</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="shooter_8h.html#aa26ebe4977f9dde01ef7baa9da0838cd">   56</a></span><span class="preprocessor">#define SHOOT_TARGET_PLAYER 2</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#a5f9f19b321478d863e4191b7511fd716">shoot_target_player</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="shooter_8h.html#abd228397245342725e04aff28c67d0ef">   70</a></span><span class="preprocessor">#define SHOOT_PERFORING_PLAYER 3</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#ab943a4cb2fee6509ff0e97387c14d156">shoot_player_perforing</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="shooter_8h.html#aed61e0ab814871deed56e46298b3c803">   84</a></span><span class="preprocessor">#define SHOOT_NONE 4</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#ab9177671e9ae9c61063d2796b07120f0">shoot_none</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="shooter_8h.html#add8b4b880048af684f551db2e19787f0">   98</a></span><span class="preprocessor">#define SHOOT_SUPER_LASER 5</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#a304ec90f7c0c40e6a27c656998599992">shoot_super_laser</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="shooter_8h.html#a3f25feda9a00f47f4147dcead61400af">  112</a></span><span class="preprocessor">#define SHOOT_MULTIDIRECTIONAL 6</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#a51563763ccfd5c17ce062e07a39cf503">shoot_multidirectional</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="shooter_8h.html#a0234cabfbd2a653fb261f51f5a26e5c6">  126</a></span><span class="preprocessor">#define SHOOT_360_DIRECTION 7</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keywordtype">int</span> <a class="code hl_function" href="shooter_8h.html#af4fc1fe7fbbb739f2ed7fdbb2381fa90">shoot_360_direction</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ashooter_8h_html_a304ec90f7c0c40e6a27c656998599992"><div class="ttname"><a href="shooter_8h.html#a304ec90f7c0c40e6a27c656998599992">shoot_super_laser</a></div><div class="ttdeci">int shoot_super_laser(Game *game, Entity *entity)</div><div class="ttdoc">Shoot a super laser from the player.</div><div class="ttdef"><b>Definition:</b> shooter.c:61</div></div>
+<div class="ttc" id="ashooter_8h_html_a51563763ccfd5c17ce062e07a39cf503"><div class="ttname"><a href="shooter_8h.html#a51563763ccfd5c17ce062e07a39cf503">shoot_multidirectional</a></div><div class="ttdeci">int shoot_multidirectional(Game *game, Entity *entity)</div><div class="ttdoc">Shoot missiles in multiple direction from the player.</div><div class="ttdef"><b>Definition:</b> shooter.c:72</div></div>
+<div class="ttc" id="ashooter_8h_html_a5f9f19b321478d863e4191b7511fd716"><div class="ttname"><a href="shooter_8h.html#a5f9f19b321478d863e4191b7511fd716">shoot_target_player</a></div><div class="ttdeci">int shoot_target_player(Game *game, Entity *entity)</div><div class="ttdoc">Shoot a missile from an ennemy to the player.</div><div class="ttdef"><b>Definition:</b> shooter.c:50</div></div>
+<div class="ttc" id="ashooter_8h_html_a783fccdfa6751cf140f0f4b7fd3c2e9a"><div class="ttname"><a href="shooter_8h.html#a783fccdfa6751cf140f0f4b7fd3c2e9a">shoot_player_basic</a></div><div class="ttdeci">int shoot_player_basic(Game *game, Entity *entity)</div><div class="ttdoc">Shoot a basic missile from the player.</div><div class="ttdef"><b>Definition:</b> shooter.c:25</div></div>
+<div class="ttc" id="ashooter_8h_html_ab444f02d90b7eabd936b5d641e84040f"><div class="ttname"><a href="shooter_8h.html#ab444f02d90b7eabd936b5d641e84040f">get_shoot_function</a></div><div class="ttdeci">SHOOT_FUNC get_shoot_function(int id)</div><div class="ttdoc">Get the shoot function from its ID.</div><div class="ttdef"><b>Definition:</b> shooter.c:11</div></div>
+<div class="ttc" id="ashooter_8h_html_ab9177671e9ae9c61063d2796b07120f0"><div class="ttname"><a href="shooter_8h.html#ab9177671e9ae9c61063d2796b07120f0">shoot_none</a></div><div class="ttdeci">int shoot_none(Game *game, Entity *entity)</div><div class="ttdoc">Do nothing.</div><div class="ttdef"><b>Definition:</b> shooter.c:56</div></div>
+<div class="ttc" id="ashooter_8h_html_ab943a4cb2fee6509ff0e97387c14d156"><div class="ttname"><a href="shooter_8h.html#ab943a4cb2fee6509ff0e97387c14d156">shoot_player_perforing</a></div><div class="ttdeci">int shoot_player_perforing(Game *game, Entity *entity)</div><div class="ttdoc">Shoot a perforing missile from the player.</div><div class="ttdef"><b>Definition:</b> shooter.c:34</div></div>
+<div class="ttc" id="ashooter_8h_html_ac3fc0d74a904e0c97d5956187ae5aa02"><div class="ttname"><a href="shooter_8h.html#ac3fc0d74a904e0c97d5956187ae5aa02">shoot_basic</a></div><div class="ttdeci">int shoot_basic(Game *game, Entity *entity)</div><div class="ttdoc">Shoot a basic missile from an ennemy.</div><div class="ttdef"><b>Definition:</b> shooter.c:45</div></div>
+<div class="ttc" id="ashooter_8h_html_af4fc1fe7fbbb739f2ed7fdbb2381fa90"><div class="ttname"><a href="shooter_8h.html#af4fc1fe7fbbb739f2ed7fdbb2381fa90">shoot_360_direction</a></div><div class="ttdeci">int shoot_360_direction(Game *game, Entity *entity)</div><div class="ttdoc">Shoot missiles in multiple direction from the sender.</div><div class="ttdef"><b>Definition:</b> shooter.c:82</div></div>
+<div class="ttc" id="astruct_8h_html_a9ccd98ae84f54489aa55040604ecd8fb"><div class="ttname"><a href="struct_8h.html#a9ccd98ae84f54489aa55040604ecd8fb">SHOOT_FUNC</a></div><div class="ttdeci">int(* SHOOT_FUNC)(struct _Game *, struct _Entity *)</div><div class="ttdoc">Function pointer to update the shoot of a spaceship First argument is the current game Second argumen...</div><div class="ttdef"><b>Definition:</b> struct.h:64</div></div>
+<div class="ttc" id="astruct__Entity_html"><div class="ttname"><a href="struct__Entity.html">_Entity</a></div><div class="ttdoc">Structure defining an entity (every object in the game is an entity)</div><div class="ttdef"><b>Definition:</b> struct.h:250</div></div>
+<div class="ttc" id="astruct__Game_html"><div class="ttname"><a href="struct__Game.html">_Game</a></div><div class="ttdoc">Structure defining the game's data.</div><div class="ttdef"><b>Definition:</b> struct.h:213</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

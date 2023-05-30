@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/src/logic/level.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_8f3e5eb8dca2e697d445141b98c03fdd.html">src</a></li><li class="navelem"><a class="el" href="dir_4e509e3fd009271e07af5ee8e4bb6c80.html">logic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier level.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="struct_8h_source.html">../../include/struct.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">../../include/logic/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bonus_8h_source.html">../../include/logic/bonus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ennemy_8h_source.html">../../include/logic/ennemy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="level_8h_source.html">../../include/logic/level.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a02598e9b8c6ac36c85643b26603b3a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34">create_level</a> (char *level_file)</td></tr>
+<tr class="memdesc:a02598e9b8c6ac36c85643b26603b3a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a level from a file.  <a href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a02598e9b8c6ac36c85643b26603b3a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a253a19001abf56118aa8ac63facbc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *object_line)</td></tr>
+<tr class="memdesc:a3a253a19001abf56118aa8ac63facbc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)  <a href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3a253a19001abf56118aa8ac63facbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7bda58ade5a1240a02906bb90768d40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40">get_object_type</a> (char object)</td></tr>
+<tr class="memdesc:ae7bda58ade5a1240a02906bb90768d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity type from a character (its id)  <a href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae7bda58ade5a1240a02906bb90768d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a008982469285ee649542893d7bafd4c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a008982469285ee649542893d7bafd4c8">set_level</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *level_file)</td></tr>
+<tr class="separator:a008982469285ee649542893d7bafd4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b065408c98606a10ed9686e75119a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a40b065408c98606a10ed9686e75119a9">update_level</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *level, int infinite)</td></tr>
+<tr class="memdesc:a40b065408c98606a10ed9686e75119a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called each frame to update the level on the game. It spawn the waves and the boss missiles.  <a href="level_8c.html#a40b065408c98606a10ed9686e75119a9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a40b065408c98606a10ed9686e75119a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fec8fad0582630d058042aa22d9dad3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">free_level</a> (<a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *level)</td></tr>
+<tr class="memdesc:a4fec8fad0582630d058042aa22d9dad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory allocated for the level.  <a href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4fec8fad0582630d058042aa22d9dad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a02598e9b8c6ac36c85643b26603b3a34" name="a02598e9b8c6ac36c85643b26603b3a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02598e9b8c6ac36c85643b26603b3a34">&#9670;&nbsp;</a></span>create_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> * create_level </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>level_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a level from a file. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level_file</td><td>path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A pointer to the level defined on the file </dd></dl>
+
+</div>
+</div>
+<a id="a3a253a19001abf56118aa8ac63facbc2" name="a3a253a19001abf56118aa8ac63facbc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a253a19001abf56118aa8ac63facbc2">&#9670;&nbsp;</a></span>create_object_line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_object_line </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>object_line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a wave from a string. Each characters correspond to an entity (ennemy or bonus) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the wave </td></tr>
+    <tr><td class="paramname">object_line</td><td>string with the wave elements </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4fec8fad0582630d058042aa22d9dad3" name="a4fec8fad0582630d058042aa22d9dad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fec8fad0582630d058042aa22d9dad3">&#9670;&nbsp;</a></span>free_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_level </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the memory allocated for the level. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae7bda58ade5a1240a02906bb90768d40" name="ae7bda58ade5a1240a02906bb90768d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7bda58ade5a1240a02906bb90768d40">&#9670;&nbsp;</a></span>get_object_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a> get_object_type </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the entity type from a character (its id) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>EntityType of the object </dd></dl>
+
+</div>
+</div>
+<a id="a008982469285ee649542893d7bafd4c8" name="a008982469285ee649542893d7bafd4c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a008982469285ee649542893d7bafd4c8">&#9670;&nbsp;</a></span>set_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_level </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>level_file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40b065408c98606a10ed9686e75119a9" name="a40b065408c98606a10ed9686e75119a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40b065408c98606a10ed9686e75119a9">&#9670;&nbsp;</a></span>update_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int update_level </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>infinite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called each frame to update the level on the game. It spawn the waves and the boss missiles. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the level </td></tr>
+    <tr><td class="paramname">level</td><td>to update </td></tr>
+    <tr><td class="paramname">infinite</td><td>1 if the level is infinite, 0 otherwise </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if the level is over, 0 otherwise </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

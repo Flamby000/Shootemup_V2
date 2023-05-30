@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/include/logic/missile.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_bda990e6e388f1461abc7c9d66ee3eb5.html">logic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier missile.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Functions to manage the logic of a missile.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="missile_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac3abe57a9dca288af342f3e30f3ad7dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#ac3abe57a9dca288af342f3e30f3ad7dc">MISSILE_DATA_PATH</a>&#160;&#160;&#160;&quot;data/missiles.data&quot;</td></tr>
+<tr class="memdesc:ac3abe57a9dca288af342f3e30f3ad7dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path of the file containing the missiles data.  <a href="missile_8h.html#ac3abe57a9dca288af342f3e30f3ad7dc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac3abe57a9dca288af342f3e30f3ad7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8367ed99429346378fee40dc636b775"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#af8367ed99429346378fee40dc636b775">BASIC_PLAYER_MISSILE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:af8367ed99429346378fee40dc636b775"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the basic player missile.  <a href="missile_8h.html#af8367ed99429346378fee40dc636b775">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af8367ed99429346378fee40dc636b775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f76097c0ad603a5b4adf69d93da7ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#ac1f76097c0ad603a5b4adf69d93da7ee">BASIC_MISSILE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ac1f76097c0ad603a5b4adf69d93da7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the basic missile from an ennemy.  <a href="missile_8h.html#ac1f76097c0ad603a5b4adf69d93da7ee">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac1f76097c0ad603a5b4adf69d93da7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d00552c0f78fa1dc4d6ce5a71c9cdc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#a01d00552c0f78fa1dc4d6ce5a71c9cdc">TARGET_PLAYER_MISSILE</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a01d00552c0f78fa1dc4d6ce5a71c9cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the missile targeting the player.  <a href="missile_8h.html#a01d00552c0f78fa1dc4d6ce5a71c9cdc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a01d00552c0f78fa1dc4d6ce5a71c9cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2c5948c390a1ae7e92d6bd6db4893d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#a8b2c5948c390a1ae7e92d6bd6db4893d">PERFORING_PLAYER_MISSILE</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a8b2c5948c390a1ae7e92d6bd6db4893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the missile perforing entities.  <a href="missile_8h.html#a8b2c5948c390a1ae7e92d6bd6db4893d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8b2c5948c390a1ae7e92d6bd6db4893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ac843b73c9b24152e0ad35b08662d55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#a2ac843b73c9b24152e0ad35b08662d55">PROTECTING_MISSILE</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a2ac843b73c9b24152e0ad35b08662d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of protecting missile.  <a href="missile_8h.html#a2ac843b73c9b24152e0ad35b08662d55">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2ac843b73c9b24152e0ad35b08662d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3724b3a02b8e849f885d95b47dcc84d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#a3724b3a02b8e849f885d95b47dcc84d1">SUPER_LASER_MISSILE</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a3724b3a02b8e849f885d95b47dcc84d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the super laser missile.  <a href="missile_8h.html#a3724b3a02b8e849f885d95b47dcc84d1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3724b3a02b8e849f885d95b47dcc84d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a3edffd8571016f59239feebcbbd9cef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#a3edffd8571016f59239feebcbbd9cef4">free_missile</a> (<a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *missile)</td></tr>
+<tr class="memdesc:a3edffd8571016f59239feebcbbd9cef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory allocated for the missile.  <a href="missile_8h.html#a3edffd8571016f59239feebcbbd9cef4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3edffd8571016f59239feebcbbd9cef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebac63d93d7841927bb98344b3fe972f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#aebac63d93d7841927bb98344b3fe972f">create_missile</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *sender, int type, int x)</td></tr>
+<tr class="memdesc:aebac63d93d7841927bb98344b3fe972f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a missile object.  <a href="missile_8h.html#aebac63d93d7841927bb98344b3fe972f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aebac63d93d7841927bb98344b3fe972f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73757ce6ccf1427ba40b4bbbb9a3b104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#a73757ce6ccf1427ba40b4bbbb9a3b104">load_missile</a> (int id, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *sender)</td></tr>
+<tr class="memdesc:a73757ce6ccf1427ba40b4bbbb9a3b104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a missile from the missiles data file with its type id.  <a href="missile_8h.html#a73757ce6ccf1427ba40b4bbbb9a3b104">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a73757ce6ccf1427ba40b4bbbb9a3b104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5a45f27fbca6640b619dc3284d8ef5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#aea5a45f27fbca6640b619dc3284d8ef5">on_collide_missile</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *missile, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *collide, <a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> direction)</td></tr>
+<tr class="memdesc:aea5a45f27fbca6640b619dc3284d8ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the missile is collided by another entity.  <a href="missile_8h.html#aea5a45f27fbca6640b619dc3284d8ef5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aea5a45f27fbca6640b619dc3284d8ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651a726e525d5d040527fe901ea53b53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="missile_8h.html#a651a726e525d5d040527fe901ea53b53">update_missile</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *missile)</td></tr>
+<tr class="memdesc:a651a726e525d5d040527fe901ea53b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called each frame to update the missile's data.  <a href="missile_8h.html#a651a726e525d5d040527fe901ea53b53">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a651a726e525d5d040527fe901ea53b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Functions to manage the logic of a missile. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Max Ducoudré &amp; Adam Mehdaoui </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2023-05-05</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="ac1f76097c0ad603a5b4adf69d93da7ee" name="ac1f76097c0ad603a5b4adf69d93da7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f76097c0ad603a5b4adf69d93da7ee">&#9670;&nbsp;</a></span>BASIC_MISSILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BASIC_MISSILE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The id of the basic missile from an ennemy. </p>
+
+</div>
+</div>
+<a id="af8367ed99429346378fee40dc636b775" name="af8367ed99429346378fee40dc636b775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8367ed99429346378fee40dc636b775">&#9670;&nbsp;</a></span>BASIC_PLAYER_MISSILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BASIC_PLAYER_MISSILE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ID of the basic player missile. </p>
+
+</div>
+</div>
+<a id="ac3abe57a9dca288af342f3e30f3ad7dc" name="ac3abe57a9dca288af342f3e30f3ad7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3abe57a9dca288af342f3e30f3ad7dc">&#9670;&nbsp;</a></span>MISSILE_DATA_PATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MISSILE_DATA_PATH&#160;&#160;&#160;&quot;data/missiles.data&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The path of the file containing the missiles data. </p>
+
+</div>
+</div>
+<a id="a8b2c5948c390a1ae7e92d6bd6db4893d" name="a8b2c5948c390a1ae7e92d6bd6db4893d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2c5948c390a1ae7e92d6bd6db4893d">&#9670;&nbsp;</a></span>PERFORING_PLAYER_MISSILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PERFORING_PLAYER_MISSILE&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The id of the missile perforing entities. </p>
+
+</div>
+</div>
+<a id="a2ac843b73c9b24152e0ad35b08662d55" name="a2ac843b73c9b24152e0ad35b08662d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac843b73c9b24152e0ad35b08662d55">&#9670;&nbsp;</a></span>PROTECTING_MISSILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROTECTING_MISSILE&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The id of protecting missile. </p>
+
+</div>
+</div>
+<a id="a3724b3a02b8e849f885d95b47dcc84d1" name="a3724b3a02b8e849f885d95b47dcc84d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3724b3a02b8e849f885d95b47dcc84d1">&#9670;&nbsp;</a></span>SUPER_LASER_MISSILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SUPER_LASER_MISSILE&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The id of the super laser missile. </p>
+
+</div>
+</div>
+<a id="a01d00552c0f78fa1dc4d6ce5a71c9cdc" name="a01d00552c0f78fa1dc4d6ce5a71c9cdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d00552c0f78fa1dc4d6ce5a71c9cdc">&#9670;&nbsp;</a></span>TARGET_PLAYER_MISSILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TARGET_PLAYER_MISSILE&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The id of the missile targeting the player. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="aebac63d93d7841927bb98344b3fe972f" name="aebac63d93d7841927bb98344b3fe972f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebac63d93d7841927bb98344b3fe972f">&#9670;&nbsp;</a></span>create_missile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> * create_missile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a missile object. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the missile </td></tr>
+    <tr><td class="paramname">sender</td><td>of the missile </td></tr>
+    <tr><td class="paramname">type</td><td>id of the missile type </td></tr>
+    <tr><td class="paramname">x</td><td>position to spawn the missile </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Pointer of the created missile </dd></dl>
+
+</div>
+</div>
+<a id="a3edffd8571016f59239feebcbbd9cef4" name="a3edffd8571016f59239feebcbbd9cef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3edffd8571016f59239feebcbbd9cef4">&#9670;&nbsp;</a></span>free_missile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_missile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *&#160;</td>
+          <td class="paramname"><em>missile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the memory allocated for the missile. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">missile</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73757ce6ccf1427ba40b4bbbb9a3b104" name="a73757ce6ccf1427ba40b4bbbb9a3b104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73757ce6ccf1427ba40b4bbbb9a3b104">&#9670;&nbsp;</a></span>load_missile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> * load_missile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a missile from the missiles data file with its type id. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>of the missile type </td></tr>
+    <tr><td class="paramname">sender</td><td>of the missile </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Pointer of the created missile </dd></dl>
+
+</div>
+</div>
+<a id="aea5a45f27fbca6640b619dc3284d8ef5" name="aea5a45f27fbca6640b619dc3284d8ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5a45f27fbca6640b619dc3284d8ef5">&#9670;&nbsp;</a></span>on_collide_missile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int on_collide_missile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *&#160;</td>
+          <td class="paramname"><em>missile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>collide</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when the missile is collided by another entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the missile </td></tr>
+    <tr><td class="paramname">missile</td><td>collided </td></tr>
+    <tr><td class="paramname">collide</td><td>entity </td></tr>
+    <tr><td class="paramname">direction</td><td>of the collision </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if an entity was destroyed, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a651a726e525d5d040527fe901ea53b53" name="a651a726e525d5d040527fe901ea53b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651a726e525d5d040527fe901ea53b53">&#9670;&nbsp;</a></span>update_missile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int update_missile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a66c1ee6cc5c0c42832f5e4d981cef648">Missile</a> *&#160;</td>
+          <td class="paramname"><em>missile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called each frame to update the missile's data. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the missile </td></tr>
+    <tr><td class="paramname">missile</td><td>to update </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if the missile was destroyed, 0 otherwise </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

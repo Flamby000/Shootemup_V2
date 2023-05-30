@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/src/logic/entity.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_8f3e5eb8dca2e697d445141b98c03fdd.html">src</a></li><li class="navelem"><a class="el" href="dir_4e509e3fd009271e07af5ee8e4bb6c80.html">logic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier entity.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="struct_8h_source.html">../../include/struct.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="animation_8h_source.html">../../include/interface/animation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">../../include/logic/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="missile_8h_source.html">../../include/logic/missile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="menu_8h_source.html">../../include/interface/menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="player_8h_source.html">../../include/logic/player.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bonus_8h_source.html">../../include/logic/bonus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ennemy_8h_source.html">../../include/logic/ennemy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="entity_8h_source.html">../../include/logic/entity.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a497844725a654f7fbcfa9d0326cc40fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd">create_entity</a> (int x, int y, int width, int height, int speed, <a class="el" href="struct_8h.html#a6123904cef607d8d40cb26e32c330cb3">SPEED_FUNC</a> update_speed, <a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *animation, char *destruction_img_path, void *parent, <a class="el" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a> type)</td></tr>
+<tr class="memdesc:a497844725a654f7fbcfa9d0326cc40fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a entity object.  <a href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a497844725a654f7fbcfa9d0326cc40fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a6481f021a113fc7648265509bc38a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#a10a6481f021a113fc7648265509bc38a">avoid_collide_border</a> (<a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a10a6481f021a113fc7648265509bc38a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The entity can't go out of the screen.  <a href="entity_8c.html#a10a6481f021a113fc7648265509bc38a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a10a6481f021a113fc7648265509bc38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40097cd60d7736d4138e55e1e8f6665e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e">update_entity</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a40097cd60d7736d4138e55e1e8f6665e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the entity data.  <a href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a40097cd60d7736d4138e55e1e8f6665e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4af4759bfcd14edc7ede2fc8cacb6a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4">get_entity_collide</a> (<a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *other)</td></tr>
+<tr class="memdesc:ae4af4759bfcd14edc7ede2fc8cacb6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the direction of an entity compared to another.  <a href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae4af4759bfcd14edc7ede2fc8cacb6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef4f183cec335d3fc51ec1b423e471a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a">on_entity_collide</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *other, <a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> direction)</td></tr>
+<tr class="memdesc:a0ef4f183cec335d3fc51ec1b423e471a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an entity is collided by another entity.  <a href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0ef4f183cec335d3fc51ec1b423e471a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac993a36899c2e61f1ecba162aaef2c01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01">free_out_of_screen</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:ac993a36899c2e61f1ecba162aaef2c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the ennemy if it is out of the screen.  <a href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac993a36899c2e61f1ecba162aaef2c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc2f30ea49d9534b0709aa0b0e191e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#aecc2f30ea49d9534b0709aa0b0e191e6">get_direction</a> (<a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:aecc2f30ea49d9534b0709aa0b0e191e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the direction of the entity.  <a href="entity_8c.html#aecc2f30ea49d9534b0709aa0b0e191e6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aecc2f30ea49d9534b0709aa0b0e191e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5353005cf9b0bbf5d618e7fff4b4d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1">closest_entity</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity, <a class="el" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a> filter)</td></tr>
+<tr class="memdesc:a1a5353005cf9b0bbf5d618e7fff4b4d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the closest entity of an entity.  <a href="entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1a5353005cf9b0bbf5d618e7fff4b4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4bd6d202b5ecb659dc41b02f4b10e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9">free_entity</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a2d4bd6d202b5ecb659dc41b02f4b10e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the entity memory.  <a href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2d4bd6d202b5ecb659dc41b02f4b10e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62762cd20888e143c235526b83114fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#ab62762cd20888e143c235526b83114fe">add_child</a> (<a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *parent, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *child)</td></tr>
+<tr class="memdesc:ab62762cd20888e143c235526b83114fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a child to an entity.  <a href="entity_8c.html#ab62762cd20888e143c235526b83114fe">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab62762cd20888e143c235526b83114fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f77c2473fe3ce412696ef5d8adf9d9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a">remove_child</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *parent, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *child)</td></tr>
+<tr class="memdesc:a2f77c2473fe3ce412696ef5d8adf9d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a child from an entity.  <a href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2f77c2473fe3ce412696ef5d8adf9d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab62762cd20888e143c235526b83114fe" name="ab62762cd20888e143c235526b83114fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62762cd20888e143c235526b83114fe">&#9670;&nbsp;</a></span>add_child()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_child </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>child</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a child to an entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>of the entity </td></tr>
+    <tr><td class="paramname">child</td><td>to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10a6481f021a113fc7648265509bc38a" name="a10a6481f021a113fc7648265509bc38a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a6481f021a113fc7648265509bc38a">&#9670;&nbsp;</a></span>avoid_collide_border()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void avoid_collide_border </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The entity can't go out of the screen. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>to avoid the border </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a5353005cf9b0bbf5d618e7fff4b4d1" name="a1a5353005cf9b0bbf5d618e7fff4b4d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5353005cf9b0bbf5d618e7fff4b4d1">&#9670;&nbsp;</a></span>closest_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> * closest_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a>&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the closest entity of an entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to get the closest </td></tr>
+    <tr><td class="paramname">filter</td><td>type of the entity to found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The closest entity pointer, NULL if not found </dd></dl>
+
+</div>
+</div>
+<a id="a497844725a654f7fbcfa9d0326cc40fd" name="a497844725a654f7fbcfa9d0326cc40fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a497844725a654f7fbcfa9d0326cc40fd">&#9670;&nbsp;</a></span>create_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> * create_entity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a6123904cef607d8d40cb26e32c330cb3">SPEED_FUNC</a>&#160;</td>
+          <td class="paramname"><em>update_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *&#160;</td>
+          <td class="paramname"><em>animation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>destruction_img_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a entity object. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>position of the entity </td></tr>
+    <tr><td class="paramname">y</td><td>position of the entity </td></tr>
+    <tr><td class="paramname">width</td><td>of the entity </td></tr>
+    <tr><td class="paramname">height</td><td>of the entity </td></tr>
+    <tr><td class="paramname">speed</td><td>of the entity </td></tr>
+    <tr><td class="paramname">update_speed</td><td>movement function pointer of the entity </td></tr>
+    <tr><td class="paramname">animation</td><td>structure of the entity </td></tr>
+    <tr><td class="paramname">destruction_img_path</td><td>path of the destruction image </td></tr>
+    <tr><td class="paramname">parent</td><td>of the entity </td></tr>
+    <tr><td class="paramname">type</td><td>of the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The created entity pointer </dd></dl>
+
+</div>
+</div>
+<a id="a2d4bd6d202b5ecb659dc41b02f4b10e9" name="a2d4bd6d202b5ecb659dc41b02f4b10e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4bd6d202b5ecb659dc41b02f4b10e9">&#9670;&nbsp;</a></span>free_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the entity memory. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac993a36899c2e61f1ecba162aaef2c01" name="ac993a36899c2e61f1ecba162aaef2c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac993a36899c2e61f1ecba162aaef2c01">&#9670;&nbsp;</a></span>free_out_of_screen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int free_out_of_screen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the ennemy if it is out of the screen. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the ennemy </td></tr>
+    <tr><td class="paramname">entity</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if the entity were removed, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aecc2f30ea49d9534b0709aa0b0e191e6" name="aecc2f30ea49d9534b0709aa0b0e191e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2f30ea49d9534b0709aa0b0e191e6">&#9670;&nbsp;</a></span>get_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> get_direction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the direction of the entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>to get the direction </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The direction </dd></dl>
+
+</div>
+</div>
+<a id="ae4af4759bfcd14edc7ede2fc8cacb6a4" name="ae4af4759bfcd14edc7ede2fc8cacb6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4af4759bfcd14edc7ede2fc8cacb6a4">&#9670;&nbsp;</a></span>get_entity_collide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> get_entity_collide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the direction of an entity compared to another. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>to get the direction </td></tr>
+    <tr><td class="paramname">other</td><td>entity to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The direction </dd></dl>
+
+</div>
+</div>
+<a id="a0ef4f183cec335d3fc51ec1b423e471a" name="a0ef4f183cec335d3fc51ec1b423e471a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef4f183cec335d3fc51ec1b423e471a">&#9670;&nbsp;</a></span>on_entity_collide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int on_entity_collide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when an entity is collided by another entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>collided </td></tr>
+    <tr><td class="paramname">other</td><td>entity collided </td></tr>
+    <tr><td class="paramname">direction</td><td>of the collision </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if an entity were removed during collision, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a2f77c2473fe3ce412696ef5d8adf9d9a" name="a2f77c2473fe3ce412696ef5d8adf9d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f77c2473fe3ce412696ef5d8adf9d9a">&#9670;&nbsp;</a></span>remove_child()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_child </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>child</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a child from an entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">parent</td><td>of the entity </td></tr>
+    <tr><td class="paramname">child</td><td>to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40097cd60d7736d4138e55e1e8f6665e" name="a40097cd60d7736d4138e55e1e8f6665e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40097cd60d7736d4138e55e1e8f6665e">&#9670;&nbsp;</a></span>update_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int update_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the entity data. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if the entity were removed, 0 otherwise </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

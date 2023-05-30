@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['label_0',['LABEL',['../struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca0f90de4d94720fdd5156fd7e7c3b0c9b',1,'struct.h']]],
+  ['last_5fclick_5faction_5ftime_1',['last_click_action_time',['../struct__Game.html#a0c8c26be59911900f60ceb32235288ac',1,'_Game']]],
+  ['last_5fdamage_5ftime_2',['last_damage_time',['../struct__Life.html#ad1572718ede2a97dfeb0b26bd4f1bdec',1,'_Life::last_damage_time()'],['../struct__Missile.html#a3cc6da8d9aecbb003b5d2cc2e328d6e0',1,'_Missile::last_damage_time()']]],
+  ['last_5fframe_5ftime_3',['last_frame_time',['../struct__Animation.html#a04f4d6862da11bc811e26d1eee0c7faf',1,'_Animation']]],
+  ['last_5fline_5ftime_4',['last_line_time',['../struct__Level.html#af09b5ddea2de16867cde4643c936d381',1,'_Level']]],
+  ['last_5fshoot_5ftime_5',['last_shoot_time',['../struct__Shooter.html#a94c6d286cad8e5fb3a780f2cc2a6b175',1,'_Shooter']]],
+  ['last_5fwave_5ftime_6',['last_wave_time',['../struct__Level.html#a0e47bb135345a823b9ea11faee537166',1,'_Level']]],
+  ['left_7',['LEFT',['../struct_8h.html#ae04b4c017d1caf6fef38aaa5407bc5e2adb45120aafd37a973140edee24708065',1,'struct.h']]],
+  ['left_5fimages_8',['left_images',['../struct__Animation.html#a44b20baf04024e9f53f4365dea09b758',1,'_Animation']]],
+  ['level_9',['Level',['../struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2',1,'struct.h']]],
+  ['level_10',['level',['../struct__Game.html#a45f71b00d4a3185c5a7cf4afba578022',1,'_Game']]],
+  ['level_2ec_11',['level.c',['../level_8c.html',1,'']]],
+  ['level_2eh_12',['level.h',['../level_8h.html',1,'']]],
+  ['level_5ffile_13',['level_file',['../struct__Level.html#ae5428496dca72c907301295c414de78a',1,'_Level']]],
+  ['life_14',['Life',['../struct_8h.html#afe30d034e12309002d775dcd18f68216',1,'struct.h']]],
+  ['life_15',['life',['../struct__SpaceShip.html#a8e8a1c02ccb9d804e236da8e464faeb1',1,'_SpaceShip']]],
+  ['life_5fdecrease_5feffect_16',['life_decrease_effect',['../bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08',1,'life_decrease_effect(Game *game, Player *eater, int reverse):&#160;bonus.c'],['../bonus_8h.html#a558fcb1e8dabfdaa1d7fda73a3336c08',1,'life_decrease_effect(Game *game, Player *eater, int reverse):&#160;bonus.c']]],
+  ['life_5fdecrease_5feffect_17',['LIFE_DECREASE_EFFECT',['../bonus_8h.html#ae2d99057d376a976517e324ad794bff8',1,'bonus.h']]],
+  ['life_5fincrease_5feffect_18',['life_increase_effect',['../bonus_8c.html#ad055706b7eb217b48f040cee55b8499c',1,'life_increase_effect(Game *game, Player *eater, int reverse):&#160;bonus.c'],['../bonus_8h.html#ad055706b7eb217b48f040cee55b8499c',1,'life_increase_effect(Game *game, Player *eater, int reverse):&#160;bonus.c']]],
+  ['life_5fincrease_5feffect_19',['LIFE_INCREASE_EFFECT',['../bonus_8h.html#a9d3fdf983b22c0743d6717c25058ba04',1,'bonus.h']]],
+  ['line_5fcooldown_20',['line_cooldown',['../struct__Level.html#a078c8dfef1a35758eaa9de0606859991',1,'_Level']]],
+  ['load_5fmissile_21',['load_missile',['../missile_8h.html#a73757ce6ccf1427ba40b4bbbb9a3b104',1,'missile.h']]],
+  ['load_5fsettings_22',['load_settings',['../settings_8c.html#a457486e8b8211e75970f756106ebff2c',1,'load_settings():&#160;settings.c'],['../settings_8h.html#a457486e8b8211e75970f756106ebff2c',1,'load_settings():&#160;settings.c']]]
+];

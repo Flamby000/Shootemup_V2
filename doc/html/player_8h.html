@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/include/logic/player.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_bda990e6e388f1461abc7c9d66ee3eb5.html">logic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier player.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Functions to manage the logic of a player.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="player_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a89e2ac9092225702ac543695d0771d38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a89e2ac9092225702ac543695d0771d38">PLAYER_WIDTH</a>&#160;&#160;&#160;42</td></tr>
+<tr class="memdesc:a89e2ac9092225702ac543695d0771d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default width of the player.  <a href="player_8h.html#a89e2ac9092225702ac543695d0771d38">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a89e2ac9092225702ac543695d0771d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2712b06fd52f25adca031d05c3e0c09b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a2712b06fd52f25adca031d05c3e0c09b">PLAYER_HEIGHT</a>&#160;&#160;&#160;74</td></tr>
+<tr class="memdesc:a2712b06fd52f25adca031d05c3e0c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default height of the player.  <a href="player_8h.html#a2712b06fd52f25adca031d05c3e0c09b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2712b06fd52f25adca031d05c3e0c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab216a3fb7ef6a32f9721bee2fb30c639"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ab216a3fb7ef6a32f9721bee2fb30c639">create_player</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int player_number)</td></tr>
+<tr class="memdesc:ab216a3fb7ef6a32f9721bee2fb30c639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a player object.  <a href="player_8h.html#ab216a3fb7ef6a32f9721bee2fb30c639">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab216a3fb7ef6a32f9721bee2fb30c639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f330e163525cf7e7fd589b83b0632d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ad7f330e163525cf7e7fd589b83b0632d">free_player</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:ad7f330e163525cf7e7fd589b83b0632d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the player allocated memory.  <a href="player_8h.html#ad7f330e163525cf7e7fd589b83b0632d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad7f330e163525cf7e7fd589b83b0632d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9113484af3e457aa5ce05219570581a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a9113484af3e457aa5ce05219570581a2">on_collide_player</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *collide, <a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> direction)</td></tr>
+<tr class="memdesc:a9113484af3e457aa5ce05219570581a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a player is collided by another entity.  <a href="player_8h.html#a9113484af3e457aa5ce05219570581a2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9113484af3e457aa5ce05219570581a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Functions to manage the logic of a player. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Max Ducoudré &amp; Adam Mehdaoui </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2023-05-05</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a2712b06fd52f25adca031d05c3e0c09b" name="a2712b06fd52f25adca031d05c3e0c09b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2712b06fd52f25adca031d05c3e0c09b">&#9670;&nbsp;</a></span>PLAYER_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PLAYER_HEIGHT&#160;&#160;&#160;74</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default height of the player. </p>
+
+</div>
+</div>
+<a id="a89e2ac9092225702ac543695d0771d38" name="a89e2ac9092225702ac543695d0771d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e2ac9092225702ac543695d0771d38">&#9670;&nbsp;</a></span>PLAYER_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PLAYER_WIDTH&#160;&#160;&#160;42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default width of the player. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab216a3fb7ef6a32f9721bee2fb30c639" name="ab216a3fb7ef6a32f9721bee2fb30c639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab216a3fb7ef6a32f9721bee2fb30c639">&#9670;&nbsp;</a></span>create_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> * create_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>player_number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a player object. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>to create the player </td></tr>
+    <tr><td class="paramname">player_number</td><td>of the player </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Pointer of the created player </dd></dl>
+
+</div>
+</div>
+<a id="ad7f330e163525cf7e7fd589b83b0632d" name="ad7f330e163525cf7e7fd589b83b0632d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f330e163525cf7e7fd589b83b0632d">&#9670;&nbsp;</a></span>free_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the player allocated memory. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the player to free </td></tr>
+    <tr><td class="paramname">player</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9113484af3e457aa5ce05219570581a2" name="a9113484af3e457aa5ce05219570581a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9113484af3e457aa5ce05219570581a2">&#9670;&nbsp;</a></span>on_collide_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int on_collide_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>collide</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when a player is collided by another entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the player </td></tr>
+    <tr><td class="paramname">player</td><td>collided </td></tr>
+    <tr><td class="paramname">collide</td><td>other entity </td></tr>
+    <tr><td class="paramname">direction</td><td>of the collision </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if an entity were removed, 0 otherwise </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

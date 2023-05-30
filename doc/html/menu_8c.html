@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/src/interface/menu.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_8f3e5eb8dca2e697d445141b98c03fdd.html">src</a></li><li class="navelem"><a class="el" href="dir_822bcbba38df12b6976a946b18cc5cc7.html">interface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier menu.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="struct_8h_source.html">../../include/struct.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="movement_8h_source.html">../../include/utils/movement.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="entity_8h_source.html">../../include/logic/entity.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">../../include/logic/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="animation_8h_source.html">../../include/interface/animation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">../../include/utils/utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="click__actions_8h_source.html">../../include/interface/click_actions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="menu_8h_source.html">../../include/interface/menu.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a58c1aa08300d29d3121c9153a6c33bb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a58c1aa08300d29d3121c9153a6c33bb2">update_button</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *button)</td></tr>
+<tr class="memdesc:a58c1aa08300d29d3121c9153a6c33bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update a button data (in function of user actions)  <a href="menu_8c.html#a58c1aa08300d29d3121c9153a6c33bb2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a58c1aa08300d29d3121c9153a6c33bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d059af25e5dec374f300c46e2798ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a62d059af25e5dec374f300c46e2798ff">draw_button</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *button)</td></tr>
+<tr class="memdesc:a62d059af25e5dec374f300c46e2798ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to draw a button.  <a href="menu_8c.html#a62d059af25e5dec374f300c46e2798ff">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a62d059af25e5dec374f300c46e2798ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d07a195d9e5b87b3dee165827ac3d39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39">free_button</a> (<a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *button)</td></tr>
+<tr class="memdesc:a3d07a195d9e5b87b3dee165827ac3d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the button memory.  <a href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3d07a195d9e5b87b3dee165827ac3d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f53862c87e5b9df58e1a68383cd0d25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a9f53862c87e5b9df58e1a68383cd0d25">insert_button</a> (<a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> *menu, <a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *button)</td></tr>
+<tr class="memdesc:a9f53862c87e5b9df58e1a68383cd0d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to insert a button in a menu.  <a href="menu_8c.html#a9f53862c87e5b9df58e1a68383cd0d25">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9f53862c87e5b9df58e1a68383cd0d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675a5b1f2b000f3e0434b6844b41de53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a675a5b1f2b000f3e0434b6844b41de53">create_button</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int x, int y, int width, int height, char *text, MLV_Color background_color, MLV_Color color, MLV_Color over_color, MLV_Color border_color, MLV_Font *font, <a class="el" href="struct_8h.html#a17e1dba9430e85b03af512bf66c9fa1e">CLICK_ACTION</a> on_click, int underline)</td></tr>
+<tr class="memdesc:a675a5b1f2b000f3e0434b6844b41de53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a button object.  <a href="menu_8c.html#a675a5b1f2b000f3e0434b6844b41de53">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a675a5b1f2b000f3e0434b6844b41de53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2154a2f801135cfc154fdb06f4babc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#afe2154a2f801135cfc154fdb06f4babc">set_slider</a> (<a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *button, int value, int min_value, int max_value)</td></tr>
+<tr class="memdesc:afe2154a2f801135cfc154fdb06f4babc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The button in argument become a slider.  <a href="menu_8c.html#afe2154a2f801135cfc154fdb06f4babc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afe2154a2f801135cfc154fdb06f4babc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c934445ca52df77b82088a8f165c0ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a9c934445ca52df77b82088a8f165c0ef">set_image</a> (<a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *button, char *path)</td></tr>
+<tr class="separator:a9c934445ca52df77b82088a8f165c0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2e142363dae02c05fc52c65bc82ed3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d">set_menu</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> *menu)</td></tr>
+<tr class="memdesc:af2e142363dae02c05fc52c65bc82ed3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the menu of the game. It replace and free the previous to set the new one.  <a href="menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af2e142363dae02c05fc52c65bc82ed3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59979f8358b4f657fe7135a3572bfcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb">create_match_pause_sample</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *text, MLV_Color title_color)</td></tr>
+<tr class="memdesc:ae59979f8358b4f657fe7135a3572bfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a base of a game over match.  <a href="menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae59979f8358b4f657fe7135a3572bfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a18928bd50d85335e4ee4f3886ea796"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796">create_game_over_menu</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a51f70ca52e671e4bcf3e55583e2c4215">MatchStatus</a> status)</td></tr>
+<tr class="memdesc:a4a18928bd50d85335e4ee4f3886ea796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a game over menu.  <a href="menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4a18928bd50d85335e4ee4f3886ea796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95952ccc68145fa05ad2063c3b3f2d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7">create_main_menu</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int type)</td></tr>
+<tr class="memdesc:ab95952ccc68145fa05ad2063c3b3f2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a main menu object in function of a type.  <a href="menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab95952ccc68145fa05ad2063c3b3f2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf613c9f9506787ca50b7eda2a587b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#accf613c9f9506787ca50b7eda2a587b5">create_main_menu_sample</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int selected_button)</td></tr>
+<tr class="memdesc:accf613c9f9506787ca50b7eda2a587b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a common main menu without submenus.  <a href="menu_8c.html#accf613c9f9506787ca50b7eda2a587b5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:accf613c9f9506787ca50b7eda2a587b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a675a5b1f2b000f3e0434b6844b41de53" name="a675a5b1f2b000f3e0434b6844b41de53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675a5b1f2b000f3e0434b6844b41de53">&#9670;&nbsp;</a></span>create_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> * create_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Color&#160;</td>
+          <td class="paramname"><em>background_color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Color&#160;</td>
+          <td class="paramname"><em>over_color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Color&#160;</td>
+          <td class="paramname"><em>border_color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a17e1dba9430e85b03af512bf66c9fa1e">CLICK_ACTION</a>&#160;</td>
+          <td class="paramname"><em>on_click</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>underline</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a button object. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the button </td></tr>
+    <tr><td class="paramname">x</td><td>position of the button </td></tr>
+    <tr><td class="paramname">y</td><td>position of the button </td></tr>
+    <tr><td class="paramname">width</td><td>of the button </td></tr>
+    <tr><td class="paramname">height</td><td>of the button </td></tr>
+    <tr><td class="paramname">text</td><td>of the button </td></tr>
+    <tr><td class="paramname">background_color</td><td>of the button </td></tr>
+    <tr><td class="paramname">color</td><td>of the button's text </td></tr>
+    <tr><td class="paramname">over_color</td><td>of the button's text when the mouse is over the button </td></tr>
+    <tr><td class="paramname">border_color</td><td>of the button </td></tr>
+    <tr><td class="paramname">font</td><td>of the button's text </td></tr>
+    <tr><td class="paramname">on_click</td><td>function to call when the button is clicked </td></tr>
+    <tr><td class="paramname">underline</td><td>1 if the text must be underlined </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The pointer of the created button </dd></dl>
+
+</div>
+</div>
+<a id="a4a18928bd50d85335e4ee4f3886ea796" name="a4a18928bd50d85335e4ee4f3886ea796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a18928bd50d85335e4ee4f3886ea796">&#9670;&nbsp;</a></span>create_game_over_menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> create_game_over_menu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a51f70ca52e671e4bcf3e55583e2c4215">MatchStatus</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a game over menu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the menu </td></tr>
+    <tr><td class="paramname">status</td><td>of the match </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Menu created </dd></dl>
+
+</div>
+</div>
+<a id="ab95952ccc68145fa05ad2063c3b3f2d7" name="ab95952ccc68145fa05ad2063c3b3f2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab95952ccc68145fa05ad2063c3b3f2d7">&#9670;&nbsp;</a></span>create_main_menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> create_main_menu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a main menu object in function of a type. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the menu </td></tr>
+    <tr><td class="paramname">type</td><td>of the main menu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Menu created </dd></dl>
+
+</div>
+</div>
+<a id="accf613c9f9506787ca50b7eda2a587b5" name="accf613c9f9506787ca50b7eda2a587b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf613c9f9506787ca50b7eda2a587b5">&#9670;&nbsp;</a></span>create_main_menu_sample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> create_main_menu_sample </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selected_button</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a common main menu without submenus. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the menu </td></tr>
+    <tr><td class="paramname">selected_button</td><td>of the menu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Menu created </dd></dl>
+
+</div>
+</div>
+<a id="ae59979f8358b4f657fe7135a3572bfcb" name="ae59979f8358b4f657fe7135a3572bfcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae59979f8358b4f657fe7135a3572bfcb">&#9670;&nbsp;</a></span>create_match_pause_sample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> create_match_pause_sample </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Color&#160;</td>
+          <td class="paramname"><em>title_color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a base of a game over match. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the menu </td></tr>
+    <tr><td class="paramname">text</td><td>title of the menu </td></tr>
+    <tr><td class="paramname">title_color</td><td>of the title </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Menu created </dd></dl>
+
+</div>
+</div>
+<a id="a62d059af25e5dec374f300c46e2798ff" name="a62d059af25e5dec374f300c46e2798ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d059af25e5dec374f300c46e2798ff">&#9670;&nbsp;</a></span>draw_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *&#160;</td>
+          <td class="paramname"><em>button</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to draw a button. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the button </td></tr>
+    <tr><td class="paramname">button</td><td>to draw </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d07a195d9e5b87b3dee165827ac3d39" name="a3d07a195d9e5b87b3dee165827ac3d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d07a195d9e5b87b3dee165827ac3d39">&#9670;&nbsp;</a></span>free_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the button memory. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9f53862c87e5b9df58e1a68383cd0d25" name="a9f53862c87e5b9df58e1a68383cd0d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f53862c87e5b9df58e1a68383cd0d25">&#9670;&nbsp;</a></span>insert_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insert_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> *&#160;</td>
+          <td class="paramname"><em>menu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *&#160;</td>
+          <td class="paramname"><em>button</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to insert a button in a menu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">menu</td><td>to insert the button </td></tr>
+    <tr><td class="paramname">button</td><td>to insert </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c934445ca52df77b82088a8f165c0ef" name="a9c934445ca52df77b82088a8f165c0ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c934445ca52df77b82088a8f165c0ef">&#9670;&nbsp;</a></span>set_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *&#160;</td>
+          <td class="paramname"><em>button</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2e142363dae02c05fc52c65bc82ed3d" name="af2e142363dae02c05fc52c65bc82ed3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e142363dae02c05fc52c65bc82ed3d">&#9670;&nbsp;</a></span>set_menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_menu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#acd564a95439387db16310f5a8c49ae15">Menu</a> *&#160;</td>
+          <td class="paramname"><em>menu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the menu of the game. It replace and free the previous to set the new one. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>to set the menu </td></tr>
+    <tr><td class="paramname">menu</td><td>to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe2154a2f801135cfc154fdb06f4babc" name="afe2154a2f801135cfc154fdb06f4babc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2154a2f801135cfc154fdb06f4babc">&#9670;&nbsp;</a></span>set_slider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_slider </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *&#160;</td>
+          <td class="paramname"><em>button</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The button in argument become a slider. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>to become a slider </td></tr>
+    <tr><td class="paramname">value</td><td>of the slider </td></tr>
+    <tr><td class="paramname">min_value</td><td>of the slider </td></tr>
+    <tr><td class="paramname">max_value</td><td>of the slider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a58c1aa08300d29d3121c9153a6c33bb2" name="a58c1aa08300d29d3121c9153a6c33bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c1aa08300d29d3121c9153a6c33bb2">&#9670;&nbsp;</a></span>update_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int update_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#aa1d7d7bd50fd40a2fe5680ea31a7ae91">Button</a> *&#160;</td>
+          <td class="paramname"><em>button</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update a button data (in function of user actions) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the button </td></tr>
+    <tr><td class="paramname">button</td><td>to update </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if the button was destroyed </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/src/logic/bonus.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_8f3e5eb8dca2e697d445141b98c03fdd.html">src</a></li><li class="navelem"><a class="el" href="dir_4e509e3fd009271e07af5ee8e4bb6c80.html">logic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier bonus.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="struct_8h_source.html">../../include/struct.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="entity_8h_source.html">../../include/logic/entity.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="animation_8h_source.html">../../include/interface/animation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="movement_8h_source.html">../../include/utils/movement.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="shooter_8h_source.html">../../include/utils/shooter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="missile_8h_source.html">../../include/logic/missile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">../../include/logic/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spaceship_8h_source.html">../../include/logic/spaceship.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bonus_8h_source.html">../../include/logic/bonus.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a0da5723f177148ab03cb688becd3f3d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char type, int x)</td></tr>
+<tr class="memdesc:a0da5723f177148ab03cb688becd3f3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a bonus object.  <a href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0da5723f177148ab03cb688becd3f3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fc1ff9cc7925acb9daa71957d8e991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int x)</td></tr>
+<tr class="memdesc:a66fc1ff9cc7925acb9daa71957d8e991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a random bonus object.  <a href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a66fc1ff9cc7925acb9daa71957d8e991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ae2c28983452dbc839229545c9e7de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de">on_collide_bonus</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *bonus, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *collide, <a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> direction)</td></tr>
+<tr class="memdesc:af6ae2c28983452dbc839229545c9e7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when a bonus collide another entity.  <a href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af6ae2c28983452dbc839229545c9e7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa33d0cd746fd6a8789d0c6f8638d19a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a">is_bonus_reachable</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *bonus)</td></tr>
+<tr class="memdesc:aaa33d0cd746fd6a8789d0c6f8638d19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a bonus can be reached by a player.  <a href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aaa33d0cd746fd6a8789d0c6f8638d19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf31d3255948e555c78bf211a63c62bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb">free_bonus</a> (<a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *bonus)</td></tr>
+<tr class="memdesc:abf31d3255948e555c78bf211a63c62bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the bonus memory.  <a href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abf31d3255948e555c78bf211a63c62bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6004477e9c2811af91ed032d4bd33e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a1aa6fb40b40a29d341c68cfdd212fe08">BONUS_FUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id</a> (char id)</td></tr>
+<tr class="memdesc:ab6004477e9c2811af91ed032d4bd33e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus effect function by the bonus type ID.  <a href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab6004477e9c2811af91ed032d4bd33e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a558fcb1e8dabfdaa1d7fda73a3336c08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08">life_decrease_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
+<tr class="memdesc:a558fcb1e8dabfdaa1d7fda73a3336c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the life decrease effect to a player.  <a href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a558fcb1e8dabfdaa1d7fda73a3336c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace50826aafb3dec795ce017c91680fb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6">shield_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
+<tr class="memdesc:ace50826aafb3dec795ce017c91680fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the shield effect to a player.  <a href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ace50826aafb3dec795ce017c91680fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d038d904e9a39d658824b3725b9db19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19">max_life_increase_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
+<tr class="memdesc:a0d038d904e9a39d658824b3725b9db19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the max life effect to the eater.  <a href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0d038d904e9a39d658824b3725b9db19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4843ebffeec6a35d3b6dbd85c5bee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5">power_up_speed_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
+<tr class="memdesc:abb4843ebffeec6a35d3b6dbd85c5bee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the speed of the eater.  <a href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abb4843ebffeec6a35d3b6dbd85c5bee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf135890bec1b253c1cde057a61256c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4">power_up_shoot_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
+<tr class="memdesc:abf135890bec1b253c1cde057a61256c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the power of the eater shoot.  <a href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abf135890bec1b253c1cde057a61256c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad055706b7eb217b48f040cee55b8499c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c">life_increase_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
+<tr class="memdesc:ad055706b7eb217b48f040cee55b8499c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the life increase effect to a player.  <a href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad055706b7eb217b48f040cee55b8499c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d463e1ca03cecf3fb8309595f46ec6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6">spawn_unit_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
+<tr class="memdesc:a12d463e1ca03cecf3fb8309595f46ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a unit to protect the eater.  <a href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a12d463e1ca03cecf3fb8309595f46ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a0da5723f177148ab03cb688becd3f3d2" name="a0da5723f177148ab03cb688becd3f3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da5723f177148ab03cb688becd3f3d2">&#9670;&nbsp;</a></span>create_bonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> * create_bonus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a bonus object. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>to create the bonus </td></tr>
+    <tr><td class="paramname">type</td><td>of bonus </td></tr>
+    <tr><td class="paramname">x</td><td>position of the spawning bonus point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The created bonus pointer </dd></dl>
+
+</div>
+</div>
+<a id="a66fc1ff9cc7925acb9daa71957d8e991" name="a66fc1ff9cc7925acb9daa71957d8e991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fc1ff9cc7925acb9daa71957d8e991">&#9670;&nbsp;</a></span>create_random_bonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> * create_random_bonus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a random bonus object. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>to create the bonus </td></tr>
+    <tr><td class="paramname">x</td><td>position of the spawning bonus point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The created bonus pointer </dd></dl>
+
+</div>
+</div>
+<a id="abf31d3255948e555c78bf211a63c62bb" name="abf31d3255948e555c78bf211a63c62bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf31d3255948e555c78bf211a63c62bb">&#9670;&nbsp;</a></span>free_bonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_bonus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *&#160;</td>
+          <td class="paramname"><em>bonus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the bonus memory. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bonus</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6004477e9c2811af91ed032d4bd33e2" name="ab6004477e9c2811af91ed032d4bd33e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6004477e9c2811af91ed032d4bd33e2">&#9670;&nbsp;</a></span>get_bonus_effect_by_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a1aa6fb40b40a29d341c68cfdd212fe08">BONUS_FUNC</a> get_bonus_effect_by_id </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the bonus effect function by the bonus type ID. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>of the bonus type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A pointer to the bonus effect function </dd></dl>
+
+</div>
+</div>
+<a id="aaa33d0cd746fd6a8789d0c6f8638d19a" name="aaa33d0cd746fd6a8789d0c6f8638d19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa33d0cd746fd6a8789d0c6f8638d19a">&#9670;&nbsp;</a></span>is_bonus_reachable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_bonus_reachable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *&#160;</td>
+          <td class="paramname"><em>bonus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a bonus can be reached by a player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">bonus</td><td>to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if the bonus can be reached, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a558fcb1e8dabfdaa1d7fda73a3336c08" name="a558fcb1e8dabfdaa1d7fda73a3336c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a558fcb1e8dabfdaa1d7fda73a3336c08">&#9670;&nbsp;</a></span>life_decrease_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void life_decrease_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>eater</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the life decrease effect to a player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">eater</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">reverse</td><td>if the effect is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad055706b7eb217b48f040cee55b8499c" name="ad055706b7eb217b48f040cee55b8499c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad055706b7eb217b48f040cee55b8499c">&#9670;&nbsp;</a></span>life_increase_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void life_increase_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>eater</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the life increase effect to a player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">eater</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">reverse</td><td>if the effect is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d038d904e9a39d658824b3725b9db19" name="a0d038d904e9a39d658824b3725b9db19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d038d904e9a39d658824b3725b9db19">&#9670;&nbsp;</a></span>max_life_increase_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void max_life_increase_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>eater</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase the max life effect to the eater. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">eater</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">reverse</td><td>if the effect is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af6ae2c28983452dbc839229545c9e7de" name="af6ae2c28983452dbc839229545c9e7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ae2c28983452dbc839229545c9e7de">&#9670;&nbsp;</a></span>on_collide_bonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int on_collide_bonus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *&#160;</td>
+          <td class="paramname"><em>bonus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>collide</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function called when a bonus collide another entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">bonus</td><td>collided </td></tr>
+    <tr><td class="paramname">collide</td><td>with the bonus </td></tr>
+    <tr><td class="paramname">direction</td><td>of the collision </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 if an entity were removed during collision, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="abf135890bec1b253c1cde057a61256c4" name="abf135890bec1b253c1cde057a61256c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf135890bec1b253c1cde057a61256c4">&#9670;&nbsp;</a></span>power_up_shoot_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void power_up_shoot_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>eater</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase the power of the eater shoot. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">eater</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">reverse</td><td>if the effect is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb4843ebffeec6a35d3b6dbd85c5bee5" name="abb4843ebffeec6a35d3b6dbd85c5bee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4843ebffeec6a35d3b6dbd85c5bee5">&#9670;&nbsp;</a></span>power_up_speed_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void power_up_speed_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>eater</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase the speed of the eater. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">eater</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">reverse</td><td>if the effect is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace50826aafb3dec795ce017c91680fb6" name="ace50826aafb3dec795ce017c91680fb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace50826aafb3dec795ce017c91680fb6">&#9670;&nbsp;</a></span>shield_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shield_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>eater</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the shield effect to a player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">eater</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">reverse</td><td>if the effect is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12d463e1ca03cecf3fb8309595f46ec6" name="a12d463e1ca03cecf3fb8309595f46ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d463e1ca03cecf3fb8309595f46ec6">&#9670;&nbsp;</a></span>spawn_unit_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spawn_unit_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>eater</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spawn a unit to protect the eater. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">eater</td><td>of the bonus </td></tr>
+    <tr><td class="paramname">reverse</td><td>if the effect is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['update_5fboost_0',['update_boost',['../spaceship_8h.html#a599c28e4e67f05de50b98a50a62bf7e3',1,'update_boost(Game *game, Entity *entity):&#160;spaceship.c'],['../spaceship_8c.html#a599c28e4e67f05de50b98a50a62bf7e3',1,'update_boost(Game *game, Entity *entity):&#160;spaceship.c']]],
+  ['update_5fbutton_1',['update_button',['../menu_8c.html#a58c1aa08300d29d3121c9153a6c33bb2',1,'update_button(Game *game, Button *button):&#160;menu.c'],['../menu_8h.html#a58c1aa08300d29d3121c9153a6c33bb2',1,'update_button(Game *game, Button *button):&#160;menu.c']]],
+  ['update_5fentity_2',['update_entity',['../entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e',1,'update_entity(Game *game, Entity *entity):&#160;entity.c'],['../entity_8h.html#a40097cd60d7736d4138e55e1e8f6665e',1,'update_entity(Game *game, Entity *entity):&#160;entity.c']]],
+  ['update_5fgame_3',['update_game',['../game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444',1,'update_game(Game *game):&#160;game.c'],['../game_8h.html#a4c75e4af7c4aa48650c4758fc0fd1444',1,'update_game(Game *game):&#160;game.c']]],
+  ['update_5flevel_4',['update_level',['../level_8c.html#a40b065408c98606a10ed9686e75119a9',1,'update_level(Game *game, Level *level, int infinite):&#160;level.c'],['../level_8h.html#a40b065408c98606a10ed9686e75119a9',1,'update_level(Game *game, Level *level, int infinite):&#160;level.c']]],
+  ['update_5fmissile_5',['update_missile',['../missile_8c.html#a651a726e525d5d040527fe901ea53b53',1,'update_missile(Game *game, Missile *missile):&#160;missile.c'],['../missile_8h.html#a651a726e525d5d040527fe901ea53b53',1,'update_missile(Game *game, Missile *missile):&#160;missile.c']]],
+  ['update_5fsetting_5fmenu_6',['update_setting_menu',['../click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64',1,'click_actions.c']]],
+  ['update_5fspaceship_7',['update_spaceship',['../spaceship_8c.html#a31601cbf05ddaeb261c3860cf7a16bed',1,'update_spaceship(Game *game, Entity *entity):&#160;spaceship.c'],['../spaceship_8h.html#a31601cbf05ddaeb261c3860cf7a16bed',1,'update_spaceship(Game *game, Entity *entity):&#160;spaceship.c']]],
+  ['user_5fmovement_5fcontroller_8',['user_movement_controller',['../movement_8c.html#a374107eaf8cda2624e4bd293beb4265d',1,'user_movement_controller(Game *game, Entity *entity):&#160;movement.c'],['../movement_8h.html#a374107eaf8cda2624e4bd293beb4265d',1,'user_movement_controller(Game *game, Entity *entity):&#160;movement.c']]]
+];

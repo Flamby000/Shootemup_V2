@@ -1,0 +1,868 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/include/utils/movement.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_562486684a84167387648fcb79fc05d3.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier movement.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Functions to update the movement and speed of an entity.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="movement_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9c68764b671ad4cad058df31d430af55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a9c68764b671ad4cad058df31d430af55">MOVEMENT_NONE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a9c68764b671ad4cad058df31d430af55"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_none.  <a href="movement_8h.html#a9c68764b671ad4cad058df31d430af55">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9c68764b671ad4cad058df31d430af55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1785ba2349532ef6fe9731d6c18b427"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#ad1785ba2349532ef6fe9731d6c18b427">MOVEMENT_FORWARD</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ad1785ba2349532ef6fe9731d6c18b427"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_forward.  <a href="movement_8h.html#ad1785ba2349532ef6fe9731d6c18b427">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad1785ba2349532ef6fe9731d6c18b427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0070390c9a159123e1c36e743b5697e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a0070390c9a159123e1c36e743b5697e0">MOVEMENT_BACKWARD</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a0070390c9a159123e1c36e743b5697e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_backward.  <a href="movement_8h.html#a0070390c9a159123e1c36e743b5697e0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0070390c9a159123e1c36e743b5697e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd22d3c727f787399dfae48da2b6e6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a5fd22d3c727f787399dfae48da2b6e6e">MOVEMENT_INFINITE_SCROLL</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a5fd22d3c727f787399dfae48da2b6e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_infinite_scroll.  <a href="movement_8h.html#a5fd22d3c727f787399dfae48da2b6e6e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5fd22d3c727f787399dfae48da2b6e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20141a1bd6542a2dea8f928b2c265df8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a20141a1bd6542a2dea8f928b2c265df8">MOVEMENT_CONTROLLER</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a20141a1bd6542a2dea8f928b2c265df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_controller.  <a href="movement_8h.html#a20141a1bd6542a2dea8f928b2c265df8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a20141a1bd6542a2dea8f928b2c265df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4f0c28f843afbfc90730734c41026a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a1f4f0c28f843afbfc90730734c41026a">MOVEMENT_FOLLOW_PLAYER</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a1f4f0c28f843afbfc90730734c41026a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_follow_player.  <a href="movement_8h.html#a1f4f0c28f843afbfc90730734c41026a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1f4f0c28f843afbfc90730734c41026a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778ef24e5afdf9d4dbd4da4c627f6a79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a778ef24e5afdf9d4dbd4da4c627f6a79">MOVEMENT_SINUSOIDAL</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a778ef24e5afdf9d4dbd4da4c627f6a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_sinusoidal.  <a href="movement_8h.html#a778ef24e5afdf9d4dbd4da4c627f6a79">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a778ef24e5afdf9d4dbd4da4c627f6a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4a2c4812fd8b768bf56504b94fb3fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#abe4a2c4812fd8b768bf56504b94fb3fb">MOVEMENT_CIRCLE_ENTITY</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:abe4a2c4812fd8b768bf56504b94fb3fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_circle_entity.  <a href="movement_8h.html#abe4a2c4812fd8b768bf56504b94fb3fb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abe4a2c4812fd8b768bf56504b94fb3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e31b083ebd0b1f3948fb3d92e18ce6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a3e31b083ebd0b1f3948fb3d92e18ce6d">MOVEMENT_FOLLOW_X</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a3e31b083ebd0b1f3948fb3d92e18ce6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_follow_x.  <a href="movement_8h.html#a3e31b083ebd0b1f3948fb3d92e18ce6d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3e31b083ebd0b1f3948fb3d92e18ce6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9acb2ace02f5717aed0e208ce8e4116"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#aa9acb2ace02f5717aed0e208ce8e4116">MOVEMENT_LEFT_RIGHT</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:aa9acb2ace02f5717aed0e208ce8e4116"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_left_right.  <a href="movement_8h.html#aa9acb2ace02f5717aed0e208ce8e4116">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa9acb2ace02f5717aed0e208ce8e4116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60e631202041acf47f3b575a616365e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#ad60e631202041acf47f3b575a616365e">MOVEMENT_FOLLOW_ENNEMY</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:ad60e631202041acf47f3b575a616365e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the function movement_follow_ennemy.  <a href="movement_8h.html#ad60e631202041acf47f3b575a616365e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad60e631202041acf47f3b575a616365e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a21cecc57afce1b1d773a435570c4e2a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a6123904cef607d8d40cb26e32c330cb3">SPEED_FUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a21cecc57afce1b1d773a435570c4e2a6">get_movement_function</a> (int id)</td></tr>
+<tr class="memdesc:a21cecc57afce1b1d773a435570c4e2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the movement function pointer from its ID.  <a href="movement_8h.html#a21cecc57afce1b1d773a435570c4e2a6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a21cecc57afce1b1d773a435570c4e2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0028be0b1961ad2174af71bbd51421c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a0028be0b1961ad2174af71bbd51421c2">movement_none</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a0028be0b1961ad2174af71bbd51421c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to no movement.  <a href="movement_8h.html#a0028be0b1961ad2174af71bbd51421c2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0028be0b1961ad2174af71bbd51421c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3503535619a03cee137511c40c3598e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a3503535619a03cee137511c40c3598e4">movement_forward</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a3503535619a03cee137511c40c3598e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement forward. The entity will move forward.  <a href="movement_8h.html#a3503535619a03cee137511c40c3598e4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3503535619a03cee137511c40c3598e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a701627525684a1769854d783c28f9ebb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a701627525684a1769854d783c28f9ebb">movement_backward</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a701627525684a1769854d783c28f9ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement backward. The entity will move backward.  <a href="movement_8h.html#a701627525684a1769854d783c28f9ebb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a701627525684a1769854d783c28f9ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cc33671dfce95a0d2059b72b1b2018"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#ab6cc33671dfce95a0d2059b72b1b2018">movement_infinite_scroll</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:ab6cc33671dfce95a0d2059b72b1b2018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of the screen.  <a href="movement_8h.html#ab6cc33671dfce95a0d2059b72b1b2018">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab6cc33671dfce95a0d2059b72b1b2018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374107eaf8cda2624e4bd293beb4265d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a374107eaf8cda2624e4bd293beb4265d">user_movement_controller</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a374107eaf8cda2624e4bd293beb4265d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement controlled by the player. The entity will move according to the player inputs.  <a href="movement_8h.html#a374107eaf8cda2624e4bd293beb4265d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a374107eaf8cda2624e4bd293beb4265d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652cb58f3f922fa163c64f1eba9efb27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a652cb58f3f922fa163c64f1eba9efb27">movement_follow_player</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a652cb58f3f922fa163c64f1eba9efb27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement following the player. The entity will follow the player.  <a href="movement_8h.html#a652cb58f3f922fa163c64f1eba9efb27">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a652cb58f3f922fa163c64f1eba9efb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ef5889c5b490e2965664d5c1c54b3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#ae2ef5889c5b490e2965664d5c1c54b3f">movement_sinusoidal</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:ae2ef5889c5b490e2965664d5c1c54b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern.  <a href="movement_8h.html#ae2ef5889c5b490e2965664d5c1c54b3f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae2ef5889c5b490e2965664d5c1c54b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b39b318ba13066e262a96e154eeeda1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a6b39b318ba13066e262a96e154eeeda1">movement_circle_entity</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a6b39b318ba13066e262a96e154eeeda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement circling an entity. The entity will circle around another entity.  <a href="movement_8h.html#a6b39b318ba13066e262a96e154eeeda1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6b39b318ba13066e262a96e154eeeda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7236c788c900918ea53feb689400a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a5a7236c788c900918ea53feb689400a8">movement_follow_x</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a5a7236c788c900918ea53feb689400a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement following the player on its X axis.  <a href="movement_8h.html#a5a7236c788c900918ea53feb689400a8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5a7236c788c900918ea53feb689400a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100b269e754d4260566e5adba43169b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a100b269e754d4260566e5adba43169b7">movement_left_right</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a100b269e754d4260566e5adba43169b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement left and right. The entity will bounce on the left and right borders of the screen.  <a href="movement_8h.html#a100b269e754d4260566e5adba43169b7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a100b269e754d4260566e5adba43169b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3c7445385987ae2ae830dd910d6f81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a0e3c7445385987ae2ae830dd910d6f81">movement_follow_ennemy</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a0e3c7445385987ae2ae830dd910d6f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correspond to a movement following an ennemy. The entity will follow an ennemy.  <a href="movement_8h.html#a0e3c7445385987ae2ae830dd910d6f81">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0e3c7445385987ae2ae830dd910d6f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47af43ea3e598d31c47c4039fd22de20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a47af43ea3e598d31c47c4039fd22de20">push_entity</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a47af43ea3e598d31c47c4039fd22de20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the entity on the bottom.  <a href="movement_8h.html#a47af43ea3e598d31c47c4039fd22de20">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a47af43ea3e598d31c47c4039fd22de20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87854f40d7571254aa2ecb11504ff322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movement_8h.html#a87854f40d7571254aa2ecb11504ff322">movement_follow_entity</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *target)</td></tr>
+<tr class="memdesc:a87854f40d7571254aa2ecb11504ff322"><td class="mdescLeft">&#160;</td><td class="mdescRight">The entity will follow the targer.  <a href="movement_8h.html#a87854f40d7571254aa2ecb11504ff322">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a87854f40d7571254aa2ecb11504ff322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Functions to update the movement and speed of an entity. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Max Ducoudré &amp; Adam Mehdaoui </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2023-05-05</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a0070390c9a159123e1c36e743b5697e0" name="a0070390c9a159123e1c36e743b5697e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0070390c9a159123e1c36e743b5697e0">&#9670;&nbsp;</a></span>MOVEMENT_BACKWARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_BACKWARD&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_backward. </p>
+
+</div>
+</div>
+<a id="abe4a2c4812fd8b768bf56504b94fb3fb" name="abe4a2c4812fd8b768bf56504b94fb3fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4a2c4812fd8b768bf56504b94fb3fb">&#9670;&nbsp;</a></span>MOVEMENT_CIRCLE_ENTITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_CIRCLE_ENTITY&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_circle_entity. </p>
+
+</div>
+</div>
+<a id="a20141a1bd6542a2dea8f928b2c265df8" name="a20141a1bd6542a2dea8f928b2c265df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20141a1bd6542a2dea8f928b2c265df8">&#9670;&nbsp;</a></span>MOVEMENT_CONTROLLER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_CONTROLLER&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_controller. </p>
+
+</div>
+</div>
+<a id="ad60e631202041acf47f3b575a616365e" name="ad60e631202041acf47f3b575a616365e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60e631202041acf47f3b575a616365e">&#9670;&nbsp;</a></span>MOVEMENT_FOLLOW_ENNEMY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_FOLLOW_ENNEMY&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_follow_ennemy. </p>
+
+</div>
+</div>
+<a id="a1f4f0c28f843afbfc90730734c41026a" name="a1f4f0c28f843afbfc90730734c41026a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4f0c28f843afbfc90730734c41026a">&#9670;&nbsp;</a></span>MOVEMENT_FOLLOW_PLAYER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_FOLLOW_PLAYER&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_follow_player. </p>
+
+</div>
+</div>
+<a id="a3e31b083ebd0b1f3948fb3d92e18ce6d" name="a3e31b083ebd0b1f3948fb3d92e18ce6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e31b083ebd0b1f3948fb3d92e18ce6d">&#9670;&nbsp;</a></span>MOVEMENT_FOLLOW_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_FOLLOW_X&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_follow_x. </p>
+
+</div>
+</div>
+<a id="ad1785ba2349532ef6fe9731d6c18b427" name="ad1785ba2349532ef6fe9731d6c18b427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1785ba2349532ef6fe9731d6c18b427">&#9670;&nbsp;</a></span>MOVEMENT_FORWARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_FORWARD&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_forward. </p>
+
+</div>
+</div>
+<a id="a5fd22d3c727f787399dfae48da2b6e6e" name="a5fd22d3c727f787399dfae48da2b6e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd22d3c727f787399dfae48da2b6e6e">&#9670;&nbsp;</a></span>MOVEMENT_INFINITE_SCROLL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_INFINITE_SCROLL&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_infinite_scroll. </p>
+
+</div>
+</div>
+<a id="aa9acb2ace02f5717aed0e208ce8e4116" name="aa9acb2ace02f5717aed0e208ce8e4116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9acb2ace02f5717aed0e208ce8e4116">&#9670;&nbsp;</a></span>MOVEMENT_LEFT_RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_LEFT_RIGHT&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_left_right. </p>
+
+</div>
+</div>
+<a id="a9c68764b671ad4cad058df31d430af55" name="a9c68764b671ad4cad058df31d430af55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c68764b671ad4cad058df31d430af55">&#9670;&nbsp;</a></span>MOVEMENT_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_NONE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_none. </p>
+
+</div>
+</div>
+<a id="a778ef24e5afdf9d4dbd4da4c627f6a79" name="a778ef24e5afdf9d4dbd4da4c627f6a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778ef24e5afdf9d4dbd4da4c627f6a79">&#9670;&nbsp;</a></span>MOVEMENT_SINUSOIDAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVEMENT_SINUSOIDAL&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the function movement_sinusoidal. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a21cecc57afce1b1d773a435570c4e2a6" name="a21cecc57afce1b1d773a435570c4e2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cecc57afce1b1d773a435570c4e2a6">&#9670;&nbsp;</a></span>get_movement_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a6123904cef607d8d40cb26e32c330cb3">SPEED_FUNC</a> get_movement_function </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the movement function pointer from its ID. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>of the movement function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>a SPEED_FUNCTION pointer defining a movement pattern </dd></dl>
+
+</div>
+</div>
+<a id="a701627525684a1769854d783c28f9ebb" name="a701627525684a1769854d783c28f9ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a701627525684a1769854d783c28f9ebb">&#9670;&nbsp;</a></span>movement_backward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_backward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement backward. The entity will move backward. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6b39b318ba13066e262a96e154eeeda1" name="a6b39b318ba13066e262a96e154eeeda1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b39b318ba13066e262a96e154eeeda1">&#9670;&nbsp;</a></span>movement_circle_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_circle_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement circling an entity. The entity will circle around another entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e3c7445385987ae2ae830dd910d6f81" name="a0e3c7445385987ae2ae830dd910d6f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3c7445385987ae2ae830dd910d6f81">&#9670;&nbsp;</a></span>movement_follow_ennemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_follow_ennemy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement following an ennemy. The entity will follow an ennemy. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a87854f40d7571254aa2ecb11504ff322" name="a87854f40d7571254aa2ecb11504ff322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87854f40d7571254aa2ecb11504ff322">&#9670;&nbsp;</a></span>movement_follow_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_follow_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The entity will follow the targer. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entities </td></tr>
+    <tr><td class="paramname">entity</td><td>to move </td></tr>
+    <tr><td class="paramname">target</td><td>to follow </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a652cb58f3f922fa163c64f1eba9efb27" name="a652cb58f3f922fa163c64f1eba9efb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652cb58f3f922fa163c64f1eba9efb27">&#9670;&nbsp;</a></span>movement_follow_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_follow_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement following the player. The entity will follow the player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a7236c788c900918ea53feb689400a8" name="a5a7236c788c900918ea53feb689400a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7236c788c900918ea53feb689400a8">&#9670;&nbsp;</a></span>movement_follow_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_follow_x </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement following the player on its X axis. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3503535619a03cee137511c40c3598e4" name="a3503535619a03cee137511c40c3598e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3503535619a03cee137511c40c3598e4">&#9670;&nbsp;</a></span>movement_forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement forward. The entity will move forward. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6cc33671dfce95a0d2059b72b1b2018" name="ab6cc33671dfce95a0d2059b72b1b2018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cc33671dfce95a0d2059b72b1b2018">&#9670;&nbsp;</a></span>movement_infinite_scroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_infinite_scroll </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of the screen. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a100b269e754d4260566e5adba43169b7" name="a100b269e754d4260566e5adba43169b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100b269e754d4260566e5adba43169b7">&#9670;&nbsp;</a></span>movement_left_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_left_right </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement left and right. The entity will bounce on the left and right borders of the screen. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0028be0b1961ad2174af71bbd51421c2" name="a0028be0b1961ad2174af71bbd51421c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0028be0b1961ad2174af71bbd51421c2">&#9670;&nbsp;</a></span>movement_none()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_none </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to no movement. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity to update speed </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2ef5889c5b490e2965664d5c1c54b3f" name="ae2ef5889c5b490e2965664d5c1c54b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ef5889c5b490e2965664d5c1c54b3f">&#9670;&nbsp;</a></span>movement_sinusoidal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movement_sinusoidal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a47af43ea3e598d31c47c4039fd22de20" name="a47af43ea3e598d31c47c4039fd22de20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47af43ea3e598d31c47c4039fd22de20">&#9670;&nbsp;</a></span>push_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void push_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Push the entity on the bottom. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity to push </td></tr>
+    <tr><td class="paramname">entity</td><td>to push </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a374107eaf8cda2624e4bd293beb4265d" name="a374107eaf8cda2624e4bd293beb4265d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374107eaf8cda2624e4bd293beb4265d">&#9670;&nbsp;</a></span>user_movement_controller()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_movement_controller </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correspond to a movement controlled by the player. The entity will move according to the player inputs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the entity </td></tr>
+    <tr><td class="paramname">entity</td><td>to update speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

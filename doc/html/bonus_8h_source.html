@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup:  Fichier source de /home/adam/Développement/Shootemup_V2/include/logic/bonus.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_bda990e6e388f1461abc7c9d66ee3eb5.html">logic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">bonus.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bonus_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef BONUS_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define BONUS_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="bonus_8h.html#aee081c4b3001d124dd5aeed4f249cfa8">   20</a></span><span class="preprocessor">#define BONUS_DATA_PATH &quot;data/bonus.data&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_struct" href="struct__Bonus.html">Bonus</a> *<a class="code hl_function" href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <span class="keywordtype">char</span> type, <span class="keywordtype">int</span> x);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#abf31d3255948e555c78bf211a63c62bb">free_bonus</a>(<a class="code hl_struct" href="struct__Bonus.html">Bonus</a> *bonus);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><a class="code hl_typedef" href="struct_8h.html#a1aa6fb40b40a29d341c68cfdd212fe08">BONUS_FUNC</a> <a class="code hl_function" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id</a>(<span class="keywordtype">char</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">int</span> <a class="code hl_function" href="bonus_8h.html#af6ae2c28983452dbc839229545c9e7de">on_collide_bonus</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Bonus.html">Bonus</a> *bonus, <a class="code hl_struct" href="struct__Entity.html">Entity</a> *collide, <a class="code hl_typedef" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> direction);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">int</span> <a class="code hl_function" href="bonus_8h.html#aaa33d0cd746fd6a8789d0c6f8638d19a">is_bonus_reachable</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Bonus.html">Bonus</a> *bonus);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="bonus_8h.html#a4e8f827a119a3c7a4e8e6d8787fe1e75">   72</a></span><span class="preprocessor">#define RANDOM_BONUSES &quot;SPHVMUL&quot;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="bonus_8h.html#a433b64fc8dbbb875ce9538eb9c3c5940">   78</a></span><span class="preprocessor">#define RANDOM_BONUS &#39;R&#39;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><a class="code hl_struct" href="struct__Bonus.html">Bonus</a> *<a class="code hl_function" href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <span class="keywordtype">int</span> x);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="bonus_8h.html#a422a87b2fb7e752b7ccbb2490e95fd7b">   92</a></span><span class="preprocessor">#define SHIELD_EFFECT &#39;S&#39;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#ace50826aafb3dec795ce017c91680fb6">shield_effect</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* eater, <span class="keywordtype">int</span> reverse);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="bonus_8h.html#a9d3fdf983b22c0743d6717c25058ba04">  106</a></span><span class="preprocessor">#define LIFE_INCREASE_EFFECT &#39;H&#39;</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#ad055706b7eb217b48f040cee55b8499c">life_increase_effect</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* eater, <span class="keywordtype">int</span> reverse);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="bonus_8h.html#ae2d99057d376a976517e324ad794bff8">  121</a></span><span class="preprocessor">#define LIFE_DECREASE_EFFECT &#39;L&#39;</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#a558fcb1e8dabfdaa1d7fda73a3336c08">life_decrease_effect</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* eater, <span class="keywordtype">int</span> reverse);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="bonus_8h.html#adf7ca8047d98e035c8ed260a01fca1dc">  135</a></span><span class="preprocessor">#define MAX_LIFE_INCREASE_EFFECT &#39;M&#39;</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#a0d038d904e9a39d658824b3725b9db19">max_life_increase_effect</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* eater, <span class="keywordtype">int</span> reverse);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="bonus_8h.html#a94a64dbcd638c26f8b1d288a748236e3">  149</a></span><span class="preprocessor">#define POWER_UP_SHOOT_EFFECT &#39;P&#39;</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#abf135890bec1b253c1cde057a61256c4">power_up_shoot_effect</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* eater, <span class="keywordtype">int</span> reverse);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="bonus_8h.html#a4d09b6aa6e4a225d8ea01422061c2675">  163</a></span><span class="preprocessor">#define POWER_UP_SPEED_EFFECT &#39;V&#39;</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#abb4843ebffeec6a35d3b6dbd85c5bee5">power_up_speed_effect</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* eater, <span class="keywordtype">int</span> reverse);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="bonus_8h.html#a6e799add158041837328eaf846874bee">  178</a></span><span class="preprocessor">#define SPAWN_UNIT_EFFECT &#39;U&#39;</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keywordtype">void</span> <a class="code hl_function" href="bonus_8h.html#a12d463e1ca03cecf3fb8309595f46ec6">spawn_unit_effect</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* eater, <span class="keywordtype">int</span> reverse);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abonus_8h_html_a0d038d904e9a39d658824b3725b9db19"><div class="ttname"><a href="bonus_8h.html#a0d038d904e9a39d658824b3725b9db19">max_life_increase_effect</a></div><div class="ttdeci">void max_life_increase_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Increase the max life effect to the eater.</div><div class="ttdef"><b>Definition:</b> bonus.c:133</div></div>
+<div class="ttc" id="abonus_8h_html_a0da5723f177148ab03cb688becd3f3d2"><div class="ttname"><a href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a></div><div class="ttdeci">Bonus * create_bonus(Game *game, char type, int x)</div><div class="ttdoc">Create a bonus object.</div><div class="ttdef"><b>Definition:</b> bonus.c:16</div></div>
+<div class="ttc" id="abonus_8h_html_a12d463e1ca03cecf3fb8309595f46ec6"><div class="ttname"><a href="bonus_8h.html#a12d463e1ca03cecf3fb8309595f46ec6">spawn_unit_effect</a></div><div class="ttdeci">void spawn_unit_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Spawn a unit to protect the eater.</div><div class="ttdef"><b>Definition:</b> bonus.c:161</div></div>
+<div class="ttc" id="abonus_8h_html_a558fcb1e8dabfdaa1d7fda73a3336c08"><div class="ttname"><a href="bonus_8h.html#a558fcb1e8dabfdaa1d7fda73a3336c08">life_decrease_effect</a></div><div class="ttdeci">void life_decrease_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Apply the life decrease effect to a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:124</div></div>
+<div class="ttc" id="abonus_8h_html_a66fc1ff9cc7925acb9daa71957d8e991"><div class="ttname"><a href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus</a></div><div class="ttdeci">Bonus * create_random_bonus(Game *game, int x)</div><div class="ttdoc">Create a random bonus object.</div><div class="ttdef"><b>Definition:</b> bonus.c:67</div></div>
+<div class="ttc" id="abonus_8h_html_aaa33d0cd746fd6a8789d0c6f8638d19a"><div class="ttname"><a href="bonus_8h.html#aaa33d0cd746fd6a8789d0c6f8638d19a">is_bonus_reachable</a></div><div class="ttdeci">int is_bonus_reachable(Game *game, Bonus *bonus)</div><div class="ttdoc">Check if a bonus can be reached by a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:93</div></div>
+<div class="ttc" id="abonus_8h_html_ab6004477e9c2811af91ed032d4bd33e2"><div class="ttname"><a href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id</a></div><div class="ttdeci">BONUS_FUNC get_bonus_effect_by_id(char id)</div><div class="ttdoc">Get the bonus effect function by the bonus type ID.</div><div class="ttdef"><b>Definition:</b> bonus.c:111</div></div>
+<div class="ttc" id="abonus_8h_html_abb4843ebffeec6a35d3b6dbd85c5bee5"><div class="ttname"><a href="bonus_8h.html#abb4843ebffeec6a35d3b6dbd85c5bee5">power_up_speed_effect</a></div><div class="ttdeci">void power_up_speed_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Increase the speed of the eater.</div><div class="ttdef"><b>Definition:</b> bonus.c:144</div></div>
+<div class="ttc" id="abonus_8h_html_abf135890bec1b253c1cde057a61256c4"><div class="ttname"><a href="bonus_8h.html#abf135890bec1b253c1cde057a61256c4">power_up_shoot_effect</a></div><div class="ttdeci">void power_up_shoot_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Increase the power of the eater shoot.</div><div class="ttdef"><b>Definition:</b> bonus.c:149</div></div>
+<div class="ttc" id="abonus_8h_html_abf31d3255948e555c78bf211a63c62bb"><div class="ttname"><a href="bonus_8h.html#abf31d3255948e555c78bf211a63c62bb">free_bonus</a></div><div class="ttdeci">void free_bonus(Bonus *bonus)</div><div class="ttdoc">Free the bonus memory.</div><div class="ttdef"><b>Definition:</b> bonus.c:107</div></div>
+<div class="ttc" id="abonus_8h_html_ace50826aafb3dec795ce017c91680fb6"><div class="ttname"><a href="bonus_8h.html#ace50826aafb3dec795ce017c91680fb6">shield_effect</a></div><div class="ttdeci">void shield_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Apply the shield effect to a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:128</div></div>
+<div class="ttc" id="abonus_8h_html_ad055706b7eb217b48f040cee55b8499c"><div class="ttname"><a href="bonus_8h.html#ad055706b7eb217b48f040cee55b8499c">life_increase_effect</a></div><div class="ttdeci">void life_increase_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Apply the life increase effect to a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:156</div></div>
+<div class="ttc" id="abonus_8h_html_af6ae2c28983452dbc839229545c9e7de"><div class="ttname"><a href="bonus_8h.html#af6ae2c28983452dbc839229545c9e7de">on_collide_bonus</a></div><div class="ttdeci">int on_collide_bonus(Game *game, Bonus *bonus, Entity *collide, Direction direction)</div><div class="ttdoc">Function called when a bonus collide another entity.</div><div class="ttdef"><b>Definition:</b> bonus.c:73</div></div>
+<div class="ttc" id="astruct_8h_html_a1aa6fb40b40a29d341c68cfdd212fe08"><div class="ttname"><a href="struct_8h.html#a1aa6fb40b40a29d341c68cfdd212fe08">BONUS_FUNC</a></div><div class="ttdeci">void(* BONUS_FUNC)(struct _Game *, struct _Player *, int)</div><div class="ttdoc">Function pointer to affect a bonus on a player First argument is the current game Second argument is ...</div><div class="ttdef"><b>Definition:</b> struct.h:72</div></div>
+<div class="ttc" id="astruct_8h_html_a992ec00cbaa34e33750f7f4b3d9308b6"><div class="ttname"><a href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a></div><div class="ttdeci">enum _Direction Direction</div><div class="ttdoc">Enumeration listing all possible directions (for pushing an entity)</div></div>
+<div class="ttc" id="astruct__Bonus_html"><div class="ttname"><a href="struct__Bonus.html">_Bonus</a></div><div class="ttdoc">Structure defining a bonus's data.</div><div class="ttdef"><b>Definition:</b> struct.h:394</div></div>
+<div class="ttc" id="astruct__Entity_html"><div class="ttname"><a href="struct__Entity.html">_Entity</a></div><div class="ttdoc">Structure defining an entity (every object in the game is an entity)</div><div class="ttdef"><b>Definition:</b> struct.h:250</div></div>
+<div class="ttc" id="astruct__Game_html"><div class="ttname"><a href="struct__Game.html">_Game</a></div><div class="ttdoc">Structure defining the game's data.</div><div class="ttdef"><b>Definition:</b> struct.h:213</div></div>
+<div class="ttc" id="astruct__Player_html"><div class="ttname"><a href="struct__Player.html">_Player</a></div><div class="ttdoc">Structure defining a player's data and its controls.</div><div class="ttdef"><b>Definition:</b> struct.h:345</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

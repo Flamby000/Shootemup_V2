@@ -65,7 +65,6 @@ void update_boost(Game *game, Entity* entity) {
     SpaceShip *ship = get_spaceship(entity);
     Boost *boost = &ship->boost;
 
-
     Player *player = (Player*)entity->parent;
 
     if(MLV_get_keyboard_state(player->key_boost) == MLV_PRESSED) {

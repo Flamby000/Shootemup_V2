@@ -54,7 +54,6 @@ void load_settings() {
             else if(strcmp(key, "player_super_shoot_cooldown") == 0) difficulty->player_super_shoot_cooldown = atoi(value);
             else if(strcmp(key, "player_speed") == 0) difficulty->player_speed = atoi(value);
             else if(strcmp(key, "player_stamina") == 0) difficulty->player_stamina = atoi(value);
-            
             }
         }
 

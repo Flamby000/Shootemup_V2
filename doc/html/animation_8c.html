@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/src/interface/animation.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_8f3e5eb8dca2e697d445141b98c03fdd.html">src</a></li><li class="navelem"><a class="el" href="dir_822bcbba38df12b6976a946b18cc5cc7.html">interface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier animation.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="struct_8h_source.html">../../include/struct.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="entity_8h_source.html">../../include/logic/entity.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="frame_8h_source.html">../../include/interface/frame.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="movement_8h_source.html">../../include/utils/movement.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">../../include/logic/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="menu_8h_source.html">../../include/interface/menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="animation_8h_source.html">../../include/interface/animation.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a242ed764127c898e7459a119df5695cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a242ed764127c898e7459a119df5695cf">init_animation_wrapper</a> (char *str)</td></tr>
+<tr class="memdesc:a242ed764127c898e7459a119df5695cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a simple sprite or an animation depending on the file name.  <a href="animation_8c.html#a242ed764127c898e7459a119df5695cf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a242ed764127c898e7459a119df5695cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f8edf73651c962296c54fceb80b497"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497">init_sprite</a> (MLV_Image *sprite)</td></tr>
+<tr class="memdesc:a42f8edf73651c962296c54fceb80b497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a animation structure with non-animated sprite.  <a href="animation_8c.html#a42f8edf73651c962296c54fceb80b497">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a42f8edf73651c962296c54fceb80b497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628a5b877f502c0eadac7e1cefc4508e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a628a5b877f502c0eadac7e1cefc4508e">init_square</a> (MLV_Color color)</td></tr>
+<tr class="memdesc:a628a5b877f502c0eadac7e1cefc4508e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a animation structure with only one color to draw a square shape.  <a href="animation_8c.html#a628a5b877f502c0eadac7e1cefc4508e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a628a5b877f502c0eadac7e1cefc4508e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e80d8497d9f71e4218558b83dc162c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c">create_one_shot_animation</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *path, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a86e80d8497d9f71e4218558b83dc162c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a one shot animation displayed one time.  <a href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a86e80d8497d9f71e4218558b83dc162c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2ed01b4348f5b7f0f42e29a8d00c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a">init_animation</a> (char *path)</td></tr>
+<tr class="memdesc:a9b2ed01b4348f5b7f0f42e29a8d00c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a animation structure with multiple sprite.  <a href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9b2ed01b4348f5b7f0f42e29a8d00c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6198de01f0e82ac72b631947da9c5657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a6198de01f0e82ac72b631947da9c5657">init_multiple_animation</a> (char *forward_path, char *backward_path, char *left_path, char *right_path)</td></tr>
+<tr class="memdesc:a6198de01f0e82ac72b631947da9c5657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a animation structure with multiple sprite for each direction of the entity.  <a href="animation_8c.html#a6198de01f0e82ac72b631947da9c5657">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6198de01f0e82ac72b631947da9c5657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400500a1dd3277c6a70a737596e01bbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf">free_animation</a> (<a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *animation)</td></tr>
+<tr class="memdesc:a400500a1dd3277c6a70a737596e01bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory of the animation.  <a href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a400500a1dd3277c6a70a737596e01bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0938d53058c7ab6460cef261f2652719"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animation_8c.html#a0938d53058c7ab6460cef261f2652719">draw_entity</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *entity, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *parent)</td></tr>
+<tr class="memdesc:a0938d53058c7ab6460cef261f2652719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the animation.  <a href="animation_8c.html#a0938d53058c7ab6460cef261f2652719">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0938d53058c7ab6460cef261f2652719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a86e80d8497d9f71e4218558b83dc162c" name="a86e80d8497d9f71e4218558b83dc162c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e80d8497d9f71e4218558b83dc162c">&#9670;&nbsp;</a></span>create_one_shot_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_one_shot_animation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a one shot animation displayed one time. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>to display the animation </td></tr>
+    <tr><td class="paramname">path</td><td>to the file name containing images (it must contain d to be replaced by the frame number) </td></tr>
+    <tr><td class="paramname">entity</td><td>linked to the animation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0938d53058c7ab6460cef261f2652719" name="a0938d53058c7ab6460cef261f2652719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0938d53058c7ab6460cef261f2652719">&#9670;&nbsp;</a></span>draw_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the animation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>to display the animation </td></tr>
+    <tr><td class="paramname">entity</td><td>linked to the animation </td></tr>
+    <tr><td class="paramname">parent</td><td>of the entity if it have one </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a400500a1dd3277c6a70a737596e01bbf" name="a400500a1dd3277c6a70a737596e01bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400500a1dd3277c6a70a737596e01bbf">&#9670;&nbsp;</a></span>free_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_animation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> *&#160;</td>
+          <td class="paramname"><em>animation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the memory of the animation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animation</td><td>to free </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b2ed01b4348f5b7f0f42e29a8d00c1a" name="a9b2ed01b4348f5b7f0f42e29a8d00c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2ed01b4348f5b7f0f42e29a8d00c1a">&#9670;&nbsp;</a></span>init_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> * init_animation </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a animation structure with multiple sprite. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>to the file name containing image (it must contain d to be replaced by the frame number) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>An animation using multiple images </dd></dl>
+
+</div>
+</div>
+<a id="a242ed764127c898e7459a119df5695cf" name="a242ed764127c898e7459a119df5695cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a242ed764127c898e7459a119df5695cf">&#9670;&nbsp;</a></span>init_animation_wrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> * init_animation_wrapper </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a simple sprite or an animation depending on the file name. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the files used to draw forward animation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The animation structure </dd></dl>
+
+</div>
+</div>
+<a id="a6198de01f0e82ac72b631947da9c5657" name="a6198de01f0e82ac72b631947da9c5657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6198de01f0e82ac72b631947da9c5657">&#9670;&nbsp;</a></span>init_multiple_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> * init_multiple_animation </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>forward_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>backward_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>left_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>right_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a animation structure with multiple sprite for each direction of the entity. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">forward_path</td><td>the files used to draw forward animation </td></tr>
+    <tr><td class="paramname">backward_path</td><td>the files used to draw backward animation </td></tr>
+    <tr><td class="paramname">left_path</td><td>the files used to draw left animation </td></tr>
+    <tr><td class="paramname">right_path</td><td>the files used to draw right animation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>An animation using multiple images for each direction </dd></dl>
+
+</div>
+</div>
+<a id="a42f8edf73651c962296c54fceb80b497" name="a42f8edf73651c962296c54fceb80b497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f8edf73651c962296c54fceb80b497">&#9670;&nbsp;</a></span>init_sprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> * init_sprite </td>
+          <td>(</td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>sprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a animation structure with non-animated sprite. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>which will be displayed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>An animation using only one image </dd></dl>
+
+</div>
+</div>
+<a id="a628a5b877f502c0eadac7e1cefc4508e" name="a628a5b877f502c0eadac7e1cefc4508e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628a5b877f502c0eadac7e1cefc4508e">&#9670;&nbsp;</a></span>init_square()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a7164f4b6850f6eb7ace4147d71a2b467">Animation</a> * init_square </td>
+          <td>(</td>
+          <td class="paramtype">MLV_Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a animation structure with only one color to draw a square shape. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>to used for the square </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>An animation drawing a simple square </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

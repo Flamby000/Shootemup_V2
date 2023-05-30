@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/src/interface/frame.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shootemup
+   </div>
+   <div id="projectbrief">Shootemup en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_8f3e5eb8dca2e697d445141b98c03fdd.html">src</a></li><li class="navelem"><a class="el" href="dir_822bcbba38df12b6976a946b18cc5cc7.html">interface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier frame.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="struct_8h_source.html">../../include/struct.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="animation_8h_source.html">../../include/interface/animation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">../../include/logic/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="frame_8h_source.html">../../include/interface/frame.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af2b07be229d47069d8dca899918e0964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="frame_8c.html#af2b07be229d47069d8dca899918e0964">init_frame</a> ()</td></tr>
+<tr class="memdesc:af2b07be229d47069d8dca899918e0964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the frame.  <a href="frame_8c.html#af2b07be229d47069d8dca899918e0964">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af2b07be229d47069d8dca899918e0964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2188cb440fcd1d85ddc7f60f20aa96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="frame_8c.html#a3b2188cb440fcd1d85ddc7f60f20aa96">draw_frame</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game)</td></tr>
+<tr class="memdesc:a3b2188cb440fcd1d85ddc7f60f20aa96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the game on the frame.  <a href="frame_8c.html#a3b2188cb440fcd1d85ddc7f60f20aa96">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3b2188cb440fcd1d85ddc7f60f20aa96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab963f20fe2e7ec21b26704d5357a2591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="frame_8c.html#ab963f20fe2e7ec21b26704d5357a2591">free_frame</a> ()</td></tr>
+<tr class="memdesc:ab963f20fe2e7ec21b26704d5357a2591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the frame memory.  <a href="frame_8c.html#ab963f20fe2e7ec21b26704d5357a2591">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab963f20fe2e7ec21b26704d5357a2591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3319b2d6bad104ddd365972e19900be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="frame_8c.html#ab3319b2d6bad104ddd365972e19900be">draw_ennemy</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a79027f4a3483054a5d457de4f16b2fc0">Ennemy</a> *ennemy)</td></tr>
+<tr class="memdesc:ab3319b2d6bad104ddd365972e19900be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the ennemy data on the frame.  <a href="frame_8c.html#ab3319b2d6bad104ddd365972e19900be">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab3319b2d6bad104ddd365972e19900be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdef13b2a543e56c77da1f97a449066f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="frame_8c.html#acdef13b2a543e56c77da1f97a449066f">draw_player</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *player)</td></tr>
+<tr class="memdesc:acdef13b2a543e56c77da1f97a449066f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the player data on the frame (Its HUD)  <a href="frame_8c.html#acdef13b2a543e56c77da1f97a449066f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acdef13b2a543e56c77da1f97a449066f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1a6b76ca667d2cf7bb96d9597c83f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="frame_8c.html#ace1a6b76ca667d2cf7bb96d9597c83f8">draw_bar</a> (int x, int y, int width, int height, int value, int max_value, MLV_Color color)</td></tr>
+<tr class="memdesc:ace1a6b76ca667d2cf7bb96d9597c83f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a bar on the frame.  <a href="frame_8c.html#ace1a6b76ca667d2cf7bb96d9597c83f8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ace1a6b76ca667d2cf7bb96d9597c83f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ace1a6b76ca667d2cf7bb96d9597c83f8" name="ace1a6b76ca667d2cf7bb96d9597c83f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1a6b76ca667d2cf7bb96d9597c83f8">&#9670;&nbsp;</a></span>draw_bar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_bar </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Color&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a bar on the frame. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>position of the bar </td></tr>
+    <tr><td class="paramname">y</td><td>position of the bar </td></tr>
+    <tr><td class="paramname">width</td><td>width of the bar </td></tr>
+    <tr><td class="paramname">height</td><td>height of the bar </td></tr>
+    <tr><td class="paramname">value</td><td>of the data to display </td></tr>
+    <tr><td class="paramname">max_value</td><td>of the data to displaye </td></tr>
+    <tr><td class="paramname">color</td><td>of the bar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab3319b2d6bad104ddd365972e19900be" name="ab3319b2d6bad104ddd365972e19900be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3319b2d6bad104ddd365972e19900be">&#9670;&nbsp;</a></span>draw_ennemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_ennemy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a79027f4a3483054a5d457de4f16b2fc0">Ennemy</a> *&#160;</td>
+          <td class="paramname"><em>ennemy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the ennemy data on the frame. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the ennemy </td></tr>
+    <tr><td class="paramname">ennemy</td><td>to draw the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3b2188cb440fcd1d85ddc7f60f20aa96" name="a3b2188cb440fcd1d85ddc7f60f20aa96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2188cb440fcd1d85ddc7f60f20aa96">&#9670;&nbsp;</a></span>draw_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_frame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the game on the frame. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>to draw </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acdef13b2a543e56c77da1f97a449066f" name="acdef13b2a543e56c77da1f97a449066f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdef13b2a543e56c77da1f97a449066f">&#9670;&nbsp;</a></span>draw_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_player </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the player data on the frame (Its HUD) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>of the player </td></tr>
+    <tr><td class="paramname">player</td><td>to draw the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab963f20fe2e7ec21b26704d5357a2591" name="ab963f20fe2e7ec21b26704d5357a2591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab963f20fe2e7ec21b26704d5357a2591">&#9670;&nbsp;</a></span>free_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_frame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the frame memory. </p>
+
+</div>
+</div>
+<a id="af2b07be229d47069d8dca899918e0964" name="af2b07be229d47069d8dca899918e0964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b07be229d47069d8dca899918e0964">&#9670;&nbsp;</a></span>init_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_frame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the frame. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>
