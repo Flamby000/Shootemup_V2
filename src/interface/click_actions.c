@@ -41,7 +41,6 @@ int open_campaign_map(Game* game, Button* button) {
 
     settings->infinite_mode = 0;    
 
-
     return 1;
 }
 

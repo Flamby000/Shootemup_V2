@@ -182,4 +182,6 @@ void push_entity(Game *game, Entity *entity);
 void movement_follow_entity(Game *game, Entity *entity, Entity *target);
 
 
+void movement_circle_button(Game *game, Entity *entity);
+
 #endif

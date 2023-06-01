@@ -44,6 +44,7 @@ int update_button(Game* game, Button *button) {
         button->is_over = 0;
     }
 
+
     
 
     return entity_removed;
@@ -125,6 +126,45 @@ void insert_button(Menu *menu, Button *button) {
     }
     for(current = *menu; current->next != NULL; current = current->next);
     current->next = button;
+}
+
+Button* create_element(Menu *menu, Game *game, int x, int y, int width, int height) {
+    Button *button = create_button(game, x, y, width, height, 
+            "", 
+            MLV_rgba(0, 0, 0, 0), MLV_rgba(0, 0, 0, 0), MLV_rgba(0, 0, 0, 0), MLV_rgba(0, 0, 0, 0), 
+            settings->big_font, NULL, 0);
+    insert_button(menu, button);
+    return button;
+}
+
+void set_animation(Button* button, char* sprite) {
+    button->entity->sprite = init_animation_wrapper(sprite);
+}
+
+void set_text(Button* button, char* text, MLV_Font *font, MLV_Color color) {
+    button->text = malloc(sizeof(char) * (strlen(text) + 1));
+    button->text = strcpy(button->text, text);
+    button->color = color;
+    button->over_color = color;
+    button->font = font;
+}
+void set_background_color(Button* button, MLV_Color color) {
+    button->background_color = color;
+}
+
+void set_border(Button* button, MLV_Color color) {
+    button->border_color = color;
+}
+
+void set_circular_movement(Button* button, Button* parent) {
+    button->entity->x = parent->entity->x - parent->entity->width;
+    button->entity->y = parent->entity->y - parent->entity->height;
+    button->entity->parent = parent;
+    button->entity->speed->update_speed = movement_circle_button;
+}
+
+void set_on_click(Button* button, CLICK_ACTION on_click) {
+    button->on_click = on_click;
 }
 
 Button* create_button(Game *game, 
@@ -266,6 +306,20 @@ Menu create_match_pause_sample(Game *game, char* text, MLV_Color title_color) {
         )
     );
 
+    insert_button(&menu, 
+        create_button(game, 
+            settings->win_width / 20, settings->win_height / 4 + txt_height * 2, 
+            txt_width, txt_height, 
+            "Restart", 
+            MLV_rgba(0, 0, 0, 0),
+            MLV_COLOR_GRAY,
+            MLV_COLOR_WHITE,
+            MLV_rgba(0, 0, 0, 0),
+            settings->medium_font,
+            restart_match_action,
+            0
+        )
+    );
     return menu;
 }
 
@@ -309,48 +363,51 @@ Menu create_main_menu(Game *game, int type) {
     int space_between_elements = box_width/25;
     int element_y = box_y + box_height / 7;
     Button* tmp;
+    Button* element;
+    int planet_size = box_width/10;
     char buffer[255];
 
     if(type == CAMPAIGN_MENU) {
             
-        /* Big menu square*/
-        insert_button(&main_menu, 
-            create_button(game,
-                box_x, box_y,
-                box_width, box_height,
-                "", 
-                MLV_rgba(25,78,157,100),
-                MLV_rgba(0,0,0,0),
-                MLV_rgba(0,0,0,0),
-                MLV_COLOR_WHITE,
-                NULL,
-                NULL,
-                0
-            )
-        );
+        /* Big menu square */
+        element = create_element(&main_menu, game, box_x, box_y, box_width, box_height);
+        set_background_color(element, MLV_rgba(25,78,157,100));
+        set_border(element, MLV_COLOR_WHITE);
+    
 
-        /* I want a campaign map. This map is composed of 3 planets (sprites) and a spaceship is turning around the selected one */
         /* Menu title */
         MLV_get_size_of_text_with_font("Campaign", &txt_width, &txt_height, settings->medium_font);
-        insert_button(&main_menu, 
-            create_button(game, 
-                box_x + box_width / 2 - txt_width / 2, box_y,
-                0, 0, 
-                "Campaign", 
-                MLV_rgba(0, 0, 0, 0),
-                MLV_COLOR_WHITE,
-                MLV_COLOR_WHITE,
-                MLV_rgba(0, 0, 0, 0),
-                settings->medium_font,
-                NULL,
-                0
-            )
-        );
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y, txt_width, txt_height);
+        set_text(element, "Campaign", settings->medium_font, MLV_COLOR_WHITE);
+
+        /* Level selection*/
+        element = create_element(&main_menu, game,
+            box_x + planet_size/2,  box_y + planet_size,
+            planet_size, planet_size);
+        set_animation(element, "resources/utils/planet1.png");
+        tmp = element;
+
+        element = create_element(&main_menu, game,
+            box_x + planet_size/2,  box_y + planet_size*2,
+            planet_size, planet_size);
+        set_animation(element, "resources/utils/planet2.png");
 
 
-
-
+        element = create_element(&main_menu, game,
+            box_x + planet_size/2,  box_y + (planet_size*3),
+            planet_size, planet_size);
+        set_animation(element, "resources/utils/planet3.png");
         
+        /* Level selector */
+        element = create_element(&main_menu, game, 
+            box_x + planet_size/2,  box_y + planet_size,
+            planet_size/5, planet_size/3);
+        set_animation(element, "resources/player/backward-1.png");
+        set_circular_movement(element, tmp);
+
+
+
+
 
     } else if(type == SETTINGS_MENU) {
 

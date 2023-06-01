@@ -152,6 +152,18 @@ void movement_circle_entity(Game *game, Entity *entity) {
     entity->y = player_entity->y + (player_entity->height/2) + (sin(get_timestamp_ms()/1000.0) * 100);
 }
 
+void movement_circle_button(Game *game, Entity *entity) {
+    Entity* parent;
+    Button* b_parent;
+    if(entity->parent == NULL) return;
+
+    b_parent = entity->parent;
+    parent = b_parent->entity;
+
+    entity->x = parent->x + (parent->width/2)  + (cos(get_timestamp_ms()/1000.0) * 100);
+    entity->y = parent->y + (parent->height/2) + (sin(get_timestamp_ms()/1000.0) * 100);
+}
+
 
 void movement_follow_x(Game *game, Entity *entity) {
     Entity *player_entity = closest_entity(game, entity, PLAYER);
