@@ -48,5 +48,5 @@
 <area shape="rect" id="node16" href="$entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="1616,1822,1698,1847"/>
 <area shape="rect" id="node48" href="$game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="833,2000,923,2026"/>
 <area shape="rect" id="node49" href="$player_8c.html#ab216a3fb7ef6a32f9721bee2fb30c639" title="Create a player object." alt="" coords="1608,1871,1707,1897"/>
-<area shape="rect" id="node50" href="$level_8c.html#a008982469285ee649542893d7bafd4c8" title=" " alt="" coords="1039,2100,1112,2126"/>
+<area shape="rect" id="node50" href="$level_8c.html#a008982469285ee649542893d7bafd4c8" title="Set the level of the game from a file." alt="" coords="1039,2100,1112,2126"/>
 </map>

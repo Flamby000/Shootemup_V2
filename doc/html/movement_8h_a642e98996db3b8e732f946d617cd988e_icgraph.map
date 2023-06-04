@@ -1,5 +1,5 @@
 <map id="movement_circle_button" name="movement_circle_button">
-<area shape="rect" id="node1" title=" " alt="" coords="1479,789,1642,815"/>
+<area shape="rect" id="node1" title="The entity will move in a circle pattern." alt="" coords="1479,789,1642,815"/>
 <area shape="rect" id="node2" href="$menu_8c.html#a03f1530241d1a11649d0a9e0fa197ca5" title=" " alt="" coords="1275,789,1431,815"/>
 <area shape="rect" id="node3" href="$menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1095,789,1227,815"/>
 <area shape="rect" id="node4" href="$click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="920,60,1029,86"/>

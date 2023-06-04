@@ -1,5 +1,5 @@
 <map id="set_level" name="set_level">
-<area shape="rect" id="node1" title=" " alt="" coords="1821,1326,1894,1352"/>
+<area shape="rect" id="node1" title="Set the level of the game from a file." alt="" coords="1821,1326,1894,1352"/>
 <area shape="rect" id="node2" href="$game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="936,1453,1013,1479"/>
 <area shape="rect" id="node4" href="$game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1682,664,1773,689"/>
 <area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1373,55,1399"/>

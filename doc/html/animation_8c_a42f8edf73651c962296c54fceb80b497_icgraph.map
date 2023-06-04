@@ -7,7 +7,7 @@
 <area shape="rect" id="node10" href="$missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1754,1302,1859,1328"/>
 <area shape="rect" id="node24" href="$spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285" title="Function to enable the shield of a spaceship." alt="" coords="1756,1125,1857,1150"/>
 <area shape="rect" id="node26" href="$menu_8c.html#aaad136ad8d674e3f5054459c5cc3779f" title=" " alt="" coords="1755,634,1858,660"/>
-<area shape="rect" id="node49" href="$menu_8c.html#a9c934445ca52df77b82088a8f165c0ef" title=" " alt="" coords="1766,1075,1847,1101"/>
+<area shape="rect" id="node49" href="$menu_8c.html#a9c934445ca52df77b82088a8f165c0ef" title="Assign an image to a button." alt="" coords="1766,1075,1847,1101"/>
 <area shape="rect" id="node4" href="$level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,1151,519,1177"/>
 <area shape="rect" id="node8" href="$bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,1126,716,1152"/>
 <area shape="rect" id="node5" href="$level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,1099,344,1125"/>

@@ -92,6 +92,12 @@ void set_slider(Button* button, int value, int min_value, int max_value);
  */
 void set_menu(Game *game, Menu *menu);
 
+/**
+ * @brief Assign an image to a button
+ * 
+ * @param button to assign the image
+ * @param path of the image
+ */
 void set_image(Button* button, char* path);
 
 /**

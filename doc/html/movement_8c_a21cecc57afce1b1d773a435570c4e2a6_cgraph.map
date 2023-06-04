@@ -13,7 +13,7 @@
 <area shape="rect" id="node16" href="$movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="215,500,389,526"/>
 <area shape="rect" id="node4" href="$entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="472,197,574,223"/>
 <area shape="rect" id="node5" href="$utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="457,251,589,276"/>
-<area shape="rect" id="node7" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="442,124,604,150"/>
+<area shape="rect" id="node7" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the target." alt="" coords="442,124,604,150"/>
 <area shape="rect" id="node13" href="$movement_8c.html#a3108b5e32dc385f5f796606e6a33bcab" title=" " alt="" coords="438,351,608,392"/>
 <area shape="rect" id="node17" href="$entity_8c.html#a10a6481f021a113fc7648265509bc38a" title="The entity can&#39;t go out of the screen." alt="" coords="454,500,593,526"/>
 </map>

@@ -18,7 +18,7 @@
 <area shape="rect" id="node19" href="$movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="549,867,724,892"/>
 <area shape="rect" id="node7" href="$entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="807,1041,909,1067"/>
 <area shape="rect" id="node8" href="$utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="792,916,924,942"/>
-<area shape="rect" id="node10" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="777,1104,939,1130"/>
+<area shape="rect" id="node10" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the target." alt="" coords="777,1104,939,1130"/>
 <area shape="rect" id="node16" href="$movement_8c.html#a3108b5e32dc385f5f796606e6a33bcab" title=" " alt="" coords="773,718,943,759"/>
 <area shape="rect" id="node20" href="$entity_8c.html#a10a6481f021a113fc7648265509bc38a" title="The entity can&#39;t go out of the screen." alt="" coords="788,867,928,892"/>
 <area shape="rect" id="node22" href="$animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1743,1007,1845,1032"/>

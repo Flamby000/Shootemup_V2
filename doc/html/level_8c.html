@@ -116,6 +116,7 @@ Fonctions</h2></td></tr>
 <tr class="memdesc:ae7bda58ade5a1240a02906bb90768d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity type from a character (its id)  <br /></td></tr>
 <tr class="separator:ae7bda58ade5a1240a02906bb90768d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a008982469285ee649542893d7bafd4c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a008982469285ee649542893d7bafd4c8">set_level</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *level_file)</td></tr>
+<tr class="memdesc:a008982469285ee649542893d7bafd4c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the level of the game from a file.  <br /></td></tr>
 <tr class="separator:a008982469285ee649542893d7bafd4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40b065408c98606a10ed9686e75119a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a40b065408c98606a10ed9686e75119a9">update_level</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *level, int infinite)</td></tr>
 <tr class="memdesc:a40b065408c98606a10ed9686e75119a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called each frame to update the level on the game. It spawn the waves and the boss missiles.  <br /></td></tr>
@@ -231,7 +232,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="level_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph.png" border="0" usemap="#alevel_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph" alt=""/></div>
 <map name="alevel_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph" id="alevel_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph">
 <area shape="rect" title="Create a level from a file." alt="" coords="1942,1326,2033,1352"/>
-<area shape="rect" href="level_8c.html#a008982469285ee649542893d7bafd4c8" title=" " alt="" coords="1821,1326,1894,1352"/>
+<area shape="rect" href="level_8c.html#a008982469285ee649542893d7bafd4c8" title="Set the level of the game from a file." alt="" coords="1821,1326,1894,1352"/>
 <area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="936,1453,1013,1479"/>
 <area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1682,664,1773,689"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1373,55,1399"/>
@@ -456,7 +457,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="level_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph.png" border="0" usemap="#alevel_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph" alt=""/></div>
 <map name="alevel_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph" id="alevel_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph">
 <area shape="rect" title="Free the memory allocated for the level." alt="" coords="1942,1326,2019,1352"/>
-<area shape="rect" href="level_8c.html#a008982469285ee649542893d7bafd4c8" title=" " alt="" coords="1821,1326,1894,1352"/>
+<area shape="rect" href="level_8c.html#a008982469285ee649542893d7bafd4c8" title="Set the level of the game from a file." alt="" coords="1821,1326,1894,1352"/>
 <area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="936,1453,1013,1479"/>
 <area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1682,664,1773,689"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1373,55,1399"/>
@@ -577,6 +578,15 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the level of the game from a file. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>object game to set the level </td></tr>
+    <tr><td class="paramname">level_file</td><td>path to the level file </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">   91</span>                                             {</div>
 <div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span>(game-&gt;<a class="code hl_variable" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">level</a> != NULL) {</div>
 <div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">free_level</a>(game-&gt;<a class="code hl_variable" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">level</a>);</div>
@@ -600,7 +610,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="level_8c_a008982469285ee649542893d7bafd4c8_cgraph.png" border="0" usemap="#alevel_8c_a008982469285ee649542893d7bafd4c8_cgraph" alt=""/></div>
 <map name="alevel_8c_a008982469285ee649542893d7bafd4c8_cgraph" id="alevel_8c_a008982469285ee649542893d7bafd4c8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,79,56"/>
+<area shape="rect" title="Set the level of the game from a file." alt="" coords="5,31,79,56"/>
 <area shape="rect" href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34" title="Create a level from a file." alt="" coords="127,5,218,31"/>
 <area shape="rect" href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3" title="Free the memory allocated for the level." alt="" coords="134,55,211,80"/>
 </map>
@@ -610,7 +620,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="level_8c_a008982469285ee649542893d7bafd4c8_icgraph.png" border="0" usemap="#alevel_8c_a008982469285ee649542893d7bafd4c8_icgraph" alt=""/></div>
 <map name="alevel_8c_a008982469285ee649542893d7bafd4c8_icgraph" id="alevel_8c_a008982469285ee649542893d7bafd4c8_icgraph">
-<area shape="rect" title=" " alt="" coords="1821,1326,1894,1352"/>
+<area shape="rect" title="Set the level of the game from a file." alt="" coords="1821,1326,1894,1352"/>
 <area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="936,1453,1013,1479"/>
 <area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1682,664,1773,689"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1373,55,1399"/>
@@ -784,7 +794,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <area shape="rect" href="movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="1457,411,1631,436"/>
 <area shape="rect" href="entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="1714,709,1817,735"/>
 <area shape="rect" href="utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="1699,759,1832,784"/>
-<area shape="rect" href="movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="1684,660,1847,686"/>
+<area shape="rect" href="movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the target." alt="" coords="1684,660,1847,686"/>
 <area shape="rect" href="movement_8c.html#a3108b5e32dc385f5f796606e6a33bcab" title=" " alt="" coords="1680,354,1851,395"/>
 <area shape="rect" href="entity_8c.html#a10a6481f021a113fc7648265509bc38a" title="The entity can&#39;t go out of the screen." alt="" coords="1696,419,1835,444"/>
 <area shape="rect" href="shooter_8c.html#af4fc1fe7fbbb739f2ed7fdbb2381fa90" title="Shoot missiles in multiple direction from the sender." alt="" coords="704,572,841,598"/>

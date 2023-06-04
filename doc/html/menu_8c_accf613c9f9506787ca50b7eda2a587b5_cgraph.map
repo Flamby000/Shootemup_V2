@@ -48,5 +48,5 @@
 <area shape="rect" id="node47" href="$player_8c.html#ab216a3fb7ef6a32f9721bee2fb30c639" title="Create a player object." alt="" coords="651,1715,751,1741"/>
 <area shape="rect" id="node48" href="$game_8c.html#a189013e377eef959f2e7f566cbef18fe" title="See if an entity is a match entity." alt="" coords="644,1764,758,1790"/>
 <area shape="rect" id="node49" href="$background_8c.html#ae633106ff2e329102b72c9bd28c28268" title="Set the speed of the background." alt="" coords="623,1814,779,1839"/>
-<area shape="rect" id="node50" href="$level_8c.html#a008982469285ee649542893d7bafd4c8" title=" " alt="" coords="664,1863,738,1889"/>
+<area shape="rect" id="node50" href="$level_8c.html#a008982469285ee649542893d7bafd4c8" title="Set the level of the game from a file." alt="" coords="664,1863,738,1889"/>
 </map>

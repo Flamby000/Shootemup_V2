@@ -4,7 +4,7 @@
 <area shape="rect" id="node9" href="$game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1540,921,1643,946"/>
 <area shape="rect" id="node44" href="$game_8c.html#a189013e377eef959f2e7f566cbef18fe" title="See if an entity is a match entity." alt="" coords="165,1146,278,1172"/>
 <area shape="rect" id="node45" href="$background_8c.html#ae633106ff2e329102b72c9bd28c28268" title="Set the speed of the background." alt="" coords="144,1195,299,1221"/>
-<area shape="rect" id="node46" href="$level_8c.html#a008982469285ee649542893d7bafd4c8" title=" " alt="" coords="185,1245,258,1270"/>
+<area shape="rect" id="node46" href="$level_8c.html#a008982469285ee649542893d7bafd4c8" title="Set the level of the game from a file." alt="" coords="185,1245,258,1270"/>
 <area shape="rect" id="node49" href="$menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d" title="Set the menu of the game. It replace and free the previous to set the new one." alt="" coords="562,1095,640,1121"/>
 <area shape="rect" id="node3" href="$entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1955,94,2052,120"/>
 <area shape="rect" id="node4" href="$spaceship_8c.html#ac3651d020ae03d8df905db6af95bfd0b" title="Create a spaceship object." alt="" coords="362,421,485,446"/>

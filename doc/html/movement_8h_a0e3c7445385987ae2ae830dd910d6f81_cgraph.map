@@ -2,6 +2,6 @@
 <area shape="rect" id="node1" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="5,55,182,80"/>
 <area shape="rect" id="node2" href="$entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="260,5,362,31"/>
 <area shape="rect" id="node3" href="$movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="238,55,384,80"/>
-<area shape="rect" id="node4" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="230,104,392,130"/>
+<area shape="rect" id="node4" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the target." alt="" coords="230,104,392,130"/>
 <area shape="rect" id="node5" href="$movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="440,104,572,130"/>
 </map>

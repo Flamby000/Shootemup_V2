@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Correspond to a movement forward. The entity will move forward." alt="" coords="3096,439,3228,465"/>
 <area shape="rect" id="node2" href="$bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="1311,117,1411,142"/>
 <area shape="rect" id="node8" href="$movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="2453,439,2613,465"/>
-<area shape="rect" id="node46" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="2885,414,3048,440"/>
+<area shape="rect" id="node46" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the target." alt="" coords="2885,414,3048,440"/>
 <area shape="rect" id="node49" href="$movement_8c.html#ab6cc33671dfce95a0d2059b72b1b2018" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="2667,515,2832,541"/>
 <area shape="rect" id="node3" href="$level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="890,91,1016,117"/>
 <area shape="rect" id="node7" href="$bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="1073,142,1223,168"/>

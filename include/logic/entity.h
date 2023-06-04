@@ -11,6 +11,7 @@
 
 #ifndef ENTITY_H
 #define ENTITY_H
+
 /**
  * @brief Update the entity data
  * 

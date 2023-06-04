@@ -11,6 +11,7 @@
 
 #ifndef CLICK_ACTIONS_H
 #define CLICK_ACTIONS_H
+
 /**
  * @brief Go to the main menu
  * 
@@ -289,4 +290,5 @@ int decrease_ennemy_speed_multiplicator(Game *game, Button *button);
  * @return 1
  */
 int save_settings_action(Game *game, Button *button);
+
 #endif

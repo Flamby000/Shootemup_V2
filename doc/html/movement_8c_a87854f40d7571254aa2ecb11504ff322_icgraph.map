@@ -1,5 +1,5 @@
 <map id="movement_follow_entity" name="movement_follow_entity">
-<area shape="rect" id="node1" title="The entity will follow the targer." alt="" coords="2878,132,3041,158"/>
+<area shape="rect" id="node1" title="The entity will follow the target." alt="" coords="2878,132,3041,158"/>
 <area shape="rect" id="node2" href="$movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="2654,107,2830,132"/>
 <area shape="rect" id="node50" href="$movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="2660,156,2825,182"/>
 <area shape="rect" id="node3" href="$movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="2446,132,2606,158"/>

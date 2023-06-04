@@ -12,7 +12,6 @@
 #ifndef MOVEMENT_H
 #define MOVEMENT_H
 
-
 /**
  * @brief Get the movement function pointer from its ID
  * 
@@ -26,6 +25,7 @@ SPEED_FUNC get_movement_function(int id);
  * 
  */
 #define MOVEMENT_NONE 0
+
 /**
  * @brief Correspond to no movement
  * 
@@ -39,6 +39,7 @@ void movement_none(Game* game, Entity *entity);
  * 
  */
 #define MOVEMENT_FORWARD 1
+
 /**
  * @brief Correspond to a movement forward. The entity will move forward.
  * 
@@ -52,6 +53,7 @@ void movement_forward(Game* game, Entity *entity);
  * 
  */
 #define MOVEMENT_BACKWARD 2
+
 /**
  * @brief Correspond to a movement backward. The entity will move backward.
  * 
@@ -65,6 +67,7 @@ void movement_backward(Game *game, Entity *entity);
  * 
  */
 #define MOVEMENT_INFINITE_SCROLL 3
+
 /**
  * @brief Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of the screen.
  * 
@@ -78,6 +81,7 @@ void movement_infinite_scroll(Game* game, Entity *entity);
  * 
  */
 #define MOVEMENT_CONTROLLER 4
+
 /**
  * @brief Correspond to a movement controlled by the player. The entity will move according to the player inputs.
  * 
@@ -91,6 +95,7 @@ void user_movement_controller(Game *game, Entity *entity);
  * 
  */
 #define MOVEMENT_FOLLOW_PLAYER 5
+
 /**
  * @brief Correspond to a movement following the player. The entity will follow the player.
  * 
@@ -104,6 +109,7 @@ void movement_follow_player(Game* game, Entity *entity);
  * 
  */
 #define MOVEMENT_SINUSOIDAL 6
+
 /**
  * @brief Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern.
  * 
@@ -117,6 +123,7 @@ void movement_sinusoidal(Game* game, Entity *entity);
  * 
  */
 #define MOVEMENT_CIRCLE_ENTITY 7
+
 /**
  * @brief Correspond to a movement circling an entity. The entity will circle around another entity.
  * 
@@ -130,6 +137,7 @@ void movement_circle_entity(Game *game, Entity *entity);
  * 
  */
 #define MOVEMENT_FOLLOW_X 8
+
 /**
  * @brief Correspond to a movement following the player on its X axis. 
  * 
@@ -143,6 +151,7 @@ void movement_follow_x(Game *game, Entity *entity);
  * 
  */
 #define MOVEMENT_LEFT_RIGHT 9
+
 /**
  * @brief Correspond to a movement left and right. The entity will bounce on the left and right borders of the screen.
  * 
@@ -156,6 +165,7 @@ void movement_left_right(Game *game, Entity *entity);
  * 
  */
 #define MOVEMENT_FOLLOW_ENNEMY 10
+
 /**
  * @brief Correspond to a movement following an ennemy. The entity will follow an ennemy.
  * 
@@ -173,7 +183,7 @@ void movement_follow_ennemy(Game *game, Entity *entity);
 void push_entity(Game *game, Entity *entity);
 
 /**
- * @brief The entity will follow the targer
+ * @brief The entity will follow the target
  * 
  * @param game of the entities
  * @param entity to move
@@ -181,7 +191,9 @@ void push_entity(Game *game, Entity *entity);
  */
 void movement_follow_entity(Game *game, Entity *entity, Entity *target);
 
-
+/**
+ * @brief The entity will move in a circle pattern
+*/
 void movement_circle_button(Game *game, Entity *entity);
 
 #endif
