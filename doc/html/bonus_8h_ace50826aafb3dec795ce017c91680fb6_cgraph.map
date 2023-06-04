@@ -1,0 +1,9 @@
+<map id="shield_effect" name="shield_effect">
+<area shape="rect" id="node1" title="Apply the shield effect to a player." alt="" coords="5,55,101,80"/>
+<area shape="rect" id="node2" href="$spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285" title="Function to enable the shield of a spaceship." alt="" coords="149,55,249,80"/>
+<area shape="rect" id="node3" href="$entity_8c.html#ab62762cd20888e143c235526b83114fe" title="Add a child to an entity." alt="" coords="336,5,412,31"/>
+<area shape="rect" id="node4" href="$entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="326,55,422,80"/>
+<area shape="rect" id="node5" href="$animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="297,104,451,130"/>
+<area shape="rect" id="node6" href="$animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="499,79,601,104"/>
+<area shape="rect" id="node7" href="$animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="511,128,589,154"/>
+</map>

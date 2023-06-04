@@ -1,0 +1,13 @@
+<map id="src/logic/spaceship.c" name="src/logic/spaceship.c">
+<area shape="rect" id="node1" title=" " alt="" coords="522,5,666,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,66,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,87,153,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="176,87,284,112"/>
+<area shape="rect" id="node5" href="$struct_8h.html" title="All the structures of the program." alt="" coords="308,87,443,112"/>
+<area shape="rect" id="node6" href="$game_8h.html" title="Functions to manage the logic of the game." alt="" coords="466,79,584,120"/>
+<area shape="rect" id="node7" href="$utils_8h.html" title="Utils function of the program." alt="" coords="608,79,722,120"/>
+<area shape="rect" id="node8" href="$movement_8h.html" title="Functions to update the movement and speed of an entity." alt="" coords="746,79,861,120"/>
+<area shape="rect" id="node9" href="$animation_8h.html" title="Functions to create and display animations." alt="" coords="885,79,1026,120"/>
+<area shape="rect" id="node10" href="$entity_8h.html" title="Functions to manage the logic of an entity." alt="" coords="1050,79,1168,120"/>
+<area shape="rect" id="node11" href="$spaceship_8h.html" title="Functions to manage the logic of a spaceship (player or ennemy)" alt="" coords="1192,79,1309,120"/>
+</map>

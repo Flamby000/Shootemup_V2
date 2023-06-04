@@ -1,0 +1,7 @@
+<map id="create_element" name="create_element">
+<area shape="rect" id="node1" title=" " alt="" coords="5,55,116,80"/>
+<area shape="rect" id="node2" href="$menu_8c.html#a675a5b1f2b000f3e0434b6844b41de53" title="Create a button object." alt="" coords="164,29,264,55"/>
+<area shape="rect" id="node5" href="$menu_8c.html#a9f53862c87e5b9df58e1a68383cd0d25" title="Function to insert a button in a menu." alt="" coords="166,79,262,104"/>
+<area shape="rect" id="node3" href="$entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="323,5,419,31"/>
+<area shape="rect" id="node4" href="$movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="312,55,429,80"/>
+</map>

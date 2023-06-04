@@ -1,0 +1,8 @@
+<map id="create_game_over_menu" name="create_game_over_menu">
+<area shape="rect" id="node1" title="Create a game over menu." alt="" coords="447,55,615,80"/>
+<area shape="rect" id="node2" href="$game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="307,5,392,31"/>
+<area shape="rect" id="node5" href="$game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="300,55,399,80"/>
+<area shape="rect" id="node3" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="128,31,227,56"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,56"/>
+<area shape="rect" id="node6" href="$click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="103,80,252,106"/>
+</map>

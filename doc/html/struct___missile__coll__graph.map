@@ -1,0 +1,18 @@
+<map id="_Missile" name="_Missile">
+<area shape="rect" id="node1" title="Structure defining a missile&#39;s data." alt="" coords="5,213,75,238"/>
+<area shape="rect" id="node2" href="$struct___entity.html" title="Structure defining an entity (every object in the game is an entity)" alt="" coords="552,94,614,120"/>
+<area shape="rect" id="node5" href="$struct___game.html" title="Structure defining the game&#39;s data." alt="" coords="360,312,424,338"/>
+<area shape="rect" id="node6" href="$struct___entity_link.html" title="Structure defining a linked list of entities." alt="" coords="462,213,549,238"/>
+<area shape="rect" id="node7" href="$struct___button.html" title="Structure defining a button in the game." alt="" coords="570,401,636,426"/>
+<area shape="rect" id="node10" href="$struct___ennemy.html" title="Structure defining an ennemy&#39;s data." alt="" coords="598,682,674,707"/>
+<area shape="rect" id="node12" href="$struct___life.html" title="Structure defining a life data of a spaceship." alt="" coords="749,262,798,288"/>
+<area shape="rect" id="node15" href="$struct___bonus.html" title="Structure defining a bonus&#39;s data." alt="" coords="481,401,546,426"/>
+<area shape="rect" id="node3" href="$struct___animation.html" title="Structure defining an animation of every possivble types." alt="" coords="540,5,626,31"/>
+<area shape="rect" id="node4" href="$struct___speed.html" title="Structure defining a speed data of a spaceship." alt="" coords="102,401,167,426"/>
+<area shape="rect" id="node13" href="$struct___shooter.html" title="Structure defining a shooter data of a spaceship It used to manage the missile creaton." alt="" coords="298,450,371,476"/>
+<area shape="rect" id="node8" href="$struct___level.html" title="Structure defining a level." alt="" coords="253,859,312,885"/>
+<area shape="rect" id="node9" href="$struct___wave.html" title="Structure defining a wave in a level. Each &#39;object_lines&#39; is a line of objects (bonus or ennemies) th..." alt="" coords="475,770,536,796"/>
+<area shape="rect" id="node11" href="$struct___space_ship.html" title="Structure defininf a spaceship data (for player and ennemy)" alt="" coords="590,593,682,619"/>
+<area shape="rect" id="node14" href="$struct___bonus_link.html" title="Structure defining a linked list of a bonus." alt="" coords="537,502,626,528"/>
+<area shape="rect" id="node16" href="$struct___boost.html" title="Structure defining a boost of a spaceship." alt="" coords="777,502,839,528"/>
+</map>

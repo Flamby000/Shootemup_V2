@@ -1,0 +1,4 @@
+<map id="free_ennemy" name="free_ennemy">
+<area shape="rect" id="node1" title="Free the ennemy memory." alt="" coords="5,5,102,31"/>
+<area shape="rect" id="node2" href="$spaceship_8c.html#a6bc89e27a0fbe46608a60309fe6ab5c0" title="Free the spaceship allocated memory." alt="" coords="150,5,259,31"/>
+</map>

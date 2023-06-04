@@ -1,0 +1,4 @@
+<map id="movement_left_right" name="movement_left_right">
+<area shape="rect" id="node1" title="Correspond to a movement left and right. The entity will bounce on the left and right borders of the ..." alt="" coords="5,13,145,39"/>
+<area shape="rect" id="node2" href="$movement_8c.html#a3108b5e32dc385f5f796606e6a33bcab" title=" " alt="" coords="193,5,363,46"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="set_animation" name="set_animation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,108,56"/>
+<area shape="rect" id="node2" href="$animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="156,31,310,56"/>
+<area shape="rect" id="node3" href="$animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="358,5,459,31"/>
+<area shape="rect" id="node4" href="$animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="370,55,447,80"/>
+</map>

@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shootemup:  Fichier source de /home/adam/Développement/Shootemup_V2/include/interface/frame.h</title>
+<title>Shootemup:  Fichier source de include/interface/frame.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,14 +56,21 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_6a3ea875435bf4525e898c5b03dccee0.html">interface</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_fac9ef7fc20ac12aaae6ba4aa5a86afc.html">interface</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -83,13 +90,13 @@ $(function() {
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#af2b07be229d47069d8dca899918e0964">init_frame</a>();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#a3b2188cb440fcd1d85ddc7f60f20aa96">draw_frame</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#a3b2188cb440fcd1d85ddc7f60f20aa96">draw_frame</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#ab963f20fe2e7ec21b26704d5357a2591">free_frame</a>();</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#acdef13b2a543e56c77da1f97a449066f">draw_player</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Player.html">Player</a>* player);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#acdef13b2a543e56c77da1f97a449066f">draw_player</a>(<a class="code hl_struct" href="struct___game.html">Game</a> *game, <a class="code hl_struct" href="struct___player.html">Player</a>* player);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#ab3319b2d6bad104ddd365972e19900be">draw_ennemy</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game, <a class="code hl_struct" href="struct__Ennemy.html">Ennemy</a> *ennemy);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#ab3319b2d6bad104ddd365972e19900be">draw_ennemy</a>(<a class="code hl_struct" href="struct___game.html">Game</a> *game, <a class="code hl_struct" href="struct___ennemy.html">Ennemy</a> *ennemy);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> <a class="code hl_function" href="frame_8h.html#ace1a6b76ca667d2cf7bb96d9597c83f8">draw_bar</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> value, <span class="keywordtype">int</span> max_value, MLV_Color color);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
@@ -101,13 +108,13 @@ $(function() {
 <div class="ttc" id="aframe_8h_html_acdef13b2a543e56c77da1f97a449066f"><div class="ttname"><a href="frame_8h.html#acdef13b2a543e56c77da1f97a449066f">draw_player</a></div><div class="ttdeci">void draw_player(Game *game, Player *player)</div><div class="ttdoc">Draw the player data on the frame (Its HUD)</div><div class="ttdef"><b>Definition:</b> frame.c:53</div></div>
 <div class="ttc" id="aframe_8h_html_ace1a6b76ca667d2cf7bb96d9597c83f8"><div class="ttname"><a href="frame_8h.html#ace1a6b76ca667d2cf7bb96d9597c83f8">draw_bar</a></div><div class="ttdeci">void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color)</div><div class="ttdoc">Draw a bar on the frame.</div><div class="ttdef"><b>Definition:</b> frame.c:137</div></div>
 <div class="ttc" id="aframe_8h_html_af2b07be229d47069d8dca899918e0964"><div class="ttname"><a href="frame_8h.html#af2b07be229d47069d8dca899918e0964">init_frame</a></div><div class="ttdeci">void init_frame()</div><div class="ttdoc">Initialize the frame.</div><div class="ttdef"><b>Definition:</b> frame.c:10</div></div>
-<div class="ttc" id="astruct__Ennemy_html"><div class="ttname"><a href="struct__Ennemy.html">_Ennemy</a></div><div class="ttdoc">Structure defining an ennemy's data.</div><div class="ttdef"><b>Definition:</b> struct.h:365</div></div>
-<div class="ttc" id="astruct__Game_html"><div class="ttname"><a href="struct__Game.html">_Game</a></div><div class="ttdoc">Structure defining the game's data.</div><div class="ttdef"><b>Definition:</b> struct.h:213</div></div>
-<div class="ttc" id="astruct__Player_html"><div class="ttname"><a href="struct__Player.html">_Player</a></div><div class="ttdoc">Structure defining a player's data and its controls.</div><div class="ttdef"><b>Definition:</b> struct.h:345</div></div>
+<div class="ttc" id="astruct___ennemy_html"><div class="ttname"><a href="struct___ennemy.html">_Ennemy</a></div><div class="ttdoc">Structure defining an ennemy's data.</div><div class="ttdef"><b>Definition:</b> struct.h:366</div></div>
+<div class="ttc" id="astruct___game_html"><div class="ttname"><a href="struct___game.html">_Game</a></div><div class="ttdoc">Structure defining the game's data.</div><div class="ttdef"><b>Definition:</b> struct.h:214</div></div>
+<div class="ttc" id="astruct___player_html"><div class="ttname"><a href="struct___player.html">_Player</a></div><div class="ttdoc">Structure defining a player's data and its controls.</div><div class="ttdef"><b>Definition:</b> struct.h:346</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

@@ -1,0 +1,6 @@
+<map id="movement_follow_player" name="movement_follow_player">
+<area shape="rect" id="node1" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="5,31,171,56"/>
+<area shape="rect" id="node2" href="$entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="249,5,351,31"/>
+<area shape="rect" id="node3" href="$movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="219,55,381,80"/>
+<area shape="rect" id="node4" href="$movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="429,55,561,80"/>
+</map>

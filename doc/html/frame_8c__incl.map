@@ -1,0 +1,10 @@
+<map id="src/interface/frame.c" name="src/interface/frame.c">
+<area shape="rect" id="node1" title=" " alt="" coords="305,5,446,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,66,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,87,153,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="176,87,284,112"/>
+<area shape="rect" id="node5" href="$struct_8h.html" title="All the structures of the program." alt="" coords="308,87,443,112"/>
+<area shape="rect" id="node6" href="$animation_8h.html" title="Functions to create and display animations." alt="" coords="467,79,607,120"/>
+<area shape="rect" id="node7" href="$game_8h.html" title="Functions to manage the logic of the game." alt="" coords="632,79,749,120"/>
+<area shape="rect" id="node8" href="$frame_8h.html" title="Functions to create and display the game frame." alt="" coords="773,79,914,120"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="draw_player" name="draw_player">
+<area shape="rect" id="node1" title="Draw the player data on the frame (Its HUD)" alt="" coords="240,5,331,31"/>
+<area shape="rect" id="node2" href="$frame_8c.html#a3b2188cb440fcd1d85ddc7f60f20aa96" title="Draw the game on the frame." alt="" coords="103,5,192,31"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>

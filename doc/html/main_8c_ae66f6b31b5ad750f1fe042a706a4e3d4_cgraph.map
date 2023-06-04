@@ -1,0 +1,52 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,417,55,443"/>
+<area shape="rect" id="node2" href="$frame_8c.html#a3b2188cb440fcd1d85ddc7f60f20aa96" title="Draw the game on the frame." alt="" coords="109,120,198,146"/>
+<area shape="rect" id="node12" href="$frame_8c.html#ab963f20fe2e7ec21b26704d5357a2591" title="Free the frame memory." alt="" coords="112,267,195,292"/>
+<area shape="rect" id="node13" href="$game_8c.html#a98bb68f0ee0b77fbd9d7c56957190c9d" title="Free the game memory." alt="" coords="477,189,559,215"/>
+<area shape="rect" id="node14" href="$settings_8c.html#aa8ebf061a461213f764daab3f0497899" title="free the game settings" alt="" coords="105,316,202,342"/>
+<area shape="rect" id="node15" href="$utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="452,417,584,443"/>
+<area shape="rect" id="node16" href="$frame_8c.html#af2b07be229d47069d8dca899918e0964" title="Initialize the frame." alt="" coords="114,689,193,715"/>
+<area shape="rect" id="node17" href="$game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="284,517,361,543"/>
+<area shape="rect" id="node37" href="$settings_8c.html#a457486e8b8211e75970f756106ebff2c" title="Load the game settings." alt="" coords="104,739,203,764"/>
+<area shape="rect" id="node38" href="$main_8c.html#a258e3b580e688a0cf46e4258525aeaf1" title=" " alt="" coords="103,788,204,814"/>
+<area shape="rect" id="node39" href="$utils_8c.html#aa7a91b1094e0e5d30267acc31f89a6fc" title="Temporize the program to have a constant framerate." alt="" coords="114,417,193,443"/>
+<area shape="rect" id="node40" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="104,640,203,666"/>
+<area shape="rect" id="node3" href="$animation_8c.html#a0938d53058c7ab6460cef261f2652719" title="Draw the animation." alt="" coords="474,108,562,134"/>
+<area shape="rect" id="node11" href="$frame_8c.html#acdef13b2a543e56c77da1f97a449066f" title="Draw the player data on the frame (Its HUD)" alt="" coords="277,69,368,95"/>
+<area shape="rect" id="node4" href="$menu_8c.html#a62d059af25e5dec374f300c46e2798ff" title="Function to draw a button." alt="" coords="688,80,780,106"/>
+<area shape="rect" id="node5" href="$frame_8c.html#ab3319b2d6bad104ddd365972e19900be" title="Draw the ennemy data on the frame." alt="" coords="683,31,785,56"/>
+<area shape="rect" id="node7" href="$entity_8c.html#aecc2f30ea49d9534b0709aa0b0e191e6" title="Get the direction of the entity." alt="" coords="686,129,782,155"/>
+<area shape="rect" id="node8" href="$game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="682,179,786,204"/>
+<area shape="rect" id="node6" href="$frame_8c.html#ace1a6b76ca667d2cf7bb96d9597c83f8" title="Draw a bar on the frame." alt="" coords="925,5,999,31"/>
+<area shape="rect" id="node9" href="$animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="872,143,1052,168"/>
+<area shape="rect" id="node10" href="$entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="921,216,1003,242"/>
+<area shape="rect" id="node18" href="$menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="452,571,584,596"/>
+<area shape="rect" id="node33" href="$background_8c.html#af1597f6233403ec9fb979e80418af500" title="Init the background of the game." alt="" coords="462,620,574,646"/>
+<area shape="rect" id="node34" href="$background_8c.html#ae633106ff2e329102b72c9bd28c28268" title="Set the speed of the background." alt="" coords="440,693,596,719"/>
+<area shape="rect" id="node35" href="$level_8c.html#a008982469285ee649542893d7bafd4c8" title=" " alt="" coords="481,517,555,543"/>
+<area shape="rect" id="node36" href="$menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d" title="Set the menu of the game. It replace and free the previous to set the new one." alt="" coords="479,743,557,768"/>
+<area shape="rect" id="node19" href="$menu_8c.html#a675a5b1f2b000f3e0434b6844b41de53" title="Create a button object." alt="" coords="912,624,1012,650"/>
+<area shape="rect" id="node20" href="$menu_8c.html#a010e974b5d782527999d867c3a0cd8d4" title=" " alt="" coords="679,673,789,699"/>
+<area shape="rect" id="node21" href="$menu_8c.html#a9f53862c87e5b9df58e1a68383cd0d25" title="Function to insert a button in a menu." alt="" coords="914,673,1010,699"/>
+<area shape="rect" id="node22" href="$menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="644,624,824,650"/>
+<area shape="rect" id="node23" href="$click__actions_8c.html#ae6431c7028c7dd7b52c487f97dd268cf" title="Decrease the ennemy life multiplicator in settings." alt="" coords="658,774,810,815"/>
+<area shape="rect" id="node24" href="$click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="651,839,817,880"/>
+<area shape="rect" id="node25" href="$click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="649,905,819,945"/>
+<area shape="rect" id="node26" href="$click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="664,969,804,995"/>
+<area shape="rect" id="node27" href="$click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="655,228,813,254"/>
+<area shape="rect" id="node28" href="$click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="660,278,808,319"/>
+<area shape="rect" id="node29" href="$click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="653,343,815,384"/>
+<area shape="rect" id="node30" href="$click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="651,409,817,449"/>
+<area shape="rect" id="node31" href="$click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="666,473,802,499"/>
+<area shape="rect" id="node32" href="$click__actions_8c.html#ac9bb7864513f84b98deeaaec4868fdd0" title="Increase the player speed in settings." alt="" coords="657,523,811,548"/>
+<area shape="rect" id="node41" href="$game_8c.html#a0383597abd462d3992f5698ee673e81c" title="Get the number of bosses killed by players in a game." alt="" coords="462,863,574,888"/>
+<area shape="rect" id="node42" href="$game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="280,715,365,740"/>
+<area shape="rect" id="node43" href="$game_8c.html#a189013e377eef959f2e7f566cbef18fe" title="See if an entity is a match entity." alt="" coords="266,964,379,990"/>
+<area shape="rect" id="node44" href="$game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="273,764,372,790"/>
+<area shape="rect" id="node45" href="$game_8c.html#ae99e33b3affa532dedd83463f2d1befa" title="Get the number of alive ennemies in the game." alt="" coords="252,567,392,592"/>
+<area shape="rect" id="node46" href="$game_8c.html#aef6b9bbb86406c3a0f2b16a7643533a0" title="Get the number of remaning players." alt="" coords="259,616,385,642"/>
+<area shape="rect" id="node47" href="$menu_8c.html#a58c1aa08300d29d3121c9153a6c33bb2" title="Function to update a button data (in function of user actions)" alt="" coords="271,468,374,494"/>
+<area shape="rect" id="node48" href="$entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="273,665,372,691"/>
+<area shape="rect" id="node49" href="$level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="275,813,369,839"/>
+<area shape="rect" id="node50" href="$spaceship_8c.html#a31601cbf05ddaeb261c3860cf7a16bed" title="Update the spaceship data." alt="" coords="259,863,385,888"/>
+</map>

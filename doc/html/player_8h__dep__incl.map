@@ -1,0 +1,7 @@
+<map id="include/logic/player.h" name="include/logic/player.h">
+<area shape="rect" id="node1" title="Functions to manage the logic of a player." alt="" coords="215,5,357,31"/>
+<area shape="rect" id="node2" href="$ennemy_8c.html" title=" " alt="" coords="5,79,135,105"/>
+<area shape="rect" id="node3" href="$entity_8c.html" title=" " alt="" coords="159,79,274,105"/>
+<area shape="rect" id="node4" href="$game_8c.html" title=" " alt="" coords="298,79,415,105"/>
+<area shape="rect" id="node5" href="$player_8c.html" title=" " alt="" coords="440,79,559,105"/>
+</map>

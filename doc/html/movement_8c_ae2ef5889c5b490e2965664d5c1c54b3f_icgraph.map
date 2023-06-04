@@ -1,0 +1,52 @@
+<map id="movement_sinusoidal" name="movement_sinusoidal">
+<area shape="rect" id="node1" title="Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern." alt="" coords="2654,157,2801,183"/>
+<area shape="rect" id="node2" href="$movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="2446,157,2606,183"/>
+<area shape="rect" id="node3" href="$ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="1306,5,1416,31"/>
+<area shape="rect" id="node8" href="$missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="2292,284,2398,310"/>
+<area shape="rect" id="node4" href="$level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="890,107,1016,132"/>
+<area shape="rect" id="node5" href="$level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="700,81,795,107"/>
+<area shape="rect" id="node6" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="128,288,227,314"/>
+<area shape="rect" id="node7" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,395,55,420"/>
+<area shape="rect" id="node9" href="$ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="2116,107,2239,132"/>
+<area shape="rect" id="node16" href="$shooter_8c.html#ac3fc0d74a904e0c97d5956187ae5aa02" title="Shoot a basic missile from an ennemy." alt="" coords="2132,183,2223,208"/>
+<area shape="rect" id="node17" href="$shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="2111,259,2244,284"/>
+<area shape="rect" id="node47" href="$shooter_8c.html#ab943a4cb2fee6509ff0e97387c14d156" title="Shoot a perforing missile from the player." alt="" coords="1911,309,2063,335"/>
+<area shape="rect" id="node48" href="$shooter_8c.html#a304ec90f7c0c40e6a27c656998599992" title="Shoot a super laser from the player." alt="" coords="2114,360,2241,386"/>
+<area shape="rect" id="node49" href="$shooter_8c.html#a5f9f19b321478d863e4191b7511fd716" title="Shoot a missile from an ennemy to the player." alt="" coords="1919,460,2055,486"/>
+<area shape="rect" id="node50" href="$bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6" title="Spawn a unit to protect the eater." alt="" coords="1721,309,1848,335"/>
+<area shape="rect" id="node10" href="$shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="1913,107,2061,132"/>
+<area shape="rect" id="node11" href="$shooter_8c.html#ab444f02d90b7eabd936b5d641e84040f" title="Get the shoot function from its ID." alt="" coords="1719,259,1850,284"/>
+<area shape="rect" id="node12" href="$bonus_8c.html#abf135890bec1b253c1cde057a61256c4" title="Increase the power of the eater shoot." alt="" coords="1706,196,1863,222"/>
+<area shape="rect" id="node13" href="$bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="1499,196,1658,222"/>
+<area shape="rect" id="node14" href="$bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="1311,157,1411,183"/>
+<area shape="rect" id="node15" href="$bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="1073,157,1223,183"/>
+<area shape="rect" id="node18" href="$player_8c.html#ab216a3fb7ef6a32f9721bee2fb30c639" title="Create a player object." alt="" coords="1937,359,2037,384"/>
+<area shape="rect" id="node19" href="$game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1739,359,1830,384"/>
+<area shape="rect" id="node20" href="$click__actions_8c.html#a33b339c60ef0dbde2391f71f9b567169" title="Restart a match." alt="" coords="1076,207,1220,232"/>
+<area shape="rect" id="node26" href="$click__actions_8c.html#a004b9f49f774e2ab3c1973d7f6242b39" title="Start an infinite match." alt="" coords="1513,359,1644,384"/>
+<area shape="rect" id="node21" href="$menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="676,305,819,345"/>
+<area shape="rect" id="node22" href="$menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="447,312,615,338"/>
+<area shape="rect" id="node23" href="$game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="307,263,392,288"/>
+<area shape="rect" id="node24" href="$game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="300,312,399,338"/>
+<area shape="rect" id="node25" href="$click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="103,337,252,363"/>
+<area shape="rect" id="node27" href="$menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="1271,359,1451,384"/>
+<area shape="rect" id="node28" href="$menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1082,657,1214,683"/>
+<area shape="rect" id="node29" href="$click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="898,455,1007,480"/>
+<area shape="rect" id="node31" href="$game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="492,511,570,536"/>
+<area shape="rect" id="node32" href="$click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="881,257,1025,283"/>
+<area shape="rect" id="node33" href="$click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="905,307,1000,332"/>
+<area shape="rect" id="node34" href="$click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="905,356,1000,382"/>
+<area shape="rect" id="node35" href="$click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="902,405,1004,431"/>
+<area shape="rect" id="node36" href="$click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="905,1113,1000,1139"/>
+<area shape="rect" id="node37" href="$click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="880,809,1025,835"/>
+<area shape="rect" id="node30" href="$click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="675,475,820,500"/>
+<area shape="rect" id="node38" href="$click__actions_8c.html#ae6431c7028c7dd7b52c487f97dd268cf" title="Decrease the ennemy life multiplicator in settings." alt="" coords="672,594,823,635"/>
+<area shape="rect" id="node39" href="$click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="664,659,831,700"/>
+<area shape="rect" id="node40" href="$click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="663,725,832,765"/>
+<area shape="rect" id="node41" href="$click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="677,789,818,815"/>
+<area shape="rect" id="node42" href="$click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="668,839,827,864"/>
+<area shape="rect" id="node43" href="$click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="674,889,821,929"/>
+<area shape="rect" id="node44" href="$click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="666,954,829,995"/>
+<area shape="rect" id="node45" href="$click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="665,1019,830,1060"/>
+<area shape="rect" id="node46" href="$click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="679,1084,816,1110"/>
+</map>

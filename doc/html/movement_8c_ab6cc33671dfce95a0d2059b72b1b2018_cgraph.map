@@ -1,0 +1,4 @@
+<map id="movement_infinite_scroll" name="movement_infinite_scroll">
+<area shape="rect" id="node1" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="5,5,171,31"/>
+<area shape="rect" id="node2" href="$movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="219,5,351,31"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="max_life_increase_effect" name="max_life_increase_effect">
+<area shape="rect" id="node1" title="Increase the max life effect to the eater." alt="" coords="5,5,172,31"/>
+<area shape="rect" id="node2" href="$spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="220,5,283,31"/>
+</map>

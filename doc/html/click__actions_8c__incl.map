@@ -1,0 +1,13 @@
+<map id="src/interface/click_actions.c" name="src/interface/click_actions.c">
+<area shape="rect" id="node1" title=" " alt="" coords="477,5,602,46"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,102,66,127"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,102,153,127"/>
+<area shape="rect" id="node4" title=" " alt="" coords="177,102,241,127"/>
+<area shape="rect" id="node5" title=" " alt="" coords="265,102,374,127"/>
+<area shape="rect" id="node6" href="$struct_8h.html" title="All the structures of the program." alt="" coords="398,102,532,127"/>
+<area shape="rect" id="node7" href="$game_8h.html" title="Functions to manage the logic of the game." alt="" coords="556,94,673,135"/>
+<area shape="rect" id="node8" href="$settings_8h.html" title="Function to manage the game settings." alt="" coords="697,102,844,127"/>
+<area shape="rect" id="node9" href="$background_8h.html" title="Functions to manage the game background." alt="" coords="868,94,982,135"/>
+<area shape="rect" id="node10" href="$menu_8h.html" title=" " alt="" coords="1007,94,1147,135"/>
+<area shape="rect" id="node11" href="$click__actions_8h.html" title="Functions to handle click actions." alt="" coords="1171,94,1311,135"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="update_level" name="update_level">
+<area shape="rect" id="node1" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" id="node2" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>

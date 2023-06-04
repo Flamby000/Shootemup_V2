@@ -1,0 +1,4 @@
+<map id="user_movement_controller" name="user_movement_controller">
+<area shape="rect" id="node1" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="5,5,180,31"/>
+<area shape="rect" id="node2" href="$entity_8c.html#a10a6481f021a113fc7648265509bc38a" title="The entity can&#39;t go out of the screen." alt="" coords="228,5,367,31"/>
+</map>

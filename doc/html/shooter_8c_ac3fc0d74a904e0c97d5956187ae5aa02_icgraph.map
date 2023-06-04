@@ -1,0 +1,9 @@
+<map id="shoot_basic" name="shoot_basic">
+<area shape="rect" id="node1" title="Shoot a basic missile from an ennemy." alt="" coords="904,31,996,56"/>
+<area shape="rect" id="node2" href="$shooter_8c.html#ab444f02d90b7eabd936b5d641e84040f" title="Get the shoot function from its ID." alt="" coords="725,31,856,56"/>
+<area shape="rect" id="node3" href="$ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="567,31,677,56"/>
+<area shape="rect" id="node4" href="$level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" id="node5" href="$level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,31,344,56"/>
+<area shape="rect" id="node6" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,31,202,56"/>
+<area shape="rect" id="node7" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,56"/>
+</map>

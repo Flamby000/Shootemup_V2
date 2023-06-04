@@ -1,0 +1,5 @@
+<map id="update_boost" name="update_boost">
+<area shape="rect" id="node1" title="Update the spaceship boost data." alt="" coords="5,31,105,56"/>
+<area shape="rect" id="node2" href="$spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="166,5,272,31"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="153,55,285,80"/>
+</map>

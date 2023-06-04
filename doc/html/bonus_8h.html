@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/include/logic/bonus.h</title>
+<title>Shootemup: Référence du fichier include/logic/bonus.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,14 +56,21 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_bda990e6e388f1461abc7c9d66ee3eb5.html">logic</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_701344d99a520edc46b3f16735b55bde.html">logic</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,93 +83,107 @@ $(function() {
 
 <p>Functions to manage the logic of a bonus.  
 <a href="#details">Plus de détails...</a></p>
-
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h__dep__incl.png" border="0" usemap="#ainclude_2logic_2bonus_8hdep" alt=""/></div>
+<map name="ainclude_2logic_2bonus_8hdep" id="ainclude_2logic_2bonus_8hdep">
+<area shape="rect" title="Functions to manage the logic of a bonus." alt="" coords="359,5,503,31"/>
+<area shape="rect" href="bonus_8c.html" title=" " alt="" coords="5,79,126,105"/>
+<area shape="rect" href="ennemy_8c.html" title=" " alt="" coords="150,79,280,105"/>
+<area shape="rect" href="entity_8c.html" title=" " alt="" coords="304,79,419,105"/>
+<area shape="rect" href="game_8c.html" title=" " alt="" coords="443,79,560,105"/>
+<area shape="rect" href="level_8c.html" title=" " alt="" coords="584,79,696,105"/>
+<area shape="rect" href="missile_8c.html" title=" " alt="" coords="721,79,847,105"/>
+</map>
+</div>
+</div>
 <p><a href="bonus_8h_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aee081c4b3001d124dd5aeed4f249cfa8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#aee081c4b3001d124dd5aeed4f249cfa8">BONUS_DATA_PATH</a>&#160;&#160;&#160;&quot;data/bonus.data&quot;</td></tr>
-<tr class="memdesc:aee081c4b3001d124dd5aeed4f249cfa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path of the bonus data file.  <a href="bonus_8h.html#aee081c4b3001d124dd5aeed4f249cfa8">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:aee081c4b3001d124dd5aeed4f249cfa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path of the bonus data file.  <br /></td></tr>
 <tr class="separator:aee081c4b3001d124dd5aeed4f249cfa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e8f827a119a3c7a4e8e6d8787fe1e75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a4e8f827a119a3c7a4e8e6d8787fe1e75">RANDOM_BONUSES</a>&#160;&#160;&#160;&quot;SPHVMUL&quot;</td></tr>
-<tr class="memdesc:a4e8f827a119a3c7a4e8e6d8787fe1e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible bonus types spawned by the 'RANDOM_BONUS' id.  <a href="bonus_8h.html#a4e8f827a119a3c7a4e8e6d8787fe1e75">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a4e8f827a119a3c7a4e8e6d8787fe1e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible bonus types spawned by the 'RANDOM_BONUS' id.  <br /></td></tr>
 <tr class="separator:a4e8f827a119a3c7a4e8e6d8787fe1e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433b64fc8dbbb875ce9538eb9c3c5940"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a433b64fc8dbbb875ce9538eb9c3c5940">RANDOM_BONUS</a>&#160;&#160;&#160;'R'</td></tr>
-<tr class="memdesc:a433b64fc8dbbb875ce9538eb9c3c5940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the random bonus type.  <a href="bonus_8h.html#a433b64fc8dbbb875ce9538eb9c3c5940">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a433b64fc8dbbb875ce9538eb9c3c5940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the random bonus type.  <br /></td></tr>
 <tr class="separator:a433b64fc8dbbb875ce9538eb9c3c5940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a422a87b2fb7e752b7ccbb2490e95fd7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a422a87b2fb7e752b7ccbb2490e95fd7b">SHIELD_EFFECT</a>&#160;&#160;&#160;'S'</td></tr>
-<tr class="memdesc:a422a87b2fb7e752b7ccbb2490e95fd7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the shield bonus type.  <a href="bonus_8h.html#a422a87b2fb7e752b7ccbb2490e95fd7b">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a422a87b2fb7e752b7ccbb2490e95fd7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the shield bonus type.  <br /></td></tr>
 <tr class="separator:a422a87b2fb7e752b7ccbb2490e95fd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d3fdf983b22c0743d6717c25058ba04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a9d3fdf983b22c0743d6717c25058ba04">LIFE_INCREASE_EFFECT</a>&#160;&#160;&#160;'H'</td></tr>
-<tr class="memdesc:a9d3fdf983b22c0743d6717c25058ba04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the life increase bonus type.  <a href="bonus_8h.html#a9d3fdf983b22c0743d6717c25058ba04">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a9d3fdf983b22c0743d6717c25058ba04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the life increase bonus type.  <br /></td></tr>
 <tr class="separator:a9d3fdf983b22c0743d6717c25058ba04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d99057d376a976517e324ad794bff8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#ae2d99057d376a976517e324ad794bff8">LIFE_DECREASE_EFFECT</a>&#160;&#160;&#160;'L'</td></tr>
-<tr class="memdesc:ae2d99057d376a976517e324ad794bff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the life decrease bonus type.  <a href="bonus_8h.html#ae2d99057d376a976517e324ad794bff8">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ae2d99057d376a976517e324ad794bff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the life decrease bonus type.  <br /></td></tr>
 <tr class="separator:ae2d99057d376a976517e324ad794bff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf7ca8047d98e035c8ed260a01fca1dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#adf7ca8047d98e035c8ed260a01fca1dc">MAX_LIFE_INCREASE_EFFECT</a>&#160;&#160;&#160;'M'</td></tr>
-<tr class="memdesc:adf7ca8047d98e035c8ed260a01fca1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the max life increase bonus type.  <a href="bonus_8h.html#adf7ca8047d98e035c8ed260a01fca1dc">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:adf7ca8047d98e035c8ed260a01fca1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the max life increase bonus type.  <br /></td></tr>
 <tr class="separator:adf7ca8047d98e035c8ed260a01fca1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94a64dbcd638c26f8b1d288a748236e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a94a64dbcd638c26f8b1d288a748236e3">POWER_UP_SHOOT_EFFECT</a>&#160;&#160;&#160;'P'</td></tr>
-<tr class="memdesc:a94a64dbcd638c26f8b1d288a748236e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the power up shoot bonus type.  <a href="bonus_8h.html#a94a64dbcd638c26f8b1d288a748236e3">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a94a64dbcd638c26f8b1d288a748236e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the power up shoot bonus type.  <br /></td></tr>
 <tr class="separator:a94a64dbcd638c26f8b1d288a748236e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d09b6aa6e4a225d8ea01422061c2675"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a4d09b6aa6e4a225d8ea01422061c2675">POWER_UP_SPEED_EFFECT</a>&#160;&#160;&#160;'V'</td></tr>
-<tr class="memdesc:a4d09b6aa6e4a225d8ea01422061c2675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the power up speed bonus type.  <a href="bonus_8h.html#a4d09b6aa6e4a225d8ea01422061c2675">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a4d09b6aa6e4a225d8ea01422061c2675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the power up speed bonus type.  <br /></td></tr>
 <tr class="separator:a4d09b6aa6e4a225d8ea01422061c2675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e799add158041837328eaf846874bee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a6e799add158041837328eaf846874bee">SPAWN_UNIT_EFFECT</a>&#160;&#160;&#160;'U'</td></tr>
-<tr class="memdesc:a6e799add158041837328eaf846874bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify a spawn unit bonus type.  <a href="bonus_8h.html#a6e799add158041837328eaf846874bee">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a6e799add158041837328eaf846874bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify a spawn unit bonus type.  <br /></td></tr>
 <tr class="separator:a6e799add158041837328eaf846874bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
 <tr class="memitem:a0da5723f177148ab03cb688becd3f3d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char type, int x)</td></tr>
-<tr class="memdesc:a0da5723f177148ab03cb688becd3f3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a bonus object.  <a href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a0da5723f177148ab03cb688becd3f3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a bonus object.  <br /></td></tr>
 <tr class="separator:a0da5723f177148ab03cb688becd3f3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf31d3255948e555c78bf211a63c62bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#abf31d3255948e555c78bf211a63c62bb">free_bonus</a> (<a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *bonus)</td></tr>
-<tr class="memdesc:abf31d3255948e555c78bf211a63c62bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the bonus memory.  <a href="bonus_8h.html#abf31d3255948e555c78bf211a63c62bb">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:abf31d3255948e555c78bf211a63c62bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the bonus memory.  <br /></td></tr>
 <tr class="separator:abf31d3255948e555c78bf211a63c62bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6004477e9c2811af91ed032d4bd33e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a1aa6fb40b40a29d341c68cfdd212fe08">BONUS_FUNC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id</a> (char id)</td></tr>
-<tr class="memdesc:ab6004477e9c2811af91ed032d4bd33e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus effect function by the bonus type ID.  <a href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ab6004477e9c2811af91ed032d4bd33e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus effect function by the bonus type ID.  <br /></td></tr>
 <tr class="separator:ab6004477e9c2811af91ed032d4bd33e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6ae2c28983452dbc839229545c9e7de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#af6ae2c28983452dbc839229545c9e7de">on_collide_bonus</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *bonus, <a class="el" href="struct_8h.html#a88bccc76704ed1a036c3500da8c42bcc">Entity</a> *collide, <a class="el" href="struct_8h.html#a992ec00cbaa34e33750f7f4b3d9308b6">Direction</a> direction)</td></tr>
-<tr class="memdesc:af6ae2c28983452dbc839229545c9e7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when a bonus collide another entity.  <a href="bonus_8h.html#af6ae2c28983452dbc839229545c9e7de">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:af6ae2c28983452dbc839229545c9e7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when a bonus collide another entity.  <br /></td></tr>
 <tr class="separator:af6ae2c28983452dbc839229545c9e7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa33d0cd746fd6a8789d0c6f8638d19a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#aaa33d0cd746fd6a8789d0c6f8638d19a">is_bonus_reachable</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *bonus)</td></tr>
-<tr class="memdesc:aaa33d0cd746fd6a8789d0c6f8638d19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a bonus can be reached by a player.  <a href="bonus_8h.html#aaa33d0cd746fd6a8789d0c6f8638d19a">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:aaa33d0cd746fd6a8789d0c6f8638d19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a bonus can be reached by a player.  <br /></td></tr>
 <tr class="separator:aaa33d0cd746fd6a8789d0c6f8638d19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66fc1ff9cc7925acb9daa71957d8e991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a160262a848844d89e5cfdcd980dbcbb2">Bonus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, int x)</td></tr>
-<tr class="memdesc:a66fc1ff9cc7925acb9daa71957d8e991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a random bonus object.  <a href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a66fc1ff9cc7925acb9daa71957d8e991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a random bonus object.  <br /></td></tr>
 <tr class="separator:a66fc1ff9cc7925acb9daa71957d8e991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace50826aafb3dec795ce017c91680fb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#ace50826aafb3dec795ce017c91680fb6">shield_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
-<tr class="memdesc:ace50826aafb3dec795ce017c91680fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the shield effect to a player.  <a href="bonus_8h.html#ace50826aafb3dec795ce017c91680fb6">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ace50826aafb3dec795ce017c91680fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the shield effect to a player.  <br /></td></tr>
 <tr class="separator:ace50826aafb3dec795ce017c91680fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad055706b7eb217b48f040cee55b8499c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#ad055706b7eb217b48f040cee55b8499c">life_increase_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
-<tr class="memdesc:ad055706b7eb217b48f040cee55b8499c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the life increase effect to a player.  <a href="bonus_8h.html#ad055706b7eb217b48f040cee55b8499c">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ad055706b7eb217b48f040cee55b8499c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the life increase effect to a player.  <br /></td></tr>
 <tr class="separator:ad055706b7eb217b48f040cee55b8499c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a558fcb1e8dabfdaa1d7fda73a3336c08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a558fcb1e8dabfdaa1d7fda73a3336c08">life_decrease_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
-<tr class="memdesc:a558fcb1e8dabfdaa1d7fda73a3336c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the life decrease effect to a player.  <a href="bonus_8h.html#a558fcb1e8dabfdaa1d7fda73a3336c08">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a558fcb1e8dabfdaa1d7fda73a3336c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the life decrease effect to a player.  <br /></td></tr>
 <tr class="separator:a558fcb1e8dabfdaa1d7fda73a3336c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d038d904e9a39d658824b3725b9db19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a0d038d904e9a39d658824b3725b9db19">max_life_increase_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
-<tr class="memdesc:a0d038d904e9a39d658824b3725b9db19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the max life effect to the eater.  <a href="bonus_8h.html#a0d038d904e9a39d658824b3725b9db19">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a0d038d904e9a39d658824b3725b9db19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the max life effect to the eater.  <br /></td></tr>
 <tr class="separator:a0d038d904e9a39d658824b3725b9db19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf135890bec1b253c1cde057a61256c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#abf135890bec1b253c1cde057a61256c4">power_up_shoot_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
-<tr class="memdesc:abf135890bec1b253c1cde057a61256c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the power of the eater shoot.  <a href="bonus_8h.html#abf135890bec1b253c1cde057a61256c4">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:abf135890bec1b253c1cde057a61256c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the power of the eater shoot.  <br /></td></tr>
 <tr class="separator:abf135890bec1b253c1cde057a61256c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb4843ebffeec6a35d3b6dbd85c5bee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#abb4843ebffeec6a35d3b6dbd85c5bee5">power_up_speed_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
-<tr class="memdesc:abb4843ebffeec6a35d3b6dbd85c5bee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the speed of the eater.  <a href="bonus_8h.html#abb4843ebffeec6a35d3b6dbd85c5bee5">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:abb4843ebffeec6a35d3b6dbd85c5bee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the speed of the eater.  <br /></td></tr>
 <tr class="separator:abb4843ebffeec6a35d3b6dbd85c5bee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12d463e1ca03cecf3fb8309595f46ec6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bonus_8h.html#a12d463e1ca03cecf3fb8309595f46ec6">spawn_unit_effect</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#af30e2030635a69690f85e48bc6ef202f">Player</a> *eater, int reverse)</td></tr>
-<tr class="memdesc:a12d463e1ca03cecf3fb8309595f46ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a unit to protect the eater.  <a href="bonus_8h.html#a12d463e1ca03cecf3fb8309595f46ec6">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a12d463e1ca03cecf3fb8309595f46ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a unit to protect the eater.  <br /></td></tr>
 <tr class="separator:a12d463e1ca03cecf3fb8309595f46ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p >Functions to manage the logic of a bonus. </p>
+<div class="textblock"><p>Functions to manage the logic of a bonus. </p>
 <dl class="section author"><dt>Auteur</dt><dd>Max Ducoudré &amp; Adam Mehdaoui </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-05-05</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
 </div><h2 class="groupheader">Documentation des macros</h2>
 <a id="aee081c4b3001d124dd5aeed4f249cfa8" name="aee081c4b3001d124dd5aeed4f249cfa8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee081c4b3001d124dd5aeed4f249cfa8">&#9670;&nbsp;</a></span>BONUS_DATA_PATH</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aee081c4b3001d124dd5aeed4f249cfa8">&#9670;&#160;</a></span>BONUS_DATA_PATH</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +199,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="ae2d99057d376a976517e324ad794bff8" name="ae2d99057d376a976517e324ad794bff8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2d99057d376a976517e324ad794bff8">&#9670;&nbsp;</a></span>LIFE_DECREASE_EFFECT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d99057d376a976517e324ad794bff8">&#9670;&#160;</a></span>LIFE_DECREASE_EFFECT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +215,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a9d3fdf983b22c0743d6717c25058ba04" name="a9d3fdf983b22c0743d6717c25058ba04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d3fdf983b22c0743d6717c25058ba04">&#9670;&nbsp;</a></span>LIFE_INCREASE_EFFECT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3fdf983b22c0743d6717c25058ba04">&#9670;&#160;</a></span>LIFE_INCREASE_EFFECT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +231,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="adf7ca8047d98e035c8ed260a01fca1dc" name="adf7ca8047d98e035c8ed260a01fca1dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf7ca8047d98e035c8ed260a01fca1dc">&#9670;&nbsp;</a></span>MAX_LIFE_INCREASE_EFFECT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7ca8047d98e035c8ed260a01fca1dc">&#9670;&#160;</a></span>MAX_LIFE_INCREASE_EFFECT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +247,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a94a64dbcd638c26f8b1d288a748236e3" name="a94a64dbcd638c26f8b1d288a748236e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94a64dbcd638c26f8b1d288a748236e3">&#9670;&nbsp;</a></span>POWER_UP_SHOOT_EFFECT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a64dbcd638c26f8b1d288a748236e3">&#9670;&#160;</a></span>POWER_UP_SHOOT_EFFECT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,7 +263,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a4d09b6aa6e4a225d8ea01422061c2675" name="a4d09b6aa6e4a225d8ea01422061c2675"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d09b6aa6e4a225d8ea01422061c2675">&#9670;&nbsp;</a></span>POWER_UP_SPEED_EFFECT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d09b6aa6e4a225d8ea01422061c2675">&#9670;&#160;</a></span>POWER_UP_SPEED_EFFECT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +279,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a433b64fc8dbbb875ce9538eb9c3c5940" name="a433b64fc8dbbb875ce9538eb9c3c5940"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a433b64fc8dbbb875ce9538eb9c3c5940">&#9670;&nbsp;</a></span>RANDOM_BONUS</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a433b64fc8dbbb875ce9538eb9c3c5940">&#9670;&#160;</a></span>RANDOM_BONUS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,7 +295,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a4e8f827a119a3c7a4e8e6d8787fe1e75" name="a4e8f827a119a3c7a4e8e6d8787fe1e75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e8f827a119a3c7a4e8e6d8787fe1e75">&#9670;&nbsp;</a></span>RANDOM_BONUSES</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8f827a119a3c7a4e8e6d8787fe1e75">&#9670;&#160;</a></span>RANDOM_BONUSES</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +311,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a422a87b2fb7e752b7ccbb2490e95fd7b" name="a422a87b2fb7e752b7ccbb2490e95fd7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a422a87b2fb7e752b7ccbb2490e95fd7b">&#9670;&nbsp;</a></span>SHIELD_EFFECT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a422a87b2fb7e752b7ccbb2490e95fd7b">&#9670;&#160;</a></span>SHIELD_EFFECT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,7 +327,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a6e799add158041837328eaf846874bee" name="a6e799add158041837328eaf846874bee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e799add158041837328eaf846874bee">&#9670;&nbsp;</a></span>SPAWN_UNIT_EFFECT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e799add158041837328eaf846874bee">&#9670;&#160;</a></span>SPAWN_UNIT_EFFECT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +344,7 @@ Fonctions</h2></td></tr>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a0da5723f177148ab03cb688becd3f3d2" name="a0da5723f177148ab03cb688becd3f3d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0da5723f177148ab03cb688becd3f3d2">&#9670;&nbsp;</a></span>create_bonus()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da5723f177148ab03cb688becd3f3d2">&#9670;&#160;</a></span>create_bonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,11 +385,149 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>The created bonus pointer </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                  {</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_struct" href="struct___bonus.html">Bonus</a>* bonus = malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct___bonus.html">Bonus</a>));</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordtype">int</span> width, height, speed;</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_struct" href="struct___animation.html">Animation</a> *animation;</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordtype">char</span> *token;</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordtype">char</span> key[200];</div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordtype">char</span> value[200];</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordtype">char</span> line[400];</div>
+<div class="line"><span class="lineno">   24</span>    <span class="keywordtype">char</span> current_id = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    FILE *file = fopen(<a class="code hl_define" href="bonus_8h.html#aee081c4b3001d124dd5aeed4f249cfa8">BONUS_DATA_PATH</a>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span>(file == NULL) {</div>
+<div class="line"><span class="lineno">   29</span>        printf(<span class="stringliteral">&quot;Error : Cannot open file %s&quot;</span>, <a class="code hl_define" href="bonus_8h.html#aee081c4b3001d124dd5aeed4f249cfa8">BONUS_DATA_PATH</a>);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">while</span>(fscanf(file, <span class="stringliteral">&quot;%s&quot;</span>, line) != EOF) {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span>(strchr(line, <span class="charliteral">&#39;:&#39;</span>) != NULL) {</div>
+<div class="line"><span class="lineno">   35</span>            token = strtok(line, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>            strcpy(key, token);</div>
+<div class="line"><span class="lineno">   37</span>            token = strtok(NULL, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>            strcpy(value, token);</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;id&quot;</span>) == 0) current_id = value[0];</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span>(current_id == type) {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span>(     strcmp(key, <span class="stringliteral">&quot;width&quot;</span>) == 0)         width = atoi(value);</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;height&quot;</span>) == 0)        height = atoi(value);</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;consumer&quot;</span>) == 0)      <span class="keywordflow">if</span>(strcmp(value, <span class="stringliteral">&quot;true&quot;</span>) == 0) bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a208a810dc6f6dd6b90543d89c73b9a02">consumer</a> = 1; <span class="keywordflow">else</span> bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a208a810dc6f6dd6b90543d89c73b9a02">consumer</a> = 0;</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;animation&quot;</span>) == 0) {   animation = <a class="code hl_function" href="animation_8h.html#a242ed764127c898e7459a119df5695cf">init_animation_wrapper</a>(value);</div>
+<div class="line"><span class="lineno">   47</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   48</span>                }</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="line"><span class="lineno">   52</span>    fclose(file);</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span>(current_id == <span class="charliteral">&#39;0&#39;</span>) {</div>
+<div class="line"><span class="lineno">   55</span>        printf(<span class="stringliteral">&quot;Error : Ennemy type not found\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span>    speed = rand() % 5 + 2;</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a10f08a78208a79d1e413378a6eac744b">entity</a> = <a class="code hl_function" href="entity_8h.html#a497844725a654f7fbcfa9d0326cc40fd">create_entity</a>(x, -height, width, height, speed, <a class="code hl_function" href="movement_8h.html#a3503535619a03cee137511c40c3598e4">movement_forward</a>, animation, <a class="code hl_define" href="animation_8h.html#a7cc1851e7422f904554db401d23480d9">EXPLOSION_1</a>, bonus, <a class="code hl_enumvalue" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a>);</div>
+<div class="line"><span class="lineno">   61</span>    bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#af08df55279f5a777477b81d2a0e93e70">effect</a> = <a class="code hl_function" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id</a>(current_id);</div>
+<div class="line"><span class="lineno">   62</span>    bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a018f63329423f4ed54c13938e0cbc99d">type</a> = type;</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_function" href="game_8h.html#a227c2e53f2080f19d4ce95d0dba46849">insert_entity</a>(game, bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a10f08a78208a79d1e413378a6eac744b">entity</a>);</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">return</span> bonus;</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="aanimation_8h_html_a242ed764127c898e7459a119df5695cf"><div class="ttname"><a href="animation_8h.html#a242ed764127c898e7459a119df5695cf">init_animation_wrapper</a></div><div class="ttdeci">Animation * init_animation_wrapper(char *str)</div><div class="ttdoc">Create a simple sprite or an animation depending on the file name.</div><div class="ttdef"><b>Definition:</b> animation.c:14</div></div>
+<div class="ttc" id="aanimation_8h_html_a7cc1851e7422f904554db401d23480d9"><div class="ttname"><a href="animation_8h.html#a7cc1851e7422f904554db401d23480d9">EXPLOSION_1</a></div><div class="ttdeci">#define EXPLOSION_1</div><div class="ttdoc">Path to explosion images.</div><div class="ttdef"><b>Definition:</b> animation.h:19</div></div>
+<div class="ttc" id="abonus_8c_html_ab6004477e9c2811af91ed032d4bd33e2"><div class="ttname"><a href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id</a></div><div class="ttdeci">BONUS_FUNC get_bonus_effect_by_id(char id)</div><div class="ttdoc">Get the bonus effect function by the bonus type ID.</div><div class="ttdef"><b>Definition:</b> bonus.c:111</div></div>
+<div class="ttc" id="abonus_8h_html_aee081c4b3001d124dd5aeed4f249cfa8"><div class="ttname"><a href="bonus_8h.html#aee081c4b3001d124dd5aeed4f249cfa8">BONUS_DATA_PATH</a></div><div class="ttdeci">#define BONUS_DATA_PATH</div><div class="ttdoc">The path of the bonus data file.</div><div class="ttdef"><b>Definition:</b> bonus.h:20</div></div>
+<div class="ttc" id="aentity_8h_html_a497844725a654f7fbcfa9d0326cc40fd"><div class="ttname"><a href="entity_8h.html#a497844725a654f7fbcfa9d0326cc40fd">create_entity</a></div><div class="ttdeci">Entity * create_entity(int x, int y, int width, int height, int speed, SPEED_FUNC update_speed, Animation *animation, char *destruction_img_path, void *parent, EntityType type)</div><div class="ttdoc">Create a entity object.</div><div class="ttdef"><b>Definition:</b> entity.c:15</div></div>
+<div class="ttc" id="agame_8h_html_a227c2e53f2080f19d4ce95d0dba46849"><div class="ttname"><a href="game_8h.html#a227c2e53f2080f19d4ce95d0dba46849">insert_entity</a></div><div class="ttdeci">void insert_entity(Game *game, struct _Entity *entity)</div><div class="ttdoc">Insert an entity into the game.</div><div class="ttdef"><b>Definition:</b> game.c:232</div></div>
+<div class="ttc" id="amovement_8h_html_a3503535619a03cee137511c40c3598e4"><div class="ttname"><a href="movement_8h.html#a3503535619a03cee137511c40c3598e4">movement_forward</a></div><div class="ttdeci">void movement_forward(Game *game, Entity *entity)</div><div class="ttdoc">Correspond to a movement forward. The entity will move forward.</div><div class="ttdef"><b>Definition:</b> movement.c:36</div></div>
+<div class="ttc" id="astruct_8h_html_a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d"><div class="ttname"><a href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a></div><div class="ttdeci">@ BONUS</div><div class="ttdef"><b>Definition:</b> struct.h:243</div></div>
+<div class="ttc" id="astruct___animation_html"><div class="ttname"><a href="struct___animation.html">_Animation</a></div><div class="ttdoc">Structure defining an animation of every possivble types.</div><div class="ttdef"><b>Definition:</b> struct.h:464</div></div>
+<div class="ttc" id="astruct___bonus_html"><div class="ttname"><a href="struct___bonus.html">_Bonus</a></div><div class="ttdoc">Structure defining a bonus's data.</div><div class="ttdef"><b>Definition:</b> struct.h:395</div></div>
+<div class="ttc" id="astruct___bonus_html_a018f63329423f4ed54c13938e0cbc99d"><div class="ttname"><a href="struct___bonus.html#a018f63329423f4ed54c13938e0cbc99d">_Bonus::type</a></div><div class="ttdeci">char type</div><div class="ttdef"><b>Definition:</b> struct.h:398</div></div>
+<div class="ttc" id="astruct___bonus_html_a10f08a78208a79d1e413378a6eac744b"><div class="ttname"><a href="struct___bonus.html#a10f08a78208a79d1e413378a6eac744b">_Bonus::entity</a></div><div class="ttdeci">struct _Entity * entity</div><div class="ttdef"><b>Definition:</b> struct.h:396</div></div>
+<div class="ttc" id="astruct___bonus_html_a208a810dc6f6dd6b90543d89c73b9a02"><div class="ttname"><a href="struct___bonus.html#a208a810dc6f6dd6b90543d89c73b9a02">_Bonus::consumer</a></div><div class="ttdeci">int consumer</div><div class="ttdef"><b>Definition:</b> struct.h:399</div></div>
+<div class="ttc" id="astruct___bonus_html_af08df55279f5a777477b81d2a0e93e70"><div class="ttname"><a href="struct___bonus.html#af08df55279f5a777477b81d2a0e93e70">_Bonus::effect</a></div><div class="ttdeci">BONUS_FUNC effect</div><div class="ttdef"><b>Definition:</b> struct.h:397</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a>, <a class="el" href="bonus_8h.html#aee081c4b3001d124dd5aeed4f249cfa8">BONUS_DATA_PATH</a>, <a class="el" href="struct___bonus.html#a208a810dc6f6dd6b90543d89c73b9a02">_Bonus::consumer</a>, <a class="el" href="entity_8h.html#a497844725a654f7fbcfa9d0326cc40fd">create_entity()</a>, <a class="el" href="struct___bonus.html#af08df55279f5a777477b81d2a0e93e70">_Bonus::effect</a>, <a class="el" href="struct___bonus.html#a10f08a78208a79d1e413378a6eac744b">_Bonus::entity</a>, <a class="el" href="animation_8h.html#a7cc1851e7422f904554db401d23480d9">EXPLOSION_1</a>, <a class="el" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>, <a class="el" href="animation_8h.html#a242ed764127c898e7459a119df5695cf">init_animation_wrapper()</a>, <a class="el" href="game_8h.html#a227c2e53f2080f19d4ce95d0dba46849">insert_entity()</a>, <a class="el" href="movement_8h.html#a3503535619a03cee137511c40c3598e4">movement_forward()</a>, et <a class="el" href="struct___bonus.html#a018f63329423f4ed54c13938e0cbc99d">_Bonus::type</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="level_8h.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line()</a>, et <a class="el" href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a0da5723f177148ab03cb688becd3f3d2_cgraph.png" border="0" usemap="#abonus_8h_a0da5723f177148ab03cb688becd3f3d2_cgraph" alt=""/></div>
+<map name="abonus_8h_a0da5723f177148ab03cb688becd3f3d2_cgraph" id="abonus_8h_a0da5723f177148ab03cb688becd3f3d2_cgraph">
+<area shape="rect" title="Create a bonus object." alt="" coords="5,626,105,652"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1602,537,1698,562"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="153,626,312,652"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1604,397,1696,422"/>
+<area shape="rect" href="movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="1584,1126,1716,1152"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="1143,777,1298,802"/>
+<area shape="rect" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08" title="Apply the life decrease effect to a player." alt="" coords="371,477,509,502"/>
+<area shape="rect" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c" title="Apply the life increase effect to a player." alt="" coords="373,526,507,552"/>
+<area shape="rect" href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19" title="Increase the max life effect to the eater." alt="" coords="567,562,734,588"/>
+<area shape="rect" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4" title="Increase the power of the eater shoot." alt="" coords="362,726,518,752"/>
+<area shape="rect" href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5" title="Increase the speed of the eater." alt="" coords="360,575,519,601"/>
+<area shape="rect" href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6" title="Apply the shield effect to a player." alt="" coords="392,677,487,702"/>
+<area shape="rect" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6" title="Spawn a unit to protect the eater." alt="" coords="587,777,714,802"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="598,386,703,412"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="808,195,912,221"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1169,219,1272,245"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="828,551,892,577"/>
+<area shape="rect" href="movement_8c.html#a47af43ea3e598d31c47c4039fd22de20" title="Push the entity on the bottom." alt="" coords="816,386,904,412"/>
+<area shape="rect" href="spaceship_8c.html#a4bd6fce724f03da73306d7f1287cfb06" title="Remove a random bonus from a spaceship." alt="" coords="782,277,938,302"/>
+<area shape="rect" href="spaceship_8c.html#a5051da8debe6053dced1eefd1800bd57" title="Get the bonus pointer from a spaceship." alt="" coords="999,170,1080,196"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="986,219,1092,245"/>
+<area shape="rect" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a" title="Remove a child from an entity." alt="" coords="1171,93,1270,118"/>
+<area shape="rect" href="spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="1168,269,1273,294"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1349,473,1529,498"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="1398,67,1480,93"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1599,611,1700,637"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1770,321,1870,346"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1918,269,2050,294"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="1923,367,2045,393"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="1925,318,2043,344"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1930,219,2038,245"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="2104,218,2225,244"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="2098,418,2230,444"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="2101,118,2228,144"/>
+<area shape="rect" href="player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="2104,318,2225,344"/>
+<area shape="rect" href="spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="992,321,1087,346"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="577,726,724,752"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="584,675,717,701"/>
+<area shape="rect" href="ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="798,726,922,752"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="987,726,1092,752"/>
+<area shape="rect" href="movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="1140,949,1301,974"/>
+<area shape="rect" href="movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="1577,999,1722,1025"/>
+<area shape="rect" href="movement_8c.html#a6b39b318ba13066e262a96e154eeeda1" title="Correspond to a movement circling an entity. The entity will circle around another entity." alt="" coords="1359,925,1519,950"/>
+<area shape="rect" href="movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="1351,974,1527,1000"/>
+<area shape="rect" href="movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="1356,826,1522,852"/>
+<area shape="rect" href="movement_8c.html#a5a7236c788c900918ea53feb689400a8" title="Correspond to a movement following the player on its X axis." alt="" coords="1370,875,1508,901"/>
+<area shape="rect" href="movement_8c.html#ab6cc33671dfce95a0d2059b72b1b2018" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="1356,1126,1522,1152"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="1400,777,1478,802"/>
+<area shape="rect" href="spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285" title="Function to enable the shield of a spaceship." alt="" coords="989,625,1089,650"/>
+<area shape="rect" href="entity_8c.html#ab62762cd20888e143c235526b83114fe" title="Add a child to an entity." alt="" coords="1182,625,1259,650"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a0da5723f177148ab03cb688becd3f3d2_icgraph.png" border="0" usemap="#abonus_8h_a0da5723f177148ab03cb688becd3f3d2_icgraph" alt=""/></div>
+<map name="abonus_8h_a0da5723f177148ab03cb688becd3f3d2_icgraph" id="abonus_8h_a0da5723f177148ab03cb688becd3f3d2_icgraph">
+<area shape="rect" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a66fc1ff9cc7925acb9daa71957d8e991" name="a66fc1ff9cc7925acb9daa71957d8e991"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66fc1ff9cc7925acb9daa71957d8e991">&#9670;&nbsp;</a></span>create_random_bonus()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fc1ff9cc7925acb9daa71957d8e991">&#9670;&#160;</a></span>create_random_bonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,11 +561,90 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>The created bonus pointer </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                              {</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordtype">char</span> types[] = <a class="code hl_define" href="bonus_8h.html#a4e8f827a119a3c7a4e8e6d8787fe1e75">RANDOM_BONUSES</a>;</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a>(game, types[MLV_get_random_integer(0, strlen(types) - 1)], x);</div>
+<div class="line"><span class="lineno">   70</span>}</div>
+<div class="ttc" id="abonus_8c_html_a0da5723f177148ab03cb688becd3f3d2"><div class="ttname"><a href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a></div><div class="ttdeci">Bonus * create_bonus(Game *game, char type, int x)</div><div class="ttdoc">Create a bonus object.</div><div class="ttdef"><b>Definition:</b> bonus.c:16</div></div>
+<div class="ttc" id="abonus_8h_html_a4e8f827a119a3c7a4e8e6d8787fe1e75"><div class="ttname"><a href="bonus_8h.html#a4e8f827a119a3c7a4e8e6d8787fe1e75">RANDOM_BONUSES</a></div><div class="ttdeci">#define RANDOM_BONUSES</div><div class="ttdoc">List of possible bonus types spawned by the 'RANDOM_BONUS' id.</div><div class="ttdef"><b>Definition:</b> bonus.h:72</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus()</a>, et <a class="el" href="bonus_8h.html#a4e8f827a119a3c7a4e8e6d8787fe1e75">RANDOM_BONUSES</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="level_8h.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_cgraph.png" border="0" usemap="#abonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_cgraph" alt=""/></div>
+<map name="abonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_cgraph" id="abonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_cgraph">
+<area shape="rect" title="Create a random bonus object." alt="" coords="5,495,155,521"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="203,495,302,521"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1799,368,1895,394"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="350,495,509,521"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1801,572,1893,598"/>
+<area shape="rect" href="movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="1570,292,1702,318"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="1341,546,1495,571"/>
+<area shape="rect" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08" title="Apply the life decrease effect to a player." alt="" coords="568,646,706,671"/>
+<area shape="rect" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c" title="Apply the life increase effect to a player." alt="" coords="570,596,704,622"/>
+<area shape="rect" href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19" title="Increase the max life effect to the eater." alt="" coords="765,1024,931,1050"/>
+<area shape="rect" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4" title="Increase the power of the eater shoot." alt="" coords="559,294,715,319"/>
+<area shape="rect" href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5" title="Increase the speed of the eater." alt="" coords="557,446,717,471"/>
+<area shape="rect" href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6" title="Apply the shield effect to a player." alt="" coords="589,495,685,521"/>
+<area shape="rect" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6" title="Spawn a unit to protect the eater." alt="" coords="784,344,912,370"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="795,874,901,899"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="1006,874,1109,899"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1366,824,1470,850"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="1026,1127,1089,1153"/>
+<area shape="rect" href="movement_8c.html#a47af43ea3e598d31c47c4039fd22de20" title="Push the entity on the bottom." alt="" coords="1013,775,1101,801"/>
+<area shape="rect" href="spaceship_8c.html#a4bd6fce724f03da73306d7f1287cfb06" title="Remove a random bonus from a spaceship." alt="" coords="979,824,1135,850"/>
+<area shape="rect" href="spaceship_8c.html#a5051da8debe6053dced1eefd1800bd57" title="Get the bonus pointer from a spaceship." alt="" coords="1196,874,1277,899"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="1183,824,1290,850"/>
+<area shape="rect" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a" title="Remove a child from an entity." alt="" coords="1369,975,1467,1001"/>
+<area shape="rect" href="spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="1365,775,1471,801"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1546,495,1726,521"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="1595,975,1677,1001"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1796,470,1898,495"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1968,698,2067,723"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="2115,750,2247,775"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="2120,651,2242,677"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="2122,700,2240,726"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="2127,799,2235,825"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="2301,626,2422,651"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="2295,850,2428,875"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="2298,951,2425,977"/>
+<area shape="rect" href="player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="2301,700,2422,726"/>
+<area shape="rect" href="spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="1189,775,1284,801"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="774,243,922,269"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="781,294,915,319"/>
+<area shape="rect" href="ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="996,243,1119,269"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1184,294,1289,319"/>
+<area shape="rect" href="movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="1338,194,1498,219"/>
+<area shape="rect" href="movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="1774,70,1920,95"/>
+<area shape="rect" href="movement_8c.html#a6b39b318ba13066e262a96e154eeeda1" title="Correspond to a movement circling an entity. The entity will circle around another entity." alt="" coords="1557,243,1716,269"/>
+<area shape="rect" href="movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="1548,95,1724,121"/>
+<area shape="rect" href="movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="1554,144,1719,170"/>
+<area shape="rect" href="movement_8c.html#a5a7236c788c900918ea53feb689400a8" title="Correspond to a movement following the player on its X axis." alt="" coords="1568,194,1705,219"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="1598,596,1675,622"/>
+<area shape="rect" href="spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285" title="Function to enable the shield of a spaceship." alt="" coords="1186,495,1287,521"/>
+<area shape="rect" href="entity_8c.html#ab62762cd20888e143c235526b83114fe" title="Add a child to an entity." alt="" coords="1380,496,1456,522"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_icgraph.png" border="0" usemap="#abonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_icgraph" alt=""/></div>
+<map name="abonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_icgraph" id="abonus_8h_a66fc1ff9cc7925acb9daa71957d8e991_icgraph">
+<area shape="rect" title="Create a random bonus object." alt="" coords="567,5,716,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="abf31d3255948e555c78bf211a63c62bb" name="abf31d3255948e555c78bf211a63c62bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf31d3255948e555c78bf211a63c62bb">&#9670;&nbsp;</a></span>free_bonus()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abf31d3255948e555c78bf211a63c62bb">&#9670;&#160;</a></span>free_bonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,11 +666,73 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                              {</div>
+<div class="line"><span class="lineno">  108</span>    free(bonus);</div>
+<div class="line"><span class="lineno">  109</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Référencé par <a class="el" href="entity_8h.html#a2d4bd6d202b5ecb659dc41b02f4b10e9">free_entity()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_abf31d3255948e555c78bf211a63c62bb_icgraph.png" border="0" usemap="#abonus_8h_abf31d3255948e555c78bf211a63c62bb_icgraph" alt=""/></div>
+<map name="abonus_8h_abf31d3255948e555c78bf211a63c62bb_icgraph" id="abonus_8h_abf31d3255948e555c78bf211a63c62bb_icgraph">
+<area shape="rect" title="Free the bonus memory." alt="" coords="3797,737,3882,762"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="3666,737,3749,762"/>
+<area shape="rect" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a" title="Remove a child from an entity." alt="" coords="3520,661,3618,686"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="2154,661,2258,686"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="3369,479,3472,505"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="3215,479,3321,505"/>
+<area shape="rect" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08" title="Apply the life decrease effect to a player." alt="" coords="3029,405,3167,430"/>
+<area shape="rect" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c" title="Apply the life increase effect to a player." alt="" coords="3031,454,3165,480"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="3032,503,3164,529"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="1960,1195,2087,1221"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="2822,405,2981,430"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="2346,297,2446,322"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="2842,478,2961,504"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="2674,395,2774,421"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="2534,395,2626,421"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,233,202,258"/>
+<area shape="rect" href="ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="2341,395,2451,421"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="2343,346,2449,372"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="2306,497,2486,522"/>
+<area shape="rect" href="menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d" title="Set the menu of the game. It replace and free the previous to set the new one." alt="" coords="1775,619,1853,645"/>
+<area shape="rect" href="animation_8c.html#a0938d53058c7ab6460cef261f2652719" title="Draw the animation." alt="" coords="1979,1081,2067,1106"/>
+<area shape="rect" href="spaceship_8c.html#a2e00e9ca0df582dcb4d0080b24a1d311" title="Free the bonuses of a spaceship." alt="" coords="1974,717,2073,742"/>
+<area shape="rect" href="game_8c.html#a98bb68f0ee0b77fbd9d7c56957190c9d" title="Free the game memory." alt="" coords="1239,1158,1321,1184"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1957,517,2089,542"/>
+<area shape="rect" href="click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="823,826,932,852"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="1963,467,2084,493"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="1970,43,2076,69"/>
+<area shape="rect" href="game_8c.html#a0eb38159a2b3f8f87a3d84562e8af90e" title="Remove all entities of specified type." alt="" coords="1940,667,2106,693"/>
+<area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1597,195,1688,221"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1969,566,2077,592"/>
+<area shape="rect" href="frame_8c.html#a3b2188cb440fcd1d85ddc7f60f20aa96" title="Draw the game on the frame." alt="" coords="1598,1107,1687,1133"/>
+<area shape="rect" href="frame_8c.html#acdef13b2a543e56c77da1f97a449066f" title="Draw the player data on the frame (Its HUD)" alt="" coords="1768,1057,1860,1082"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1057,55,1082"/>
+<area shape="rect" href="menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="614,194,756,235"/>
+<area shape="rect" href="click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="613,726,757,752"/>
+<area shape="rect" href="menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="397,205,565,230"/>
+<area shape="rect" href="game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="257,257,342,282"/>
+<area shape="rect" href="game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="250,205,349,230"/>
+<area shape="rect" href="menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1004,651,1136,677"/>
+<area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="839,955,916,981"/>
+<area shape="rect" href="click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="806,550,950,576"/>
+<area shape="rect" href="click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="830,777,925,802"/>
+<area shape="rect" href="click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="830,449,925,474"/>
+<area shape="rect" href="click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="827,702,929,728"/>
+<area shape="rect" href="click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="830,347,925,373"/>
+<area shape="rect" href="click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="805,601,950,626"/>
+<area shape="rect" href="menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="1190,550,1370,576"/>
+<area shape="rect" href="spaceship_8c.html#a4bd6fce724f03da73306d7f1287cfb06" title="Remove a random bonus from a spaceship." alt="" coords="1736,18,1892,44"/>
+<area shape="rect" href="click__actions_8c.html#a33b339c60ef0dbde2391f71f9b567169" title="Restart a match." alt="" coords="998,195,1142,221"/>
+<area shape="rect" href="click__actions_8c.html#a004b9f49f774e2ab3c1973d7f6242b39" title="Start an infinite match." alt="" coords="1418,347,1549,373"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="ab6004477e9c2811af91ed032d4bd33e2" name="ab6004477e9c2811af91ed032d4bd33e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6004477e9c2811af91ed032d4bd33e2">&#9670;&nbsp;</a></span>get_bonus_effect_by_id()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6004477e9c2811af91ed032d4bd33e2">&#9670;&#160;</a></span>get_bonus_effect_by_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,11 +755,112 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>A pointer to the bonus effect function </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                           {</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">switch</span>(<span class="keywordtype">id</span>) {</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="bonus_8h.html#a422a87b2fb7e752b7ccbb2490e95fd7b">SHIELD_EFFECT</a>: <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6">shield_effect</a>; </div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="bonus_8h.html#adf7ca8047d98e035c8ed260a01fca1dc">MAX_LIFE_INCREASE_EFFECT</a>: <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19">max_life_increase_effect</a>;</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="bonus_8h.html#a94a64dbcd638c26f8b1d288a748236e3">POWER_UP_SHOOT_EFFECT</a>: <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4">power_up_shoot_effect</a>; </div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="bonus_8h.html#a9d3fdf983b22c0743d6717c25058ba04">LIFE_INCREASE_EFFECT</a>: <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c">life_increase_effect</a>;</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="bonus_8h.html#a4d09b6aa6e4a225d8ea01422061c2675">POWER_UP_SPEED_EFFECT</a>: <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5">power_up_speed_effect</a>;</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="bonus_8h.html#a6e799add158041837328eaf846874bee">SPAWN_UNIT_EFFECT</a>: <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6">spawn_unit_effect</a>;</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="bonus_8h.html#ae2d99057d376a976517e324ad794bff8">LIFE_DECREASE_EFFECT</a> : <span class="keywordflow">return</span> <a class="code hl_function" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08">life_decrease_effect</a>;</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  121</span>    } </div>
+<div class="line"><span class="lineno">  122</span>}</div>
+<div class="ttc" id="abonus_8c_html_a0d038d904e9a39d658824b3725b9db19"><div class="ttname"><a href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19">max_life_increase_effect</a></div><div class="ttdeci">void max_life_increase_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Increase the max life effect to the eater.</div><div class="ttdef"><b>Definition:</b> bonus.c:133</div></div>
+<div class="ttc" id="abonus_8c_html_a12d463e1ca03cecf3fb8309595f46ec6"><div class="ttname"><a href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6">spawn_unit_effect</a></div><div class="ttdeci">void spawn_unit_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Spawn a unit to protect the eater.</div><div class="ttdef"><b>Definition:</b> bonus.c:161</div></div>
+<div class="ttc" id="abonus_8c_html_a558fcb1e8dabfdaa1d7fda73a3336c08"><div class="ttname"><a href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08">life_decrease_effect</a></div><div class="ttdeci">void life_decrease_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Apply the life decrease effect to a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:124</div></div>
+<div class="ttc" id="abonus_8c_html_abb4843ebffeec6a35d3b6dbd85c5bee5"><div class="ttname"><a href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5">power_up_speed_effect</a></div><div class="ttdeci">void power_up_speed_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Increase the speed of the eater.</div><div class="ttdef"><b>Definition:</b> bonus.c:144</div></div>
+<div class="ttc" id="abonus_8c_html_abf135890bec1b253c1cde057a61256c4"><div class="ttname"><a href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4">power_up_shoot_effect</a></div><div class="ttdeci">void power_up_shoot_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Increase the power of the eater shoot.</div><div class="ttdef"><b>Definition:</b> bonus.c:149</div></div>
+<div class="ttc" id="abonus_8c_html_ace50826aafb3dec795ce017c91680fb6"><div class="ttname"><a href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6">shield_effect</a></div><div class="ttdeci">void shield_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Apply the shield effect to a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:128</div></div>
+<div class="ttc" id="abonus_8c_html_ad055706b7eb217b48f040cee55b8499c"><div class="ttname"><a href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c">life_increase_effect</a></div><div class="ttdeci">void life_increase_effect(Game *game, Player *eater, int reverse)</div><div class="ttdoc">Apply the life increase effect to a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:156</div></div>
+<div class="ttc" id="abonus_8h_html_a422a87b2fb7e752b7ccbb2490e95fd7b"><div class="ttname"><a href="bonus_8h.html#a422a87b2fb7e752b7ccbb2490e95fd7b">SHIELD_EFFECT</a></div><div class="ttdeci">#define SHIELD_EFFECT</div><div class="ttdoc">Identify the shield bonus type.</div><div class="ttdef"><b>Definition:</b> bonus.h:92</div></div>
+<div class="ttc" id="abonus_8h_html_a4d09b6aa6e4a225d8ea01422061c2675"><div class="ttname"><a href="bonus_8h.html#a4d09b6aa6e4a225d8ea01422061c2675">POWER_UP_SPEED_EFFECT</a></div><div class="ttdeci">#define POWER_UP_SPEED_EFFECT</div><div class="ttdoc">Identify the power up speed bonus type.</div><div class="ttdef"><b>Definition:</b> bonus.h:163</div></div>
+<div class="ttc" id="abonus_8h_html_a6e799add158041837328eaf846874bee"><div class="ttname"><a href="bonus_8h.html#a6e799add158041837328eaf846874bee">SPAWN_UNIT_EFFECT</a></div><div class="ttdeci">#define SPAWN_UNIT_EFFECT</div><div class="ttdoc">Identify a spawn unit bonus type.</div><div class="ttdef"><b>Definition:</b> bonus.h:178</div></div>
+<div class="ttc" id="abonus_8h_html_a94a64dbcd638c26f8b1d288a748236e3"><div class="ttname"><a href="bonus_8h.html#a94a64dbcd638c26f8b1d288a748236e3">POWER_UP_SHOOT_EFFECT</a></div><div class="ttdeci">#define POWER_UP_SHOOT_EFFECT</div><div class="ttdoc">Identify the power up shoot bonus type.</div><div class="ttdef"><b>Definition:</b> bonus.h:149</div></div>
+<div class="ttc" id="abonus_8h_html_a9d3fdf983b22c0743d6717c25058ba04"><div class="ttname"><a href="bonus_8h.html#a9d3fdf983b22c0743d6717c25058ba04">LIFE_INCREASE_EFFECT</a></div><div class="ttdeci">#define LIFE_INCREASE_EFFECT</div><div class="ttdoc">Identify the life increase bonus type.</div><div class="ttdef"><b>Definition:</b> bonus.h:106</div></div>
+<div class="ttc" id="abonus_8h_html_adf7ca8047d98e035c8ed260a01fca1dc"><div class="ttname"><a href="bonus_8h.html#adf7ca8047d98e035c8ed260a01fca1dc">MAX_LIFE_INCREASE_EFFECT</a></div><div class="ttdeci">#define MAX_LIFE_INCREASE_EFFECT</div><div class="ttdoc">Identify the max life increase bonus type.</div><div class="ttdef"><b>Definition:</b> bonus.h:135</div></div>
+<div class="ttc" id="abonus_8h_html_ae2d99057d376a976517e324ad794bff8"><div class="ttname"><a href="bonus_8h.html#ae2d99057d376a976517e324ad794bff8">LIFE_DECREASE_EFFECT</a></div><div class="ttdeci">#define LIFE_DECREASE_EFFECT</div><div class="ttdoc">Identify the life decrease bonus type.</div><div class="ttdef"><b>Definition:</b> bonus.h:121</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="bonus_8h.html#ae2d99057d376a976517e324ad794bff8">LIFE_DECREASE_EFFECT</a>, <a class="el" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08">life_decrease_effect()</a>, <a class="el" href="bonus_8h.html#a9d3fdf983b22c0743d6717c25058ba04">LIFE_INCREASE_EFFECT</a>, <a class="el" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c">life_increase_effect()</a>, <a class="el" href="bonus_8h.html#adf7ca8047d98e035c8ed260a01fca1dc">MAX_LIFE_INCREASE_EFFECT</a>, <a class="el" href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19">max_life_increase_effect()</a>, <a class="el" href="bonus_8h.html#a94a64dbcd638c26f8b1d288a748236e3">POWER_UP_SHOOT_EFFECT</a>, <a class="el" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4">power_up_shoot_effect()</a>, <a class="el" href="bonus_8h.html#a4d09b6aa6e4a225d8ea01422061c2675">POWER_UP_SPEED_EFFECT</a>, <a class="el" href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5">power_up_speed_effect()</a>, <a class="el" href="bonus_8h.html#a422a87b2fb7e752b7ccbb2490e95fd7b">SHIELD_EFFECT</a>, <a class="el" href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6">shield_effect()</a>, <a class="el" href="bonus_8h.html#a6e799add158041837328eaf846874bee">SPAWN_UNIT_EFFECT</a>, et <a class="el" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6">spawn_unit_effect()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_ab6004477e9c2811af91ed032d4bd33e2_cgraph.png" border="0" usemap="#abonus_8h_ab6004477e9c2811af91ed032d4bd33e2_cgraph" alt=""/></div>
+<map name="abonus_8h_ab6004477e9c2811af91ed032d4bd33e2_cgraph" id="abonus_8h_ab6004477e9c2811af91ed032d4bd33e2_cgraph">
+<area shape="rect" title="Get the bonus effect function by the bonus type ID." alt="" coords="5,356,165,382"/>
+<area shape="rect" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08" title="Apply the life decrease effect to a player." alt="" coords="223,255,362,280"/>
+<area shape="rect" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c" title="Apply the life increase effect to a player." alt="" coords="225,205,360,231"/>
+<area shape="rect" href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19" title="Increase the max life effect to the eater." alt="" coords="420,305,586,331"/>
+<area shape="rect" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4" title="Increase the power of the eater shoot." alt="" coords="425,407,581,432"/>
+<area shape="rect" href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5" title="Increase the speed of the eater." alt="" coords="213,507,372,532"/>
+<area shape="rect" href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6" title="Apply the shield effect to a player." alt="" coords="245,457,340,483"/>
+<area shape="rect" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6" title="Spawn a unit to protect the eater." alt="" coords="440,356,567,382"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="451,205,556,231"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="661,153,764,179"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1011,236,1114,262"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="681,305,744,331"/>
+<area shape="rect" href="movement_8c.html#a47af43ea3e598d31c47c4039fd22de20" title="Push the entity on the bottom." alt="" coords="668,204,757,230"/>
+<area shape="rect" href="spaceship_8c.html#a4bd6fce724f03da73306d7f1287cfb06" title="Remove a random bonus from a spaceship." alt="" coords="634,80,791,106"/>
+<area shape="rect" href="spaceship_8c.html#a5051da8debe6053dced1eefd1800bd57" title="Get the bonus pointer from a spaceship." alt="" coords="860,104,941,130"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="847,153,954,179"/>
+<area shape="rect" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a" title="Remove a child from an entity." alt="" coords="1014,167,1112,192"/>
+<area shape="rect" href="spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="1010,92,1115,118"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1163,352,1344,378"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="1212,153,1295,179"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1432,301,1528,327"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1429,449,1531,475"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1434,252,1526,278"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1421,351,1539,376"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1639,252,1738,278"/>
+<area shape="rect" href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf" title="Free the memory of the animation." alt="" coords="1427,5,1533,31"/>
+<area shape="rect" href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb" title="Free the bonus memory." alt="" coords="1437,55,1523,80"/>
+<area shape="rect" href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39" title="Free the button memory." alt="" coords="1437,104,1523,130"/>
+<area shape="rect" href="ennemy_8c.html#a567f6b8f74983a850f9746dda26b389f" title="Free the ennemy memory." alt="" coords="1432,153,1528,179"/>
+<area shape="rect" href="missile_8c.html#a3edffd8571016f59239feebcbbd9cef4" title="Free the memory allocated for the missile." alt="" coords="1434,203,1526,228"/>
+<area shape="rect" href="spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="853,55,948,80"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="639,407,786,432"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="646,457,779,483"/>
+<area shape="rect" href="ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="839,407,962,432"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1010,407,1115,432"/>
+<area shape="rect" href="movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="1173,551,1334,576"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="1176,600,1331,626"/>
+<area shape="rect" href="movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="1616,551,1761,576"/>
+<area shape="rect" href="movement_8c.html#a6b39b318ba13066e262a96e154eeeda1" title="Correspond to a movement circling an entity. The entity will circle around another entity." alt="" coords="1400,699,1560,724"/>
+<area shape="rect" href="movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="1392,600,1568,626"/>
+<area shape="rect" href="movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="1397,748,1563,774"/>
+<area shape="rect" href="movement_8c.html#a5a7236c788c900918ea53feb689400a8" title="Correspond to a movement following the player on its X axis." alt="" coords="1411,797,1549,823"/>
+<area shape="rect" href="movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="1623,699,1755,724"/>
+<area shape="rect" href="movement_8c.html#ab6cc33671dfce95a0d2059b72b1b2018" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="1397,649,1563,675"/>
+<area shape="rect" href="movement_8c.html#a100b269e754d4260566e5adba43169b7" title="Correspond to a movement left and right. The entity will bounce on the left and right borders of the ..." alt="" coords="1410,551,1550,576"/>
+<area shape="rect" href="movement_8c.html#ae2ef5889c5b490e2965664d5c1c54b3f" title="Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern." alt="" coords="1406,899,1554,924"/>
+<area shape="rect" href="movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="1393,400,1567,426"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="1441,948,1519,974"/>
+<area shape="rect" href="spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285" title="Function to enable the shield of a spaceship." alt="" coords="1013,577,1113,603"/>
+<area shape="rect" href="entity_8c.html#ab62762cd20888e143c235526b83114fe" title="Add a child to an entity." alt="" coords="1215,649,1292,675"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_ab6004477e9c2811af91ed032d4bd33e2_icgraph.png" border="0" usemap="#abonus_8h_ab6004477e9c2811af91ed032d4bd33e2_icgraph" alt=""/></div>
+<map name="abonus_8h_ab6004477e9c2811af91ed032d4bd33e2_icgraph" id="abonus_8h_ab6004477e9c2811af91ed032d4bd33e2_icgraph">
+<area shape="rect" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="aaa33d0cd746fd6a8789d0c6f8638d19a" name="aaa33d0cd746fd6a8789d0c6f8638d19a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa33d0cd746fd6a8789d0c6f8638d19a">&#9670;&nbsp;</a></span>is_bonus_reachable()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa33d0cd746fd6a8789d0c6f8638d19a">&#9670;&#160;</a></span>is_bonus_reachable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -493,11 +894,98 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 if the bonus can be reached, 0 otherwise </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                 {</div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_struct" href="struct___entity_link.html">EntityLink</a> *link;</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_struct" href="struct___bonus_link.html">BonusLink</a> *bonus_link;</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">for</span>(link = game-&gt;<a class="code hl_variable" href="struct___game.html#aca43b64dd100818c697e2bbf9b812100">entities</a>; link != NULL; link = link-&gt;<a class="code hl_variable" href="struct___entity_link.html#ae2fb40efc4b6c550b10946f522827d35">next</a>) {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span>(link-&gt;<a class="code hl_variable" href="struct___entity_link.html#ad73528574efe84813340ea126c675926">entity</a>-&gt;<a class="code hl_variable" href="struct___entity.html#abf74ac326206b75054d7a4fbd2c39f89">type</a> == <a class="code hl_enumvalue" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72cade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>) {</div>
+<div class="line"><span class="lineno">   98</span>            <a class="code hl_struct" href="struct___player.html">Player</a> *player = (<a class="code hl_struct" href="struct___player.html">Player</a>*)link-&gt;<a class="code hl_variable" href="struct___entity_link.html#ad73528574efe84813340ea126c675926">entity</a>-&gt;<a class="code hl_variable" href="struct___entity.html#aadc8012b0aa72cf28a883df5202e25d2">parent</a>;</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">for</span>(bonus_link = player-&gt;<a class="code hl_variable" href="struct___player.html#a943c63a27f4eccf9a95e50c9e3521130">ship</a>-&gt;<a class="code hl_variable" href="struct___space_ship.html#acf552ec2efd57dacd7b6dc1247fb0a38">bonus</a>; bonus_link != NULL; bonus_link = bonus_link-&gt;<a class="code hl_variable" href="struct___bonus_link.html#ac56c208135013846d9083c679dd6dbea">next</a>) {</div>
+<div class="line"><span class="lineno">  100</span>                <span class="keywordflow">if</span>(bonus_link-&gt;<a class="code hl_variable" href="struct___bonus_link.html#a44a7099dc5ceee1c0814b705304d10d0">bonus</a> == bonus) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  105</span>}</div>
+<div class="ttc" id="astruct_8h_html_a5642ffc461001ffb4a92a8c4e448c72cade5dc3e0dbd007d995ed3e37bde5ce7e"><div class="ttname"><a href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72cade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a></div><div class="ttdeci">@ PLAYER</div><div class="ttdef"><b>Definition:</b> struct.h:240</div></div>
+<div class="ttc" id="astruct___bonus_link_html"><div class="ttname"><a href="struct___bonus_link.html">_BonusLink</a></div><div class="ttdoc">Structure defining a linked list of a bonus.</div><div class="ttdef"><b>Definition:</b> struct.h:307</div></div>
+<div class="ttc" id="astruct___bonus_link_html_a44a7099dc5ceee1c0814b705304d10d0"><div class="ttname"><a href="struct___bonus_link.html#a44a7099dc5ceee1c0814b705304d10d0">_BonusLink::bonus</a></div><div class="ttdeci">struct _Bonus * bonus</div><div class="ttdef"><b>Definition:</b> struct.h:308</div></div>
+<div class="ttc" id="astruct___bonus_link_html_ac56c208135013846d9083c679dd6dbea"><div class="ttname"><a href="struct___bonus_link.html#ac56c208135013846d9083c679dd6dbea">_BonusLink::next</a></div><div class="ttdeci">struct _BonusLink * next</div><div class="ttdef"><b>Definition:</b> struct.h:309</div></div>
+<div class="ttc" id="astruct___entity_html_aadc8012b0aa72cf28a883df5202e25d2"><div class="ttname"><a href="struct___entity.html#aadc8012b0aa72cf28a883df5202e25d2">_Entity::parent</a></div><div class="ttdeci">void * parent</div><div class="ttdef"><b>Definition:</b> struct.h:264</div></div>
+<div class="ttc" id="astruct___entity_html_abf74ac326206b75054d7a4fbd2c39f89"><div class="ttname"><a href="struct___entity.html#abf74ac326206b75054d7a4fbd2c39f89">_Entity::type</a></div><div class="ttdeci">EntityType type</div><div class="ttdef"><b>Definition:</b> struct.h:265</div></div>
+<div class="ttc" id="astruct___entity_link_html"><div class="ttname"><a href="struct___entity_link.html">_EntityLink</a></div><div class="ttdoc">Structure defining a linked list of entities.</div><div class="ttdef"><b>Definition:</b> struct.h:229</div></div>
+<div class="ttc" id="astruct___entity_link_html_ad73528574efe84813340ea126c675926"><div class="ttname"><a href="struct___entity_link.html#ad73528574efe84813340ea126c675926">_EntityLink::entity</a></div><div class="ttdeci">struct _Entity * entity</div><div class="ttdef"><b>Definition:</b> struct.h:230</div></div>
+<div class="ttc" id="astruct___entity_link_html_ae2fb40efc4b6c550b10946f522827d35"><div class="ttname"><a href="struct___entity_link.html#ae2fb40efc4b6c550b10946f522827d35">_EntityLink::next</a></div><div class="ttdeci">struct _EntityLink * next</div><div class="ttdef"><b>Definition:</b> struct.h:231</div></div>
+<div class="ttc" id="astruct___game_html_aca43b64dd100818c697e2bbf9b812100"><div class="ttname"><a href="struct___game.html#aca43b64dd100818c697e2bbf9b812100">_Game::entities</a></div><div class="ttdeci">struct _EntityLink * entities</div><div class="ttdef"><b>Definition:</b> struct.h:215</div></div>
+<div class="ttc" id="astruct___player_html"><div class="ttname"><a href="struct___player.html">_Player</a></div><div class="ttdoc">Structure defining a player's data and its controls.</div><div class="ttdef"><b>Definition:</b> struct.h:346</div></div>
+<div class="ttc" id="astruct___player_html_a943c63a27f4eccf9a95e50c9e3521130"><div class="ttname"><a href="struct___player.html#a943c63a27f4eccf9a95e50c9e3521130">_Player::ship</a></div><div class="ttdeci">struct _SpaceShip * ship</div><div class="ttdef"><b>Definition:</b> struct.h:348</div></div>
+<div class="ttc" id="astruct___space_ship_html_acf552ec2efd57dacd7b6dc1247fb0a38"><div class="ttname"><a href="struct___space_ship.html#acf552ec2efd57dacd7b6dc1247fb0a38">_SpaceShip::bonus</a></div><div class="ttdeci">struct _BonusLink * bonus</div><div class="ttdef"><b>Definition:</b> struct.h:335</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___bonus_link.html#a44a7099dc5ceee1c0814b705304d10d0">_BonusLink::bonus</a>, <a class="el" href="struct___space_ship.html#acf552ec2efd57dacd7b6dc1247fb0a38">_SpaceShip::bonus</a>, <a class="el" href="struct___game.html#aca43b64dd100818c697e2bbf9b812100">_Game::entities</a>, <a class="el" href="struct___entity_link.html#ad73528574efe84813340ea126c675926">_EntityLink::entity</a>, <a class="el" href="struct___entity_link.html#ae2fb40efc4b6c550b10946f522827d35">_EntityLink::next</a>, <a class="el" href="struct___bonus_link.html#ac56c208135013846d9083c679dd6dbea">_BonusLink::next</a>, <a class="el" href="struct___entity.html#aadc8012b0aa72cf28a883df5202e25d2">_Entity::parent</a>, <a class="el" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72cade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>, <a class="el" href="struct___player.html#a943c63a27f4eccf9a95e50c9e3521130">_Player::ship</a>, et <a class="el" href="struct___entity.html#abf74ac326206b75054d7a4fbd2c39f89">_Entity::type</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#af6ae2c28983452dbc839229545c9e7de">on_collide_bonus()</a>, <a class="el" href="ennemy_8h.html#a9b33b907351e3993ce951d98eea3e498">on_collide_ennemy()</a>, et <a class="el" href="missile_8h.html#aea5a45f27fbca6640b619dc3284d8ef5">on_collide_missile()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_aaa33d0cd746fd6a8789d0c6f8638d19a_icgraph.png" border="0" usemap="#abonus_8h_aaa33d0cd746fd6a8789d0c6f8638d19a_icgraph" alt=""/></div>
+<map name="abonus_8h_aaa33d0cd746fd6a8789d0c6f8638d19a_icgraph" id="abonus_8h_aaa33d0cd746fd6a8789d0c6f8638d19a_icgraph">
+<area shape="rect" title="Check if a bonus can be reached by a player." alt="" coords="2589,1062,2726,1088"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="2420,1062,2541,1088"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="1131,993,1263,1018"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="1133,1278,1261,1304"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="2254,1251,2372,1277"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="2106,1175,2206,1201"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1966,574,2058,600"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,698,202,724"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,69,863,94"/>
+<area shape="rect" href="ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="586,145,697,170"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1775,322,1881,348"/>
+<area shape="rect" href="player_8c.html#ab216a3fb7ef6a32f9721bee2fb30c639" title="Create a player object." alt="" coords="1147,473,1247,498"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1738,767,1918,793"/>
+<area shape="rect" href="menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d" title="Set the menu of the game. It replace and free the previous to set the new one." alt="" coords="1158,898,1236,924"/>
+<area shape="rect" href="background_8c.html#af1597f6233403ec9fb979e80418af500" title="Init the background of the game." alt="" coords="1772,1125,1884,1150"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,94,519,120"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,43,716,69"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,170,344,196"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1097,55,1122"/>
+<area shape="rect" href="ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="1552,195,1675,221"/>
+<area shape="rect" href="shooter_8c.html#ac3fc0d74a904e0c97d5956187ae5aa02" title="Shoot a basic missile from an ennemy." alt="" coords="1568,297,1659,322"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="1340,398,1473,424"/>
+<area shape="rect" href="shooter_8c.html#ab943a4cb2fee6509ff0e97387c14d156" title="Shoot a perforing missile from the player." alt="" coords="1537,346,1690,372"/>
+<area shape="rect" href="shooter_8c.html#a304ec90f7c0c40e6a27c656998599992" title="Shoot a super laser from the player." alt="" coords="1343,447,1470,473"/>
+<area shape="rect" href="shooter_8c.html#a5f9f19b321478d863e4191b7511fd716" title="Shoot a missile from an ennemy to the player." alt="" coords="1546,246,1681,272"/>
+<area shape="rect" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6" title="Spawn a unit to protect the eater." alt="" coords="1550,119,1677,145"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="1333,195,1480,221"/>
+<area shape="rect" href="shooter_8c.html#ab444f02d90b7eabd936b5d641e84040f" title="Get the shoot function from its ID." alt="" coords="1131,297,1263,322"/>
+<area shape="rect" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4" title="Increase the power of the eater shoot." alt="" coords="1119,195,1275,221"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,94,1071,120"/>
+<area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="946,599,1036,625"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1562,949,1665,974"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="1354,1126,1459,1152"/>
+<area shape="rect" href="animation_8c.html#a0938d53058c7ab6460cef261f2652719" title="Draw the animation." alt="" coords="1362,775,1450,801"/>
+<area shape="rect" href="spaceship_8c.html#a2e00e9ca0df582dcb4d0080b24a1d311" title="Free the bonuses of a spaceship." alt="" coords="1357,825,1456,850"/>
+<area shape="rect" href="game_8c.html#a98bb68f0ee0b77fbd9d7c56957190c9d" title="Free the game memory." alt="" coords="773,1097,855,1122"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1340,1277,1472,1302"/>
+<area shape="rect" href="click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="936,649,1046,674"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="1353,874,1459,900"/>
+<area shape="rect" href="game_8c.html#a0eb38159a2b3f8f87a3d84562e8af90e" title="Remove all entities of specified type." alt="" coords="1323,923,1489,949"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1352,1227,1460,1253"/>
+<area shape="rect" href="game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="948,698,1034,724"/>
+<area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="952,1147,1030,1173"/>
+<area shape="rect" href="click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="919,898,1063,924"/>
+<area shape="rect" href="click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="943,947,1039,973"/>
+<area shape="rect" href="click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="943,1046,1039,1072"/>
+<area shape="rect" href="click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="940,747,1042,773"/>
+<area shape="rect" href="click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="943,849,1039,874"/>
+<area shape="rect" href="game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="406,785,505,810"/>
+<area shape="rect" href="click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="918,997,1064,1022"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a558fcb1e8dabfdaa1d7fda73a3336c08" name="a558fcb1e8dabfdaa1d7fda73a3336c08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a558fcb1e8dabfdaa1d7fda73a3336c08">&#9670;&nbsp;</a></span>life_decrease_effect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a558fcb1e8dabfdaa1d7fda73a3336c08">&#9670;&#160;</a></span>life_decrease_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -537,11 +1025,80 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                                  {</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_function" href="spaceship_8h.html#a577113741d72c832f9233d9cc519bb27">deals_damage</a>(game, eater-&gt;<a class="code hl_variable" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">entity</a>, 1);</div>
+<div class="line"><span class="lineno">  126</span>}</div>
+<div class="ttc" id="aspaceship_8h_html_a577113741d72c832f9233d9cc519bb27"><div class="ttname"><a href="spaceship_8h.html#a577113741d72c832f9233d9cc519bb27">deals_damage</a></div><div class="ttdeci">int deals_damage(Game *game, Entity *entity, int damage)</div><div class="ttdoc">Function to deals damage to a spaceship.</div><div class="ttdef"><b>Definition:</b> spaceship.c:199</div></div>
+<div class="ttc" id="astruct___player_html_afd1677f57b922a85a7dd7c9ffd1168e4"><div class="ttname"><a href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">_Player::entity</a></div><div class="ttdeci">struct _Entity * entity</div><div class="ttdef"><b>Definition:</b> struct.h:347</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="spaceship_8h.html#a577113741d72c832f9233d9cc519bb27">deals_damage()</a>, et <a class="el" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">_Player::entity</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_cgraph.png" border="0" usemap="#abonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_cgraph" alt=""/></div>
+<map name="abonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_cgraph" id="abonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_cgraph">
+<area shape="rect" title="Apply the life decrease effect to a player." alt="" coords="5,598,144,624"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="192,598,297,624"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="372,647,475,673"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="704,497,807,522"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="392,697,455,722"/>
+<area shape="rect" href="movement_8c.html#a47af43ea3e598d31c47c4039fd22de20" title="Push the entity on the bottom." alt="" coords="379,746,467,772"/>
+<area shape="rect" href="spaceship_8c.html#a4bd6fce724f03da73306d7f1287cfb06" title="Remove a random bonus from a spaceship." alt="" coords="345,598,501,624"/>
+<area shape="rect" href="spaceship_8c.html#a5051da8debe6053dced1eefd1800bd57" title="Get the bonus pointer from a spaceship." alt="" coords="715,997,796,1022"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="549,649,656,674"/>
+<area shape="rect" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a" title="Remove a child from an entity." alt="" coords="553,822,652,848"/>
+<area shape="rect" href="spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="2105,547,2211,573"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="855,395,1035,421"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="904,773,986,798"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1088,297,1185,322"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1086,346,1187,372"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1090,395,1183,421"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1940,446,2057,472"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1243,345,1342,370"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1395,246,1527,272"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="1400,295,1522,321"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="1402,345,1520,370"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1407,497,1515,522"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="1581,370,1702,396"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="1575,195,1708,221"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="1578,146,1705,172"/>
+<area shape="rect" href="player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="1581,321,1702,346"/>
+<area shape="rect" href="spaceship_8c.html#a055b065e8dede719c55392fb89ac5b55" title="Add a bonus to a spaceship." alt="" coords="1782,395,1866,421"/>
+<area shape="rect" href="spaceship_8c.html#a31bf6516f1323f34fe8e82cc8941f0dd" title="Check if a spaceship have a bonus." alt="" coords="1778,346,1870,372"/>
+<area shape="rect" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a" title="Check if a bonus can be reached by a player." alt="" coords="1756,195,1892,221"/>
+<area shape="rect" href="spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="1951,547,2046,573"/>
+<area shape="rect" href="missile_8c.html#ac4fddff2b43d581a22be2a836d4b7e75" title=" " alt="" coords="1757,146,1891,172"/>
+<area shape="rect" href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf" title="Free the memory of the animation." alt="" coords="1083,698,1190,724"/>
+<area shape="rect" href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb" title="Free the bonus memory." alt="" coords="1094,846,1179,872"/>
+<area shape="rect" href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39" title="Free the button memory." alt="" coords="1093,895,1180,921"/>
+<area shape="rect" href="ennemy_8c.html#a567f6b8f74983a850f9746dda26b389f" title="Free the ennemy memory." alt="" coords="1088,649,1185,674"/>
+<area shape="rect" href="missile_8c.html#a3edffd8571016f59239feebcbbd9cef4" title="Free the memory allocated for the missile." alt="" coords="1091,797,1182,822"/>
+<area shape="rect" href="player_8c.html#ad7f330e163525cf7e7fd589b83b0632d" title="Free the player allocated memory." alt="" coords="1094,747,1179,773"/>
+<area shape="rect" href="spaceship_8c.html#a6bc89e27a0fbe46608a60309fe6ab5c0" title="Free the spaceship allocated memory." alt="" coords="1238,698,1347,724"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_icgraph.png" border="0" usemap="#abonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_icgraph" alt=""/></div>
+<map name="abonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_icgraph" id="abonus_8h_a558fcb1e8dabfdaa1d7fda73a3336c08_icgraph">
+<area shape="rect" title="Apply the life decrease effect to a player." alt="" coords="1119,5,1257,31"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="ad055706b7eb217b48f040cee55b8499c" name="ad055706b7eb217b48f040cee55b8499c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad055706b7eb217b48f040cee55b8499c">&#9670;&nbsp;</a></span>life_increase_effect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad055706b7eb217b48f040cee55b8499c">&#9670;&#160;</a></span>life_increase_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -581,11 +1138,78 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>                                                                  {</div>
+<div class="line"><span class="lineno">  157</span>    <a class="code hl_function" href="spaceship_8h.html#a577113741d72c832f9233d9cc519bb27">deals_damage</a>(game, eater-&gt;<a class="code hl_variable" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">entity</a>, -1);</div>
+<div class="line"><span class="lineno">  158</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="spaceship_8h.html#a577113741d72c832f9233d9cc519bb27">deals_damage()</a>, et <a class="el" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">_Player::entity</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_ad055706b7eb217b48f040cee55b8499c_cgraph.png" border="0" usemap="#abonus_8h_ad055706b7eb217b48f040cee55b8499c_cgraph" alt=""/></div>
+<map name="abonus_8h_ad055706b7eb217b48f040cee55b8499c_cgraph" id="abonus_8h_ad055706b7eb217b48f040cee55b8499c_cgraph">
+<area shape="rect" title="Apply the life increase effect to a player." alt="" coords="5,598,140,624"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="188,598,293,624"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="368,647,471,673"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="700,497,803,522"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="388,697,451,722"/>
+<area shape="rect" href="movement_8c.html#a47af43ea3e598d31c47c4039fd22de20" title="Push the entity on the bottom." alt="" coords="375,746,463,772"/>
+<area shape="rect" href="spaceship_8c.html#a4bd6fce724f03da73306d7f1287cfb06" title="Remove a random bonus from a spaceship." alt="" coords="341,598,497,624"/>
+<area shape="rect" href="spaceship_8c.html#a5051da8debe6053dced1eefd1800bd57" title="Get the bonus pointer from a spaceship." alt="" coords="711,997,792,1022"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="545,649,652,674"/>
+<area shape="rect" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a" title="Remove a child from an entity." alt="" coords="549,822,648,848"/>
+<area shape="rect" href="spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="2101,547,2207,573"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="851,395,1031,421"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="900,773,982,798"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1084,297,1181,322"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1082,346,1183,372"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1086,395,1179,421"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1936,446,2053,472"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1239,345,1338,370"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1391,246,1523,272"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="1396,295,1518,321"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="1398,345,1516,370"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1403,497,1511,522"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="1577,370,1698,396"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="1571,195,1704,221"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="1574,146,1701,172"/>
+<area shape="rect" href="player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="1577,321,1698,346"/>
+<area shape="rect" href="spaceship_8c.html#a055b065e8dede719c55392fb89ac5b55" title="Add a bonus to a spaceship." alt="" coords="1778,395,1862,421"/>
+<area shape="rect" href="spaceship_8c.html#a31bf6516f1323f34fe8e82cc8941f0dd" title="Check if a spaceship have a bonus." alt="" coords="1774,346,1866,372"/>
+<area shape="rect" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a" title="Check if a bonus can be reached by a player." alt="" coords="1752,195,1888,221"/>
+<area shape="rect" href="spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="1947,547,2042,573"/>
+<area shape="rect" href="missile_8c.html#ac4fddff2b43d581a22be2a836d4b7e75" title=" " alt="" coords="1753,146,1887,172"/>
+<area shape="rect" href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf" title="Free the memory of the animation." alt="" coords="1079,698,1186,724"/>
+<area shape="rect" href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb" title="Free the bonus memory." alt="" coords="1090,846,1175,872"/>
+<area shape="rect" href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39" title="Free the button memory." alt="" coords="1089,895,1176,921"/>
+<area shape="rect" href="ennemy_8c.html#a567f6b8f74983a850f9746dda26b389f" title="Free the ennemy memory." alt="" coords="1084,649,1181,674"/>
+<area shape="rect" href="missile_8c.html#a3edffd8571016f59239feebcbbd9cef4" title="Free the memory allocated for the missile." alt="" coords="1087,797,1178,822"/>
+<area shape="rect" href="player_8c.html#ad7f330e163525cf7e7fd589b83b0632d" title="Free the player allocated memory." alt="" coords="1090,747,1175,773"/>
+<area shape="rect" href="spaceship_8c.html#a6bc89e27a0fbe46608a60309fe6ab5c0" title="Free the spaceship allocated memory." alt="" coords="1234,698,1343,724"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_ad055706b7eb217b48f040cee55b8499c_icgraph.png" border="0" usemap="#abonus_8h_ad055706b7eb217b48f040cee55b8499c_icgraph" alt=""/></div>
+<map name="abonus_8h_ad055706b7eb217b48f040cee55b8499c_icgraph" id="abonus_8h_ad055706b7eb217b48f040cee55b8499c_icgraph">
+<area shape="rect" title="Apply the life increase effect to a player." alt="" coords="1119,5,1253,31"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a0d038d904e9a39d658824b3725b9db19" name="a0d038d904e9a39d658824b3725b9db19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d038d904e9a39d658824b3725b9db19">&#9670;&nbsp;</a></span>max_life_increase_effect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d038d904e9a39d658824b3725b9db19">&#9670;&#160;</a></span>max_life_increase_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -625,11 +1249,53 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>                                                                      {</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_struct" href="struct___life.html">Life</a>* life = <a class="code hl_function" href="spaceship_8h.html#a483b69e874826639c84a22acf2151afd">get_life</a>(eater-&gt;<a class="code hl_variable" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">entity</a>);</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span>(life == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span>(!reverse) {</div>
+<div class="line"><span class="lineno">  137</span>        life-&gt;<a class="code hl_variable" href="struct___life.html#a51ff65cec7e966fe860f083b6310545c">max_hp</a>++;</div>
+<div class="line"><span class="lineno">  138</span>        life-&gt;<a class="code hl_variable" href="struct___life.html#ab768aea6e8d5627ab0f54d730cead06e">hp</a> = life-&gt;<a class="code hl_variable" href="struct___life.html#a51ff65cec7e966fe860f083b6310545c">max_hp</a>;</div>
+<div class="line"><span class="lineno">  139</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  140</span>        life-&gt;<a class="code hl_variable" href="struct___life.html#a51ff65cec7e966fe860f083b6310545c">max_hp</a>--;</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="line"><span class="lineno">  142</span>}</div>
+<div class="ttc" id="aspaceship_8h_html_a483b69e874826639c84a22acf2151afd"><div class="ttname"><a href="spaceship_8h.html#a483b69e874826639c84a22acf2151afd">get_life</a></div><div class="ttdeci">Life * get_life(Entity *entity)</div><div class="ttdoc">Get the life object from an entity.</div><div class="ttdef"><b>Definition:</b> spaceship.c:193</div></div>
+<div class="ttc" id="astruct___life_html"><div class="ttname"><a href="struct___life.html">_Life</a></div><div class="ttdoc">Structure defining a life data of a spaceship.</div><div class="ttdef"><b>Definition:</b> struct.h:284</div></div>
+<div class="ttc" id="astruct___life_html_a51ff65cec7e966fe860f083b6310545c"><div class="ttname"><a href="struct___life.html#a51ff65cec7e966fe860f083b6310545c">_Life::max_hp</a></div><div class="ttdeci">int max_hp</div><div class="ttdef"><b>Definition:</b> struct.h:286</div></div>
+<div class="ttc" id="astruct___life_html_ab768aea6e8d5627ab0f54d730cead06e"><div class="ttname"><a href="struct___life.html#ab768aea6e8d5627ab0f54d730cead06e">_Life::hp</a></div><div class="ttdeci">int hp</div><div class="ttdef"><b>Definition:</b> struct.h:287</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">_Player::entity</a>, <a class="el" href="spaceship_8h.html#a483b69e874826639c84a22acf2151afd">get_life()</a>, <a class="el" href="struct___life.html#ab768aea6e8d5627ab0f54d730cead06e">_Life::hp</a>, et <a class="el" href="struct___life.html#a51ff65cec7e966fe860f083b6310545c">_Life::max_hp</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a0d038d904e9a39d658824b3725b9db19_cgraph.png" border="0" usemap="#abonus_8h_a0d038d904e9a39d658824b3725b9db19_cgraph" alt=""/></div>
+<map name="abonus_8h_a0d038d904e9a39d658824b3725b9db19_cgraph" id="abonus_8h_a0d038d904e9a39d658824b3725b9db19_cgraph">
+<area shape="rect" title="Increase the max life effect to the eater." alt="" coords="5,5,172,31"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="220,5,283,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a0d038d904e9a39d658824b3725b9db19_icgraph.png" border="0" usemap="#abonus_8h_a0d038d904e9a39d658824b3725b9db19_icgraph" alt=""/></div>
+<map name="abonus_8h_a0d038d904e9a39d658824b3725b9db19_icgraph" id="abonus_8h_a0d038d904e9a39d658824b3725b9db19_icgraph">
+<area shape="rect" title="Increase the max life effect to the eater." alt="" coords="1119,5,1285,31"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="af6ae2c28983452dbc839229545c9e7de" name="af6ae2c28983452dbc839229545c9e7de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6ae2c28983452dbc839229545c9e7de">&#9670;&nbsp;</a></span>on_collide_bonus()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ae2c28983452dbc839229545c9e7de">&#9670;&#160;</a></span>on_collide_bonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -677,11 +1343,139 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 if an entity were removed during collision, 0 otherwise </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                                     {</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span>(collide-&gt;<a class="code hl_variable" href="struct___entity.html#abf74ac326206b75054d7a4fbd2c39f89">type</a> == <a class="code hl_enumvalue" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72cade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>) {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span>(bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a208a810dc6f6dd6b90543d89c73b9a02">consumer</a>) {</div>
+<div class="line"><span class="lineno">   76</span>            bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#af08df55279f5a777477b81d2a0e93e70">effect</a>(game, (<a class="code hl_struct" href="struct___player.html">Player</a>*)collide-&gt;<a class="code hl_variable" href="struct___entity.html#aadc8012b0aa72cf28a883df5202e25d2">parent</a>, 0);</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="game_8h.html#a3720a19b675dd8e9a2006da280613caf">remove_entity</a>(game, bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a10f08a78208a79d1e413378a6eac744b">entity</a>, 0);</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a">is_bonus_reachable</a>(game, bonus)) {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="spaceship_8h.html#a31bf6516f1323f34fe8e82cc8941f0dd">have_bonus</a>(collide, bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a018f63329423f4ed54c13938e0cbc99d">type</a>)) {</div>
+<div class="line"><span class="lineno">   83</span>                <a class="code hl_function" href="game_8h.html#a3720a19b675dd8e9a2006da280613caf">remove_entity</a>(game, bonus-&gt;<a class="code hl_variable" href="struct___bonus.html#a10f08a78208a79d1e413378a6eac744b">entity</a>, 0);</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="spaceship_8h.html#a055b065e8dede719c55392fb89ac5b55">add_bonus</a>(game, collide, bonus);</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+<div class="ttc" id="abonus_8c_html_aaa33d0cd746fd6a8789d0c6f8638d19a"><div class="ttname"><a href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a">is_bonus_reachable</a></div><div class="ttdeci">int is_bonus_reachable(Game *game, Bonus *bonus)</div><div class="ttdoc">Check if a bonus can be reached by a player.</div><div class="ttdef"><b>Definition:</b> bonus.c:93</div></div>
+<div class="ttc" id="agame_8h_html_a3720a19b675dd8e9a2006da280613caf"><div class="ttname"><a href="game_8h.html#a3720a19b675dd8e9a2006da280613caf">remove_entity</a></div><div class="ttdeci">void remove_entity(Game *game, struct _Entity *entity, int explose)</div><div class="ttdoc">Remove an entity from the game.</div><div class="ttdef"><b>Definition:</b> game.c:273</div></div>
+<div class="ttc" id="aspaceship_8h_html_a055b065e8dede719c55392fb89ac5b55"><div class="ttname"><a href="spaceship_8h.html#a055b065e8dede719c55392fb89ac5b55">add_bonus</a></div><div class="ttdeci">void add_bonus(Game *game, Entity *entity, Bonus *bonus)</div><div class="ttdoc">Add a bonus to a spaceship.</div><div class="ttdef"><b>Definition:</b> spaceship.c:99</div></div>
+<div class="ttc" id="aspaceship_8h_html_a31bf6516f1323f34fe8e82cc8941f0dd"><div class="ttname"><a href="spaceship_8h.html#a31bf6516f1323f34fe8e82cc8941f0dd">have_bonus</a></div><div class="ttdeci">int have_bonus(Entity *entity, char bonus_type)</div><div class="ttdoc">Check if a spaceship have a bonus.</div><div class="ttdef"><b>Definition:</b> spaceship.c:151</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="spaceship_8h.html#a055b065e8dede719c55392fb89ac5b55">add_bonus()</a>, <a class="el" href="struct___bonus.html#a208a810dc6f6dd6b90543d89c73b9a02">_Bonus::consumer</a>, <a class="el" href="struct___bonus.html#af08df55279f5a777477b81d2a0e93e70">_Bonus::effect</a>, <a class="el" href="struct___bonus.html#a10f08a78208a79d1e413378a6eac744b">_Bonus::entity</a>, <a class="el" href="spaceship_8h.html#a31bf6516f1323f34fe8e82cc8941f0dd">have_bonus()</a>, <a class="el" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a">is_bonus_reachable()</a>, <a class="el" href="struct___entity.html#aadc8012b0aa72cf28a883df5202e25d2">_Entity::parent</a>, <a class="el" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72cade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>, <a class="el" href="game_8h.html#a3720a19b675dd8e9a2006da280613caf">remove_entity()</a>, <a class="el" href="struct___entity.html#abf74ac326206b75054d7a4fbd2c39f89">_Entity::type</a>, et <a class="el" href="struct___bonus.html#a018f63329423f4ed54c13938e0cbc99d">_Bonus::type</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="entity_8h.html#a0ef4f183cec335d3fc51ec1b423e471a">on_entity_collide()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_af6ae2c28983452dbc839229545c9e7de_cgraph.png" border="0" usemap="#abonus_8h_af6ae2c28983452dbc839229545c9e7de_cgraph" alt=""/></div>
+<map name="abonus_8h_af6ae2c28983452dbc839229545c9e7de_cgraph" id="abonus_8h_af6ae2c28983452dbc839229545c9e7de_cgraph">
+<area shape="rect" title="Function called when a bonus collide another entity." alt="" coords="5,145,127,170"/>
+<area shape="rect" href="spaceship_8c.html#a055b065e8dede719c55392fb89ac5b55" title="Add a bonus to a spaceship." alt="" coords="374,43,458,69"/>
+<area shape="rect" href="spaceship_8c.html#a31bf6516f1323f34fe8e82cc8941f0dd" title="Check if a spaceship have a bonus." alt="" coords="181,94,272,120"/>
+<area shape="rect" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a" title="Check if a bonus can be reached by a player." alt="" coords="1228,509,1364,534"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="175,497,278,522"/>
+<area shape="rect" href="spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="1622,471,1717,497"/>
+<area shape="rect" href="spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="1771,522,1876,548"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="554,94,672,120"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="326,295,506,321"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="1782,747,1865,773"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="565,246,661,272"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="562,295,664,321"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="567,345,659,370"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="720,345,819,370"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="867,395,999,421"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="872,346,994,372"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="874,297,992,322"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="879,445,987,470"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="1047,546,1180,572"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="1050,497,1177,522"/>
+<area shape="rect" href="player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="1053,297,1174,322"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="1243,623,1349,649"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="1439,722,1542,748"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="1459,673,1522,698"/>
+<area shape="rect" href="movement_8c.html#a47af43ea3e598d31c47c4039fd22de20" title="Push the entity on the bottom." alt="" coords="1446,623,1534,649"/>
+<area shape="rect" href="spaceship_8c.html#a4bd6fce724f03da73306d7f1287cfb06" title="Remove a random bonus from a spaceship." alt="" coords="1412,522,1568,548"/>
+<area shape="rect" href="spaceship_8c.html#a5051da8debe6053dced1eefd1800bd57" title="Get the bonus pointer from a spaceship." alt="" coords="1629,647,1710,673"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="1616,573,1723,598"/>
+<area shape="rect" href="entity_8c.html#a2f77c2473fe3ce412696ef5d8adf9d9a" title="Remove a child from an entity." alt="" coords="1620,722,1719,748"/>
+<area shape="rect" href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf" title="Free the memory of the animation." alt="" coords="1924,623,2030,649"/>
+<area shape="rect" href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb" title="Free the bonus memory." alt="" coords="1935,673,2020,698"/>
+<area shape="rect" href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39" title="Free the button memory." alt="" coords="1934,722,2020,748"/>
+<area shape="rect" href="ennemy_8c.html#a567f6b8f74983a850f9746dda26b389f" title="Free the ennemy memory." alt="" coords="1929,771,2025,797"/>
+<area shape="rect" href="missile_8c.html#a3edffd8571016f59239feebcbbd9cef4" title="Free the memory allocated for the missile." alt="" coords="1932,821,2023,846"/>
+<area shape="rect" href="player_8c.html#ad7f330e163525cf7e7fd589b83b0632d" title="Free the player allocated memory." alt="" coords="1935,870,2020,896"/>
+<area shape="rect" href="spaceship_8c.html#a6bc89e27a0fbe46608a60309fe6ab5c0" title="Free the spaceship allocated memory." alt="" coords="2078,821,2188,846"/>
+<area shape="rect" href="missile_8c.html#ac4fddff2b43d581a22be2a836d4b7e75" title=" " alt="" coords="1229,459,1363,485"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_af6ae2c28983452dbc839229545c9e7de_icgraph.png" border="0" usemap="#abonus_8h_af6ae2c28983452dbc839229545c9e7de_icgraph" alt=""/></div>
+<map name="abonus_8h_af6ae2c28983452dbc839229545c9e7de_icgraph" id="abonus_8h_af6ae2c28983452dbc839229545c9e7de_icgraph">
+<area shape="rect" title="Function called when a bonus collide another entity." alt="" coords="2464,1014,2585,1040"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="2298,802,2416,828"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="2150,650,2250,676"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="2010,574,2102,600"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,705,202,730"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="786,498,885,524"/>
+<area shape="rect" href="ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="781,429,891,454"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1819,321,1925,346"/>
+<area shape="rect" href="player_8c.html#ab216a3fb7ef6a32f9721bee2fb30c639" title="Create a player object." alt="" coords="1191,473,1291,498"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1782,701,1962,726"/>
+<area shape="rect" href="menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d" title="Set the menu of the game. It replace and free the previous to set the new one." alt="" coords="1202,1251,1280,1277"/>
+<area shape="rect" href="background_8c.html#af1597f6233403ec9fb979e80418af500" title="Init the background of the game." alt="" coords="1816,145,1928,170"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,466,519,492"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,542,716,568"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,429,344,454"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,705,55,730"/>
+<area shape="rect" href="ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="1596,197,1719,222"/>
+<area shape="rect" href="shooter_8c.html#ac3fc0d74a904e0c97d5956187ae5aa02" title="Shoot a basic missile from an ennemy." alt="" coords="1612,146,1703,172"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="1384,346,1517,372"/>
+<area shape="rect" href="shooter_8c.html#ab943a4cb2fee6509ff0e97387c14d156" title="Shoot a perforing missile from the player." alt="" coords="1581,246,1734,272"/>
+<area shape="rect" href="shooter_8c.html#a304ec90f7c0c40e6a27c656998599992" title="Shoot a super laser from the player." alt="" coords="1387,447,1514,473"/>
+<area shape="rect" href="shooter_8c.html#a5f9f19b321478d863e4191b7511fd716" title="Shoot a missile from an ennemy to the player." alt="" coords="1590,295,1725,321"/>
+<area shape="rect" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6" title="Spawn a unit to protect the eater." alt="" coords="1594,397,1721,422"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="1377,297,1524,322"/>
+<area shape="rect" href="shooter_8c.html#ab444f02d90b7eabd936b5d641e84040f" title="Get the shoot function from its ID." alt="" coords="1175,297,1307,322"/>
+<area shape="rect" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4" title="Increase the power of the eater shoot." alt="" coords="1163,346,1319,372"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="955,397,1115,422"/>
+<area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="990,906,1080,932"/>
+<area shape="rect" href="click__actions_8c.html#a33b339c60ef0dbde2391f71f9b567169" title="Restart a match." alt="" coords="764,906,907,932"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1606,999,1709,1025"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="1398,853,1503,878"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="1175,853,1307,878"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="1177,802,1305,828"/>
+<area shape="rect" href="animation_8c.html#a0938d53058c7ab6460cef261f2652719" title="Draw the animation." alt="" coords="1406,926,1494,952"/>
+<area shape="rect" href="spaceship_8c.html#a2e00e9ca0df582dcb4d0080b24a1d311" title="Free the bonuses of a spaceship." alt="" coords="1401,975,1500,1001"/>
+<area shape="rect" href="game_8c.html#a98bb68f0ee0b77fbd9d7c56957190c9d" title="Free the game memory." alt="" coords="600,1402,683,1428"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1384,1329,1516,1354"/>
+<area shape="rect" href="click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="980,955,1090,981"/>
+<area shape="rect" href="spaceship_8c.html#a4af6268d5b5c1740ae3f6ffa8dec7c9c" title="Remove a bonus from a spaceship." alt="" coords="1397,1025,1503,1050"/>
+<area shape="rect" href="game_8c.html#a0eb38159a2b3f8f87a3d84562e8af90e" title="Remove all entities of specified type." alt="" coords="1367,1227,1533,1253"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1396,650,1504,676"/>
+<area shape="rect" href="game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="992,1005,1078,1030"/>
+<area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="996,43,1074,69"/>
+<area shape="rect" href="click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="963,1153,1107,1178"/>
+<area shape="rect" href="click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="987,1202,1083,1228"/>
+<area shape="rect" href="click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="987,1251,1083,1277"/>
+<area shape="rect" href="click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="984,1301,1086,1326"/>
+<area shape="rect" href="click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="987,1054,1083,1080"/>
+<area shape="rect" href="game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="406,1117,505,1142"/>
+<area shape="rect" href="click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="962,1103,1108,1129"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="abf135890bec1b253c1cde057a61256c4" name="abf135890bec1b253c1cde057a61256c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf135890bec1b253c1cde057a61256c4">&#9670;&nbsp;</a></span>power_up_shoot_effect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abf135890bec1b253c1cde057a61256c4">&#9670;&#160;</a></span>power_up_shoot_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -721,11 +1515,99 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                   {</div>
+<div class="line"><span class="lineno">  150</span>    <a class="code hl_struct" href="struct___space_ship.html">SpaceShip</a> *ship = eater-&gt;<a class="code hl_variable" href="struct___player.html#a943c63a27f4eccf9a95e50c9e3521130">ship</a>;</div>
+<div class="line"><span class="lineno">  151</span>    <a class="code hl_struct" href="struct___shooter.html">Shooter</a> *shooter = &amp;ship-&gt;<a class="code hl_variable" href="struct___space_ship.html#a1a830e8f335a4d3a8899b6da42ba0ae8">shooter</a>;</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">if</span>(!reverse) shooter-&gt;<a class="code hl_variable" href="struct___shooter.html#ac901f2b956deaa5d4a9d5e0a2e48098e">update_shoot</a> = <a class="code hl_function" href="shooter_8h.html#a51563763ccfd5c17ce062e07a39cf503">shoot_multidirectional</a>;</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">else</span> shooter-&gt;<a class="code hl_variable" href="struct___shooter.html#ac901f2b956deaa5d4a9d5e0a2e48098e">update_shoot</a> = <a class="code hl_function" href="shooter_8h.html#a783fccdfa6751cf140f0f4b7fd3c2e9a">shoot_player_basic</a>;</div>
+<div class="line"><span class="lineno">  154</span>}</div>
+<div class="ttc" id="ashooter_8h_html_a51563763ccfd5c17ce062e07a39cf503"><div class="ttname"><a href="shooter_8h.html#a51563763ccfd5c17ce062e07a39cf503">shoot_multidirectional</a></div><div class="ttdeci">int shoot_multidirectional(Game *game, Entity *entity)</div><div class="ttdoc">Shoot missiles in multiple direction from the player.</div><div class="ttdef"><b>Definition:</b> shooter.c:72</div></div>
+<div class="ttc" id="ashooter_8h_html_a783fccdfa6751cf140f0f4b7fd3c2e9a"><div class="ttname"><a href="shooter_8h.html#a783fccdfa6751cf140f0f4b7fd3c2e9a">shoot_player_basic</a></div><div class="ttdeci">int shoot_player_basic(Game *game, Entity *entity)</div><div class="ttdoc">Shoot a basic missile from the player.</div><div class="ttdef"><b>Definition:</b> shooter.c:25</div></div>
+<div class="ttc" id="astruct___shooter_html"><div class="ttname"><a href="struct___shooter.html">_Shooter</a></div><div class="ttdoc">Structure defining a shooter data of a spaceship It used to manage the missile creaton.</div><div class="ttdef"><b>Definition:</b> struct.h:297</div></div>
+<div class="ttc" id="astruct___shooter_html_ac901f2b956deaa5d4a9d5e0a2e48098e"><div class="ttname"><a href="struct___shooter.html#ac901f2b956deaa5d4a9d5e0a2e48098e">_Shooter::update_shoot</a></div><div class="ttdeci">SHOOT_FUNC update_shoot</div><div class="ttdef"><b>Definition:</b> struct.h:298</div></div>
+<div class="ttc" id="astruct___space_ship_html"><div class="ttname"><a href="struct___space_ship.html">_SpaceShip</a></div><div class="ttdoc">Structure defininf a spaceship data (for player and ennemy)</div><div class="ttdef"><b>Definition:</b> struct.h:332</div></div>
+<div class="ttc" id="astruct___space_ship_html_a1a830e8f335a4d3a8899b6da42ba0ae8"><div class="ttname"><a href="struct___space_ship.html#a1a830e8f335a4d3a8899b6da42ba0ae8">_SpaceShip::shooter</a></div><div class="ttdeci">struct _Shooter shooter</div><div class="ttdef"><b>Definition:</b> struct.h:334</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___player.html#a943c63a27f4eccf9a95e50c9e3521130">_Player::ship</a>, <a class="el" href="shooter_8h.html#a51563763ccfd5c17ce062e07a39cf503">shoot_multidirectional()</a>, <a class="el" href="shooter_8h.html#a783fccdfa6751cf140f0f4b7fd3c2e9a">shoot_player_basic()</a>, <a class="el" href="struct___space_ship.html#a1a830e8f335a4d3a8899b6da42ba0ae8">_SpaceShip::shooter</a>, et <a class="el" href="struct___shooter.html#ac901f2b956deaa5d4a9d5e0a2e48098e">_Shooter::update_shoot</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_abf135890bec1b253c1cde057a61256c4_cgraph.png" border="0" usemap="#abonus_8h_abf135890bec1b253c1cde057a61256c4_cgraph" alt=""/></div>
+<map name="abonus_8h_abf135890bec1b253c1cde057a61256c4_cgraph" id="abonus_8h_abf135890bec1b253c1cde057a61256c4_cgraph">
+<area shape="rect" title="Increase the power of the eater shoot." alt="" coords="5,767,162,792"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="210,741,357,767"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="405,792,538,818"/>
+<area shape="rect" href="ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="410,743,533,768"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="586,768,692,794"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="2146,505,2242,531"/>
+<area shape="rect" href="movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="740,917,900,943"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="743,1243,897,1268"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="774,643,866,668"/>
+<area shape="rect" href="movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="1185,1116,1330,1142"/>
+<area shape="rect" href="movement_8c.html#a6b39b318ba13066e262a96e154eeeda1" title="Correspond to a movement circling an entity. The entity will circle around another entity." alt="" coords="957,943,1116,968"/>
+<area shape="rect" href="movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="948,1091,1124,1116"/>
+<area shape="rect" href="movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="1391,892,1523,918"/>
+<area shape="rect" href="movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="954,1041,1119,1067"/>
+<area shape="rect" href="movement_8c.html#a5a7236c788c900918ea53feb689400a8" title="Correspond to a movement following the player on its X axis." alt="" coords="968,992,1105,1018"/>
+<area shape="rect" href="movement_8c.html#ab6cc33671dfce95a0d2059b72b1b2018" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="954,841,1119,867"/>
+<area shape="rect" href="movement_8c.html#a100b269e754d4260566e5adba43169b7" title="Correspond to a movement left and right. The entity will bounce on the left and right borders of the ..." alt="" coords="967,693,1106,719"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="2135,733,2252,759"/>
+<area shape="rect" href="movement_8c.html#ae2ef5889c5b490e2965664d5c1c54b3f" title="Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern." alt="" coords="963,792,1110,818"/>
+<area shape="rect" href="movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="949,743,1123,768"/>
+<area shape="rect" href="entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="1206,992,1309,1018"/>
+<area shape="rect" href="utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="1191,943,1324,968"/>
+<area shape="rect" href="movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="1176,1041,1339,1067"/>
+<area shape="rect" href="movement_8c.html#a3108b5e32dc385f5f796606e6a33bcab" title=" " alt="" coords="1172,693,1343,733"/>
+<area shape="rect" href="entity_8c.html#a10a6481f021a113fc7648265509bc38a" title="The entity can&#39;t go out of the screen." alt="" coords="1188,757,1327,783"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="2143,956,2244,982"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="998,1293,1075,1319"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="987,480,1086,506"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1391,279,1523,304"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="1196,529,1319,555"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="1198,480,1317,506"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1585,280,1693,306"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1755,380,1859,406"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1907,683,2087,708"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="1956,128,2038,154"/>
+<area shape="rect" href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf" title="Free the memory of the animation." alt="" coords="2141,55,2247,80"/>
+<area shape="rect" href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb" title="Free the bonus memory." alt="" coords="2151,104,2236,130"/>
+<area shape="rect" href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39" title="Free the button memory." alt="" coords="2151,153,2237,179"/>
+<area shape="rect" href="ennemy_8c.html#a567f6b8f74983a850f9746dda26b389f" title="Free the ennemy memory." alt="" coords="2146,203,2242,228"/>
+<area shape="rect" href="missile_8c.html#a3edffd8571016f59239feebcbbd9cef4" title="Free the memory allocated for the missile." alt="" coords="2148,252,2239,278"/>
+<area shape="rect" href="player_8c.html#ad7f330e163525cf7e7fd589b83b0632d" title="Free the player allocated memory." alt="" coords="2151,5,2236,31"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="1396,555,1518,580"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="1391,480,1523,506"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="1393,431,1521,456"/>
+<area shape="rect" href="player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="1396,604,1518,630"/>
+<area shape="rect" href="spaceship_8c.html#a055b065e8dede719c55392fb89ac5b55" title="Add a bonus to a spaceship." alt="" coords="1765,683,1849,708"/>
+<area shape="rect" href="spaceship_8c.html#a31bf6516f1323f34fe8e82cc8941f0dd" title="Check if a spaceship have a bonus." alt="" coords="1594,632,1685,658"/>
+<area shape="rect" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a" title="Check if a bonus can be reached by a player." alt="" coords="1571,480,1707,506"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="1587,431,1692,456"/>
+<area shape="rect" href="missile_8c.html#ac4fddff2b43d581a22be2a836d4b7e75" title=" " alt="" coords="1573,381,1706,407"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_abf135890bec1b253c1cde057a61256c4_icgraph.png" border="0" usemap="#abonus_8h_abf135890bec1b253c1cde057a61256c4_icgraph" alt=""/></div>
+<map name="abonus_8h_abf135890bec1b253c1cde057a61256c4_icgraph" id="abonus_8h_abf135890bec1b253c1cde057a61256c4_icgraph">
+<area shape="rect" title="Increase the power of the eater shoot." alt="" coords="1119,5,1275,31"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="abb4843ebffeec6a35d3b6dbd85c5bee5" name="abb4843ebffeec6a35d3b6dbd85c5bee5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb4843ebffeec6a35d3b6dbd85c5bee5">&#9670;&nbsp;</a></span>power_up_speed_effect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4843ebffeec6a35d3b6dbd85c5bee5">&#9670;&#160;</a></span>power_up_speed_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -765,11 +1647,36 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>                                                                   {</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">if</span>(!reverse) eater-&gt;<a class="code hl_variable" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">entity</a>-&gt;<a class="code hl_variable" href="struct___entity.html#a16580af85dd7febf4475cdd6788def64">speed</a>-&gt;<a class="code hl_variable" href="struct___speed.html#ace61bbae50acec4e7994666a02572b9d">speed</a> += 3;</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">else</span> eater-&gt;<a class="code hl_variable" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">entity</a>-&gt;<a class="code hl_variable" href="struct___entity.html#a16580af85dd7febf4475cdd6788def64">speed</a>-&gt;<a class="code hl_variable" href="struct___speed.html#ace61bbae50acec4e7994666a02572b9d">speed</a> -= 3;</div>
+<div class="line"><span class="lineno">  147</span>}</div>
+<div class="ttc" id="astruct___entity_html_a16580af85dd7febf4475cdd6788def64"><div class="ttname"><a href="struct___entity.html#a16580af85dd7febf4475cdd6788def64">_Entity::speed</a></div><div class="ttdeci">struct _Speed * speed</div><div class="ttdef"><b>Definition:</b> struct.h:261</div></div>
+<div class="ttc" id="astruct___speed_html_ace61bbae50acec4e7994666a02572b9d"><div class="ttname"><a href="struct___speed.html#ace61bbae50acec4e7994666a02572b9d">_Speed::speed</a></div><div class="ttdeci">int speed</div><div class="ttdef"><b>Definition:</b> struct.h:275</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">_Player::entity</a>, <a class="el" href="struct___entity.html#a16580af85dd7febf4475cdd6788def64">_Entity::speed</a>, et <a class="el" href="struct___speed.html#ace61bbae50acec4e7994666a02572b9d">_Speed::speed</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_abb4843ebffeec6a35d3b6dbd85c5bee5_icgraph.png" border="0" usemap="#abonus_8h_abb4843ebffeec6a35d3b6dbd85c5bee5_icgraph" alt=""/></div>
+<map name="abonus_8h_abb4843ebffeec6a35d3b6dbd85c5bee5_icgraph" id="abonus_8h_abb4843ebffeec6a35d3b6dbd85c5bee5_icgraph">
+<area shape="rect" title="Increase the speed of the eater." alt="" coords="1119,5,1278,31"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="ace50826aafb3dec795ce017c91680fb6" name="ace50826aafb3dec795ce017c91680fb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace50826aafb3dec795ce017c91680fb6">&#9670;&nbsp;</a></span>shield_effect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace50826aafb3dec795ce017c91680fb6">&#9670;&#160;</a></span>shield_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,11 +1716,49 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>                                                           {</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span>(reverse) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">else</span> <a class="code hl_function" href="spaceship_8h.html#a3dd762274847a6e21b8fa1e49c322285">enable_shield</a>(game, eater-&gt;<a class="code hl_variable" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">entity</a>);</div>
+<div class="line"><span class="lineno">  131</span>}</div>
+<div class="ttc" id="aspaceship_8h_html_a3dd762274847a6e21b8fa1e49c322285"><div class="ttname"><a href="spaceship_8h.html#a3dd762274847a6e21b8fa1e49c322285">enable_shield</a></div><div class="ttdeci">int enable_shield(Game *game, Entity *entity)</div><div class="ttdoc">Function to enable the shield of a spaceship.</div><div class="ttdef"><b>Definition:</b> spaceship.c:277</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="spaceship_8h.html#a3dd762274847a6e21b8fa1e49c322285">enable_shield()</a>, et <a class="el" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">_Player::entity</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_ace50826aafb3dec795ce017c91680fb6_cgraph.png" border="0" usemap="#abonus_8h_ace50826aafb3dec795ce017c91680fb6_cgraph" alt=""/></div>
+<map name="abonus_8h_ace50826aafb3dec795ce017c91680fb6_cgraph" id="abonus_8h_ace50826aafb3dec795ce017c91680fb6_cgraph">
+<area shape="rect" title="Apply the shield effect to a player." alt="" coords="5,55,101,80"/>
+<area shape="rect" href="spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285" title="Function to enable the shield of a spaceship." alt="" coords="149,55,249,80"/>
+<area shape="rect" href="entity_8c.html#ab62762cd20888e143c235526b83114fe" title="Add a child to an entity." alt="" coords="336,5,412,31"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="326,55,422,80"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="297,104,451,130"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="499,79,601,104"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="511,128,589,154"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_ace50826aafb3dec795ce017c91680fb6_icgraph.png" border="0" usemap="#abonus_8h_ace50826aafb3dec795ce017c91680fb6_icgraph" alt=""/></div>
+<map name="abonus_8h_ace50826aafb3dec795ce017c91680fb6_icgraph" id="abonus_8h_ace50826aafb3dec795ce017c91680fb6_icgraph">
+<area shape="rect" title="Apply the shield effect to a player." alt="" coords="1119,5,1214,31"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a12d463e1ca03cecf3fb8309595f46ec6" name="a12d463e1ca03cecf3fb8309595f46ec6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12d463e1ca03cecf3fb8309595f46ec6">&#9670;&nbsp;</a></span>spawn_unit_effect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d463e1ca03cecf3fb8309595f46ec6">&#9670;&#160;</a></span>spawn_unit_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -853,13 +1798,96 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>                                                               {</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">if</span>(!reverse) {</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_function" href="missile_8h.html#aebac63d93d7841927bb98344b3fe972f">create_missile</a>(game, eater-&gt;<a class="code hl_variable" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">entity</a>, <a class="code hl_define" href="missile_8h.html#a2ac843b73c9b24152e0ad35b08662d55">PROTECTING_MISSILE</a>, -1);</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="line"><span class="lineno">  165</span>}</div>
+<div class="ttc" id="amissile_8h_html_a2ac843b73c9b24152e0ad35b08662d55"><div class="ttname"><a href="missile_8h.html#a2ac843b73c9b24152e0ad35b08662d55">PROTECTING_MISSILE</a></div><div class="ttdeci">#define PROTECTING_MISSILE</div><div class="ttdoc">The id of protecting missile.</div><div class="ttdef"><b>Definition:</b> missile.h:48</div></div>
+<div class="ttc" id="amissile_8h_html_aebac63d93d7841927bb98344b3fe972f"><div class="ttname"><a href="missile_8h.html#aebac63d93d7841927bb98344b3fe972f">create_missile</a></div><div class="ttdeci">Missile * create_missile(Game *game, Entity *sender, int type, int x)</div><div class="ttdoc">Create a missile object.</div><div class="ttdef"><b>Definition:</b> missile.c:15</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="missile_8h.html#aebac63d93d7841927bb98344b3fe972f">create_missile()</a>, <a class="el" href="struct___player.html#afd1677f57b922a85a7dd7c9ffd1168e4">_Player::entity</a>, et <a class="el" href="missile_8h.html#a2ac843b73c9b24152e0ad35b08662d55">PROTECTING_MISSILE</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="bonus_8h.html#ab6004477e9c2811af91ed032d4bd33e2">get_bonus_effect_by_id()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_cgraph.png" border="0" usemap="#abonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_cgraph" alt=""/></div>
+<map name="abonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_cgraph" id="abonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_cgraph">
+<area shape="rect" title="Spawn a unit to protect the eater." alt="" coords="5,792,133,818"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="181,792,286,818"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1740,504,1836,530"/>
+<area shape="rect" href="movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="334,941,494,967"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="337,1268,491,1294"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="368,668,460,694"/>
+<area shape="rect" href="movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="779,979,925,1004"/>
+<area shape="rect" href="movement_8c.html#a6b39b318ba13066e262a96e154eeeda1" title="Correspond to a movement circling an entity. The entity will circle around another entity." alt="" coords="551,916,710,942"/>
+<area shape="rect" href="movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="542,1017,719,1043"/>
+<area shape="rect" href="movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="985,1104,1117,1130"/>
+<area shape="rect" href="movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="548,1116,713,1142"/>
+<area shape="rect" href="movement_8c.html#a5a7236c788c900918ea53feb689400a8" title="Correspond to a movement following the player on its X axis." alt="" coords="562,1067,699,1092"/>
+<area shape="rect" href="movement_8c.html#ab6cc33671dfce95a0d2059b72b1b2018" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="548,768,713,794"/>
+<area shape="rect" href="movement_8c.html#a100b269e754d4260566e5adba43169b7" title="Correspond to a movement left and right. The entity will bounce on the left and right borders of the ..." alt="" coords="561,719,700,744"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1729,732,1847,758"/>
+<area shape="rect" href="movement_8c.html#ae2ef5889c5b490e2965664d5c1c54b3f" title="Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern." alt="" coords="557,817,704,843"/>
+<area shape="rect" href="movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="543,867,718,892"/>
+<area shape="rect" href="entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="801,1041,903,1067"/>
+<area shape="rect" href="utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="786,916,918,942"/>
+<area shape="rect" href="movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the targer." alt="" coords="771,1104,933,1130"/>
+<area shape="rect" href="movement_8c.html#a3108b5e32dc385f5f796606e6a33bcab" title=" " alt="" coords="767,718,937,759"/>
+<area shape="rect" href="entity_8c.html#a10a6481f021a113fc7648265509bc38a" title="The entity can&#39;t go out of the screen." alt="" coords="782,867,922,892"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1737,1007,1839,1032"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="592,1319,669,1344"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="581,541,680,567"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="985,280,1117,306"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="791,541,913,567"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="793,480,911,506"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1179,631,1288,656"/>
+<area shape="rect" href="game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1350,455,1453,480"/>
+<area shape="rect" href="animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1501,681,1681,707"/>
+<area shape="rect" href="entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="1550,128,1632,154"/>
+<area shape="rect" href="animation_8c.html#a400500a1dd3277c6a70a737596e01bbf" title="Free the memory of the animation." alt="" coords="1735,104,1841,130"/>
+<area shape="rect" href="bonus_8c.html#abf31d3255948e555c78bf211a63c62bb" title="Free the bonus memory." alt="" coords="1745,153,1831,179"/>
+<area shape="rect" href="menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39" title="Free the button memory." alt="" coords="1745,203,1831,228"/>
+<area shape="rect" href="ennemy_8c.html#a567f6b8f74983a850f9746dda26b389f" title="Free the ennemy memory." alt="" coords="1740,252,1836,278"/>
+<area shape="rect" href="missile_8c.html#a3edffd8571016f59239feebcbbd9cef4" title="Free the memory allocated for the missile." alt="" coords="1742,5,1834,31"/>
+<area shape="rect" href="player_8c.html#ad7f330e163525cf7e7fd589b83b0632d" title="Free the player allocated memory." alt="" coords="1745,55,1831,80"/>
+<area shape="rect" href="bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="991,531,1112,556"/>
+<area shape="rect" href="ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="985,429,1117,455"/>
+<area shape="rect" href="missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="988,380,1115,406"/>
+<area shape="rect" href="player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="991,480,1112,506"/>
+<area shape="rect" href="spaceship_8c.html#a055b065e8dede719c55392fb89ac5b55" title="Add a bonus to a spaceship." alt="" coords="1191,757,1276,783"/>
+<area shape="rect" href="spaceship_8c.html#a31bf6516f1323f34fe8e82cc8941f0dd" title="Check if a spaceship have a bonus." alt="" coords="1188,581,1279,607"/>
+<area shape="rect" href="bonus_8c.html#aaa33d0cd746fd6a8789d0c6f8638d19a" title="Check if a bonus can be reached by a player." alt="" coords="1165,429,1302,455"/>
+<area shape="rect" href="spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="1354,783,1449,808"/>
+<area shape="rect" href="spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="1539,808,1644,834"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="1181,380,1286,406"/>
+<area shape="rect" href="spaceship_8c.html#a6932076626953d274498c13e990e314a" title="Function to disable the shield of a spaceship." alt="" coords="1350,380,1453,406"/>
+<area shape="rect" href="missile_8c.html#ac4fddff2b43d581a22be2a836d4b7e75" title=" " alt="" coords="1167,331,1300,356"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="bonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_icgraph.png" border="0" usemap="#abonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_icgraph" alt=""/></div>
+<map name="abonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_icgraph" id="abonus_8h_a12d463e1ca03cecf3fb8309595f46ec6_icgraph">
+<area shape="rect" title="Spawn a unit to protect the eater." alt="" coords="1119,5,1246,31"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="911,5,1071,31"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

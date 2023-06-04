@@ -1,0 +1,8 @@
+<map id="draw_bar" name="draw_bar">
+<area shape="rect" id="node1" title="Draw a bar on the frame." alt="" coords="666,55,740,80"/>
+<area shape="rect" id="node2" href="$frame_8c.html#ab3319b2d6bad104ddd365972e19900be" title="Draw the ennemy data on the frame." alt="" coords="516,29,618,55"/>
+<area shape="rect" id="node6" href="$frame_8c.html#acdef13b2a543e56c77da1f97a449066f" title="Draw the player data on the frame (Its HUD)" alt="" coords="240,80,331,106"/>
+<area shape="rect" id="node3" href="$animation_8c.html#a0938d53058c7ab6460cef261f2652719" title="Draw the animation." alt="" coords="379,29,468,55"/>
+<area shape="rect" id="node4" href="$frame_8c.html#a3b2188cb440fcd1d85ddc7f60f20aa96" title="Draw the game on the frame." alt="" coords="103,55,192,80"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,55,55,80"/>
+</map>

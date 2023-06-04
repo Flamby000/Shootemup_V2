@@ -1,0 +1,4 @@
+<map id="_Settings" name="_Settings">
+<area shape="rect" id="node1" title="Structure defining the settings of the game (used a global variable)" alt="" coords="7,94,84,120"/>
+<area shape="rect" id="node2" href="$struct___difficulty.html" title="Structure defining the configuration of a match difficulty." alt="" coords="5,5,86,31"/>
+</map>
