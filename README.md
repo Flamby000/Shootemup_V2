@@ -37,7 +37,7 @@ make run
 Le jeu propose 2 modes de jeu :
 
 - **Mode campagne** : le joueur joue à différents niveaux avec des ennemis de plus en plus forts.
-- **Mode infinie** : le joueur joue à un niveau infini. Le but de ce mode est de survivre le plus longtemps possible.
+- **Mode infini** : le joueur joue à un niveau infini. Le but de ce mode est de survivre le plus longtemps possible.
 
 ## Paramètres du jeu
 
