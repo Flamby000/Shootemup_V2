@@ -1,0 +1,8 @@
+<map id="create_bonus" name="create_bonus">
+<area shape="rect" id="node1" title="Create a bonus object." alt="" coords="764,5,863,31"/>
+<area shape="rect" id="node2" href="$level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" id="node6" href="$bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="567,31,716,56"/>
+<area shape="rect" id="node3" href="$level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" id="node4" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>

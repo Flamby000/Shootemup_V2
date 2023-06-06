@@ -1,0 +1,4 @@
+<map id="movement_follow_x" name="movement_follow_x">
+<area shape="rect" id="node1" title="Correspond to a movement following the player on its X axis." alt="" coords="5,5,143,31"/>
+<area shape="rect" id="node2" href="$entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="191,5,293,31"/>
+</map>

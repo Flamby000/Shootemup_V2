@@ -1,0 +1,6 @@
+<map id="init_square" name="init_square">
+<area shape="rect" id="node1" title="Create a animation structure with only one color to draw a square shape." alt="" coords="388,5,473,31"/>
+<area shape="rect" id="node2" href="$background_8c.html#af1597f6233403ec9fb979e80418af500" title="Init the background of the game." alt="" coords="228,5,340,31"/>
+<area shape="rect" id="node3" href="$game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="103,5,180,31"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>

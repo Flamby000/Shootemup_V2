@@ -34,7 +34,6 @@ Animation* init_sprite(MLV_Image* sprite);
  */
 Animation* init_square(MLV_Color color);
 
-
 /**
  * @brief Create a animation structure with multiple sprite
  * 
@@ -53,7 +52,6 @@ Animation* init_animation(char* path);
  * @return An animation using multiple images for each direction
  */
 Animation* init_multiple_animation(char* forward_path, char* backward_path, char* left_path, char* right_path);
-
 
 /**
  * @brief Create a simple sprite or an animation depending on the file name

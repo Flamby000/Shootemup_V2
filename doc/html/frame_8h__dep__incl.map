@@ -1,0 +1,9 @@
+<map id="include/interface/frame.h" name="include/interface/frame.h">
+<area shape="rect" id="node1" title="Functions to create and display the game frame." alt="" coords="376,5,540,31"/>
+<area shape="rect" id="node2" href="$animation_8c.html" title=" " alt="" coords="5,79,170,105"/>
+<area shape="rect" id="node3" href="$frame_8c.html" title=" " alt="" coords="194,79,336,105"/>
+<area shape="rect" id="node4" href="$main_8c.html" title=" " alt="" coords="360,79,442,105"/>
+<area shape="rect" id="node5" href="$settings_8c.html" title=" " alt="" coords="467,79,567,105"/>
+<area shape="rect" id="node6" href="$background_8c.html" title=" " alt="" coords="592,79,741,105"/>
+<area shape="rect" id="node7" href="$movement_8c.html" title=" " alt="" coords="765,79,909,105"/>
+</map>

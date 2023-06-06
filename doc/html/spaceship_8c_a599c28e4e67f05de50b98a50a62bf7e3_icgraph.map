@@ -1,0 +1,6 @@
+<map id="update_boost" name="update_boost">
+<area shape="rect" id="node1" title="Update the spaceship boost data." alt="" coords="424,5,524,31"/>
+<area shape="rect" id="node2" href="$spaceship_8c.html#a31601cbf05ddaeb261c3860cf7a16bed" title="Update the spaceship data." alt="" coords="250,5,376,31"/>
+<area shape="rect" id="node3" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>

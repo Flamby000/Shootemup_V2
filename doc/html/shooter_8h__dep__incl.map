@@ -1,0 +1,7 @@
+<map id="include/utils/shooter.h" name="include/utils/shooter.h">
+<area shape="rect" id="node1" title="Functions to create the missiles from a sender when it shoot." alt="" coords="215,5,362,31"/>
+<area shape="rect" id="node2" href="$bonus_8c.html" title=" " alt="" coords="5,79,126,105"/>
+<area shape="rect" id="node3" href="$ennemy_8c.html" title=" " alt="" coords="150,79,280,105"/>
+<area shape="rect" id="node4" href="$player_8c.html" title=" " alt="" coords="303,79,423,105"/>
+<area shape="rect" id="node5" href="$shooter_8c.html" title=" " alt="" coords="446,79,570,105"/>
+</map>

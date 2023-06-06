@@ -1,0 +1,4 @@
+<map id="temporize" name="temporize">
+<area shape="rect" id="node1" title="Temporize the program to have a constant framerate." alt="" coords="5,5,84,31"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="132,5,264,31"/>
+</map>

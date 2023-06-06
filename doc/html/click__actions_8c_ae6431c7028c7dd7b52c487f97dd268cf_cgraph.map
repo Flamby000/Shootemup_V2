@@ -1,0 +1,52 @@
+<map id="decrease_ennemy_life_multiplicator" name="decrease_ennemy_life_multiplicator">
+<area shape="rect" id="node1" title="Decrease the ennemy life multiplicator in settings." alt="" coords="5,1319,157,1359"/>
+<area shape="rect" id="node2" href="$click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="205,1352,350,1377"/>
+<area shape="rect" id="node3" href="$menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="398,1021,529,1047"/>
+<area shape="rect" id="node11" href="$menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d" title="Set the menu of the game. It replace and free the previous to set the new one." alt="" coords="1048,804,1126,829"/>
+<area shape="rect" id="node4" href="$menu_8c.html#a675a5b1f2b000f3e0434b6844b41de53" title="Create a button object." alt="" coords="848,458,949,484"/>
+<area shape="rect" id="node7" href="$menu_8c.html#a010e974b5d782527999d867c3a0cd8d4" title=" " alt="" coords="618,481,728,507"/>
+<area shape="rect" id="node8" href="$menu_8c.html#a9f53862c87e5b9df58e1a68383cd0d25" title="Function to insert a button in a menu." alt="" coords="850,508,947,533"/>
+<area shape="rect" id="node9" href="$menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="583,582,763,608"/>
+<area shape="rect" id="node21" href="$click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="590,5,756,46"/>
+<area shape="rect" id="node22" href="$click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="588,71,758,111"/>
+<area shape="rect" id="node23" href="$click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="603,136,743,161"/>
+<area shape="rect" id="node24" href="$click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="594,185,752,211"/>
+<area shape="rect" id="node25" href="$click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="599,235,747,275"/>
+<area shape="rect" id="node26" href="$click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="592,300,754,341"/>
+<area shape="rect" id="node27" href="$click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="590,365,756,406"/>
+<area shape="rect" id="node28" href="$click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="605,1282,741,1308"/>
+<area shape="rect" id="node29" href="$click__actions_8c.html#ac9bb7864513f84b98deeaaec4868fdd0" title="Increase the player speed in settings." alt="" coords="596,1332,750,1357"/>
+<area shape="rect" id="node30" href="$click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="601,632,745,657"/>
+<area shape="rect" id="node33" href="$menu_8c.html#aaad136ad8d674e3f5054459c5cc3779f" title=" " alt="" coords="622,681,724,707"/>
+<area shape="rect" id="node35" href="$menu_8c.html#a22c3d630a7051d7b2df72a26c29b21f9" title=" " alt="" coords="599,730,747,756"/>
+<area shape="rect" id="node36" href="$menu_8c.html#aa6cee331bccdd42303da2961f5e7b280" title=" " alt="" coords="632,780,714,805"/>
+<area shape="rect" id="node37" href="$menu_8c.html#a03f1530241d1a11649d0a9e0fa197ca5" title=" " alt="" coords="595,829,751,855"/>
+<area shape="rect" id="node39" href="$click__actions_8c.html#a7ec7f9d1bdee2d3283b0c5d90a7e9f45" title="Set the difficulty to custom." alt="" coords="600,1381,746,1407"/>
+<area shape="rect" id="node40" href="$click__actions_8c.html#a3f53ed623a6668d38dfc483a087a6856" title="Set the difficulty to easy." alt="" coords="608,1430,738,1456"/>
+<area shape="rect" id="node41" href="$click__actions_8c.html#aa5b5e811131f908d63b3f7b84e308499" title="Set the difficulty to hard." alt="" coords="609,1480,737,1505"/>
+<area shape="rect" id="node42" href="$click__actions_8c.html#ad718e739d45d0795237b239974fc630b" title="Set the difficulty to medium." alt="" coords="599,1529,747,1555"/>
+<area shape="rect" id="node43" href="$click__actions_8c.html#a3a25039e3dd387cc13a4b4503538fd69" title="Set the player shoot cooldown in settings." alt="" coords="601,1578,745,1604"/>
+<area shape="rect" id="node44" href="$click__actions_8c.html#aaefd58a44f89e2ddbed6839544a913e7" title="Set the player stamina in settings." alt="" coords="606,1628,740,1653"/>
+<area shape="rect" id="node45" href="$click__actions_8c.html#ac077e022d55d57e924f2852b9d8c9cc0" title="Set the player super shoot cooldown in settings." alt="" coords="593,1677,753,1718"/>
+<area shape="rect" id="node46" href="$menu_8c.html#afe2154a2f801135cfc154fdb06f4babc" title="The button in argument become a slider." alt="" coords="634,878,712,904"/>
+<area shape="rect" id="node47" href="$menu_8c.html#a66c282f6131ccb3ec7cd3a1d8356c28e" title=" " alt="" coords="639,928,707,953"/>
+<area shape="rect" id="node48" href="$click__actions_8c.html#a628e6def2eeb5d04bc200a2b0d2e552e" title="Set the volume of the game." alt="" coords="629,1742,717,1768"/>
+<area shape="rect" id="node49" href="$click__actions_8c.html#a1269e6f9ca1811750057bb4ec69adaa7" title="Set the waves spawn cooldown in settings." alt="" coords="577,1792,769,1817"/>
+<area shape="rect" id="node50" href="$click__actions_8c.html#a7725f8d356468423c723646b9dbc6f1a" title="Toogle on or off the coop mode." alt="" coords="608,1841,738,1867"/>
+<area shape="rect" id="node5" href="$entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1039,434,1135,460"/>
+<area shape="rect" id="node6" href="$movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1028,484,1145,509"/>
+<area shape="rect" id="node10" href="$click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="826,656,971,681"/>
+<area shape="rect" id="node15" href="$click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="851,705,946,731"/>
+<area shape="rect" id="node16" href="$click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="851,754,946,780"/>
+<area shape="rect" id="node17" href="$click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="847,804,950,829"/>
+<area shape="rect" id="node18" href="$click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="851,853,946,879"/>
+<area shape="rect" id="node19" href="$click__actions_8c.html#afcd66da941897a6bfecd1da1c33e1f7a" title="Quit the game." alt="" coords="858,557,939,583"/>
+<area shape="rect" id="node20" href="$click__actions_8c.html#a004b9f49f774e2ab3c1973d7f6242b39" title="Start an infinite match." alt="" coords="833,606,964,632"/>
+<area shape="rect" id="node12" href="$game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1230,778,1323,804"/>
+<area shape="rect" id="node14" href="$game_8c.html#a0eb38159a2b3f8f87a3d84562e8af90e" title="Remove all entities of specified type." alt="" coords="1193,828,1360,853"/>
+<area shape="rect" id="node13" href="$entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1408,778,1507,804"/>
+<area shape="rect" id="node31" href="$click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="844,952,953,977"/>
+<area shape="rect" id="node32" href="$settings_8c.html#a4ea9ddbddca3d537bf00dcbd508a6434" title="Save the game settings." alt="" coords="847,902,950,928"/>
+<area shape="rect" id="node34" href="$animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="821,1001,976,1027"/>
+<area shape="rect" id="node38" href="$movement_8c.html#a642e98996db3b8e732f946d617cd988e" title="The entity will move in a circle pattern." alt="" coords="817,1050,980,1076"/>
+</map>

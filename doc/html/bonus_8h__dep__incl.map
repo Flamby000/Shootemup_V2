@@ -1,0 +1,9 @@
+<map id="include/logic/bonus.h" name="include/logic/bonus.h">
+<area shape="rect" id="node1" title="Functions to manage the logic of a bonus." alt="" coords="359,5,503,31"/>
+<area shape="rect" id="node2" href="$bonus_8c.html" title=" " alt="" coords="5,79,126,105"/>
+<area shape="rect" id="node3" href="$ennemy_8c.html" title=" " alt="" coords="150,79,280,105"/>
+<area shape="rect" id="node4" href="$entity_8c.html" title=" " alt="" coords="304,79,419,105"/>
+<area shape="rect" id="node5" href="$game_8c.html" title=" " alt="" coords="443,79,560,105"/>
+<area shape="rect" id="node6" href="$level_8c.html" title=" " alt="" coords="584,79,696,105"/>
+<area shape="rect" id="node7" href="$missile_8c.html" title=" " alt="" coords="721,79,847,105"/>
+</map>

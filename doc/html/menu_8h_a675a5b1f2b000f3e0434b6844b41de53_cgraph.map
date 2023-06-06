@@ -1,0 +1,5 @@
+<map id="create_button" name="create_button">
+<area shape="rect" id="node1" title="Create a button object." alt="" coords="5,31,106,56"/>
+<area shape="rect" id="node2" href="$entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="164,5,261,31"/>
+<area shape="rect" id="node3" href="$movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="154,55,271,80"/>
+</map>

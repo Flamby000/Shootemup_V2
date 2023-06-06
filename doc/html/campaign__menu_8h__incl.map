@@ -1,0 +1,10 @@
+<map id="include/interface/campaign_menu.h" name="include/interface/campaign_menu.h">
+<area shape="rect" id="node1" title=" " alt="" coords="231,5,408,46"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,102,66,127"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,102,153,127"/>
+<area shape="rect" id="node4" title=" " alt="" coords="177,102,241,127"/>
+<area shape="rect" id="node5" title=" " alt="" coords="265,102,374,127"/>
+<area shape="rect" id="node6" href="$struct_8h.html" title="All the structures of the program." alt="" coords="398,102,532,127"/>
+<area shape="rect" id="node7" href="$utils_8h.html" title="Utils function of the program." alt="" coords="556,94,670,135"/>
+<area shape="rect" id="node8" href="$menu_8h.html" title=" " alt="" coords="695,94,835,135"/>
+</map>

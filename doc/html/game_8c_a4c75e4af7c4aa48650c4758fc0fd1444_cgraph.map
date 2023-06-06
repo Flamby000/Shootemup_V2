@@ -1,0 +1,52 @@
+<map id="update_game" name="update_game">
+<area shape="rect" id="node1" title="Update the game data." alt="" coords="5,787,105,812"/>
+<area shape="rect" id="node2" href="$game_8c.html#a0383597abd462d3992f5698ee673e81c" title="Get the number of bosses killed by players in a game." alt="" coords="1176,5,1287,31"/>
+<area shape="rect" id="node3" href="$game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="180,508,266,534"/>
+<area shape="rect" id="node10" href="$game_8c.html#a189013e377eef959f2e7f566cbef18fe" title="See if an entity is a match entity." alt="" coords="966,712,1079,738"/>
+<area shape="rect" id="node14" href="$entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="2006,727,2105,752"/>
+<area shape="rect" id="node29" href="$game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="776,609,875,635"/>
+<area shape="rect" id="node30" href="$game_8c.html#ae99e33b3affa532dedd83463f2d1befa" title="Get the number of alive ennemies in the game." alt="" coords="153,863,293,888"/>
+<area shape="rect" id="node31" href="$game_8c.html#aef6b9bbb86406c3a0f2b16a7643533a0" title="Get the number of remaning players." alt="" coords="160,912,286,938"/>
+<area shape="rect" id="node32" href="$menu_8c.html#a58c1aa08300d29d3121c9153a6c33bb2" title="Function to update a button data (in function of user actions)" alt="" coords="373,963,476,988"/>
+<area shape="rect" id="node34" href="$level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="976,159,1070,184"/>
+<area shape="rect" id="node48" href="$spaceship_8c.html#a31601cbf05ddaeb261c3860cf7a16bed" title="Update the spaceship data." alt="" coords="160,1013,286,1039"/>
+<area shape="rect" id="node4" href="$menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="341,508,508,534"/>
+<area shape="rect" id="node23" href="$background_8c.html#ae633106ff2e329102b72c9bd28c28268" title="Set the speed of the background." alt="" coords="945,613,1100,639"/>
+<area shape="rect" id="node24" href="$menu_8c.html#af2e142363dae02c05fc52c65bc82ed3d" title="Set the menu of the game. It replace and free the previous to set the new one." alt="" coords="984,511,1062,536"/>
+<area shape="rect" id="node25" href="$game_8c.html#a0eb38159a2b3f8f87a3d84562e8af90e" title="Remove all entities of specified type." alt="" coords="1148,461,1315,487"/>
+<area shape="rect" id="node5" href="$menu_8c.html#a675a5b1f2b000f3e0434b6844b41de53" title="Create a button object." alt="" coords="973,308,1073,334"/>
+<area shape="rect" id="node8" href="$menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="560,443,702,484"/>
+<area shape="rect" id="node26" href="$menu_8c.html#a9f53862c87e5b9df58e1a68383cd0d25" title="Function to insert a button in a menu." alt="" coords="777,560,874,586"/>
+<area shape="rect" id="node28" href="$click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="556,559,706,584"/>
+<area shape="rect" id="node6" href="$entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1820,359,1917,384"/>
+<area shape="rect" id="node7" href="$movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1997,461,2114,487"/>
+<area shape="rect" id="node9" href="$click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="771,511,880,536"/>
+<area shape="rect" id="node27" href="$click__actions_8c.html#a33b339c60ef0dbde2391f71f9b567169" title="Restart a match." alt="" coords="754,409,897,435"/>
+<area shape="rect" id="node11" href="$game_8c.html#acb270cc13ea5c44dd7d823f0bf5fe0da" title="Remove an entity from the game." alt="" coords="1386,588,1489,614"/>
+<area shape="rect" id="node12" href="$animation_8c.html#a86e80d8497d9f71e4218558b83dc162c" title="Create a one shot animation displayed one time." alt="" coords="1560,461,1740,487"/>
+<area shape="rect" id="node13" href="$game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1822,409,1915,435"/>
+<area shape="rect" id="node15" href="$entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="2162,812,2294,838"/>
+<area shape="rect" id="node16" href="$entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="2167,763,2289,788"/>
+<area shape="rect" id="node17" href="$entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="2169,713,2287,739"/>
+<area shape="rect" id="node22" href="$missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="2174,664,2282,690"/>
+<area shape="rect" id="node18" href="$bonus_8c.html#af6ae2c28983452dbc839229545c9e7de" title="Function called when a bonus collide another entity." alt="" coords="2348,639,2469,664"/>
+<area shape="rect" id="node19" href="$ennemy_8c.html#a9b33b907351e3993ce951d98eea3e498" title="Called when an ennemy is collided by another entity." alt="" coords="2342,812,2475,838"/>
+<area shape="rect" id="node20" href="$missile_8c.html#aea5a45f27fbca6640b619dc3284d8ef5" title="Called when the missile is collided by another entity." alt="" coords="2345,576,2472,602"/>
+<area shape="rect" id="node21" href="$player_8c.html#a9113484af3e457aa5ce05219570581a2" title="Called when a player is collided by another entity." alt="" coords="2348,713,2469,739"/>
+<area shape="rect" id="node33" href="$utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="565,963,697,988"/>
+<area shape="rect" id="node35" href="$ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="1595,209,1705,235"/>
+<area shape="rect" id="node41" href="$level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="1168,133,1295,159"/>
+<area shape="rect" id="node45" href="$ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="1170,232,1293,258"/>
+<area shape="rect" id="node47" href="$game_8c.html#a19eb12526626181322050572472807f9" title="Get if a boss is currently alive in the game." alt="" coords="1181,183,1282,208"/>
+<area shape="rect" id="node36" href="$spaceship_8c.html#ac3651d020ae03d8df905db6af95bfd0b" title="Create a spaceship object." alt="" coords="1807,109,1930,135"/>
+<area shape="rect" id="node37" href="$movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="1788,260,1949,286"/>
+<area shape="rect" id="node38" href="$shooter_8c.html#ab444f02d90b7eabd936b5d641e84040f" title="Get the shoot function from its ID." alt="" coords="1803,159,1934,184"/>
+<area shape="rect" id="node39" href="$shooter_8c.html#ab9177671e9ae9c61063d2796b07120f0" title="Do nothing." alt="" coords="2011,184,2100,210"/>
+<area shape="rect" id="node40" href="$animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="1791,309,1946,335"/>
+<area shape="rect" id="node42" href="$bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="1601,309,1700,335"/>
+<area shape="rect" id="node43" href="$bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="1363,309,1512,335"/>
+<area shape="rect" id="node44" href="$level_8c.html#ae7bda58ade5a1240a02906bb90768d40" title="Get the entity type from a character (its id)" alt="" coords="1381,157,1494,183"/>
+<area shape="rect" id="node46" href="$missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1598,260,1703,286"/>
+<area shape="rect" id="node49" href="$spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="578,1037,684,1063"/>
+<area shape="rect" id="node50" href="$spaceship_8c.html#a599c28e4e67f05de50b98a50a62bf7e3" title="Update the spaceship boost data." alt="" coords="375,1012,474,1038"/>
+</map>

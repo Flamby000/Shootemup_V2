@@ -79,7 +79,7 @@ Life* get_life(Entity *entity);
  * @brief Add a bonus to a spaceship
  * 
  * @param game of the entity
- * @param entity's spaceship
+ * @param entity spceship linked to the entity
  * @param bonus to apply on the spaceship
  */
 void add_bonus(Game *game, Entity *entity, Bonus *bonus);

@@ -1,0 +1,4 @@
+<map id="draw_ennemy" name="draw_ennemy">
+<area shape="rect" id="node1" title="Draw the ennemy data on the frame." alt="" coords="5,5,108,31"/>
+<area shape="rect" id="node2" href="$frame_8c.html#ace1a6b76ca667d2cf7bb96d9597c83f8" title="Draw a bar on the frame." alt="" coords="156,5,230,31"/>
+</map>

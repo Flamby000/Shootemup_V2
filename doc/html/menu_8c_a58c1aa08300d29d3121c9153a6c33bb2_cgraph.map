@@ -1,0 +1,4 @@
+<map id="update_button" name="update_button">
+<area shape="rect" id="node1" title="Function to update a button data (in function of user actions)" alt="" coords="5,5,109,31"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="157,5,289,31"/>
+</map>

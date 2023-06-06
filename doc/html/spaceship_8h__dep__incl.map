@@ -1,0 +1,9 @@
+<map id="include/logic/spaceship.h" name="include/logic/spaceship.h">
+<area shape="rect" id="node1" title="Functions to manage the logic of a spaceship (player or ennemy)" alt="" coords="351,5,519,31"/>
+<area shape="rect" id="node2" href="$bonus_8c.html" title=" " alt="" coords="5,79,126,105"/>
+<area shape="rect" id="node3" href="$ennemy_8c.html" title=" " alt="" coords="150,79,280,105"/>
+<area shape="rect" id="node4" href="$game_8c.html" title=" " alt="" coords="304,79,422,105"/>
+<area shape="rect" id="node5" href="$missile_8c.html" title=" " alt="" coords="445,79,571,105"/>
+<area shape="rect" id="node6" href="$player_8c.html" title=" " alt="" coords="595,79,715,105"/>
+<area shape="rect" id="node7" href="$spaceship_8c.html" title=" " alt="" coords="739,79,883,105"/>
+</map>

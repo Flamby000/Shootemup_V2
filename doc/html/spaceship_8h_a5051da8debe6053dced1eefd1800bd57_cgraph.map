@@ -1,0 +1,4 @@
+<map id="get_bonus" name="get_bonus">
+<area shape="rect" id="node1" title="Get the bonus pointer from a spaceship." alt="" coords="5,5,87,31"/>
+<area shape="rect" id="node2" href="$spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="135,5,240,31"/>
+</map>

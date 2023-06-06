@@ -9,7 +9,6 @@
  * 
  */
 
-
 #ifndef BONUS_H
 #define BONUS_H
 
@@ -44,7 +43,6 @@ void free_bonus(Bonus *bonus);
  */
 BONUS_FUNC get_bonus_effect_by_id(char id);
 
-
 /**
  * @brief Function called when a bonus collide another entity
  * 
@@ -76,6 +74,7 @@ int is_bonus_reachable(Game *game, Bonus *bonus);
  * 
  */
 #define RANDOM_BONUS 'R'
+
 /**
  * @brief Create a random bonus object
  * 
@@ -90,6 +89,7 @@ Bonus *create_random_bonus(Game *game, int x);
  * 
  */
 #define SHIELD_EFFECT 'S'
+
 /**
  * @brief Apply the shield effect to a player
  * 
@@ -119,6 +119,7 @@ void life_increase_effect(Game *game, Player* eater, int reverse);
  * 
  */
 #define LIFE_DECREASE_EFFECT 'L'
+
 /**
  * @brief Apply the life decrease effect to a player
  * 
@@ -133,6 +134,7 @@ void life_decrease_effect(Game *game, Player* eater, int reverse);
  * 
  */
 #define MAX_LIFE_INCREASE_EFFECT 'M'
+
 /**
  * @brief Increase the max life effect to the eater
  * 
@@ -147,6 +149,7 @@ void max_life_increase_effect(Game *game, Player* eater, int reverse);
  * 
  */
 #define POWER_UP_SHOOT_EFFECT 'P'
+
 /**
  * @brief Increase the power of the eater shoot
  * 

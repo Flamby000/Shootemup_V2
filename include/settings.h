@@ -33,17 +33,16 @@ typedef enum _GamePhase {
  */
 void load_settings();
 
-
 /**
  * @brief free the game settings
  * 
  */
 void free_settings();
 
-
 /**
  * @brief Save the game settings
  * 
  */
 void save_settings();
+
 #endif

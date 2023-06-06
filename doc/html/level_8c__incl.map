@@ -1,0 +1,11 @@
+<map id="src/logic/level.c" name="src/logic/level.c">
+<area shape="rect" id="node1" title=" " alt="" coords="394,5,506,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,66,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,87,153,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="176,87,284,112"/>
+<area shape="rect" id="node5" href="$struct_8h.html" title="All the structures of the program." alt="" coords="308,87,443,112"/>
+<area shape="rect" id="node6" href="$game_8h.html" title="Functions to manage the logic of the game." alt="" coords="466,79,584,120"/>
+<area shape="rect" id="node7" href="$bonus_8h.html" title="Functions to manage the logic of a bonus." alt="" coords="608,79,725,120"/>
+<area shape="rect" id="node8" href="$ennemy_8h.html" title="Functions to manage the logic of an ennemy." alt="" coords="749,79,866,120"/>
+<area shape="rect" id="node9" href="$level_8h.html" title="Functions to manage the logic of a level." alt="" coords="890,79,1008,120"/>
+</map>

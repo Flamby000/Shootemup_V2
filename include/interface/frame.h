@@ -1,5 +1,3 @@
-
-
 /**
  * @file frame.h
  * @author Max Ducoudré & Adam Mehdaoui
@@ -79,6 +77,5 @@ void draw_ennemy(Game *game, Ennemy *ennemy);
  * @param color of the bar
  */
 void draw_bar(int x, int y, int width, int height, int value, int max_value, MLV_Color color);
-
 
 #endif

@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shootemup:  Fichier source de /home/adam/Développement/Shootemup_V2/include/logic/game.h</title>
+<title>Shootemup:  Fichier source de include/logic/game.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,14 +56,21 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li><li class="navelem"><a class="el" href="dir_bda990e6e388f1461abc7c9d66ee3eb5.html">logic</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_701344d99a520edc46b3f16735b55bde.html">logic</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,46 +83,39 @@ $(function() {
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="game_8h.html#aed7818555b2da57314243d796315e4e9">   19</a></span><span class="preprocessor">#define GAME_NAME &quot;Space Crusade&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><a class="code hl_struct" href="struct__Game.html">Game</a>* <a class="code hl_function" href="game_8h.html#afe1685d2cbc4f739f05be56aa80099ab">init_game</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><a class="code hl_struct" href="struct___game.html">Game</a>* <a class="code hl_function" href="game_8h.html#afe1685d2cbc4f739f05be56aa80099ab">init_game</a>();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a4c75e4af7c4aa48650c4758fc0fd1444">update_game</a>(<a class="code hl_struct" href="struct__Game.html">Game</a> *game);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a4c75e4af7c4aa48650c4758fc0fd1444">update_game</a>(<a class="code hl_struct" href="struct___game.html">Game</a> *game);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a98bb68f0ee0b77fbd9d7c56957190c9d">free_game</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a98bb68f0ee0b77fbd9d7c56957190c9d">free_game</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a15a16990ec45f6ed217db14d5daa7fd5">end_match</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game, <a class="code hl_typedef" href="struct_8h.html#a51f70ca52e671e4bcf3e55583e2c4215">MatchStatus</a> status);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a227c2e53f2080f19d4ce95d0dba46849">insert_entity</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game, <span class="keyword">struct</span> <a class="code hl_struct" href="struct__Entity.html">_Entity</a>* entity);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a3720a19b675dd8e9a2006da280613caf">remove_entity</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game, <span class="keyword">struct</span> <a class="code hl_struct" href="struct__Entity.html">_Entity</a>* entity, <span class="keywordtype">int</span> explose);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#ac12a08d1ea5fa84bceb6b7758a72f98f">get_entity_id</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game, <a class="code hl_struct" href="struct__Entity.html">Entity</a>* entity);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#ae99e33b3affa532dedd83463f2d1befa">remaining_ennemies</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#aef6b9bbb86406c3a0f2b16a7643533a0">remaining_players</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a0383597abd462d3992f5698ee673e81c">boss_kill_count</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a19eb12526626181322050572472807f9">is_boss_alive</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a50e3a06097a1814040d19e89673efb75">start_match</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game, <span class="keywordtype">char</span>* level_file);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a0eb38159a2b3f8f87a3d84562e8af90e">remove_entities_by_type</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game, <a class="code hl_typedef" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a> type);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a189013e377eef959f2e7f566cbef18fe">is_match_entity</a>(<a class="code hl_struct" href="struct__Entity.html">Entity</a> *entity);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a2c4dc872b466c6493fb03a3344fe99d6">pause_match</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a1fd473f83a780890c37b7cd616ae5296">get_score</a>(<a class="code hl_struct" href="struct__Game.html">Game</a>* game);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a15a16990ec45f6ed217db14d5daa7fd5">end_match</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game, <a class="code hl_typedef" href="struct_8h.html#a51f70ca52e671e4bcf3e55583e2c4215">MatchStatus</a> status);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a227c2e53f2080f19d4ce95d0dba46849">insert_entity</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game, <span class="keyword">struct</span> <a class="code hl_struct" href="struct___entity.html">_Entity</a>* entity);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a3720a19b675dd8e9a2006da280613caf">remove_entity</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game, <span class="keyword">struct</span> <a class="code hl_struct" href="struct___entity.html">_Entity</a>* entity, <span class="keywordtype">int</span> explose);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#ac12a08d1ea5fa84bceb6b7758a72f98f">get_entity_id</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game, <a class="code hl_struct" href="struct___entity.html">Entity</a>* entity);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#ae99e33b3affa532dedd83463f2d1befa">remaining_ennemies</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#aef6b9bbb86406c3a0f2b16a7643533a0">remaining_players</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a0383597abd462d3992f5698ee673e81c">boss_kill_count</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a19eb12526626181322050572472807f9">is_boss_alive</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a50e3a06097a1814040d19e89673efb75">start_match</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game, <span class="keywordtype">char</span>* level_file);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a0eb38159a2b3f8f87a3d84562e8af90e">remove_entities_by_type</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game, <a class="code hl_typedef" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a> type);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a189013e377eef959f2e7f566cbef18fe">is_match_entity</a>(<a class="code hl_struct" href="struct___entity.html">Entity</a> *entity);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keywordtype">void</span> <a class="code hl_function" href="game_8h.html#a2c4dc872b466c6493fb03a3344fe99d6">pause_match</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="keywordtype">int</span> <a class="code hl_function" href="game_8h.html#a1fd473f83a780890c37b7cd616ae5296">get_score</a>(<a class="code hl_struct" href="struct___game.html">Game</a>* game);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agame_8h_html_a0383597abd462d3992f5698ee673e81c"><div class="ttname"><a href="game_8h.html#a0383597abd462d3992f5698ee673e81c">boss_kill_count</a></div><div class="ttdeci">int boss_kill_count(Game *game)</div><div class="ttdoc">Get the number of bosses killed by players in a game.</div><div class="ttdef"><b>Definition:</b> game.c:105</div></div>
 <div class="ttc" id="agame_8h_html_a0eb38159a2b3f8f87a3d84562e8af90e"><div class="ttname"><a href="game_8h.html#a0eb38159a2b3f8f87a3d84562e8af90e">remove_entities_by_type</a></div><div class="ttdeci">void remove_entities_by_type(Game *game, EntityType type)</div><div class="ttdoc">Remove all entities of specified type.</div><div class="ttdef"><b>Definition:</b> game.c:197</div></div>
 <div class="ttc" id="agame_8h_html_a15a16990ec45f6ed217db14d5daa7fd5"><div class="ttname"><a href="game_8h.html#a15a16990ec45f6ed217db14d5daa7fd5">end_match</a></div><div class="ttdeci">void end_match(Game *game, MatchStatus status)</div><div class="ttdoc">End a space crusader match of the game.</div><div class="ttdef"><b>Definition:</b> game.c:208</div></div>
@@ -134,12 +134,12 @@ $(function() {
 <div class="ttc" id="agame_8h_html_afe1685d2cbc4f739f05be56aa80099ab"><div class="ttname"><a href="game_8h.html#afe1685d2cbc4f739f05be56aa80099ab">init_game</a></div><div class="ttdeci">Game * init_game()</div><div class="ttdoc">Initialize the game.</div><div class="ttdef"><b>Definition:</b> game.c:21</div></div>
 <div class="ttc" id="astruct_8h_html_a17dcda8db7223a4027a9665ab02b8673"><div class="ttname"><a href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a></div><div class="ttdeci">enum _EntityType EntityType</div><div class="ttdoc">Enumeration of all possible entity types.</div></div>
 <div class="ttc" id="astruct_8h_html_a51f70ca52e671e4bcf3e55583e2c4215"><div class="ttname"><a href="struct_8h.html#a51f70ca52e671e4bcf3e55583e2c4215">MatchStatus</a></div><div class="ttdeci">enum _MatchStatus MatchStatus</div><div class="ttdoc">Enumeration of all possible match status.</div></div>
-<div class="ttc" id="astruct__Entity_html"><div class="ttname"><a href="struct__Entity.html">_Entity</a></div><div class="ttdoc">Structure defining an entity (every object in the game is an entity)</div><div class="ttdef"><b>Definition:</b> struct.h:250</div></div>
-<div class="ttc" id="astruct__Game_html"><div class="ttname"><a href="struct__Game.html">_Game</a></div><div class="ttdoc">Structure defining the game's data.</div><div class="ttdef"><b>Definition:</b> struct.h:213</div></div>
+<div class="ttc" id="astruct___entity_html"><div class="ttname"><a href="struct___entity.html">_Entity</a></div><div class="ttdoc">Structure defining an entity (every object in the game is an entity)</div><div class="ttdef"><b>Definition:</b> struct.h:251</div></div>
+<div class="ttc" id="astruct___game_html"><div class="ttname"><a href="struct___game.html">_Game</a></div><div class="ttdoc">Structure defining the game's data.</div><div class="ttdef"><b>Definition:</b> struct.h:214</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

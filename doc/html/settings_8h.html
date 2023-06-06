@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/include/settings.h</title>
+<title>Shootemup: Référence du fichier include/settings.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,14 +56,21 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_1303ff9f0fd9e7dd1ac2dace88c522a7.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,19 +85,31 @@ $(function() {
 
 <p>Function to manage the game settings.  
 <a href="#details">Plus de détails...</a></p>
-
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="settings_8h__dep__incl.png" border="0" usemap="#ainclude_2settings_8hdep" alt=""/></div>
+<map name="ainclude_2settings_8hdep" id="ainclude_2settings_8hdep">
+<area shape="rect" title="Function to manage the game settings." alt="" coords="213,5,336,31"/>
+<area shape="rect" href="click__actions_8c.html" title=" " alt="" coords="5,79,130,120"/>
+<area shape="rect" href="game_8c.html" title=" " alt="" coords="154,87,272,112"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="296,87,378,112"/>
+<area shape="rect" href="settings_8c.html" title=" " alt="" coords="403,87,503,112"/>
+</map>
+</div>
+</div>
 <p><a href="settings_8h_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a8266b7311f45c5b7a65c3729b7b3da94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a>&#160;&#160;&#160;&quot;data/settings.data&quot;</td></tr>
-<tr class="memdesc:a8266b7311f45c5b7a65c3729b7b3da94"><td class="mdescLeft">&#160;</td><td class="mdescRight">The settings file path.  <a href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a8266b7311f45c5b7a65c3729b7b3da94"><td class="mdescLeft">&#160;</td><td class="mdescRight">The settings file path.  <br /></td></tr>
 <tr class="separator:a8266b7311f45c5b7a65c3729b7b3da94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Définitions de type</h2></td></tr>
 <tr class="memitem:a940682fb471e3fd25e49022cb356b792"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="settings_8h.html#a64299ff3e8beb1a94ef42175c00dd265">_GamePhase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="settings_8h.html#a940682fb471e3fd25e49022cb356b792">GamePhase</a></td></tr>
-<tr class="memdesc:a940682fb471e3fd25e49022cb356b792"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game phases.  <a href="settings_8h.html#a940682fb471e3fd25e49022cb356b792">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a940682fb471e3fd25e49022cb356b792"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game phases.  <br /></td></tr>
 <tr class="separator:a940682fb471e3fd25e49022cb356b792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -104,24 +123,24 @@ Définitions de type</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
 <tr class="memitem:a457486e8b8211e75970f756106ebff2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="settings_8h.html#a457486e8b8211e75970f756106ebff2c">load_settings</a> ()</td></tr>
-<tr class="memdesc:a457486e8b8211e75970f756106ebff2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the game settings.  <a href="settings_8h.html#a457486e8b8211e75970f756106ebff2c">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a457486e8b8211e75970f756106ebff2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the game settings.  <br /></td></tr>
 <tr class="separator:a457486e8b8211e75970f756106ebff2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8ebf061a461213f764daab3f0497899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="settings_8h.html#aa8ebf061a461213f764daab3f0497899">free_settings</a> ()</td></tr>
-<tr class="memdesc:aa8ebf061a461213f764daab3f0497899"><td class="mdescLeft">&#160;</td><td class="mdescRight">free the game settings  <a href="settings_8h.html#aa8ebf061a461213f764daab3f0497899">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:aa8ebf061a461213f764daab3f0497899"><td class="mdescLeft">&#160;</td><td class="mdescRight">free the game settings  <br /></td></tr>
 <tr class="separator:aa8ebf061a461213f764daab3f0497899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ea9ddbddca3d537bf00dcbd508a6434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="settings_8h.html#a4ea9ddbddca3d537bf00dcbd508a6434">save_settings</a> ()</td></tr>
-<tr class="memdesc:a4ea9ddbddca3d537bf00dcbd508a6434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the game settings.  <a href="settings_8h.html#a4ea9ddbddca3d537bf00dcbd508a6434">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a4ea9ddbddca3d537bf00dcbd508a6434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the game settings.  <br /></td></tr>
 <tr class="separator:a4ea9ddbddca3d537bf00dcbd508a6434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p >Function to manage the game settings. </p>
+<div class="textblock"><p>Function to manage the game settings. </p>
 <dl class="section author"><dt>Auteur</dt><dd>Max Ducoudré &amp; Adam Mehdaoui </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-05-05</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
 </div><h2 class="groupheader">Documentation des macros</h2>
 <a id="a8266b7311f45c5b7a65c3729b7b3da94" name="a8266b7311f45c5b7a65c3729b7b3da94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8266b7311f45c5b7a65c3729b7b3da94">&#9670;&nbsp;</a></span>SETTINGS_DATA_PATH</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8266b7311f45c5b7a65c3729b7b3da94">&#9670;&#160;</a></span>SETTINGS_DATA_PATH</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +157,7 @@ Fonctions</h2></td></tr>
 </div>
 <h2 class="groupheader">Documentation des définitions de type</h2>
 <a id="a940682fb471e3fd25e49022cb356b792" name="a940682fb471e3fd25e49022cb356b792"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a940682fb471e3fd25e49022cb356b792">&#9670;&nbsp;</a></span>GamePhase</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a940682fb471e3fd25e49022cb356b792">&#9670;&#160;</a></span>GamePhase</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +174,7 @@ Fonctions</h2></td></tr>
 </div>
 <h2 class="groupheader">Documentation du type de l'énumération</h2>
 <a id="a64299ff3e8beb1a94ef42175c00dd265" name="a64299ff3e8beb1a94ef42175c00dd265"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64299ff3e8beb1a94ef42175c00dd265">&#9670;&nbsp;</a></span>_GamePhase</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64299ff3e8beb1a94ef42175c00dd265">&#9670;&#160;</a></span>_GamePhase</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,12 +190,19 @@ Fonctions</h2></td></tr>
 <tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a64299ff3e8beb1a94ef42175c00dd265a5eb2c01520d86de49b3aff491b36749a" name="a64299ff3e8beb1a94ef42175c00dd265a5eb2c01520d86de49b3aff491b36749a"></a>MATCH_PHASE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a64299ff3e8beb1a94ef42175c00dd265a31f0fa3f74b7540ac29df4612f2f0173" name="a64299ff3e8beb1a94ef42175c00dd265a31f0fa3f74b7540ac29df4612f2f0173"></a>MAIN_MENU_PHASE&#160;</td><td class="fielddoc"></td></tr>
 </table>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                        {</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="settings_8h.html#a64299ff3e8beb1a94ef42175c00dd265a5eb2c01520d86de49b3aff491b36749a">MATCH_PHASE</a>,</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="settings_8h.html#a64299ff3e8beb1a94ef42175c00dd265a31f0fa3f74b7540ac29df4612f2f0173">MAIN_MENU_PHASE</a></div>
+<div class="line"><span class="lineno">   28</span>} <a class="code hl_typedef" href="settings_8h.html#a940682fb471e3fd25e49022cb356b792">GamePhase</a>;</div>
+<div class="ttc" id="asettings_8h_html_a64299ff3e8beb1a94ef42175c00dd265a31f0fa3f74b7540ac29df4612f2f0173"><div class="ttname"><a href="settings_8h.html#a64299ff3e8beb1a94ef42175c00dd265a31f0fa3f74b7540ac29df4612f2f0173">MAIN_MENU_PHASE</a></div><div class="ttdeci">@ MAIN_MENU_PHASE</div><div class="ttdef"><b>Definition:</b> settings.h:27</div></div>
+<div class="ttc" id="asettings_8h_html_a64299ff3e8beb1a94ef42175c00dd265a5eb2c01520d86de49b3aff491b36749a"><div class="ttname"><a href="settings_8h.html#a64299ff3e8beb1a94ef42175c00dd265a5eb2c01520d86de49b3aff491b36749a">MATCH_PHASE</a></div><div class="ttdeci">@ MATCH_PHASE</div><div class="ttdef"><b>Definition:</b> settings.h:26</div></div>
+<div class="ttc" id="asettings_8h_html_a940682fb471e3fd25e49022cb356b792"><div class="ttname"><a href="settings_8h.html#a940682fb471e3fd25e49022cb356b792">GamePhase</a></div><div class="ttdeci">enum _GamePhase GamePhase</div><div class="ttdoc">The game phases.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="aa8ebf061a461213f764daab3f0497899" name="aa8ebf061a461213f764daab3f0497899"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8ebf061a461213f764daab3f0497899">&#9670;&nbsp;</a></span>free_settings()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ebf061a461213f764daab3f0497899">&#9670;&#160;</a></span>free_settings()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,11 +217,30 @@ Fonctions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>free the game settings </p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                     {</div>
+<div class="line"><span class="lineno">   66</span>    free(<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>);</div>
+<div class="line"><span class="lineno">   67</span>    free(<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>);</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+<div class="ttc" id="astruct_8h_html_aa187af7bd168795834bafac3e0d374cd"><div class="ttname"><a href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a></div><div class="ttdeci">struct _Settings * settings</div><div class="ttdef"><b>Definition:</b> main.c:18</div></div>
+<div class="ttc" id="astruct___settings_html_a156454421508a9e45add8beacfa8361c"><div class="ttname"><a href="struct___settings.html#a156454421508a9e45add8beacfa8361c">_Settings::difficulty</a></div><div class="ttdeci">struct _Difficulty * difficulty</div><div class="ttdef"><b>Definition:</b> struct.h:126</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">_Settings::difficulty</a>, et <a class="el" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="settings_8h_aa8ebf061a461213f764daab3f0497899_icgraph.png" border="0" usemap="#asettings_8h_aa8ebf061a461213f764daab3f0497899_icgraph" alt=""/></div>
+<map name="asettings_8h_aa8ebf061a461213f764daab3f0497899_icgraph" id="asettings_8h_aa8ebf061a461213f764daab3f0497899_icgraph">
+<area shape="rect" title="free the game settings" alt="" coords="103,5,199,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a457486e8b8211e75970f756106ebff2c" name="a457486e8b8211e75970f756106ebff2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a457486e8b8211e75970f756106ebff2c">&#9670;&nbsp;</a></span>load_settings()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a457486e8b8211e75970f756106ebff2c">&#9670;&#160;</a></span>load_settings()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,11 +255,93 @@ Fonctions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Load the game settings. </p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                     {</div>
+<div class="line"><span class="lineno">   12</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, height;</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_struct" href="struct___difficulty.html">Difficulty</a> *difficulty = malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct___difficulty.html">Difficulty</a>));</div>
+<div class="line"><span class="lineno">   14</span>    FILE *file;</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">char</span> key[200];</div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordtype">char</span> value[200];</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordtype">char</span> line[400];</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>    MLV_get_desktop_size(&amp;width, &amp;height);</div>
+<div class="line"><span class="lineno">   20</span>    width -= width/25;</div>
+<div class="line"><span class="lineno">   21</span>    height -= height/10;</div>
+<div class="line"><span class="lineno">   22</span>    <span class="comment">/*width = 1200;</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment">    height = 800;</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a> = malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct___settings.html">Settings</a>));</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> = width;</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#aea3875809fa755e5750b1a6f26db5eb1">win_height</a> = height;</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a69bbb0e5ec67aa4ab8d3b43a246d5052">infinite_mode</a> = 0;</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#aea53aee976807ddc98fdd50fd99f37cb">coop_mode</a> = 0;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    </div>
+<div class="line"><span class="lineno">   32</span>    file = fopen(<a class="code hl_define" href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span>(file == NULL) {</div>
+<div class="line"><span class="lineno">   34</span>        printf(<span class="stringliteral">&quot;Error : Cannot open file %s\n&quot;</span>, <a class="code hl_define" href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a>);</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>    }    </div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    </div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">while</span>(fscanf(file, <span class="stringliteral">&quot;%s&quot;</span>, line) != EOF) {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span>(strchr(line, <span class="charliteral">&#39;:&#39;</span>) != NULL) {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordtype">char</span> *token = strtok(line, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><span class="lineno">   42</span>            strcpy(key, token);</div>
+<div class="line"><span class="lineno">   43</span>            token = strtok(NULL, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>            strcpy(value, token);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;volume&quot;</span>) == 0) <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a1317988b356d0a9ae17bf597338e722b">volume</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;coop_mode&quot;</span>) == 0) <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#aea53aee976807ddc98fdd50fd99f37cb">coop_mode</a> = strcmp(value, <span class="stringliteral">&quot;true&quot;</span>) == 0 ? 1 : 0; </div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;waves_spawn_cooldown&quot;</span>) == 0)  difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">waves_spawn_cooldown</a> = atoi(value);    </div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;ennemy_life_multiplicator&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#af3b1be0d210c97a3fa78affab554779d">ennemy_life_multiplicator</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;ennemy_shoot_cooldown_multiplicator&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#a227c3ddee96f12db2043f8c616c07092">ennemy_shoot_cooldown_multiplicator</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;ennemy_speed_multiplicator&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#afd2ecd660e0822e1536778a6eb23ba9d">ennemy_speed_multiplicator</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;player_life&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#a0485d9bdf8b14b9b128227b8792f2ba2">player_life</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;player_shoot_cooldown&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#a7de1b45e700ddb20594f4e57c057d7de">player_shoot_cooldown</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;player_super_shoot_cooldown&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#a50295551de83ec4890a0eaf5f6c951f5">player_super_shoot_cooldown</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;player_speed&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#a71db96e36dab94435d135c698caa60c6">player_speed</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(key, <span class="stringliteral">&quot;player_stamina&quot;</span>) == 0) difficulty-&gt;<a class="code hl_variable" href="struct___difficulty.html#a512f56ba9968b8685a40d00fcd07390e">player_stamina</a> = atoi(value);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a> = difficulty;</div>
+<div class="line"><span class="lineno">   62</span>}</div>
+<div class="ttc" id="asettings_8h_html_a8266b7311f45c5b7a65c3729b7b3da94"><div class="ttname"><a href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a></div><div class="ttdeci">#define SETTINGS_DATA_PATH</div><div class="ttdoc">The settings file path.</div><div class="ttdef"><b>Definition:</b> settings.h:19</div></div>
+<div class="ttc" id="astruct___difficulty_html"><div class="ttname"><a href="struct___difficulty.html">_Difficulty</a></div><div class="ttdoc">Structure defining the configuration of a match difficulty.</div><div class="ttdef"><b>Definition:</b> struct.h:98</div></div>
+<div class="ttc" id="astruct___difficulty_html_a0485d9bdf8b14b9b128227b8792f2ba2"><div class="ttname"><a href="struct___difficulty.html#a0485d9bdf8b14b9b128227b8792f2ba2">_Difficulty::player_life</a></div><div class="ttdeci">int player_life</div><div class="ttdef"><b>Definition:</b> struct.h:104</div></div>
+<div class="ttc" id="astruct___difficulty_html_a227c3ddee96f12db2043f8c616c07092"><div class="ttname"><a href="struct___difficulty.html#a227c3ddee96f12db2043f8c616c07092">_Difficulty::ennemy_shoot_cooldown_multiplicator</a></div><div class="ttdeci">int ennemy_shoot_cooldown_multiplicator</div><div class="ttdef"><b>Definition:</b> struct.h:102</div></div>
+<div class="ttc" id="astruct___difficulty_html_a3f9357ddd4303087ee8bdabd508055fb"><div class="ttname"><a href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">_Difficulty::waves_spawn_cooldown</a></div><div class="ttdeci">int waves_spawn_cooldown</div><div class="ttdef"><b>Definition:</b> struct.h:100</div></div>
+<div class="ttc" id="astruct___difficulty_html_a50295551de83ec4890a0eaf5f6c951f5"><div class="ttname"><a href="struct___difficulty.html#a50295551de83ec4890a0eaf5f6c951f5">_Difficulty::player_super_shoot_cooldown</a></div><div class="ttdeci">int player_super_shoot_cooldown</div><div class="ttdef"><b>Definition:</b> struct.h:106</div></div>
+<div class="ttc" id="astruct___difficulty_html_a512f56ba9968b8685a40d00fcd07390e"><div class="ttname"><a href="struct___difficulty.html#a512f56ba9968b8685a40d00fcd07390e">_Difficulty::player_stamina</a></div><div class="ttdeci">int player_stamina</div><div class="ttdef"><b>Definition:</b> struct.h:108</div></div>
+<div class="ttc" id="astruct___difficulty_html_a71db96e36dab94435d135c698caa60c6"><div class="ttname"><a href="struct___difficulty.html#a71db96e36dab94435d135c698caa60c6">_Difficulty::player_speed</a></div><div class="ttdeci">int player_speed</div><div class="ttdef"><b>Definition:</b> struct.h:107</div></div>
+<div class="ttc" id="astruct___difficulty_html_a7de1b45e700ddb20594f4e57c057d7de"><div class="ttname"><a href="struct___difficulty.html#a7de1b45e700ddb20594f4e57c057d7de">_Difficulty::player_shoot_cooldown</a></div><div class="ttdeci">int player_shoot_cooldown</div><div class="ttdef"><b>Definition:</b> struct.h:105</div></div>
+<div class="ttc" id="astruct___difficulty_html_af3b1be0d210c97a3fa78affab554779d"><div class="ttname"><a href="struct___difficulty.html#af3b1be0d210c97a3fa78affab554779d">_Difficulty::ennemy_life_multiplicator</a></div><div class="ttdeci">int ennemy_life_multiplicator</div><div class="ttdef"><b>Definition:</b> struct.h:101</div></div>
+<div class="ttc" id="astruct___difficulty_html_afd2ecd660e0822e1536778a6eb23ba9d"><div class="ttname"><a href="struct___difficulty.html#afd2ecd660e0822e1536778a6eb23ba9d">_Difficulty::ennemy_speed_multiplicator</a></div><div class="ttdeci">int ennemy_speed_multiplicator</div><div class="ttdef"><b>Definition:</b> struct.h:103</div></div>
+<div class="ttc" id="astruct___settings_html"><div class="ttname"><a href="struct___settings.html">_Settings</a></div><div class="ttdoc">Structure defining the settings of the game (used a global variable)</div><div class="ttdef"><b>Definition:</b> struct.h:116</div></div>
+<div class="ttc" id="astruct___settings_html_a1317988b356d0a9ae17bf597338e722b"><div class="ttname"><a href="struct___settings.html#a1317988b356d0a9ae17bf597338e722b">_Settings::volume</a></div><div class="ttdeci">int volume</div><div class="ttdef"><b>Definition:</b> struct.h:128</div></div>
+<div class="ttc" id="astruct___settings_html_a3b0723cec0a46fde45d97861bf485d11"><div class="ttname"><a href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">_Settings::win_width</a></div><div class="ttdeci">int win_width</div><div class="ttdef"><b>Definition:</b> struct.h:117</div></div>
+<div class="ttc" id="astruct___settings_html_a69bbb0e5ec67aa4ab8d3b43a246d5052"><div class="ttname"><a href="struct___settings.html#a69bbb0e5ec67aa4ab8d3b43a246d5052">_Settings::infinite_mode</a></div><div class="ttdeci">int infinite_mode</div><div class="ttdef"><b>Definition:</b> struct.h:119</div></div>
+<div class="ttc" id="astruct___settings_html_aea3875809fa755e5750b1a6f26db5eb1"><div class="ttname"><a href="struct___settings.html#aea3875809fa755e5750b1a6f26db5eb1">_Settings::win_height</a></div><div class="ttdeci">int win_height</div><div class="ttdef"><b>Definition:</b> struct.h:118</div></div>
+<div class="ttc" id="astruct___settings_html_aea53aee976807ddc98fdd50fd99f37cb"><div class="ttname"><a href="struct___settings.html#aea53aee976807ddc98fdd50fd99f37cb">_Settings::coop_mode</a></div><div class="ttdeci">int coop_mode</div><div class="ttdef"><b>Definition:</b> struct.h:127</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___settings.html#aea53aee976807ddc98fdd50fd99f37cb">_Settings::coop_mode</a>, <a class="el" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">_Settings::difficulty</a>, <a class="el" href="struct___difficulty.html#af3b1be0d210c97a3fa78affab554779d">_Difficulty::ennemy_life_multiplicator</a>, <a class="el" href="struct___difficulty.html#a227c3ddee96f12db2043f8c616c07092">_Difficulty::ennemy_shoot_cooldown_multiplicator</a>, <a class="el" href="struct___difficulty.html#afd2ecd660e0822e1536778a6eb23ba9d">_Difficulty::ennemy_speed_multiplicator</a>, <a class="el" href="struct___settings.html#a69bbb0e5ec67aa4ab8d3b43a246d5052">_Settings::infinite_mode</a>, <a class="el" href="struct___difficulty.html#a0485d9bdf8b14b9b128227b8792f2ba2">_Difficulty::player_life</a>, <a class="el" href="struct___difficulty.html#a7de1b45e700ddb20594f4e57c057d7de">_Difficulty::player_shoot_cooldown</a>, <a class="el" href="struct___difficulty.html#a71db96e36dab94435d135c698caa60c6">_Difficulty::player_speed</a>, <a class="el" href="struct___difficulty.html#a512f56ba9968b8685a40d00fcd07390e">_Difficulty::player_stamina</a>, <a class="el" href="struct___difficulty.html#a50295551de83ec4890a0eaf5f6c951f5">_Difficulty::player_super_shoot_cooldown</a>, <a class="el" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>, <a class="el" href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a>, <a class="el" href="struct___settings.html#a1317988b356d0a9ae17bf597338e722b">_Settings::volume</a>, <a class="el" href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">_Difficulty::waves_spawn_cooldown</a>, <a class="el" href="struct___settings.html#aea3875809fa755e5750b1a6f26db5eb1">_Settings::win_height</a>, et <a class="el" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">_Settings::win_width</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="settings_8h_a457486e8b8211e75970f756106ebff2c_icgraph.png" border="0" usemap="#asettings_8h_a457486e8b8211e75970f756106ebff2c_icgraph" alt=""/></div>
+<map name="asettings_8h_a457486e8b8211e75970f756106ebff2c_icgraph" id="asettings_8h_a457486e8b8211e75970f756106ebff2c_icgraph">
+<area shape="rect" title="Load the game settings." alt="" coords="103,5,201,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a4ea9ddbddca3d537bf00dcbd508a6434" name="a4ea9ddbddca3d537bf00dcbd508a6434"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ea9ddbddca3d537bf00dcbd508a6434">&#9670;&nbsp;</a></span>save_settings()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ea9ddbddca3d537bf00dcbd508a6434">&#9670;&#160;</a></span>save_settings()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,13 +356,85 @@ Fonctions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Save the game settings. </p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                     {</div>
+<div class="line"><span class="lineno">   71</span>    FILE *file;</div>
+<div class="line"><span class="lineno">   72</span>    file = fopen(<a class="code hl_define" href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a>, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span>(file == NULL) {</div>
+<div class="line"><span class="lineno">   74</span>        printf(<span class="stringliteral">&quot;Error : Cannot open file %s\n&quot;</span>, <a class="code hl_define" href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a>);</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>    }    </div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    fprintf(file, <span class="stringliteral">&quot;volume:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a1317988b356d0a9ae17bf597338e722b">volume</a>);</div>
+<div class="line"><span class="lineno">   79</span>    fprintf(file, <span class="stringliteral">&quot;coop_mode:%s\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#aea53aee976807ddc98fdd50fd99f37cb">coop_mode</a> == 1 ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span>    fprintf(file, <span class="stringliteral">&quot;waves_spawn_cooldown:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">waves_spawn_cooldown</a>);</div>
+<div class="line"><span class="lineno">   81</span>    fprintf(file, <span class="stringliteral">&quot;ennemy_life_multiplicator:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#af3b1be0d210c97a3fa78affab554779d">ennemy_life_multiplicator</a>);</div>
+<div class="line"><span class="lineno">   82</span>    fprintf(file, <span class="stringliteral">&quot;ennemy_shoot_cooldown_multiplicator:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a227c3ddee96f12db2043f8c616c07092">ennemy_shoot_cooldown_multiplicator</a>);</div>
+<div class="line"><span class="lineno">   83</span>    fprintf(file, <span class="stringliteral">&quot;ennemy_speed_multiplicator:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#afd2ecd660e0822e1536778a6eb23ba9d">ennemy_speed_multiplicator</a>);</div>
+<div class="line"><span class="lineno">   84</span>    fprintf(file, <span class="stringliteral">&quot;player_life:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a0485d9bdf8b14b9b128227b8792f2ba2">player_life</a>);</div>
+<div class="line"><span class="lineno">   85</span>    fprintf(file, <span class="stringliteral">&quot;player_shoot_cooldown:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a7de1b45e700ddb20594f4e57c057d7de">player_shoot_cooldown</a>);</div>
+<div class="line"><span class="lineno">   86</span>    fprintf(file, <span class="stringliteral">&quot;player_super_shoot_cooldown:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a50295551de83ec4890a0eaf5f6c951f5">player_super_shoot_cooldown</a>);</div>
+<div class="line"><span class="lineno">   87</span>    fprintf(file, <span class="stringliteral">&quot;player_speed:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a71db96e36dab94435d135c698caa60c6">player_speed</a>);</div>
+<div class="line"><span class="lineno">   88</span>    fprintf(file, <span class="stringliteral">&quot;player_stamina:%d\n&quot;</span>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a512f56ba9968b8685a40d00fcd07390e">player_stamina</a>);</div>
+<div class="line"><span class="lineno">   89</span>    fclose(file);</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___settings.html#aea53aee976807ddc98fdd50fd99f37cb">_Settings::coop_mode</a>, <a class="el" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">_Settings::difficulty</a>, <a class="el" href="struct___difficulty.html#af3b1be0d210c97a3fa78affab554779d">_Difficulty::ennemy_life_multiplicator</a>, <a class="el" href="struct___difficulty.html#a227c3ddee96f12db2043f8c616c07092">_Difficulty::ennemy_shoot_cooldown_multiplicator</a>, <a class="el" href="struct___difficulty.html#afd2ecd660e0822e1536778a6eb23ba9d">_Difficulty::ennemy_speed_multiplicator</a>, <a class="el" href="struct___difficulty.html#a0485d9bdf8b14b9b128227b8792f2ba2">_Difficulty::player_life</a>, <a class="el" href="struct___difficulty.html#a7de1b45e700ddb20594f4e57c057d7de">_Difficulty::player_shoot_cooldown</a>, <a class="el" href="struct___difficulty.html#a71db96e36dab94435d135c698caa60c6">_Difficulty::player_speed</a>, <a class="el" href="struct___difficulty.html#a512f56ba9968b8685a40d00fcd07390e">_Difficulty::player_stamina</a>, <a class="el" href="struct___difficulty.html#a50295551de83ec4890a0eaf5f6c951f5">_Difficulty::player_super_shoot_cooldown</a>, <a class="el" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>, <a class="el" href="settings_8h.html#a8266b7311f45c5b7a65c3729b7b3da94">SETTINGS_DATA_PATH</a>, <a class="el" href="struct___settings.html#a1317988b356d0a9ae17bf597338e722b">_Settings::volume</a>, et <a class="el" href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">_Difficulty::waves_spawn_cooldown</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="click__actions_8h.html#a75442e280a2e540532ba1561ac42690c">save_settings_action()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="settings_8h_a4ea9ddbddca3d537bf00dcbd508a6434_icgraph.png" border="0" usemap="#asettings_8h_a4ea9ddbddca3d537bf00dcbd508a6434_icgraph" alt=""/></div>
+<map name="asettings_8h_a4ea9ddbddca3d537bf00dcbd508a6434_icgraph" id="asettings_8h_a4ea9ddbddca3d537bf00dcbd508a6434_icgraph">
+<area shape="rect" title="Save the game settings." alt="" coords="1467,721,1569,747"/>
+<area shape="rect" href="click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="1275,721,1419,747"/>
+<area shape="rect" href="menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1095,747,1227,772"/>
+<area shape="rect" href="click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="920,67,1029,92"/>
+<area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="492,120,570,146"/>
+<area shape="rect" href="click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="903,316,1047,342"/>
+<area shape="rect" href="click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="927,417,1022,443"/>
+<area shape="rect" href="click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="927,168,1022,194"/>
+<area shape="rect" href="click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="924,217,1026,243"/>
+<area shape="rect" href="click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="927,267,1022,292"/>
+<area shape="rect" href="click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="902,975,1047,1000"/>
+<area shape="rect" href="menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="687,31,830,72"/>
+<area shape="rect" href="menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="447,33,615,59"/>
+<area shape="rect" href="game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="307,80,392,106"/>
+<area shape="rect" href="game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="300,31,399,56"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="128,80,227,106"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,105,55,131"/>
+<area shape="rect" href="click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="103,5,252,31"/>
+<area shape="rect" href="menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="668,292,849,318"/>
+<area shape="rect" href="click__actions_8c.html#ae6431c7028c7dd7b52c487f97dd268cf" title="Decrease the ennemy life multiplicator in settings." alt="" coords="683,590,834,631"/>
+<area shape="rect" href="click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="675,655,842,696"/>
+<area shape="rect" href="click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="674,721,843,761"/>
+<area shape="rect" href="click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="688,785,829,811"/>
+<area shape="rect" href="click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="679,835,838,860"/>
+<area shape="rect" href="click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="685,885,832,925"/>
+<area shape="rect" href="click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="677,950,840,991"/>
+<area shape="rect" href="click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="676,1015,841,1056"/>
+<area shape="rect" href="click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="690,1080,827,1106"/>
+<area shape="rect" href="click__actions_8c.html#ac9bb7864513f84b98deeaaec4868fdd0" title="Increase the player speed in settings." alt="" coords="681,1129,836,1155"/>
+<area shape="rect" href="click__actions_8c.html#a7ec7f9d1bdee2d3283b0c5d90a7e9f45" title="Set the difficulty to custom." alt="" coords="686,1179,831,1204"/>
+<area shape="rect" href="click__actions_8c.html#a3f53ed623a6668d38dfc483a087a6856" title="Set the difficulty to easy." alt="" coords="693,1228,824,1254"/>
+<area shape="rect" href="click__actions_8c.html#aa5b5e811131f908d63b3f7b84e308499" title="Set the difficulty to hard." alt="" coords="695,1277,822,1303"/>
+<area shape="rect" href="click__actions_8c.html#ad718e739d45d0795237b239974fc630b" title="Set the difficulty to medium." alt="" coords="684,1327,833,1352"/>
+<area shape="rect" href="click__actions_8c.html#a3a25039e3dd387cc13a4b4503538fd69" title="Set the player shoot cooldown in settings." alt="" coords="687,1376,830,1402"/>
+<area shape="rect" href="click__actions_8c.html#aaefd58a44f89e2ddbed6839544a913e7" title="Set the player stamina in settings." alt="" coords="691,1425,826,1451"/>
+<area shape="rect" href="click__actions_8c.html#ac077e022d55d57e924f2852b9d8c9cc0" title="Set the player super shoot cooldown in settings." alt="" coords="679,1475,838,1516"/>
+<area shape="rect" href="click__actions_8c.html#a628e6def2eeb5d04bc200a2b0d2e552e" title="Set the volume of the game." alt="" coords="714,441,803,467"/>
+<area shape="rect" href="click__actions_8c.html#a1269e6f9ca1811750057bb4ec69adaa7" title="Set the waves spawn cooldown in settings." alt="" coords="663,491,854,516"/>
+<area shape="rect" href="click__actions_8c.html#a7725f8d356468423c723646b9dbc6f1a" title="Toogle on or off the coop mode." alt="" coords="693,540,824,566"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

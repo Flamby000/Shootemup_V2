@@ -9,7 +9,6 @@
  * 
  */
 
-
 #ifndef LEVEL_H
 #define LEVEL_H
 
@@ -54,7 +53,12 @@ void create_object_line(Game *game, char* object_line);
  */
 EntityType get_object_type(char object);
 
-
+/**
+ * @brief Set the level of the game from a file
+ * 
+ * @param game object game to set the level
+ * @param level_file path to the level file
+*/
 void set_level(Game* game, char* level_file);
 int get_high_score(int level_number);
 void set_high_score(int level_number, int score);

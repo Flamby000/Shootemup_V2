@@ -1,0 +1,40 @@
+<map id="set_volume" name="set_volume">
+<area shape="rect" id="node1" title="Set the volume of the game." alt="" coords="1275,892,1363,918"/>
+<area shape="rect" id="node2" href="$menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1095,791,1227,816"/>
+<area shape="rect" id="node3" href="$click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="920,60,1029,86"/>
+<area shape="rect" id="node12" href="$game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="492,159,570,184"/>
+<area shape="rect" id="node13" href="$click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="903,360,1047,386"/>
+<area shape="rect" id="node15" href="$click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="927,461,1022,487"/>
+<area shape="rect" id="node16" href="$click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="927,212,1022,238"/>
+<area shape="rect" id="node17" href="$click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="924,261,1026,287"/>
+<area shape="rect" id="node18" href="$click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="927,311,1022,336"/>
+<area shape="rect" id="node19" href="$click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="902,1019,1047,1044"/>
+<area shape="rect" id="node4" href="$menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="687,46,830,87"/>
+<area shape="rect" id="node11" href="$click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="686,111,831,136"/>
+<area shape="rect" id="node5" href="$menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="447,55,615,80"/>
+<area shape="rect" id="node6" href="$game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="307,5,392,31"/>
+<area shape="rect" id="node9" href="$game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="300,55,399,80"/>
+<area shape="rect" id="node7" href="$game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="128,55,227,80"/>
+<area shape="rect" id="node8" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,55,132"/>
+<area shape="rect" id="node10" href="$click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="103,104,252,130"/>
+<area shape="rect" id="node14" href="$menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="668,336,849,362"/>
+<area shape="rect" id="node20" href="$click__actions_8c.html#ae6431c7028c7dd7b52c487f97dd268cf" title="Decrease the ennemy life multiplicator in settings." alt="" coords="683,635,834,676"/>
+<area shape="rect" id="node21" href="$click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="675,701,842,741"/>
+<area shape="rect" id="node22" href="$click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="674,766,843,807"/>
+<area shape="rect" id="node23" href="$click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="688,831,829,856"/>
+<area shape="rect" id="node24" href="$click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="679,880,838,906"/>
+<area shape="rect" id="node25" href="$click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="685,930,832,971"/>
+<area shape="rect" id="node26" href="$click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="677,995,840,1036"/>
+<area shape="rect" id="node27" href="$click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="676,1061,841,1101"/>
+<area shape="rect" id="node28" href="$click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="690,1125,827,1151"/>
+<area shape="rect" id="node29" href="$click__actions_8c.html#ac9bb7864513f84b98deeaaec4868fdd0" title="Increase the player speed in settings." alt="" coords="681,1175,836,1200"/>
+<area shape="rect" id="node30" href="$click__actions_8c.html#a7ec7f9d1bdee2d3283b0c5d90a7e9f45" title="Set the difficulty to custom." alt="" coords="686,1224,831,1250"/>
+<area shape="rect" id="node31" href="$click__actions_8c.html#a3f53ed623a6668d38dfc483a087a6856" title="Set the difficulty to easy." alt="" coords="693,1273,824,1299"/>
+<area shape="rect" id="node32" href="$click__actions_8c.html#aa5b5e811131f908d63b3f7b84e308499" title="Set the difficulty to hard." alt="" coords="695,1323,822,1348"/>
+<area shape="rect" id="node33" href="$click__actions_8c.html#ad718e739d45d0795237b239974fc630b" title="Set the difficulty to medium." alt="" coords="684,1373,833,1399"/>
+<area shape="rect" id="node34" href="$click__actions_8c.html#a3a25039e3dd387cc13a4b4503538fd69" title="Set the player shoot cooldown in settings." alt="" coords="687,1424,830,1450"/>
+<area shape="rect" id="node35" href="$click__actions_8c.html#aaefd58a44f89e2ddbed6839544a913e7" title="Set the player stamina in settings." alt="" coords="691,1473,826,1499"/>
+<area shape="rect" id="node36" href="$click__actions_8c.html#ac077e022d55d57e924f2852b9d8c9cc0" title="Set the player super shoot cooldown in settings." alt="" coords="679,471,838,512"/>
+<area shape="rect" id="node37" href="$click__actions_8c.html#a1269e6f9ca1811750057bb4ec69adaa7" title="Set the waves spawn cooldown in settings." alt="" coords="663,536,854,562"/>
+<area shape="rect" id="node38" href="$click__actions_8c.html#a7725f8d356468423c723646b9dbc6f1a" title="Toogle on or off the coop mode." alt="" coords="693,585,824,611"/>
+</map>

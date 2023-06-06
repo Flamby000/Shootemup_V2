@@ -1,0 +1,6 @@
+<map id="add_bonus" name="add_bonus">
+<area shape="rect" id="node1" title="Add a bonus to a spaceship." alt="" coords="5,56,90,82"/>
+<area shape="rect" id="node2" href="$spaceship_8c.html#ae7b82a0c99a2c18fb2bdbfa43b05da30" title="Count the number of bonus of a spaceship." alt="" coords="149,5,244,31"/>
+<area shape="rect" id="node3" href="$spaceship_8c.html#a397cbb62dc6e85548a6ed4a457ace0de" title="Get the spaceship object from an entity." alt="" coords="303,31,408,56"/>
+<area shape="rect" id="node4" href="$movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="138,107,255,132"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="include/logic/level.h" name="include/logic/level.h">
+<area shape="rect" id="node1" title="Functions to manage the logic of a level." alt="" coords="66,5,201,31"/>
+<area shape="rect" id="node2" href="$game_8c.html" title=" " alt="" coords="5,79,123,105"/>
+<area shape="rect" id="node3" href="$level_8c.html" title=" " alt="" coords="147,79,259,105"/>
+</map>

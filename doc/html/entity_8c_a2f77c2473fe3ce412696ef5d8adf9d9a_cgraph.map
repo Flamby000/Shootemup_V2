@@ -1,0 +1,11 @@
+<map id="remove_child" name="remove_child">
+<area shape="rect" id="node1" title="Remove a child from an entity." alt="" coords="5,129,104,155"/>
+<area shape="rect" id="node2" href="$entity_8c.html#a2d4bd6d202b5ecb659dc41b02f4b10e9" title="Free the entity memory." alt="" coords="152,129,234,155"/>
+<area shape="rect" id="node3" href="$animation_8c.html#a400500a1dd3277c6a70a737596e01bbf" title="Free the memory of the animation." alt="" coords="282,5,388,31"/>
+<area shape="rect" id="node4" href="$bonus_8c.html#abf31d3255948e555c78bf211a63c62bb" title="Free the bonus memory." alt="" coords="293,55,378,80"/>
+<area shape="rect" id="node5" href="$menu_8c.html#a3d07a195d9e5b87b3dee165827ac3d39" title="Free the button memory." alt="" coords="292,104,378,130"/>
+<area shape="rect" id="node6" href="$ennemy_8c.html#a567f6b8f74983a850f9746dda26b389f" title="Free the ennemy memory." alt="" coords="287,153,383,179"/>
+<area shape="rect" id="node8" href="$missile_8c.html#a3edffd8571016f59239feebcbbd9cef4" title="Free the memory allocated for the missile." alt="" coords="290,203,381,228"/>
+<area shape="rect" id="node9" href="$player_8c.html#ad7f330e163525cf7e7fd589b83b0632d" title="Free the player allocated memory." alt="" coords="293,252,378,278"/>
+<area shape="rect" id="node7" href="$spaceship_8c.html#a6bc89e27a0fbe46608a60309fe6ab5c0" title="Free the spaceship allocated memory." alt="" coords="436,203,546,228"/>
+</map>

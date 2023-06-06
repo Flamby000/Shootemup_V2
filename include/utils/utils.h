@@ -11,6 +11,7 @@
 
 #ifndef UTILS_H
 #define UTILS_H
+
 /**
  * @brief Get the timestamp from the start of the program in milliseconds
  * 

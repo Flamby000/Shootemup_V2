@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Shootemup: Référence du fichier /home/adam/Développement/Shootemup_V2/src/logic/level.c</title>
+<title>Shootemup: Référence du fichier src/logic/level.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,14 +56,21 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_f9de17239cfd29f8023a174e88b811ad.html">Shootemup_V2</a></li><li class="navelem"><a class="el" href="dir_8f3e5eb8dca2e697d445141b98c03fdd.html">src</a></li><li class="navelem"><a class="el" href="dir_4e509e3fd009271e07af5ee8e4bb6c80.html">logic</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3d2e4578fe4cc3b7fa6177047437af5b.html">logic</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -80,30 +87,47 @@ $(function() {
 <code>#include &quot;<a class="el" href="bonus_8h_source.html">../../include/logic/bonus.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ennemy_8h_source.html">../../include/logic/ennemy.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="level_8h_source.html">../../include/logic/level.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de level.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c__incl.png" border="0" usemap="#asrc_2logic_2level_8c" alt=""/></div>
+<map name="asrc_2logic_2level_8c" id="asrc_2logic_2level_8c">
+<area shape="rect" title=" " alt="" coords="394,5,506,31"/>
+<area shape="rect" title=" " alt="" coords="5,87,66,112"/>
+<area shape="rect" title=" " alt="" coords="89,87,153,112"/>
+<area shape="rect" title=" " alt="" coords="176,87,284,112"/>
+<area shape="rect" href="struct_8h.html" title="All the structures of the program." alt="" coords="308,87,443,112"/>
+<area shape="rect" href="game_8h.html" title="Functions to manage the logic of the game." alt="" coords="466,79,584,120"/>
+<area shape="rect" href="bonus_8h.html" title="Functions to manage the logic of a bonus." alt="" coords="608,79,725,120"/>
+<area shape="rect" href="ennemy_8h.html" title="Functions to manage the logic of an ennemy." alt="" coords="749,79,866,120"/>
+<area shape="rect" href="level_8h.html" title="Functions to manage the logic of a level." alt="" coords="890,79,1008,120"/>
+</map>
+</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
 <tr class="memitem:a02598e9b8c6ac36c85643b26603b3a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34">create_level</a> (char *level_file)</td></tr>
-<tr class="memdesc:a02598e9b8c6ac36c85643b26603b3a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a level from a file.  <a href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a02598e9b8c6ac36c85643b26603b3a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a level from a file.  <br /></td></tr>
 <tr class="separator:a02598e9b8c6ac36c85643b26603b3a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a253a19001abf56118aa8ac63facbc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *object_line)</td></tr>
-<tr class="memdesc:a3a253a19001abf56118aa8ac63facbc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)  <a href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a3a253a19001abf56118aa8ac63facbc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)  <br /></td></tr>
 <tr class="separator:a3a253a19001abf56118aa8ac63facbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7bda58ade5a1240a02906bb90768d40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a17dcda8db7223a4027a9665ab02b8673">EntityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40">get_object_type</a> (char object)</td></tr>
-<tr class="memdesc:ae7bda58ade5a1240a02906bb90768d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity type from a character (its id)  <a href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ae7bda58ade5a1240a02906bb90768d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity type from a character (its id)  <br /></td></tr>
 <tr class="separator:ae7bda58ade5a1240a02906bb90768d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a008982469285ee649542893d7bafd4c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a008982469285ee649542893d7bafd4c8">set_level</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, char *level_file)</td></tr>
+<tr class="memdesc:a008982469285ee649542893d7bafd4c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the level of the game from a file.  <br /></td></tr>
 <tr class="separator:a008982469285ee649542893d7bafd4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40b065408c98606a10ed9686e75119a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a40b065408c98606a10ed9686e75119a9">update_level</a> (<a class="el" href="struct_8h.html#a57156d39c530aec3fba3a9dad8c2dc6a">Game</a> *game, <a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *level, int infinite)</td></tr>
-<tr class="memdesc:a40b065408c98606a10ed9686e75119a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called each frame to update the level on the game. It spawn the waves and the boss missiles.  <a href="level_8c.html#a40b065408c98606a10ed9686e75119a9">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a40b065408c98606a10ed9686e75119a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called each frame to update the level on the game. It spawn the waves and the boss missiles.  <br /></td></tr>
 <tr class="separator:a40b065408c98606a10ed9686e75119a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fec8fad0582630d058042aa22d9dad3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">free_level</a> (<a class="el" href="struct_8h.html#a2f0d9bfad5ead18b64746afcea9b37e2">Level</a> *level)</td></tr>
-<tr class="memdesc:a4fec8fad0582630d058042aa22d9dad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory allocated for the level.  <a href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a4fec8fad0582630d058042aa22d9dad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory allocated for the level.  <br /></td></tr>
 <tr class="separator:a4fec8fad0582630d058042aa22d9dad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a02598e9b8c6ac36c85643b26603b3a34" name="a02598e9b8c6ac36c85643b26603b3a34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02598e9b8c6ac36c85643b26603b3a34">&#9670;&nbsp;</a></span>create_level()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02598e9b8c6ac36c85643b26603b3a34">&#9670;&#160;</a></span>create_level()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,11 +150,137 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>A pointer to the level defined on the file </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                                      {</div>
+<div class="line"><span class="lineno">   12</span>    <span class="keywordtype">char</span> line[200];</div>
+<div class="line"><span class="lineno">   13</span>    <span class="keywordtype">int</span> line_size;</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordtype">int</span> boss_id = <span class="charliteral">&#39;X&#39;</span>;</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_struct" href="struct___level.html">Level</a> *level = malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct___level.html">Level</a>));</div>
+<div class="line"><span class="lineno">   17</span>    FILE *file = fopen(level_file, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">if</span>(file == NULL) {</div>
+<div class="line"><span class="lineno">   19</span>        printf(<span class="stringliteral">&quot;Error : Cannot open file %s&quot;</span>, level_file);</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#ae5428496dca72c907301295c414de78a">level_file</a> = level_file;</div>
+<div class="line"><span class="lineno">   24</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#af09b5ddea2de16867cde4643c936d381">last_line_time</a> = 0;</div>
+<div class="line"><span class="lineno">   25</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#a078c8dfef1a35758eaa9de0606859991">line_cooldown</a> = <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">waves_spawn_cooldown</a>;</div>
+<div class="line"><span class="lineno">   26</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#a0e47bb135345a823b9ea11faee537166">last_wave_time</a> = 0;</div>
+<div class="line"><span class="lineno">   27</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#a84f3e449d3ef71dd500892057d45027e">wave_cooldown</a> = <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">difficulty</a>-&gt;<a class="code hl_variable" href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">waves_spawn_cooldown</a>*1.5;</div>
+<div class="line"><span class="lineno">   28</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> = 0;</div>
+<div class="line"><span class="lineno">   29</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a> = 0;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a> = NULL;</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">while</span>(fscanf(file, <span class="stringliteral">&quot;%s&quot;</span>, line) != EOF) {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span>(line[0] == <span class="charliteral">&#39;#&#39;</span>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span>(line[0] == <span class="charliteral">&#39;=&#39;</span> || line[0] == <span class="charliteral">&#39;-&#39;</span>) {</div>
+<div class="line"><span class="lineno">   36</span>            line_size = strlen(line);</div>
+<div class="line"><span class="lineno">   37</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a>++;</div>
+<div class="line"><span class="lineno">   38</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a> = realloc(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>, level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct___wave.html">Wave</a>));</div>
+<div class="line"><span class="lineno">   39</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a> = 0;</div>
+<div class="line"><span class="lineno">   40</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a> = NULL;</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span>(line[0] == <span class="charliteral">&#39;=&#39;</span>) boss_id = <span class="charliteral">&#39;X&#39;</span>;</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">for</span>(i = 0; line[i] != <span class="charliteral">&#39;\0&#39;</span>; i++){</div>
+<div class="line"><span class="lineno">   44</span>                    <span class="keywordflow">if</span>(line[i] != <span class="charliteral">&#39;-&#39;</span>) {</div>
+<div class="line"><span class="lineno">   45</span>                        boss_id = line[i];</div>
+<div class="line"><span class="lineno">   46</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   47</span>                    }</div>
+<div class="line"><span class="lineno">   48</span>                } </div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a>++;</div>
+<div class="line"><span class="lineno">   53</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a> = 0;</div>
+<div class="line"><span class="lineno">   54</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a> = realloc(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a>, level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div>
+<div class="line"><span class="lineno">   55</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a> - 1] = malloc(line_size * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><span class="lineno">   56</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#a523d3ecbd3a3827527ef79f9a535ebc8">boss_id</a> = boss_id;</div>
+<div class="line"><span class="lineno">   57</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#ab53fa42914e9b13ae132a810ed31e8c0">boss</a> = NULL;</div>
+<div class="line"><span class="lineno">   58</span>            strcpy(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a> - 1].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a> - 1], line);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    fclose(file);</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">return</span> level;</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+<div class="ttc" id="astruct_8h_html_aa187af7bd168795834bafac3e0d374cd"><div class="ttname"><a href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a></div><div class="ttdeci">struct _Settings * settings</div><div class="ttdef"><b>Definition:</b> main.c:18</div></div>
+<div class="ttc" id="astruct___difficulty_html_a3f9357ddd4303087ee8bdabd508055fb"><div class="ttname"><a href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">_Difficulty::waves_spawn_cooldown</a></div><div class="ttdeci">int waves_spawn_cooldown</div><div class="ttdef"><b>Definition:</b> struct.h:100</div></div>
+<div class="ttc" id="astruct___level_html"><div class="ttname"><a href="struct___level.html">_Level</a></div><div class="ttdoc">Structure defining a level.</div><div class="ttdef"><b>Definition:</b> struct.h:419</div></div>
+<div class="ttc" id="astruct___level_html_a078c8dfef1a35758eaa9de0606859991"><div class="ttname"><a href="struct___level.html#a078c8dfef1a35758eaa9de0606859991">_Level::line_cooldown</a></div><div class="ttdeci">int line_cooldown</div><div class="ttdef"><b>Definition:</b> struct.h:429</div></div>
+<div class="ttc" id="astruct___level_html_a0e47bb135345a823b9ea11faee537166"><div class="ttname"><a href="struct___level.html#a0e47bb135345a823b9ea11faee537166">_Level::last_wave_time</a></div><div class="ttdeci">int last_wave_time</div><div class="ttdef"><b>Definition:</b> struct.h:431</div></div>
+<div class="ttc" id="astruct___level_html_a2c8aaa19f960b076970867088af096ea"><div class="ttname"><a href="struct___level.html#a2c8aaa19f960b076970867088af096ea">_Level::current_wave</a></div><div class="ttdeci">int current_wave</div><div class="ttdef"><b>Definition:</b> struct.h:425</div></div>
+<div class="ttc" id="astruct___level_html_a703dd9ca0feaefc61cd0448fe7edf571"><div class="ttname"><a href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">_Level::waves</a></div><div class="ttdeci">struct _Wave * waves</div><div class="ttdef"><b>Definition:</b> struct.h:423</div></div>
+<div class="ttc" id="astruct___level_html_a7cbef444dedb1b4dd153200022aed187"><div class="ttname"><a href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">_Level::nb_wave</a></div><div class="ttdeci">int nb_wave</div><div class="ttdef"><b>Definition:</b> struct.h:422</div></div>
+<div class="ttc" id="astruct___level_html_a84f3e449d3ef71dd500892057d45027e"><div class="ttname"><a href="struct___level.html#a84f3e449d3ef71dd500892057d45027e">_Level::wave_cooldown</a></div><div class="ttdeci">int wave_cooldown</div><div class="ttdef"><b>Definition:</b> struct.h:432</div></div>
+<div class="ttc" id="astruct___level_html_ae5428496dca72c907301295c414de78a"><div class="ttname"><a href="struct___level.html#ae5428496dca72c907301295c414de78a">_Level::level_file</a></div><div class="ttdeci">char * level_file</div><div class="ttdef"><b>Definition:</b> struct.h:420</div></div>
+<div class="ttc" id="astruct___level_html_af09b5ddea2de16867cde4643c936d381"><div class="ttname"><a href="struct___level.html#af09b5ddea2de16867cde4643c936d381">_Level::last_line_time</a></div><div class="ttdeci">int last_line_time</div><div class="ttdef"><b>Definition:</b> struct.h:428</div></div>
+<div class="ttc" id="astruct___settings_html_a156454421508a9e45add8beacfa8361c"><div class="ttname"><a href="struct___settings.html#a156454421508a9e45add8beacfa8361c">_Settings::difficulty</a></div><div class="ttdeci">struct _Difficulty * difficulty</div><div class="ttdef"><b>Definition:</b> struct.h:126</div></div>
+<div class="ttc" id="astruct___wave_html"><div class="ttname"><a href="struct___wave.html">_Wave</a></div><div class="ttdoc">Structure defining a wave in a level. Each 'object_lines' is a line of objects (bonus or ennemies) th...</div><div class="ttdef"><b>Definition:</b> struct.h:406</div></div>
+<div class="ttc" id="astruct___wave_html_a523d3ecbd3a3827527ef79f9a535ebc8"><div class="ttname"><a href="struct___wave.html#a523d3ecbd3a3827527ef79f9a535ebc8">_Wave::boss_id</a></div><div class="ttdeci">char boss_id</div><div class="ttdef"><b>Definition:</b> struct.h:411</div></div>
+<div class="ttc" id="astruct___wave_html_a920dedb786d0bea15dd1aaf31f0d7bac"><div class="ttname"><a href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">_Wave::nb_line</a></div><div class="ttdeci">int nb_line</div><div class="ttdef"><b>Definition:</b> struct.h:407</div></div>
+<div class="ttc" id="astruct___wave_html_ab53fa42914e9b13ae132a810ed31e8c0"><div class="ttname"><a href="struct___wave.html#ab53fa42914e9b13ae132a810ed31e8c0">_Wave::boss</a></div><div class="ttdeci">struct _Ennemy * boss</div><div class="ttdef"><b>Definition:</b> struct.h:412</div></div>
+<div class="ttc" id="astruct___wave_html_acf1e34ea1ac93c616ff7db6f92bffa29"><div class="ttname"><a href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">_Wave::object_lines</a></div><div class="ttdeci">char ** object_lines</div><div class="ttdef"><b>Definition:</b> struct.h:409</div></div>
+<div class="ttc" id="astruct___wave_html_af0b664979f981fb3fe725101f1381a1d"><div class="ttname"><a href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">_Wave::current_line</a></div><div class="ttdeci">int current_line</div><div class="ttdef"><b>Definition:</b> struct.h:408</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___wave.html#ab53fa42914e9b13ae132a810ed31e8c0">_Wave::boss</a>, <a class="el" href="struct___wave.html#a523d3ecbd3a3827527ef79f9a535ebc8">_Wave::boss_id</a>, <a class="el" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">_Wave::current_line</a>, <a class="el" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">_Level::current_wave</a>, <a class="el" href="struct___settings.html#a156454421508a9e45add8beacfa8361c">_Settings::difficulty</a>, <a class="el" href="struct___level.html#af09b5ddea2de16867cde4643c936d381">_Level::last_line_time</a>, <a class="el" href="struct___level.html#a0e47bb135345a823b9ea11faee537166">_Level::last_wave_time</a>, <a class="el" href="struct___level.html#ae5428496dca72c907301295c414de78a">_Level::level_file</a>, <a class="el" href="struct___level.html#a078c8dfef1a35758eaa9de0606859991">_Level::line_cooldown</a>, <a class="el" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">_Wave::nb_line</a>, <a class="el" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">_Level::nb_wave</a>, <a class="el" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">_Wave::object_lines</a>, <a class="el" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>, <a class="el" href="struct___level.html#a84f3e449d3ef71dd500892057d45027e">_Level::wave_cooldown</a>, <a class="el" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">_Level::waves</a>, et <a class="el" href="struct___difficulty.html#a3f9357ddd4303087ee8bdabd508055fb">_Difficulty::waves_spawn_cooldown</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="level_8h.html#a008982469285ee649542893d7bafd4c8">set_level()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph.png" border="0" usemap="#alevel_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph" alt=""/></div>
+<map name="alevel_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph" id="alevel_8c_a02598e9b8c6ac36c85643b26603b3a34_icgraph">
+<area shape="rect" title="Create a level from a file." alt="" coords="1942,1326,2033,1352"/>
+<area shape="rect" href="level_8c.html#a008982469285ee649542893d7bafd4c8" title="Set the level of the game from a file." alt="" coords="1821,1326,1894,1352"/>
+<area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="936,1453,1013,1479"/>
+<area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1682,664,1773,689"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1373,55,1399"/>
+<area shape="rect" href="click__actions_8c.html#a33b339c60ef0dbde2391f71f9b567169" title="Restart a match." alt="" coords="1293,122,1437,148"/>
+<area shape="rect" href="click__actions_8c.html#a004b9f49f774e2ab3c1973d7f6242b39" title="Start an infinite match." alt="" coords="1503,664,1634,689"/>
+<area shape="rect" href="menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="687,175,830,216"/>
+<area shape="rect" href="menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="447,742,615,768"/>
+<area shape="rect" href="game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="307,717,392,743"/>
+<area shape="rect" href="game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="300,766,399,792"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="128,766,227,792"/>
+<area shape="rect" href="click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="103,816,252,841"/>
+<area shape="rect" href="menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="1275,664,1455,689"/>
+<area shape="rect" href="menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1095,721,1227,747"/>
+<area shape="rect" href="click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="920,189,1029,215"/>
+<area shape="rect" href="click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="903,1354,1047,1380"/>
+<area shape="rect" href="click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="927,1404,1022,1429"/>
+<area shape="rect" href="click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="927,41,1022,67"/>
+<area shape="rect" href="click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="924,90,1026,116"/>
+<area shape="rect" href="click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="927,140,1022,165"/>
+<area shape="rect" href="click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="902,797,1047,823"/>
+<area shape="rect" href="click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="686,240,831,265"/>
+<area shape="rect" href="click__actions_8c.html#ae6431c7028c7dd7b52c487f97dd268cf" title="Decrease the ennemy life multiplicator in settings." alt="" coords="683,906,834,946"/>
+<area shape="rect" href="click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="675,971,842,1012"/>
+<area shape="rect" href="click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="674,1036,843,1077"/>
+<area shape="rect" href="click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="688,1101,829,1127"/>
+<area shape="rect" href="click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="679,1150,838,1176"/>
+<area shape="rect" href="click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="685,1200,832,1241"/>
+<area shape="rect" href="click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="677,1266,840,1306"/>
+<area shape="rect" href="click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="676,1331,841,1372"/>
+<area shape="rect" href="click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="690,290,827,316"/>
+<area shape="rect" href="click__actions_8c.html#ac9bb7864513f84b98deeaaec4868fdd0" title="Increase the player speed in settings." alt="" coords="681,341,836,367"/>
+<area shape="rect" href="click__actions_8c.html#a7ec7f9d1bdee2d3283b0c5d90a7e9f45" title="Set the difficulty to custom." alt="" coords="686,392,831,417"/>
+<area shape="rect" href="click__actions_8c.html#a3f53ed623a6668d38dfc483a087a6856" title="Set the difficulty to easy." alt="" coords="693,442,824,468"/>
+<area shape="rect" href="click__actions_8c.html#aa5b5e811131f908d63b3f7b84e308499" title="Set the difficulty to hard." alt="" coords="695,493,822,519"/>
+<area shape="rect" href="click__actions_8c.html#ad718e739d45d0795237b239974fc630b" title="Set the difficulty to medium." alt="" coords="684,544,833,569"/>
+<area shape="rect" href="click__actions_8c.html#a3a25039e3dd387cc13a4b4503538fd69" title="Set the player shoot cooldown in settings." alt="" coords="687,593,830,619"/>
+<area shape="rect" href="click__actions_8c.html#aaefd58a44f89e2ddbed6839544a913e7" title="Set the player stamina in settings." alt="" coords="691,642,826,668"/>
+<area shape="rect" href="click__actions_8c.html#ac077e022d55d57e924f2852b9d8c9cc0" title="Set the player super shoot cooldown in settings." alt="" coords="679,692,838,733"/>
+<area shape="rect" href="click__actions_8c.html#a628e6def2eeb5d04bc200a2b0d2e552e" title="Set the volume of the game." alt="" coords="714,757,803,783"/>
+<area shape="rect" href="click__actions_8c.html#a1269e6f9ca1811750057bb4ec69adaa7" title="Set the waves spawn cooldown in settings." alt="" coords="663,806,854,832"/>
+<area shape="rect" href="click__actions_8c.html#a7725f8d356468423c723646b9dbc6f1a" title="Toogle on or off the coop mode." alt="" coords="693,856,824,881"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a3a253a19001abf56118aa8ac63facbc2" name="a3a253a19001abf56118aa8ac63facbc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a253a19001abf56118aa8ac63facbc2">&#9670;&nbsp;</a></span>create_object_line()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a253a19001abf56118aa8ac63facbc2">&#9670;&#160;</a></span>create_object_line()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,11 +313,108 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                       {</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordtype">int</span> line_size = strlen(object_line);</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">for</span>(i = 0; i &lt; line_size; i++) {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">switch</span>(<a class="code hl_function" href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40">get_object_type</a>(object_line[i])) {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca03bd8662dd096bf140411d1d85924241">ENNEMY</a>:</div>
+<div class="line"><span class="lineno">   73</span>                <a class="code hl_function" href="ennemy_8h.html#a0b23b10a394ffae58571f6513d9a57c1">create_ennemy</a>(game, object_line[i], (<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> / line_size) * i + (<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> / line_size) / 2);</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a> :</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span>(object_line[i] == <span class="charliteral">&#39;R&#39;</span>) <a class="code hl_function" href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus</a>(game, (<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> / line_size) * i + (<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> / line_size) / 2);</div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">else</span> <a class="code hl_function" href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a>(game, object_line[i], (<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> / line_size) * i + (<a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> / line_size) / 2);</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   79</span>            default :</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   81</span>        }    </div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span>}</div>
+<div class="ttc" id="abonus_8h_html_a0da5723f177148ab03cb688becd3f3d2"><div class="ttname"><a href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus</a></div><div class="ttdeci">Bonus * create_bonus(Game *game, char type, int x)</div><div class="ttdoc">Create a bonus object.</div><div class="ttdef"><b>Definition:</b> bonus.c:16</div></div>
+<div class="ttc" id="abonus_8h_html_a66fc1ff9cc7925acb9daa71957d8e991"><div class="ttname"><a href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus</a></div><div class="ttdeci">Bonus * create_random_bonus(Game *game, int x)</div><div class="ttdoc">Create a random bonus object.</div><div class="ttdef"><b>Definition:</b> bonus.c:67</div></div>
+<div class="ttc" id="aennemy_8h_html_a0b23b10a394ffae58571f6513d9a57c1"><div class="ttname"><a href="ennemy_8h.html#a0b23b10a394ffae58571f6513d9a57c1">create_ennemy</a></div><div class="ttdeci">Ennemy * create_ennemy(Game *game, char type, int x)</div><div class="ttdoc">Create an ennemy object.</div><div class="ttdef"><b>Definition:</b> ennemy.c:17</div></div>
+<div class="ttc" id="alevel_8c_html_ae7bda58ade5a1240a02906bb90768d40"><div class="ttname"><a href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40">get_object_type</a></div><div class="ttdeci">EntityType get_object_type(char object)</div><div class="ttdoc">Get the entity type from a character (its id)</div><div class="ttdef"><b>Definition:</b> level.c:85</div></div>
+<div class="ttc" id="astruct_8h_html_a5642ffc461001ffb4a92a8c4e448c72ca03bd8662dd096bf140411d1d85924241"><div class="ttname"><a href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca03bd8662dd096bf140411d1d85924241">ENNEMY</a></div><div class="ttdeci">@ ENNEMY</div><div class="ttdef"><b>Definition:</b> struct.h:239</div></div>
+<div class="ttc" id="astruct_8h_html_a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d"><div class="ttname"><a href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a></div><div class="ttdeci">@ BONUS</div><div class="ttdef"><b>Definition:</b> struct.h:243</div></div>
+<div class="ttc" id="astruct___settings_html_a3b0723cec0a46fde45d97861bf485d11"><div class="ttname"><a href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">_Settings::win_width</a></div><div class="ttdeci">int win_width</div><div class="ttdef"><b>Definition:</b> struct.h:117</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a>, <a class="el" href="bonus_8h.html#a0da5723f177148ab03cb688becd3f3d2">create_bonus()</a>, <a class="el" href="ennemy_8h.html#a0b23b10a394ffae58571f6513d9a57c1">create_ennemy()</a>, <a class="el" href="bonus_8h.html#a66fc1ff9cc7925acb9daa71957d8e991">create_random_bonus()</a>, <a class="el" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca03bd8662dd096bf140411d1d85924241">ENNEMY</a>, <a class="el" href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40">get_object_type()</a>, <a class="el" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>, et <a class="el" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">_Settings::win_width</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="level_8h.html#a40b065408c98606a10ed9686e75119a9">update_level()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a3a253a19001abf56118aa8ac63facbc2_cgraph.png" border="0" usemap="#alevel_8c_a3a253a19001abf56118aa8ac63facbc2_cgraph" alt=""/></div>
+<map name="alevel_8c_a3a253a19001abf56118aa8ac63facbc2_cgraph" id="alevel_8c_a3a253a19001abf56118aa8ac63facbc2_cgraph">
+<area shape="rect" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="5,755,132,780"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="377,780,476,806"/>
+<area shape="rect" href="ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="549,451,659,476"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="180,729,329,755"/>
+<area shape="rect" href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40" title="Get the entity type from a character (its id)" alt="" coords="198,831,311,856"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1332,776,1428,802"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="524,829,684,855"/>
+<area shape="rect" href="movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="1739,453,1871,479"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="1303,700,1457,726"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1334,104,1426,130"/>
+<area shape="rect" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08" title="Apply the life decrease effect to a player." alt="" coords="746,1001,884,1027"/>
+<area shape="rect" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c" title="Apply the life increase effect to a player." alt="" coords="748,952,882,978"/>
+<area shape="rect" href="bonus_8c.html#a0d038d904e9a39d658824b3725b9db19" title="Increase the max life effect to the eater." alt="" coords="732,853,898,879"/>
+<area shape="rect" href="bonus_8c.html#abf135890bec1b253c1cde057a61256c4" title="Increase the power of the eater shoot." alt="" coords="737,551,893,576"/>
+<area shape="rect" href="bonus_8c.html#abb4843ebffeec6a35d3b6dbd85c5bee5" title="Increase the speed of the eater." alt="" coords="735,903,895,928"/>
+<area shape="rect" href="bonus_8c.html#ace50826aafb3dec795ce017c91680fb6" title="Apply the shield effect to a player." alt="" coords="767,804,863,830"/>
+<area shape="rect" href="bonus_8c.html#a12d463e1ca03cecf3fb8309595f46ec6" title="Spawn a unit to protect the eater." alt="" coords="751,703,879,728"/>
+<area shape="rect" href="spaceship_8c.html#a577113741d72c832f9233d9cc519bb27" title="Function to deals damage to a spaceship." alt="" coords="970,952,1075,978"/>
+<area shape="rect" href="spaceship_8c.html#a483b69e874826639c84a22acf2151afd" title="Get the life object from an entity." alt="" coords="1167,904,1231,930"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="949,501,1096,527"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="956,551,1089,576"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1146,403,1252,428"/>
+<area shape="rect" href="movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="1300,403,1460,428"/>
+<area shape="rect" href="movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="1732,204,1878,230"/>
+<area shape="rect" href="movement_8c.html#a6b39b318ba13066e262a96e154eeeda1" title="Correspond to a movement circling an entity. The entity will circle around another entity." alt="" coords="1517,253,1676,279"/>
+<area shape="rect" href="movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="1508,204,1684,230"/>
+<area shape="rect" href="movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="1514,303,1679,328"/>
+<area shape="rect" href="movement_8c.html#a5a7236c788c900918ea53feb689400a8" title="Correspond to a movement following the player on its X axis." alt="" coords="1528,352,1665,378"/>
+<area shape="rect" href="movement_8c.html#ab6cc33671dfce95a0d2059b72b1b2018" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="1514,453,1679,479"/>
+<area shape="rect" href="movement_8c.html#a100b269e754d4260566e5adba43169b7" title="Correspond to a movement left and right. The entity will bounce on the left and right borders of the ..." alt="" coords="1527,503,1666,528"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1538,552,1655,578"/>
+<area shape="rect" href="movement_8c.html#ae2ef5889c5b490e2965664d5c1c54b3f" title="Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern." alt="" coords="1523,601,1670,627"/>
+<area shape="rect" href="movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="1509,651,1683,676"/>
+<area shape="rect" href="entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="1754,277,1856,303"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1546,749,1647,775"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="1558,700,1635,726"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1547,103,1646,128"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1739,153,1871,179"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="1744,5,1866,31"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="1746,55,1864,80"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1751,104,1859,130"/>
+<area shape="rect" href="spaceship_8c.html#a3dd762274847a6e21b8fa1e49c322285" title="Function to enable the shield of a spaceship." alt="" coords="1149,801,1249,827"/>
+<area shape="rect" href="spaceship_8c.html#ac3651d020ae03d8df905db6af95bfd0b" title="Create a spaceship object." alt="" coords="753,425,877,451"/>
+<area shape="rect" href="shooter_8c.html#ab444f02d90b7eabd936b5d641e84040f" title="Get the shoot function from its ID." alt="" coords="749,376,881,402"/>
+<area shape="rect" href="shooter_8c.html#ab9177671e9ae9c61063d2796b07120f0" title="Do nothing." alt="" coords="978,452,1066,478"/>
+<area shape="rect" href="shooter_8c.html#af4fc1fe7fbbb739f2ed7fdbb2381fa90" title="Shoot missiles in multiple direction from the sender." alt="" coords="954,353,1091,379"/>
+<area shape="rect" href="shooter_8c.html#ac3fc0d74a904e0c97d5956187ae5aa02" title="Shoot a basic missile from an ennemy." alt="" coords="977,304,1068,330"/>
+<area shape="rect" href="shooter_8c.html#ab943a4cb2fee6509ff0e97387c14d156" title="Shoot a perforing missile from the player." alt="" coords="946,403,1098,428"/>
+<area shape="rect" href="shooter_8c.html#a304ec90f7c0c40e6a27c656998599992" title="Shoot a super laser from the player." alt="" coords="959,205,1086,231"/>
+<area shape="rect" href="shooter_8c.html#a5f9f19b321478d863e4191b7511fd716" title="Shoot a missile from an ennemy to the player." alt="" coords="955,255,1090,280"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a3a253a19001abf56118aa8ac63facbc2_icgraph.png" border="0" usemap="#alevel_8c_a3a253a19001abf56118aa8ac63facbc2_icgraph" alt=""/></div>
+<map name="alevel_8c_a3a253a19001abf56118aa8ac63facbc2_icgraph" id="alevel_8c_a3a253a19001abf56118aa8ac63facbc2_icgraph">
+<area shape="rect" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a4fec8fad0582630d058042aa22d9dad3" name="a4fec8fad0582630d058042aa22d9dad3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fec8fad0582630d058042aa22d9dad3">&#9670;&nbsp;</a></span>free_level()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fec8fad0582630d058042aa22d9dad3">&#9670;&#160;</a></span>free_level()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,11 +436,76 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>                              {</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">for</span>(i = 0; i &lt; level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a>; i++) {</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">for</span>(j = 0; j &lt; level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[i].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a>; j++) {</div>
+<div class="line"><span class="lineno">  154</span>            free(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[i].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a>[j]);</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        free(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[i].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a>);</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="line"><span class="lineno">  158</span>    free(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>);</div>
+<div class="line"><span class="lineno">  159</span>    free(level);</div>
+<div class="line"><span class="lineno">  160</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">_Wave::nb_line</a>, <a class="el" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">_Level::nb_wave</a>, <a class="el" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">_Wave::object_lines</a>, et <a class="el" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">_Level::waves</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="level_8h.html#a008982469285ee649542893d7bafd4c8">set_level()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph.png" border="0" usemap="#alevel_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph" alt=""/></div>
+<map name="alevel_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph" id="alevel_8c_a4fec8fad0582630d058042aa22d9dad3_icgraph">
+<area shape="rect" title="Free the memory allocated for the level." alt="" coords="1942,1326,2019,1352"/>
+<area shape="rect" href="level_8c.html#a008982469285ee649542893d7bafd4c8" title="Set the level of the game from a file." alt="" coords="1821,1326,1894,1352"/>
+<area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="936,1453,1013,1479"/>
+<area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1682,664,1773,689"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1373,55,1399"/>
+<area shape="rect" href="click__actions_8c.html#a33b339c60ef0dbde2391f71f9b567169" title="Restart a match." alt="" coords="1293,122,1437,148"/>
+<area shape="rect" href="click__actions_8c.html#a004b9f49f774e2ab3c1973d7f6242b39" title="Start an infinite match." alt="" coords="1503,664,1634,689"/>
+<area shape="rect" href="menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="687,175,830,216"/>
+<area shape="rect" href="menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="447,742,615,768"/>
+<area shape="rect" href="game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="307,717,392,743"/>
+<area shape="rect" href="game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="300,766,399,792"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="128,766,227,792"/>
+<area shape="rect" href="click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="103,816,252,841"/>
+<area shape="rect" href="menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="1275,664,1455,689"/>
+<area shape="rect" href="menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1095,721,1227,747"/>
+<area shape="rect" href="click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="920,189,1029,215"/>
+<area shape="rect" href="click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="903,1354,1047,1380"/>
+<area shape="rect" href="click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="927,1404,1022,1429"/>
+<area shape="rect" href="click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="927,41,1022,67"/>
+<area shape="rect" href="click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="924,90,1026,116"/>
+<area shape="rect" href="click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="927,140,1022,165"/>
+<area shape="rect" href="click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="902,797,1047,823"/>
+<area shape="rect" href="click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="686,240,831,265"/>
+<area shape="rect" href="click__actions_8c.html#ae6431c7028c7dd7b52c487f97dd268cf" title="Decrease the ennemy life multiplicator in settings." alt="" coords="683,906,834,946"/>
+<area shape="rect" href="click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="675,971,842,1012"/>
+<area shape="rect" href="click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="674,1036,843,1077"/>
+<area shape="rect" href="click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="688,1101,829,1127"/>
+<area shape="rect" href="click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="679,1150,838,1176"/>
+<area shape="rect" href="click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="685,1200,832,1241"/>
+<area shape="rect" href="click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="677,1266,840,1306"/>
+<area shape="rect" href="click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="676,1331,841,1372"/>
+<area shape="rect" href="click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="690,290,827,316"/>
+<area shape="rect" href="click__actions_8c.html#ac9bb7864513f84b98deeaaec4868fdd0" title="Increase the player speed in settings." alt="" coords="681,341,836,367"/>
+<area shape="rect" href="click__actions_8c.html#a7ec7f9d1bdee2d3283b0c5d90a7e9f45" title="Set the difficulty to custom." alt="" coords="686,392,831,417"/>
+<area shape="rect" href="click__actions_8c.html#a3f53ed623a6668d38dfc483a087a6856" title="Set the difficulty to easy." alt="" coords="693,442,824,468"/>
+<area shape="rect" href="click__actions_8c.html#aa5b5e811131f908d63b3f7b84e308499" title="Set the difficulty to hard." alt="" coords="695,493,822,519"/>
+<area shape="rect" href="click__actions_8c.html#ad718e739d45d0795237b239974fc630b" title="Set the difficulty to medium." alt="" coords="684,544,833,569"/>
+<area shape="rect" href="click__actions_8c.html#a3a25039e3dd387cc13a4b4503538fd69" title="Set the player shoot cooldown in settings." alt="" coords="687,593,830,619"/>
+<area shape="rect" href="click__actions_8c.html#aaefd58a44f89e2ddbed6839544a913e7" title="Set the player stamina in settings." alt="" coords="691,642,826,668"/>
+<area shape="rect" href="click__actions_8c.html#ac077e022d55d57e924f2852b9d8c9cc0" title="Set the player super shoot cooldown in settings." alt="" coords="679,692,838,733"/>
+<area shape="rect" href="click__actions_8c.html#a628e6def2eeb5d04bc200a2b0d2e552e" title="Set the volume of the game." alt="" coords="714,757,803,783"/>
+<area shape="rect" href="click__actions_8c.html#a1269e6f9ca1811750057bb4ec69adaa7" title="Set the waves spawn cooldown in settings." alt="" coords="663,806,854,832"/>
+<area shape="rect" href="click__actions_8c.html#a7725f8d356468423c723646b9dbc6f1a" title="Toogle on or off the coop mode." alt="" coords="693,856,824,881"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="ae7bda58ade5a1240a02906bb90768d40" name="ae7bda58ade5a1240a02906bb90768d40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7bda58ade5a1240a02906bb90768d40">&#9670;&nbsp;</a></span>get_object_type()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7bda58ade5a1240a02906bb90768d40">&#9670;&#160;</a></span>get_object_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,11 +528,33 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>EntityType of the object </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                        {</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span>(<span class="keywordtype">object</span> == <span class="charliteral">&#39;X&#39;</span>) <span class="keywordflow">return</span> <a class="code hl_define" href="struct_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a>;</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<span class="charliteral">&#39;0&#39;</span> &lt;= <span class="keywordtype">object</span> &amp;&amp; <span class="keywordtype">object</span> &lt;= <span class="charliteral">&#39;9&#39;</span>) <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca03bd8662dd096bf140411d1d85924241">ENNEMY</a>;</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a>;</div>
+<div class="line"><span class="lineno">   89</span>}</div>
+<div class="ttc" id="astruct_8h_html_a655c84af1b0034986ff56e12e84f983d"><div class="ttname"><a href="struct_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a></div><div class="ttdeci">#define NONE</div><div class="ttdef"><b>Definition:</b> struct.h:48</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca1867908cfbd59d506f09c46311c5664d">BONUS</a>, <a class="el" href="struct_8h.html#a5642ffc461001ffb4a92a8c4e448c72ca03bd8662dd096bf140411d1d85924241">ENNEMY</a>, et <a class="el" href="struct_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="level_8h.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_ae7bda58ade5a1240a02906bb90768d40_icgraph.png" border="0" usemap="#alevel_8c_ae7bda58ade5a1240a02906bb90768d40_icgraph" alt=""/></div>
+<map name="alevel_8c_ae7bda58ade5a1240a02906bb90768d40_icgraph" id="alevel_8c_ae7bda58ade5a1240a02906bb90768d40_icgraph">
+<area shape="rect" title="Get the entity type from a character (its id)" alt="" coords="567,5,680,31"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="392,5,519,31"/>
+<area shape="rect" href="level_8c.html#a40b065408c98606a10ed9686e75119a9" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a008982469285ee649542893d7bafd4c8" name="a008982469285ee649542893d7bafd4c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a008982469285ee649542893d7bafd4c8">&#9670;&nbsp;</a></span>set_level()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a008982469285ee649542893d7bafd4c8">&#9670;&#160;</a></span>set_level()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,10 +579,96 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the level of the game from a file. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game</td><td>object game to set the level </td></tr>
+    <tr><td class="paramname">level_file</td><td>path to the level file </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                                             {</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span>(game-&gt;<a class="code hl_variable" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">level</a> != NULL) {</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">free_level</a>(game-&gt;<a class="code hl_variable" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">level</a>);</div>
+<div class="line"><span class="lineno">   94</span>        game-&gt;<a class="code hl_variable" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">level</a> = NULL;</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span>(level_file == NULL) {</div>
+<div class="line"><span class="lineno">   97</span>        game-&gt;<a class="code hl_variable" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">level</a> = NULL;</div>
+<div class="line"><span class="lineno">   98</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   99</span>        game-&gt;<a class="code hl_variable" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">level</a> = <a class="code hl_function" href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34">create_level</a>(level_file);</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>}</div>
+<div class="ttc" id="alevel_8c_html_a02598e9b8c6ac36c85643b26603b3a34"><div class="ttname"><a href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34">create_level</a></div><div class="ttdeci">Level * create_level(char *level_file)</div><div class="ttdoc">Create a level from a file.</div><div class="ttdef"><b>Definition:</b> level.c:11</div></div>
+<div class="ttc" id="alevel_8c_html_a4fec8fad0582630d058042aa22d9dad3"><div class="ttname"><a href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">free_level</a></div><div class="ttdeci">void free_level(Level *level)</div><div class="ttdoc">Free the memory allocated for the level.</div><div class="ttdef"><b>Definition:</b> level.c:150</div></div>
+<div class="ttc" id="astruct___game_html_a45f71b00d4a3185c5a7cf4afba578022"><div class="ttname"><a href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">_Game::level</a></div><div class="ttdeci">struct _Level * level</div><div class="ttdef"><b>Definition:</b> struct.h:219</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34">create_level()</a>, <a class="el" href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3">free_level()</a>, et <a class="el" href="struct___game.html#a45f71b00d4a3185c5a7cf4afba578022">_Game::level</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="game_8h.html#afe1685d2cbc4f739f05be56aa80099ab">init_game()</a>, et <a class="el" href="game_8h.html#a50e3a06097a1814040d19e89673efb75">start_match()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a008982469285ee649542893d7bafd4c8_cgraph.png" border="0" usemap="#alevel_8c_a008982469285ee649542893d7bafd4c8_cgraph" alt=""/></div>
+<map name="alevel_8c_a008982469285ee649542893d7bafd4c8_cgraph" id="alevel_8c_a008982469285ee649542893d7bafd4c8_cgraph">
+<area shape="rect" title="Set the level of the game from a file." alt="" coords="5,31,79,56"/>
+<area shape="rect" href="level_8c.html#a02598e9b8c6ac36c85643b26603b3a34" title="Create a level from a file." alt="" coords="127,5,218,31"/>
+<area shape="rect" href="level_8c.html#a4fec8fad0582630d058042aa22d9dad3" title="Free the memory allocated for the level." alt="" coords="134,55,211,80"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a008982469285ee649542893d7bafd4c8_icgraph.png" border="0" usemap="#alevel_8c_a008982469285ee649542893d7bafd4c8_icgraph" alt=""/></div>
+<map name="alevel_8c_a008982469285ee649542893d7bafd4c8_icgraph" id="alevel_8c_a008982469285ee649542893d7bafd4c8_icgraph">
+<area shape="rect" title="Set the level of the game from a file." alt="" coords="1821,1326,1894,1352"/>
+<area shape="rect" href="game_8c.html#afe1685d2cbc4f739f05be56aa80099ab" title="Initialize the game." alt="" coords="936,1453,1013,1479"/>
+<area shape="rect" href="game_8c.html#a50e3a06097a1814040d19e89673efb75" title="Start a match of the game." alt="" coords="1682,664,1773,689"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1373,55,1399"/>
+<area shape="rect" href="click__actions_8c.html#a33b339c60ef0dbde2391f71f9b567169" title="Restart a match." alt="" coords="1293,122,1437,148"/>
+<area shape="rect" href="click__actions_8c.html#a004b9f49f774e2ab3c1973d7f6242b39" title="Start an infinite match." alt="" coords="1503,664,1634,689"/>
+<area shape="rect" href="menu_8c.html#ae59979f8358b4f657fe7135a3572bfcb" title="Create a base of a game over match." alt="" coords="687,175,830,216"/>
+<area shape="rect" href="menu_8c.html#a4a18928bd50d85335e4ee4f3886ea796" title="Create a game over menu." alt="" coords="447,742,615,768"/>
+<area shape="rect" href="game_8c.html#a15a16990ec45f6ed217db14d5daa7fd5" title="End a space crusader match of the game." alt="" coords="307,717,392,743"/>
+<area shape="rect" href="game_8c.html#a2c4dc872b466c6493fb03a3344fe99d6" title="Pause or resume a match." alt="" coords="300,766,399,792"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="128,766,227,792"/>
+<area shape="rect" href="click__actions_8c.html#ad5c5031b15aac7c2262c0b72137e7d9d" title="Resume a match." alt="" coords="103,816,252,841"/>
+<area shape="rect" href="menu_8c.html#accf613c9f9506787ca50b7eda2a587b5" title="Create a common main menu without submenus." alt="" coords="1275,664,1455,689"/>
+<area shape="rect" href="menu_8c.html#ab95952ccc68145fa05ad2063c3b3f2d7" title="Create a main menu object in function of a type." alt="" coords="1095,721,1227,747"/>
+<area shape="rect" href="click__actions_8c.html#a2e5ea175ce01a0f95eca4cc43650e0c6" title="Go to the main menu." alt="" coords="920,189,1029,215"/>
+<area shape="rect" href="click__actions_8c.html#a7c5fc5e9bfc3c71b8a04c965d359ae6c" title="Open the campaign map." alt="" coords="903,1354,1047,1380"/>
+<area shape="rect" href="click__actions_8c.html#a6d4016cc9add39fa2cb896f2b1a3c96c" title="Open credits menu." alt="" coords="927,1404,1022,1429"/>
+<area shape="rect" href="click__actions_8c.html#a50f224efcc0218be1c5b8fc0119ba8a8" title="Open garage menu." alt="" coords="927,41,1022,67"/>
+<area shape="rect" href="click__actions_8c.html#a4a7a6b7c78bc02dd945ba0fa303a3f5a" title="Open settings menu." alt="" coords="924,90,1026,116"/>
+<area shape="rect" href="click__actions_8c.html#a042837e68be43b88bd3a259673174d63" title="Open tutorial menu." alt="" coords="927,140,1022,165"/>
+<area shape="rect" href="click__actions_8c.html#ae43386862b260d46dc1f99dc0ed98f64" title=" " alt="" coords="902,797,1047,823"/>
+<area shape="rect" href="click__actions_8c.html#a75442e280a2e540532ba1561ac42690c" title="Save the settings in the file." alt="" coords="686,240,831,265"/>
+<area shape="rect" href="click__actions_8c.html#ae6431c7028c7dd7b52c487f97dd268cf" title="Decrease the ennemy life multiplicator in settings." alt="" coords="683,906,834,946"/>
+<area shape="rect" href="click__actions_8c.html#ad9edee076140e43092d53cc89e091059" title="Decrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="675,971,842,1012"/>
+<area shape="rect" href="click__actions_8c.html#a6ec07e6162a1ca4568dcc0af00654b6a" title="Decrease the ennemy speed multiplicator in settings." alt="" coords="674,1036,843,1077"/>
+<area shape="rect" href="click__actions_8c.html#a66d45d6ebab2117f9c6d89a654fef84e" title="Decrease the max player life in settings." alt="" coords="688,1101,829,1127"/>
+<area shape="rect" href="click__actions_8c.html#a8e6ce6824d16851653a45ba0a64a8e1a" title="Decrease the player speed in settings." alt="" coords="679,1150,838,1176"/>
+<area shape="rect" href="click__actions_8c.html#ae60374bc36247a4f1f7c512547f24cdb" title="Increase the ennemy life multiplicator in settings." alt="" coords="685,1200,832,1241"/>
+<area shape="rect" href="click__actions_8c.html#a71d3348a56cf8041916e026fb5c69e9b" title="Inecrease the ennemy shoot cooldown multiplicator in settings." alt="" coords="677,1266,840,1306"/>
+<area shape="rect" href="click__actions_8c.html#adcee0231c8ec5a403f56ec30296f2075" title="Increase the ennemy speed multiplicator in settings." alt="" coords="676,1331,841,1372"/>
+<area shape="rect" href="click__actions_8c.html#ab19adb5a984e38867a8a0113953b5670" title="Increase the max player life in settings." alt="" coords="690,290,827,316"/>
+<area shape="rect" href="click__actions_8c.html#ac9bb7864513f84b98deeaaec4868fdd0" title="Increase the player speed in settings." alt="" coords="681,341,836,367"/>
+<area shape="rect" href="click__actions_8c.html#a7ec7f9d1bdee2d3283b0c5d90a7e9f45" title="Set the difficulty to custom." alt="" coords="686,392,831,417"/>
+<area shape="rect" href="click__actions_8c.html#a3f53ed623a6668d38dfc483a087a6856" title="Set the difficulty to easy." alt="" coords="693,442,824,468"/>
+<area shape="rect" href="click__actions_8c.html#aa5b5e811131f908d63b3f7b84e308499" title="Set the difficulty to hard." alt="" coords="695,493,822,519"/>
+<area shape="rect" href="click__actions_8c.html#ad718e739d45d0795237b239974fc630b" title="Set the difficulty to medium." alt="" coords="684,544,833,569"/>
+<area shape="rect" href="click__actions_8c.html#a3a25039e3dd387cc13a4b4503538fd69" title="Set the player shoot cooldown in settings." alt="" coords="687,593,830,619"/>
+<area shape="rect" href="click__actions_8c.html#aaefd58a44f89e2ddbed6839544a913e7" title="Set the player stamina in settings." alt="" coords="691,642,826,668"/>
+<area shape="rect" href="click__actions_8c.html#ac077e022d55d57e924f2852b9d8c9cc0" title="Set the player super shoot cooldown in settings." alt="" coords="679,692,838,733"/>
+<area shape="rect" href="click__actions_8c.html#a628e6def2eeb5d04bc200a2b0d2e552e" title="Set the volume of the game." alt="" coords="714,757,803,783"/>
+<area shape="rect" href="click__actions_8c.html#a1269e6f9ca1811750057bb4ec69adaa7" title="Set the waves spawn cooldown in settings." alt="" coords="663,806,854,832"/>
+<area shape="rect" href="click__actions_8c.html#a7725f8d356468423c723646b9dbc6f1a" title="Toogle on or off the coop mode." alt="" coords="693,856,824,881"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a40b065408c98606a10ed9686e75119a9" name="a40b065408c98606a10ed9686e75119a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40b065408c98606a10ed9686e75119a9">&#9670;&nbsp;</a></span>update_level()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a40b065408c98606a10ed9686e75119a9">&#9670;&#160;</a></span>update_level()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,13 +709,134 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 if the level is over, 0 otherwise </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                         {</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span>(level == NULL) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">if</span>(!infinite </div>
+<div class="line"><span class="lineno">  107</span>        &amp;&amp; (!(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#a523d3ecbd3a3827527ef79f9a535ebc8">boss_id</a> == <span class="charliteral">&#39;X&#39;</span>)) </div>
+<div class="line"><span class="lineno">  108</span>        &amp;&amp; <a class="code hl_function" href="game_8h.html#a0383597abd462d3992f5698ee673e81c">boss_kill_count</a>(game) != 0) </div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span>(!infinite &amp;&amp; level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a> == level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a></div>
+<div class="line"><span class="lineno">  112</span>    &amp;&amp; level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a> == level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a>) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(infinite &amp;&amp; level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a> == level-&gt;<a class="code hl_variable" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">nb_wave</a>) {</div>
+<div class="line"><span class="lineno">  115</span>        level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a> = 0;</div>
+<div class="line"><span class="lineno">  116</span>        level-&gt;<a class="code hl_variable" href="struct___level.html#a0e47bb135345a823b9ea11faee537166">last_wave_time</a> = MLV_get_time();</div>
+<div class="line"><span class="lineno">  117</span>    } </div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">if</span>(MLV_get_time() - level-&gt;<a class="code hl_variable" href="struct___level.html#af09b5ddea2de16867cde4643c936d381">last_line_time</a> &gt; level-&gt;<a class="code hl_variable" href="struct___level.html#a078c8dfef1a35758eaa9de0606859991">line_cooldown</a>) {</div>
+<div class="line"><span class="lineno">  120</span>        level-&gt;<a class="code hl_variable" href="struct___level.html#af09b5ddea2de16867cde4643c936d381">last_line_time</a> = MLV_get_time();</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span>(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#a523d3ecbd3a3827527ef79f9a535ebc8">boss_id</a> == <span class="charliteral">&#39;X&#39;</span>) {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_function" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line</a>(game, level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a>]);</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>            level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a>++;</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span>(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a> == level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a>) {</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">if</span>(infinite) level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a> = 0;</div>
+<div class="line"><span class="lineno">  128</span>                level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>++;</div>
+<div class="line"><span class="lineno">  129</span>                level-&gt;<a class="code hl_variable" href="struct___level.html#a0e47bb135345a823b9ea11faee537166">last_wave_time</a> = MLV_get_time();</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>        } <span class="keywordflow">else</span> {            </div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="game_8h.html#a19eb12526626181322050572472807f9">is_boss_alive</a>(game)) {</div>
+<div class="line"><span class="lineno">  134</span>                level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#ab53fa42914e9b13ae132a810ed31e8c0">boss</a> = <a class="code hl_function" href="ennemy_8h.html#a0b23b10a394ffae58571f6513d9a57c1">create_ennemy</a>(game, level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#a523d3ecbd3a3827527ef79f9a535ebc8">boss_id</a>, <a class="code hl_variable" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>-&gt;<a class="code hl_variable" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">win_width</a> / 2);</div>
+<div class="line"><span class="lineno">  135</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  136</span>                <a class="code hl_function" href="ennemy_8h.html#a0d2d4ef7ced35f1948c85ac61b0e0442">create_shoot_line</a>(game, level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#ab53fa42914e9b13ae132a810ed31e8c0">boss</a>-&gt;<a class="code hl_variable" href="struct___ennemy.html#aab0ba75a78edbee65f875d6fa7609a9f">entity</a>, level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">object_lines</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a>]);</div>
+<div class="line"><span class="lineno">  137</span>                level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a>++;</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">if</span>(level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a> == level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">nb_line</a>) {</div>
+<div class="line"><span class="lineno">  139</span>                    level-&gt;<a class="code hl_variable" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">waves</a>[level-&gt;<a class="code hl_variable" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">current_wave</a>].<a class="code hl_variable" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">current_line</a> = 0;</div>
+<div class="line"><span class="lineno">  140</span>                }</div>
+<div class="line"><span class="lineno">  141</span>            }</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>            <span class="comment">/*level-&gt;current_wave++;*/</span></div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  147</span>}</div>
+<div class="ttc" id="aennemy_8h_html_a0d2d4ef7ced35f1948c85ac61b0e0442"><div class="ttname"><a href="ennemy_8h.html#a0d2d4ef7ced35f1948c85ac61b0e0442">create_shoot_line</a></div><div class="ttdeci">void create_shoot_line(Game *game, Entity *entity, char *shootline)</div><div class="ttdoc">Create a shoot pattern from the entity.</div><div class="ttdef"><b>Definition:</b> ennemy.c:80</div></div>
+<div class="ttc" id="agame_8h_html_a0383597abd462d3992f5698ee673e81c"><div class="ttname"><a href="game_8h.html#a0383597abd462d3992f5698ee673e81c">boss_kill_count</a></div><div class="ttdeci">int boss_kill_count(Game *game)</div><div class="ttdoc">Get the number of bosses killed by players in a game.</div><div class="ttdef"><b>Definition:</b> game.c:105</div></div>
+<div class="ttc" id="agame_8h_html_a19eb12526626181322050572472807f9"><div class="ttname"><a href="game_8h.html#a19eb12526626181322050572472807f9">is_boss_alive</a></div><div class="ttdeci">int is_boss_alive(Game *game)</div><div class="ttdoc">Get if a boss is currently alive in the game.</div><div class="ttdef"><b>Definition:</b> game.c:131</div></div>
+<div class="ttc" id="alevel_8c_html_a3a253a19001abf56118aa8ac63facbc2"><div class="ttname"><a href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line</a></div><div class="ttdeci">void create_object_line(Game *game, char *object_line)</div><div class="ttdoc">Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)</div><div class="ttdef"><b>Definition:</b> level.c:66</div></div>
+<div class="ttc" id="astruct___ennemy_html_aab0ba75a78edbee65f875d6fa7609a9f"><div class="ttname"><a href="struct___ennemy.html#aab0ba75a78edbee65f875d6fa7609a9f">_Ennemy::entity</a></div><div class="ttdeci">struct _Entity * entity</div><div class="ttdef"><b>Definition:</b> struct.h:367</div></div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="struct___wave.html#ab53fa42914e9b13ae132a810ed31e8c0">_Wave::boss</a>, <a class="el" href="struct___wave.html#a523d3ecbd3a3827527ef79f9a535ebc8">_Wave::boss_id</a>, <a class="el" href="game_8h.html#a0383597abd462d3992f5698ee673e81c">boss_kill_count()</a>, <a class="el" href="ennemy_8h.html#a0b23b10a394ffae58571f6513d9a57c1">create_ennemy()</a>, <a class="el" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2">create_object_line()</a>, <a class="el" href="ennemy_8h.html#a0d2d4ef7ced35f1948c85ac61b0e0442">create_shoot_line()</a>, <a class="el" href="struct___wave.html#af0b664979f981fb3fe725101f1381a1d">_Wave::current_line</a>, <a class="el" href="struct___level.html#a2c8aaa19f960b076970867088af096ea">_Level::current_wave</a>, <a class="el" href="struct___ennemy.html#aab0ba75a78edbee65f875d6fa7609a9f">_Ennemy::entity</a>, <a class="el" href="game_8h.html#a19eb12526626181322050572472807f9">is_boss_alive()</a>, <a class="el" href="struct___level.html#af09b5ddea2de16867cde4643c936d381">_Level::last_line_time</a>, <a class="el" href="struct___level.html#a0e47bb135345a823b9ea11faee537166">_Level::last_wave_time</a>, <a class="el" href="struct___level.html#a078c8dfef1a35758eaa9de0606859991">_Level::line_cooldown</a>, <a class="el" href="struct___wave.html#a920dedb786d0bea15dd1aaf31f0d7bac">_Wave::nb_line</a>, <a class="el" href="struct___level.html#a7cbef444dedb1b4dd153200022aed187">_Level::nb_wave</a>, <a class="el" href="struct___wave.html#acf1e34ea1ac93c616ff7db6f92bffa29">_Wave::object_lines</a>, <a class="el" href="struct_8h.html#aa187af7bd168795834bafac3e0d374cd">settings</a>, <a class="el" href="struct___level.html#a703dd9ca0feaefc61cd0448fe7edf571">_Level::waves</a>, et <a class="el" href="struct___settings.html#a3b0723cec0a46fde45d97861bf485d11">_Settings::win_width</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="game_8h.html#a4c75e4af7c4aa48650c4758fc0fd1444">update_game()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a40b065408c98606a10ed9686e75119a9_cgraph.png" border="0" usemap="#alevel_8c_a40b065408c98606a10ed9686e75119a9_cgraph" alt=""/></div>
+<map name="alevel_8c_a40b065408c98606a10ed9686e75119a9_cgraph" id="alevel_8c_a40b065408c98606a10ed9686e75119a9_cgraph">
+<area shape="rect" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="5,347,100,372"/>
+<area shape="rect" href="game_8c.html#a0383597abd462d3992f5698ee673e81c" title="Get the number of bosses killed by players in a game." alt="" coords="155,247,267,272"/>
+<area shape="rect" href="ennemy_8c.html#a0b23b10a394ffae58571f6513d9a57c1" title="Create an ennemy object." alt="" coords="342,345,452,371"/>
+<area shape="rect" href="ennemy_8c.html#a0d2d4ef7ced35f1948c85ac61b0e0442" title="Create a shoot pattern from the entity." alt="" coords="909,621,1032,647"/>
+<area shape="rect" href="level_8c.html#a3a253a19001abf56118aa8ac63facbc2" title="Create a wave from a string. Each characters correspond to an entity (ennemy or bonus)" alt="" coords="148,296,274,322"/>
+<area shape="rect" href="game_8c.html#a19eb12526626181322050572472807f9" title="Get if a boss is currently alive in the game." alt="" coords="161,773,261,799"/>
+<area shape="rect" href="entity_8c.html#a497844725a654f7fbcfa9d0326cc40fd" title="Create a entity object." alt="" coords="1280,421,1376,447"/>
+<area shape="rect" href="spaceship_8c.html#ac3651d020ae03d8df905db6af95bfd0b" title="Create a spaceship object." alt="" coords="523,295,647,320"/>
+<area shape="rect" href="movement_8c.html#a21cecc57afce1b1d773a435570c4e2a6" title="Get the movement function pointer from its ID." alt="" coords="1248,611,1408,636"/>
+<area shape="rect" href="shooter_8c.html#ab444f02d90b7eabd936b5d641e84040f" title="Get the shoot function from its ID." alt="" coords="519,420,651,446"/>
+<area shape="rect" href="animation_8c.html#a242ed764127c898e7459a119df5695cf" title="Create a simple sprite or an animation depending on the file name." alt="" coords="1251,231,1405,256"/>
+<area shape="rect" href="game_8c.html#aa7a317d136e479d18b2727e75ced082a" title="Insert an entity into the game." alt="" coords="1282,175,1374,200"/>
+<area shape="rect" href="shooter_8c.html#ab9177671e9ae9c61063d2796b07120f0" title="Do nothing." alt="" coords="728,269,817,295"/>
+<area shape="rect" href="movement_8c.html#a701627525684a1769854d783c28f9ebb" title="Correspond to a movement backward. The entity will move backward." alt="" coords="1693,489,1838,515"/>
+<area shape="rect" href="movement_8c.html#a6b39b318ba13066e262a96e154eeeda1" title="Correspond to a movement circling an entity. The entity will circle around another entity." alt="" coords="1465,759,1624,784"/>
+<area shape="rect" href="movement_8c.html#a0e3c7445385987ae2ae830dd910d6f81" title="Correspond to a movement following an ennemy. The entity will follow an ennemy." alt="" coords="1456,512,1632,538"/>
+<area shape="rect" href="movement_8c.html#a3503535619a03cee137511c40c3598e4" title="Correspond to a movement forward. The entity will move forward." alt="" coords="1899,735,2031,760"/>
+<area shape="rect" href="movement_8c.html#a652cb58f3f922fa163c64f1eba9efb27" title="Correspond to a movement following the player. The entity will follow the player." alt="" coords="1462,660,1627,686"/>
+<area shape="rect" href="movement_8c.html#a5a7236c788c900918ea53feb689400a8" title="Correspond to a movement following the player on its X axis." alt="" coords="1476,709,1613,735"/>
+<area shape="rect" href="movement_8c.html#ab6cc33671dfce95a0d2059b72b1b2018" title="Correspond to a movement infinite scroll. When the entity is out of screen, it appears at the top of ..." alt="" coords="1683,809,1848,835"/>
+<area shape="rect" href="movement_8c.html#a100b269e754d4260566e5adba43169b7" title="Correspond to a movement left and right. The entity will bounce on the left and right borders of the ..." alt="" coords="1475,361,1614,387"/>
+<area shape="rect" href="movement_8c.html#a0028be0b1961ad2174af71bbd51421c2" title="Correspond to no movement." alt="" coords="1486,561,1603,587"/>
+<area shape="rect" href="movement_8c.html#ae2ef5889c5b490e2965664d5c1c54b3f" title="Correspond to a movement sinusoidal. The entity will move in a sinusoidal pattern." alt="" coords="1471,611,1618,636"/>
+<area shape="rect" href="movement_8c.html#a374107eaf8cda2624e4bd293beb4265d" title="Correspond to a movement controlled by the player. The entity will move according to the player input..." alt="" coords="1457,411,1631,436"/>
+<area shape="rect" href="entity_8c.html#a1a5353005cf9b0bbf5d618e7fff4b4d1" title="Get the closest entity of an entity." alt="" coords="1714,709,1817,735"/>
+<area shape="rect" href="utils_8c.html#a25596bcc0f9ecf0e3e688ab0c1c74619" title="Get the timestamp from the start of the program in milliseconds." alt="" coords="1699,759,1832,784"/>
+<area shape="rect" href="movement_8c.html#a87854f40d7571254aa2ecb11504ff322" title="The entity will follow the target." alt="" coords="1684,660,1847,686"/>
+<area shape="rect" href="movement_8c.html#a3108b5e32dc385f5f796606e6a33bcab" title=" " alt="" coords="1680,354,1851,395"/>
+<area shape="rect" href="entity_8c.html#a10a6481f021a113fc7648265509bc38a" title="The entity can&#39;t go out of the screen." alt="" coords="1696,419,1835,444"/>
+<area shape="rect" href="shooter_8c.html#af4fc1fe7fbbb739f2ed7fdbb2381fa90" title="Shoot missiles in multiple direction from the sender." alt="" coords="704,572,841,598"/>
+<area shape="rect" href="shooter_8c.html#ac3fc0d74a904e0c97d5956187ae5aa02" title="Shoot a basic missile from an ennemy." alt="" coords="727,371,818,396"/>
+<area shape="rect" href="shooter_8c.html#a51563763ccfd5c17ce062e07a39cf503" title="Shoot missiles in multiple direction from the player." alt="" coords="699,621,846,647"/>
+<area shape="rect" href="shooter_8c.html#a783fccdfa6751cf140f0f4b7fd3c2e9a" title="Shoot a basic missile from the player." alt="" coords="706,420,839,446"/>
+<area shape="rect" href="shooter_8c.html#ab943a4cb2fee6509ff0e97387c14d156" title="Shoot a perforing missile from the player." alt="" coords="894,472,1046,498"/>
+<area shape="rect" href="shooter_8c.html#a304ec90f7c0c40e6a27c656998599992" title="Shoot a super laser from the player." alt="" coords="907,521,1034,547"/>
+<area shape="rect" href="shooter_8c.html#a5f9f19b321478d863e4191b7511fd716" title="Shoot a missile from an ennemy to the player." alt="" coords="903,320,1038,346"/>
+<area shape="rect" href="missile_8c.html#aebac63d93d7841927bb98344b3fe972f" title="Create a missile object." alt="" coords="1094,421,1200,447"/>
+<area shape="rect" href="animation_8c.html#a9b2ed01b4348f5b7f0f42e29a8d00c1a" title="Create a animation structure with multiple sprite." alt="" coords="1494,231,1595,256"/>
+<area shape="rect" href="animation_8c.html#a42f8edf73651c962296c54fceb80b497" title="Create a animation structure with non&#45;animated sprite." alt="" coords="1506,280,1583,306"/>
+<area shape="rect" href="entity_8c.html#a40097cd60d7736d4138e55e1e8f6665e" title="Update the entity data." alt="" coords="1495,181,1594,207"/>
+<area shape="rect" href="entity_8c.html#ac993a36899c2e61f1ecba162aaef2c01" title="Free the ennemy if it is out of the screen." alt="" coords="1699,156,1832,182"/>
+<area shape="rect" href="entity_8c.html#ae4af4759bfcd14edc7ede2fc8cacb6a4" title="Get the direction of an entity compared to another." alt="" coords="1704,205,1827,231"/>
+<area shape="rect" href="entity_8c.html#a0ef4f183cec335d3fc51ec1b423e471a" title="Called when an entity is collided by another entity." alt="" coords="1706,255,1825,280"/>
+<area shape="rect" href="missile_8c.html#a651a726e525d5d040527fe901ea53b53" title="Called each frame to update the missile&#39;s data." alt="" coords="1711,304,1820,330"/>
+<area shape="rect" href="bonus_8c.html#a0da5723f177148ab03cb688becd3f3d2" title="Create a bonus object." alt="" coords="1097,117,1197,143"/>
+<area shape="rect" href="bonus_8c.html#a66fc1ff9cc7925acb9daa71957d8e991" title="Create a random bonus object." alt="" coords="322,67,471,92"/>
+<area shape="rect" href="level_8c.html#ae7bda58ade5a1240a02906bb90768d40" title="Get the entity type from a character (its id)" alt="" coords="340,296,453,322"/>
+<area shape="rect" href="bonus_8c.html#ab6004477e9c2811af91ed032d4bd33e2" title="Get the bonus effect function by the bonus type ID." alt="" coords="1248,55,1408,80"/>
+<area shape="rect" href="bonus_8c.html#a558fcb1e8dabfdaa1d7fda73a3336c08" title="Apply the life decrease effect to a player." alt="" coords="1475,5,1613,31"/>
+<area shape="rect" href="bonus_8c.html#ad055706b7eb217b48f040cee55b8499c" title="Apply the life increase effect to a player." alt="" coords="1477,55,1611,80"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="level_8c_a40b065408c98606a10ed9686e75119a9_icgraph.png" border="0" usemap="#alevel_8c_a40b065408c98606a10ed9686e75119a9_icgraph" alt=""/></div>
+<map name="alevel_8c_a40b065408c98606a10ed9686e75119a9_icgraph" id="alevel_8c_a40b065408c98606a10ed9686e75119a9_icgraph">
+<area shape="rect" title="Called each frame to update the level on the game. It spawn the waves and the boss missiles." alt="" coords="250,5,344,31"/>
+<area shape="rect" href="game_8c.html#a4c75e4af7c4aa48650c4758fc0fd1444" title="Update the game data." alt="" coords="103,5,202,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

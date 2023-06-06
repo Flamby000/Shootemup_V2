@@ -39,7 +39,6 @@ void update_game(Game *game);
  */
 void free_game(Game* game);
 
-
 /**
  * @brief End a space crusader match of the game
  * 
@@ -90,7 +89,6 @@ int remaining_ennemies(Game* game);
  */
 int remaining_players(Game* game);
 
-
 /**
  * @brief Get the number of bosses killed by players in a game
  * 
@@ -106,7 +104,6 @@ int boss_kill_count(Game* game);
  * @return 1 if a boss is alive, 0 otherwise
  */
 int is_boss_alive(Game* game);
-
 
 /**
  * @brief Start a match of the game
@@ -132,14 +129,12 @@ void remove_entities_by_type(Game* game, EntityType type);
  */
 int is_match_entity(Entity *entity);
 
-
 /**
  * @brief Pause or resume a match
  * 
  * @param game to pause or resume 
  */
 void pause_match(Game* game);
-
 
 /**
  * @brief Calculate the score of every players
@@ -148,7 +143,5 @@ void pause_match(Game* game);
  * @return the score of every players
  */
 int get_score(Game* game);
-
-
 
 #endif

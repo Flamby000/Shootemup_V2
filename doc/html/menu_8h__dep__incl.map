@@ -1,0 +1,10 @@
+<map id="include/interface/menu.h" name="include/interface/menu.h">
+<area shape="rect" id="node1" title=" " alt="" coords="452,5,615,31"/>
+<area shape="rect" id="node2" href="$campaign__menu_8h.html" title=" " alt="" coords="5,79,182,120"/>
+<area shape="rect" id="node4" href="$animation_8c.html" title=" " alt="" coords="206,87,370,112"/>
+<area shape="rect" id="node5" href="$click__actions_8c.html" title=" " alt="" coords="394,79,518,120"/>
+<area shape="rect" id="node6" href="$menu_8c.html" title=" " alt="" coords="542,87,682,112"/>
+<area shape="rect" id="node7" href="$entity_8c.html" title=" " alt="" coords="707,87,822,112"/>
+<area shape="rect" id="node8" href="$game_8c.html" title=" " alt="" coords="846,87,963,112"/>
+<area shape="rect" id="node3" href="$campaign__menu_8c.html" title=" " alt="" coords="17,168,170,208"/>
+</map>
