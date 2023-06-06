@@ -117,6 +117,7 @@ typedef struct _Settings {
     int win_width;
     int win_height;
     int infinite_mode;
+    int selected_level;
 
     MLV_Font *small_font;
     MLV_Font *medium_font;
@@ -137,6 +138,7 @@ typedef struct _Button {
     struct _Button* next;
     struct _Entity* entity;
 
+    char* id;
 
     char* text;
     CLICK_ACTION on_click;
@@ -148,6 +150,7 @@ typedef struct _Button {
 
     int is_over;
     int is_selected;
+    int is_circle;
     int underline;
 
     int is_slider;
@@ -259,6 +262,7 @@ typedef struct _Entity{
     int height;
     int rotation;
     struct _Speed* speed;
+
 
     struct _EntityLink* children;
     void* parent;

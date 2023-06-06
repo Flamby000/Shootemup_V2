@@ -93,7 +93,16 @@ void set_slider(Button* button, int value, int min_value, int max_value);
 void set_menu(Game *game, Menu *menu);
 
 void set_image(Button* button, char* path);
-
+void set_id(Button* button, char* id);
+Button* get_by_id(Menu menu, char* id);
+void set_animation(Button* button, char* sprite);
+void set_sprite(Button* button, Animation* sprite);
+Button* create_element(Menu *menu, Game *game, int x, int y, int width, int height);
+void set_on_click(Button* button, CLICK_ACTION on_click);
+void set_circular_movement(Button* button, Button* parent);
+void set_background_color(Button* button, MLV_Color color);
+void set_border(Button* button, MLV_Color color);
+void set_text(Button* button, char* text, MLV_Font *font, MLV_Color color);
 /**
  * @brief Create a game over menu 
  * 
@@ -130,5 +139,8 @@ Menu create_main_menu(Game *game, int type);
  * @return Menu created
  */
 Menu create_main_menu_sample(Game *game, int selected_button);
+
+
+
 
 #endif 

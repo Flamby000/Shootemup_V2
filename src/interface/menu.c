@@ -108,15 +108,24 @@ void draw_button(Game* game, Button *button) {
         );
     }
 
+    if(button->is_circle && button->is_selected) {
+        MLV_draw_circle(
+            button->entity->x + button->entity->width / 2, 
+            button->entity->y + button->entity->height / 2, 
+            button->entity->width / 2, 
+            button->over_color
+        );
+    }
+
 
 
 }
 
 void free_button(Button *button) {
     free(button->text);
+    if(button->id != NULL) free(button->id);
     free(button);
 }
-
 
 void insert_button(Menu *menu, Button *button) {
     Button *current;
@@ -141,7 +150,12 @@ void set_animation(Button* button, char* sprite) {
     button->entity->sprite = init_animation_wrapper(sprite);
 }
 
+void set_sprite(Button* button, Animation* sprite) {
+    button->entity->sprite = sprite;
+}
+
 void set_text(Button* button, char* text, MLV_Font *font, MLV_Color color) {
+    if(button->text != NULL) free(button->text);
     button->text = malloc(sizeof(char) * (strlen(text) + 1));
     button->text = strcpy(button->text, text);
     button->color = color;
@@ -165,6 +179,11 @@ void set_circular_movement(Button* button, Button* parent) {
 
 void set_on_click(Button* button, CLICK_ACTION on_click) {
     button->on_click = on_click;
+}
+
+void set_selection_circle(Button* button, MLV_Color color) {
+    button->is_circle = 1;
+    button->over_color = color;
 }
 
 Button* create_button(Game *game, 
@@ -192,7 +211,8 @@ Button* create_button(Game *game,
     button->text = malloc(sizeof(char) * (strlen(text) + 1));
     button->text = strcpy(button->text, text);
 
-
+    button->is_circle = 0;
+    button->id = NULL;
     button->background_color = background_color;
     button->color = color;
     button->font = font;
@@ -208,6 +228,21 @@ Button* create_button(Game *game,
     button->min_value = 0;
     
     return button;
+}
+
+void set_id(Button* button, char* id) {
+    button->id = malloc(sizeof(char) * (strlen(id) + 1));
+    button->id = strcpy(button->id, id);
+}
+
+Button* get_by_id(Menu menu, char* id) {
+    Button *current;
+    for(current = menu; current != NULL; current = current->next) {
+        if(current->id != NULL && strcmp(current->id, id) == 0) {
+            return current;
+        }
+    }
+    return NULL;
 }
 
 void set_slider(Button* button, int value, int min_value, int max_value) {
@@ -350,6 +385,8 @@ Menu create_game_over_menu(Game *game, MatchStatus status) {
 }
 
 
+
+
 Menu create_main_menu(Game *game, int type) {
     Menu main_menu = create_main_menu_sample(game, type);
     int box_x = settings->win_width / 3 - settings->win_width / 10;
@@ -374,7 +411,6 @@ Menu create_main_menu(Game *game, int type) {
         set_background_color(element, MLV_rgba(25,78,157,100));
         set_border(element, MLV_COLOR_WHITE);
     
-
         /* Menu title */
         MLV_get_size_of_text_with_font("Campaign", &txt_width, &txt_height, settings->medium_font);
         element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y, txt_width, txt_height);
@@ -385,26 +421,55 @@ Menu create_main_menu(Game *game, int type) {
             box_x + planet_size/2,  box_y + planet_size,
             planet_size, planet_size);
         set_animation(element, "resources/utils/planet1.png");
-        tmp = element;
+        set_selection_circle(element, MLV_COLOR_ORANGE);
+        set_on_click(element, set_selected_level);
+        set_id(element, "level-1");
 
         element = create_element(&main_menu, game,
-            box_x + planet_size/2,  box_y + planet_size*2,
+            box_x + planet_size*2,  box_y + planet_size*2,
             planet_size, planet_size);
         set_animation(element, "resources/utils/planet2.png");
-
+        set_selection_circle(element, MLV_COLOR_ORANGE);
+        set_on_click(element, set_selected_level);
+        set_id(element, "level-2");
 
         element = create_element(&main_menu, game,
             box_x + planet_size/2,  box_y + (planet_size*3),
             planet_size, planet_size);
         set_animation(element, "resources/utils/planet3.png");
-        
-        /* Level selector */
-        element = create_element(&main_menu, game, 
-            box_x + planet_size/2,  box_y + planet_size,
-            planet_size/5, planet_size/3);
-        set_animation(element, "resources/player/backward-1.png");
-        set_circular_movement(element, tmp);
+        set_selection_circle(element, MLV_COLOR_ORANGE);
+        set_on_click(element, set_selected_level);
+        set_id(element, "level-3");
 
+
+        /* Level details */
+        element = create_element(&main_menu, game,
+            box_x + box_width/3,  box_y + planet_size,
+            box_width - planet_size*4, planet_size*3);
+        set_id(element, "level-name");
+
+        /* High score*/
+        element = create_element(&main_menu, game,
+            box_x + box_width/3,  box_y + planet_size*1.5,
+            box_width - planet_size*4, planet_size*3);
+        set_id(element, "level-high-score");
+
+        /* Ennemies */
+        element = create_element(&main_menu, game,
+            box_x + box_width/3,  box_y + planet_size*2,
+            box_width - planet_size*4, planet_size*2);
+        set_id(element, "level-ennemies-count");
+
+        element = create_element(&main_menu, game,
+            box_x + box_width/3,  box_y + planet_size*2.5,
+            box_width - planet_size*4, planet_size*2);
+        set_id(element, "level-boss");
+
+        /* The boss sprite preview */
+        element = create_element(&main_menu, game,
+            box_x + box_width/3,  box_y + planet_size*3,
+            planet_size, planet_size);
+        set_id(element, "level-boss-sprite");
 
 
 

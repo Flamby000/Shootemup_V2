@@ -33,7 +33,6 @@ Entity* create_entity(int x, int y, int width, int height,
         entity->destruction_img_path = NULL;
     }
 
-
     entity->speed = malloc(sizeof(Speed));
     entity->speed->speed_x = 0;
     entity->speed->speed_y = 0;
@@ -46,6 +45,7 @@ Entity* create_entity(int x, int y, int width, int height,
     
     return entity;
 }    
+
 
 
 void avoid_collide_border(Entity *entity) {

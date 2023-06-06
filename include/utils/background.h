@@ -27,4 +27,5 @@ void init_background(Game *game);
  */
 void set_background_speed(Game *game, double factor);
 
+void set_background_image(Game *game, Animation *animation);
 #endif

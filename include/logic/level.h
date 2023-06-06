@@ -56,5 +56,8 @@ EntityType get_object_type(char object);
 
 
 void set_level(Game* game, char* level_file);
-
+int get_high_score(int level_number);
+void set_high_score(int level_number, int score);
+int get_ennemy_count(int level_number);
+Animation* get_boss_animation(int level_number);
 #endif

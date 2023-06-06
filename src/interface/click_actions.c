@@ -4,7 +4,9 @@
 #include <MLV/MLV_all.h>
 #include "../../include/struct.h"
 #include "../../include/logic/game.h"
+#include "../../include/logic/level.h"
 #include "../../include/settings.h"
+#include "../../include/interface/animation.h"
 #include "../../include/utils/background.h"
 #include "../../include/interface/menu.h"
 #include "../../include/interface/click_actions.h"
@@ -89,6 +91,12 @@ void update_setting_menu(Game *game) {
     set_menu(game, &settings_menu);
 }
 
+void update_campaign_menu(Game *game) {
+    Menu campaign_menu;
+    campaign_menu = create_main_menu(game, CAMPAIGN_MENU);
+    set_menu(game, &campaign_menu);
+}
+
 int toggle_coop_mode(Game* game, Button* button) {
 
     settings->coop_mode = !settings->coop_mode;
@@ -163,13 +171,13 @@ int set_difficulty_custom(Game* game, Button* button) {
 }
 
 int set_volume(Game *game, Button *button) {
-    MLV_Music *music;
+    /*MLV_Music *music;
     MLV_stop_music();
     music = MLV_load_music("resources/sound/music.mp3");
 
     settings->volume = button->value;
 
-    MLV_play_music(music, settings->volume*0.01, -1);
+    MLV_play_music(music, settings->volume*0.01, -1);*/
 
     update_setting_menu(game);
     return 1;
@@ -298,5 +306,48 @@ int decrease_ennemy_speed_multiplicator(Game *game, Button *button) {
 int save_settings_action(Game *game, Button *button) {
     save_settings();
     go_main_menu(game, button);
+    return 1;
+}
+
+
+int set_selected_level(Game* game, Button* button) {
+    Button* level_name = get_by_id(button, "level-name");
+    Button* level_high_score = get_by_id(button, "level-high-score");
+    Button* ennemy_count = get_by_id(button, "level-ennemies-count");
+    Button* level_boss_sprite = get_by_id(button, "level-boss-sprite");
+    Button* level_boss = get_by_id(button, "level-boss");
+    Animation* boss_sprite = NULL;
+
+    char buffer[255];
+    set_background_image(game, copy_animation(button->entity->sprite));
+
+    /* Get level information */
+    if(get_by_id(button, "level-1") != NULL) {
+        settings->selected_level = 1;
+        set_text(level_name, "Earth", settings->medium_font, MLV_COLOR_WHITE);
+
+    } else if(get_by_id(button, "level-2") != NULL) {
+        settings->selected_level = 2;
+        set_text(level_name, "Mars", settings->medium_font, MLV_COLOR_WHITE);
+
+    } else if(get_by_id(button, "level-3") != NULL) {
+        settings->selected_level = 2;
+        set_text(level_name, "Moon", settings->medium_font, MLV_COLOR_WHITE);
+    }
+
+    /* Get high score */
+    sprintf(buffer, "High score : %d", get_high_score(settings->selected_level));
+    set_text(level_high_score, buffer, settings->small_font, MLV_COLOR_WHITE);
+    
+    /* Ennemy count */
+    sprintf(buffer, "Ennemy count : %d", get_ennemy_count(settings->selected_level));
+    set_text(ennemy_count, buffer, settings->small_font, MLV_COLOR_WHITE);
+
+    set_text(level_boss, "Boss :", settings->small_font, MLV_COLOR_WHITE);
+
+    boss_sprite = get_boss_animation(settings->selected_level);
+    set_sprite(level_boss_sprite, boss_sprite);
+
+
     return 1;
 }

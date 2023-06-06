@@ -88,4 +88,5 @@ void free_animation(Animation* animation);
  */
 void draw_entity(Game *game, Entity* entity, Entity* parent);
 
+Animation* copy_animation(Animation* animation);
 #endif

@@ -65,4 +65,5 @@ int on_collide_ennemy(Game *game, Ennemy *ennemy, Entity *collide, Direction dir
  */
 void create_shoot_line(Game* game, Entity *entity, char* shootline);
 
+Animation* create_ennemy_animation(char type);
 #endif

@@ -27,6 +27,7 @@ void load_settings() {
     settings->win_height = height;
     settings->infinite_mode = 0;
     settings->coop_mode = 0;
+    settings->selected_level = 1;
 
     
     file = fopen(SETTINGS_DATA_PATH, "r");

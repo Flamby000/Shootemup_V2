@@ -241,3 +241,49 @@ void draw_entity(Game *game, Entity* entity, Entity* parent) {
     
     
 }
+
+Animation* copy_animation(Animation* animation) {
+    Animation* copy = malloc(sizeof(Animation));
+    int i;
+    if(copy == NULL) return NULL;
+    copy->type = animation->type;
+    copy->nb_frames = animation->nb_frames;
+    copy->current_frame = animation->current_frame;
+    copy->last_frame_time = animation->last_frame_time;
+    copy->frame_duration = animation->frame_duration;
+    switch(animation->type) {
+        case SQUARE:
+            copy->color = animation->color;
+            break;
+        case SPRITE:
+            copy->sprite = MLV_copy_image(animation->sprite);
+            break;
+        case ANIMATED:
+            copy->forward_images = malloc(sizeof(MLV_Image*) * animation->nb_frames);
+            for(i = 0; i < animation->nb_frames; i++) {
+                copy->forward_images[i] = MLV_copy_image(animation->forward_images[i]);
+            }
+            break;
+        case ONE_SHOT_ANIMATION:
+            copy->forward_images = malloc(sizeof(MLV_Image*) * animation->nb_frames);
+            for(i = 0; i < animation->nb_frames; i++) {
+                copy->forward_images[i] = MLV_copy_image(animation->forward_images[i]);
+            }
+            break;
+        case MULTIPLE_ANIMATED:
+            copy->forward_images = malloc(sizeof(MLV_Image*) * animation->nb_frames);
+            copy->backward_images = malloc(sizeof(MLV_Image*) * animation->nb_frames);
+            copy->left_images = malloc(sizeof(MLV_Image*) * animation->nb_frames);
+            copy->right_images = malloc(sizeof(MLV_Image*) * animation->nb_frames);
+            for(i = 0; i < animation->nb_frames; i++) {
+                copy->forward_images[i] = MLV_copy_image(animation->forward_images[i]);
+                copy->backward_images[i] = MLV_copy_image(animation->backward_images[i]);
+                copy->left_images[i] = MLV_copy_image(animation->left_images[i]);
+                copy->right_images[i] = MLV_copy_image(animation->right_images[i]);
+            }
+            break;
+        default:
+            break;
+    }
+    return copy;
+}

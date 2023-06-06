@@ -289,4 +289,7 @@ int decrease_ennemy_speed_multiplicator(Game *game, Button *button);
  * @return 1
  */
 int save_settings_action(Game *game, Button *button);
+
+int set_selected_level(Game *game, Button *button);
+
 #endif

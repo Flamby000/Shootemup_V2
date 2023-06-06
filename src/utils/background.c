@@ -75,3 +75,11 @@ void init_background(Game *game) {
     element_count++;
     insert_entity(game, tmp);
 }
+
+void set_background_image(Game *game, Animation *animation) {
+    /* Set the image of the planet*/
+    int index = NB_STAR+1;
+    free_animation(game->background[index]->sprite);
+    game->background[index]->sprite = animation;
+
+}

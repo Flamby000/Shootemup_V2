@@ -76,6 +76,48 @@ Ennemy* create_ennemy(Game *game, char type, int x) {
     return ennemy;
 }
 
+Animation* create_ennemy_animation(char type) {
+    char key[200];
+    char value[200];
+    char line[400];
+    char current_id = 'X';
+    Animation *animation = NULL;
+    char* token;
+
+    FILE *file = fopen(ENNEMY_DATA_PATH, "r");
+
+    if(file == NULL) {
+        printf("Error : Cannot open file %s", ENNEMY_DATA_PATH);
+        return NULL;
+    }
+
+    while(fscanf(file, "%s", line) != EOF) {
+        if(strchr(line, ':') != NULL) {
+            token = strtok(line, ":");
+            strcpy(key, token);
+            token = strtok(NULL, ":");
+            strcpy(value, token);
+
+            if(strcmp(key, "id") == 0) current_id = value[0];
+
+            if(current_id == type) {
+                if(strcmp(key, "animation") == 0) {
+                    animation = init_animation_wrapper(value);
+                    break;
+                }
+            }
+        }
+    }
+    fclose(file);
+
+    if(current_id == 'X') {
+        printf("Error : Ennemy type not found\n");
+        return NULL;
+    }
+
+    return animation;
+}
+
 
 void create_shoot_line(Game* game, Entity *entity, char* shootline) {
     int i;
