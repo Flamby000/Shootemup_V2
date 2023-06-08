@@ -28,9 +28,9 @@ shoot:2
 
 =====Sinusoidal=====
 id:3
-width:20
-height:30
-speed:3
+width:30
+height:40
+speed:2
 score:10
 life:1
 invincibility:0
@@ -79,5 +79,19 @@ invincibility:0
 cooldown:1000
 is_boss:true
 animation:resources/ennemies/boss/spaceship9-%d.png
+movement:9
+shoot:4
+
+====Third Boss====
+id:7
+width:150
+height:200
+speed:8
+score:100
+life:10
+invincibility:0
+cooldown:1000
+is_boss:true
+animation:resources/ennemies/boss/ultimate_boss-%d.png
 movement:9
 shoot:4

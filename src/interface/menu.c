@@ -186,6 +186,34 @@ void set_selection_circle(Button* button, MLV_Color color) {
     button->over_color = color;
 }
 
+void create_dialog_element(Menu *menu, Game* game, char* img, char *txt, int x, int y, int width, int height) {
+    Button *element;
+    int txt_width, txt_height;
+
+    element = create_element(menu, game, x, y, width, height);
+    set_background_color(element, MLV_rgba(25,78,157,100));
+    set_border(element, MLV_COLOR_WHITE);
+
+    MLV_get_size_of_text_with_font(txt, &txt_width, &txt_height, settings->medium_font);
+
+    element = create_element(menu, game, 
+        (x+height) + (width-height)/2 - txt_width/2 -10, 
+        y + txt_height/2 -10, 
+        width-height, 
+        height);
+    set_text(element, txt, settings->medium_font, MLV_COLOR_WHITE);
+    
+
+
+    element = create_element(menu, game, x, y, height, height);
+    set_border(element, MLV_COLOR_ORANGE);
+    set_animation(element, img);
+    
+
+
+
+}
+
 Button* create_button(Game *game, 
                       int x, int y, 
                       int width, int height, 
@@ -273,7 +301,9 @@ if(game->current_menu != NULL)     remove_entities_by_type(game, BUTTON);
 
 Menu create_match_pause_sample(Game *game, char* text, MLV_Color title_color) {
     Menu menu = NULL;
+    Button* element;
     int txt_width, txt_height;
+    char buffer[255];
 
     /* Darker background*/    
     insert_button(&menu, 
@@ -355,6 +385,12 @@ Menu create_match_pause_sample(Game *game, char* text, MLV_Color title_color) {
             0
         )
     );
+
+    /* Score */
+    sprintf(buffer, "Score : %d", get_score(game));
+    element = create_element(&menu, game, settings->win_width/3, settings->win_height/3, 100, 100);
+    set_text(element, buffer, settings->medium_font, MLV_COLOR_WHITE);
+
     return menu;
 }
 
@@ -383,6 +419,8 @@ Menu create_game_over_menu(Game *game, MatchStatus status) {
     else menu = create_match_pause_sample(game, "Game Over", MLV_COLOR_RED);
     return menu;
 }
+
+
 
 
 
@@ -441,6 +479,12 @@ Menu create_main_menu(Game *game, int type) {
         set_on_click(element, set_selected_level);
         set_id(element, "level-3");
 
+        MLV_draw_line(
+            box_x + planet_size/2,  box_y + planet_size,
+            box_x + planet_size*2,  box_y + planet_size*2,
+            MLV_COLOR_ORANGE
+        );
+
 
         /* Level details */
         element = create_element(&main_menu, game,
@@ -480,6 +524,38 @@ Menu create_main_menu(Game *game, int type) {
         
 
 
+    } else if(type == CREDITS_MENU) {
+
+        MLV_get_size_of_text_with_font("Crédits", &txt_width, &txt_height, settings->medium_font);
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y, txt_width, txt_height);
+        set_text(element, "Crédits", settings->medium_font, MLV_COLOR_ORANGE);
+
+
+        create_dialog_element(&main_menu, game, "resources/utils/planet1.png", "Max Ducoudré", 
+            box_x + box_width/4, 
+            box_y +  ((box_height/5) ), 
+            box_width - box_width/2, 
+            txt_height*2);
+
+
+        create_dialog_element(&main_menu, game, "resources/utils/planet2.png", "Adam Mehdaoui", 
+            box_x + box_width/4, 
+            box_y +  ((box_height/5) *2), 
+            box_width - box_width/2, 
+            txt_height*2
+        );
+
+
+
+        create_dialog_element(&main_menu, game, "resources/utils/info.png", "ESIPE", 
+            box_x + box_width/4, 
+            box_y +  ((box_height/5) *3), 
+            box_width - box_width/2, 
+            txt_height*2);
+
+
+
+    
     } else if(type == SETTINGS_MENU) {
 
         /* Big menu square*/

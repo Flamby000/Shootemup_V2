@@ -42,8 +42,7 @@ Game* init_game() {
         exit(EXIT_FAILURE);
     }
     else {
-        fprintf(stdout, "Musique chargée\n");
-        /*MLV_play_music(music, settings->volume, -1);*/
+        MLV_play_music(music, settings->volume, -1);
     }
 
     return game;

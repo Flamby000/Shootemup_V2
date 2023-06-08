@@ -84,6 +84,11 @@ void free_missile(Missile *missile) {
 }
 
 
+Missile* create_directional_missile(Game *game, Entity *sender, int direction) {
+    return create_missile(game, sender, DIRECTIONAL_MISSILE, -1);
+}
+
+
 int update_missile(Game *game, Missile *missile) {
     if(missile->fuel > 0) {
         if(MLV_get_time() - missile->creation_time > missile->fuel) {

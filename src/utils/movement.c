@@ -6,6 +6,7 @@
 #include "../../include/struct.h"
 #include "../../include/interface/frame.h"
 #include "../../include/logic/entity.h"
+#include "../../include/logic/game.h"
 #include "../../include/utils/movement.h"
 #include "../../include/utils/utils.h"
 
@@ -23,7 +24,9 @@ SPEED_FUNC get_movement_function(int id) {
         case MOVEMENT_FOLLOW_X:        return movement_follow_x;        /* id : 8 */
         case MOVEMENT_LEFT_RIGHT:      return movement_left_right;      /* id : 9 */
         case MOVEMENT_FOLLOW_ENNEMY:   return movement_follow_ennemy;        /* id : 10 */
+        case 11:                       return movement_empty;        /* id : 11 */
         default:                       return movement_none;
+
     }
 }
 
@@ -43,6 +46,9 @@ void movement_backward(Game *game, Entity *entity) {
     Speed *speed = entity->speed;
     speed->speed_x = 0;
     speed->speed_y = -speed->speed;
+}
+
+void movement_empty(Game *game, Entity *entity) {
 }
 
 void movement_infinite_scroll(Game *game, Entity *entity) {
@@ -128,6 +134,7 @@ void movement_follow_player(Game *game, Entity *entity) {
 
 void movement_follow_ennemy(Game *game, Entity *entity) {
     Entity *ennemy = closest_entity(game, entity, ENNEMY);
+
     if(ennemy == NULL) movement_backward(game, entity);
     else movement_follow_entity(game, entity, ennemy);
 }
@@ -147,7 +154,8 @@ void movement_follow_entity(Game *game, Entity *entity, Entity *target) {
 
 void movement_circle_entity(Game *game, Entity *entity) {
     Entity *player_entity = closest_entity(game, entity, PLAYER);
-    /*if(player_entity == NULL) return;*/
+    if(player_entity == NULL) remove_entity(game, entity, 1);
+
     entity->x = player_entity->x + (player_entity->width/2)  + (cos(get_timestamp_ms()/1000.0) * 100);
     entity->y = player_entity->y + (player_entity->height/2) + (sin(get_timestamp_ms()/1000.0) * 100);
 }
