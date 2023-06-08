@@ -490,7 +490,7 @@ Menu create_main_menu(Game *game, int type) {
         set_background_color(element, MLV_rgba(25,78,157,100));
         set_border(element, MLV_COLOR_WHITE);
         /* Menu square player 2 */
-        element = create_element(&main_menu, game, box_x + box_width/2 - 20, box_y + box_height/5, box_width/2 - 20, box_height/1.5);
+        element = create_element(&main_menu, game, box_x + box_width/2 - 20, box_y + box_height/5, box_width/2 - 15, box_height/1.5);
         set_background_color(element, MLV_rgba(25,78,157,100));
         set_border(element, MLV_COLOR_WHITE);
     
