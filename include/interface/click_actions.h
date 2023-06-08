@@ -293,4 +293,6 @@ int save_settings_action(Game *game, Button *button);
 
 int set_selected_level(Game *game, Button *button);
 
+
+int start_level(Game *game, Button *button);
 #endif

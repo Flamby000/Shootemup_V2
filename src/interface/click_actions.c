@@ -316,6 +316,7 @@ int set_selected_level(Game* game, Button* button) {
     Button* ennemy_count = get_by_id(button, "level-ennemies-count");
     Button* level_boss_sprite = get_by_id(button, "level-boss-sprite");
     Button* level_boss = get_by_id(button, "level-boss");
+    Button* level_start = get_by_id(button, "level-start");
     Animation* boss_sprite = NULL;
 
     char buffer[255];
@@ -324,15 +325,15 @@ int set_selected_level(Game* game, Button* button) {
     /* Get level information */
     if(get_by_id(button, "level-1") != NULL) {
         settings->selected_level = 1;
-        set_text(level_name, "Earth", settings->medium_font, MLV_COLOR_WHITE);
+        set_text(level_name, "Earth", settings->medium_font, MLV_COLOR_ORANGE);
 
     } else if(get_by_id(button, "level-2") != NULL) {
         settings->selected_level = 2;
-        set_text(level_name, "Mars", settings->medium_font, MLV_COLOR_WHITE);
+        set_text(level_name, "Mars", settings->medium_font, MLV_COLOR_ORANGE);
 
     } else if(get_by_id(button, "level-3") != NULL) {
         settings->selected_level = 2;
-        set_text(level_name, "Moon", settings->medium_font, MLV_COLOR_WHITE);
+        set_text(level_name, "Moon", settings->medium_font, MLV_COLOR_ORANGE);
     }
 
     /* Get high score */
@@ -348,6 +349,17 @@ int set_selected_level(Game* game, Button* button) {
     boss_sprite = get_boss_animation(settings->selected_level);
     set_sprite(level_boss_sprite, boss_sprite);
 
+    set_text(level_start, "Start", settings->medium_font, MLV_COLOR_GREEN);
 
+
+    return 1;
+}
+
+int start_level(Game *game, Button *button) {
+    char* level_path = NULL;
+    level_path = malloc(sizeof(char) * 255);
+    sprintf(level_path, "data/level/level-%d.lvl", settings->selected_level);
+    start_match(game, level_path);
+    free(level_path);
     return 1;
 }

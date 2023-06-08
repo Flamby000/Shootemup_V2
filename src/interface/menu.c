@@ -471,7 +471,13 @@ Menu create_main_menu(Game *game, int type) {
             planet_size, planet_size);
         set_id(element, "level-boss-sprite");
 
-
+        /* Start level button*/
+        element = create_element(&main_menu, game,
+            box_x + box_width/3,  box_y + planet_size*4,
+            box_width - planet_size*4, planet_size*2);
+        set_on_click(element, start_level);
+        set_id(element, "level-start");
+        
 
 
     } else if(type == SETTINGS_MENU) {
