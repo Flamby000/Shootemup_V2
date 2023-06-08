@@ -6,11 +6,7 @@ La documentation technique du code est dans le **fichier Doxygen.html dans le r�
 
 Ce document est à ouvrir **avec un navigateur** car il est chargé à partir des fichiers de configuration Doxygen.
 
-## Prérequis
-
-**Avoir la librairie MLV installée.**
-<br>
-Tutoriel pour les O.S. linux : http://www-igm.univ-mlv.fr/~boussica/mlv/api/French/html/installation_linux.html
+La documentation suivante est un **extrait** du manuel utilisateur contenu dans le fichier **doc/USER.md**.
 
 ## Installation
 
@@ -31,6 +27,10 @@ Pour lancer le jeu :
 ```sh
 make run
 ```
+
+## Contrôles en jeu
+
+Tous les contrôles sont indiqués dans la section **Tutorial** du jeu.
 
 ## Modes de jeu
 
