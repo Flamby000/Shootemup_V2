@@ -25,10 +25,10 @@ int update_button(Game* game, Button *button) {
                 if(button->value < button->min_value) button->value = button->min_value;
                 if(button->value > button->max_value) button->value = button->max_value;
                 entity_removed = button->on_click(game, button);
-
             } else if(button->on_click != NULL && button->is_selected == 0) {
-
                 if(get_timestamp_ms() - game->last_click_action_time > 200) {
+                    MLV_play_sound(settings->click_sound, settings->volume*0.01);
+
                     entity_removed = button->on_click(game, button);
                     game->last_click_action_time = get_timestamp_ms();
                 }
@@ -404,8 +404,7 @@ Menu create_main_menu(Game *game, int type) {
     int planet_size = box_width/10;
     char buffer[255];
 
-    if(type == CAMPAIGN_MENU) {
-            
+    if(type == CAMPAIGN_MENU) {     
         /* Big menu square */
         element = create_element(&main_menu, game, box_x, box_y, box_width, box_height);
         set_background_color(element, MLV_rgba(25,78,157,100));
@@ -478,8 +477,43 @@ Menu create_main_menu(Game *game, int type) {
         set_on_click(element, start_level);
         set_id(element, "level-start");
         
+    } else if(type == TUTORIAL_MENU) {
+        int main_title_height, last_height;
 
+        /* Big menu square */
+        element = create_element(&main_menu, game, box_x, box_y, box_width, box_height);
+        set_background_color(element, MLV_rgba(25,78,157,100));
+        set_border(element, MLV_COLOR_WHITE);
+    
+        /* Menu title */
+        MLV_get_size_of_text_with_font("Tutorial", &txt_width, &txt_height, settings->medium_font);
+        main_title_height = txt_height;
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y, txt_width, txt_height);
+        set_text(element, "Tutorial", settings->medium_font, MLV_COLOR_WHITE);
 
+        /* Player title */
+        MLV_get_size_of_text_with_font("Player 1", &txt_width, &txt_height, settings->medium_font);
+        last_height = main_title_height + txt_height + 10;
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y + main_title_height, txt_width, txt_height);
+        set_text(element, "Player 1", settings->medium_font, MLV_COLOR_WHITE);
+
+        /* Controls */
+        MLV_get_size_of_text_with_font("Haut : bouton Z", &txt_width, &txt_height, settings->medium_font);
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Haut : Bouton Z", settings->medium_font, MLV_COLOR_WHITE);
+        
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Bas : Bouton S", settings->medium_font, MLV_COLOR_WHITE);
+
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Droite : Bouton D", settings->medium_font, MLV_COLOR_WHITE);
+
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "← : Bouton Q", settings->medium_font, MLV_COLOR_WHITE);
     } else if(type == SETTINGS_MENU) {
 
         /* Big menu square*/
