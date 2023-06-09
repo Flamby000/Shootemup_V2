@@ -92,6 +92,6 @@ life:10
 invincibility:0
 cooldown:1000
 is_boss:true
-animation:resources/ennemies/boss/ultimate_boss-%d.png
+animation:resources/ennemies/boss/planes_05B-%d.png
 movement:9
 shoot:4
