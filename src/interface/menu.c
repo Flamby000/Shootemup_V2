@@ -627,6 +627,38 @@ Menu create_main_menu(Game *game, int type) {
         set_text(element, "Button SHIFT : Sprint", settings->medium_font, MLV_COLOR_WHITE);
         element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
         set_text(element, "Button EXCLAIM : Sprint", settings->medium_font, MLV_COLOR_WHITE);
+
+        } else if(type == CREDITS_MENU) {
+
+        MLV_get_size_of_text_with_font("Crédits", &txt_width, &txt_height, settings->medium_font);
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y, txt_width, txt_height);
+        set_text(element, "Crédits", settings->medium_font, MLV_COLOR_ORANGE);
+
+
+        create_dialog_element(&main_menu, game, "resources/utils/planet1.png", "Max Ducoudré", 
+            box_x + box_width/4, 
+            box_y +  ((box_height/5) ), 
+            box_width - box_width/2, 
+            txt_height*2);
+
+
+        create_dialog_element(&main_menu, game, "resources/utils/planet2.png", "Adam Mehdaoui", 
+            box_x + box_width/4, 
+            box_y +  ((box_height/5) *2), 
+            box_width - box_width/2, 
+            txt_height*2
+        );
+
+
+
+        create_dialog_element(&main_menu, game, "resources/utils/info.png", "ESIPE", 
+            box_x + box_width/4, 
+            box_y +  ((box_height/5) *3), 
+            box_width - box_width/2, 
+            txt_height*2);
+
+
+
     } else if(type == SETTINGS_MENU) {
 
         /* Big menu square*/

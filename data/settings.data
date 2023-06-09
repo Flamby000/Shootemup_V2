@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-volume:6
-coop_mode:true
-=======
-volume:0
+volume:18
 coop_mode:false
->>>>>>> branch2
-waves_spawn_cooldown:2500
+waves_spawn_cooldown:3000
 ennemy_life_multiplicator:1
-ennemy_shoot_cooldown_multiplicator:1
+ennemy_shoot_cooldown_multiplicator:2
 ennemy_speed_multiplicator:1
-player_life:3
-player_shoot_cooldown:500
-player_super_shoot_cooldown:5000
-player_speed:5
-player_stamina:200
+player_life:5
+player_shoot_cooldown:250
+player_super_shoot_cooldown:2500
+player_speed:7
+player_stamina:300

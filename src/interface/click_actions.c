@@ -330,7 +330,7 @@ int set_selected_level(Game* game, Button* button) {
         set_text(level_name, "Mars", settings->medium_font, MLV_COLOR_ORANGE);
 
     } else if(get_by_id(button, "level-3") != NULL) {
-        settings->selected_level = 2;
+        settings->selected_level = 3;
         set_text(level_name, "Moon", settings->medium_font, MLV_COLOR_ORANGE);
     }
 
