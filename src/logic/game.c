@@ -33,11 +33,7 @@ Game* init_game() {
     game->match_status = NOT_STARTED;
     game->last_click_action_time = 0;
 
-<<<<<<< HEAD
     MLV_play_music(settings->music, settings->volume*0.01, -1);
-=======
-    MLV_play_music(settings->music, settings->volume, -1);    
->>>>>>> branch2
 
     return game;
 }
@@ -269,11 +265,6 @@ void remove_entity(Game* game, Entity* entity, int explose) {
         create_one_shot_animation(game, entity->destruction_img_path, entity);
         MLV_play_sound(settings->explosion_sound, settings->volume*0.005);
     }
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> branch2
     for(current = game->entities; current != NULL; current = next) {
         next = current->next;
         if(current->entity == entity) {

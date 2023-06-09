@@ -524,22 +524,11 @@ Menu create_main_menu(Game *game, int type) {
     } else if(type == TUTORIAL_MENU) {
         int main_title_height, last_height;
 
-<<<<<<< HEAD
         /* Big menu square */
         element = create_element(&main_menu, game, box_x, box_y, box_width, box_height);
         set_background_color(element, MLV_rgba(25,78,157,100));
         set_border(element, MLV_COLOR_WHITE);
 
-=======
-    } else if(type == TUTORIAL_MENU) {
-         int main_title_height, last_height;
-
-        /* Big menu square */
-        element = create_element(&main_menu, game, box_x, box_y, box_width, box_height);
-        set_background_color(element, MLV_rgba(25,78,157,100));
-        set_border(element, MLV_COLOR_WHITE);
-
->>>>>>> branch2
         /* Menu square player 1 */
         element = create_element(&main_menu, game, box_x + box_width/20, box_y + box_height/5, box_width/2.5 + 50, box_height/1.5);
         set_background_color(element, MLV_rgba(25,78,157,100));
@@ -638,41 +627,6 @@ Menu create_main_menu(Game *game, int type) {
         set_text(element, "Button SHIFT : Sprint", settings->medium_font, MLV_COLOR_WHITE);
         element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
         set_text(element, "Button EXCLAIM : Sprint", settings->medium_font, MLV_COLOR_WHITE);
-<<<<<<< HEAD
-=======
-    } else if(type == CREDITS_MENU) {
-
-        MLV_get_size_of_text_with_font("Crédits", &txt_width, &txt_height, settings->medium_font);
-        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y, txt_width, txt_height);
-        set_text(element, "Crédits", settings->medium_font, MLV_COLOR_ORANGE);
-
-
-        create_dialog_element(&main_menu, game, "resources/utils/planet1.png", "Max Ducoudré", 
-            box_x + box_width/4, 
-            box_y +  ((box_height/5) ), 
-            box_width - box_width/2, 
-            txt_height*2);
-
-
-        create_dialog_element(&main_menu, game, "resources/utils/planet2.png", "Adam Mehdaoui", 
-            box_x + box_width/4, 
-            box_y +  ((box_height/5) *2), 
-            box_width - box_width/2, 
-            txt_height*2
-        );
-
-
-
-        create_dialog_element(&main_menu, game, "resources/utils/info.png", "ESIPE", 
-            box_x + box_width/4, 
-            box_y +  ((box_height/5) *3), 
-            box_width - box_width/2, 
-            txt_height*2);
-
-
-
-    
->>>>>>> branch2
     } else if(type == SETTINGS_MENU) {
 
         /* Big menu square*/
