@@ -29,6 +29,8 @@ int update_button(Game* game, Button *button) {
             } else if(button->on_click != NULL && button->is_selected == 0) {
 
                 if(get_timestamp_ms() - game->last_click_action_time > 200) {
+                    MLV_play_sound(settings->click_sound, settings->volume*0.01);
+
                     entity_removed = button->on_click(game, button);
                     game->last_click_action_time = get_timestamp_ms();
                 }
@@ -523,7 +525,112 @@ Menu create_main_menu(Game *game, int type) {
         set_id(element, "level-start");
         
 
+    } else if(type == TUTORIAL_MENU) {
+         int main_title_height, last_height;
 
+        /* Big menu square */
+        element = create_element(&main_menu, game, box_x, box_y, box_width, box_height);
+        set_background_color(element, MLV_rgba(25,78,157,100));
+        set_border(element, MLV_COLOR_WHITE);
+
+        /* Menu square player 1 */
+        element = create_element(&main_menu, game, box_x + box_width/20, box_y + box_height/5, box_width/2.5 + 50, box_height/1.5);
+        set_background_color(element, MLV_rgba(25,78,157,100));
+        set_border(element, MLV_COLOR_WHITE);
+        /* Menu square player 2 */
+        element = create_element(&main_menu, game, box_x + box_width/2 - 20, box_y + box_height/5, box_width/2 - 15, box_height/1.5);
+        set_background_color(element, MLV_rgba(25,78,157,100));
+        set_border(element, MLV_COLOR_WHITE);
+    
+        /* Menu title */
+        MLV_get_size_of_text_with_font("Tutorial", &txt_width, &txt_height, settings->medium_font);
+        main_title_height = txt_height;
+        element = create_element(&main_menu, game, box_x + box_width / 2 - txt_width / 2, box_y, txt_width, txt_height);
+        set_text(element, "Tutorial", settings->medium_font, MLV_COLOR_GREEN);
+
+        /* Players title */
+        /* Player 1 */
+        MLV_get_size_of_text_with_font("Player 1", &txt_width, &txt_height, settings->medium_font);
+        last_height = main_title_height + box_height/7;
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + main_title_height + box_height/7, txt_width, txt_height);
+        set_text(element, "Player 1", settings->medium_font, MLV_COLOR_ORANGE);
+        /* Player 2 */
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + main_title_height + box_height/7, txt_width, txt_height);
+        set_text(element, "Player 2", settings->medium_font, MLV_COLOR_ORANGE);
+
+        /* Controls Up */
+        /* Player 1 */
+        MLV_get_size_of_text_with_font("Haut : bouton Z", &txt_width, &txt_height, settings->medium_font);
+        last_height = last_height + txt_height + 4;
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button Z", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_x/5 + txt_width / 1.5, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/up_arrow.png");
+        /* Player 2 */
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button UP", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_width/2 + txt_width / 1.5, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/up_arrow.png");
+        last_height = last_height + txt_height;
+
+        /* Controls Down */
+        /* Player 1 */
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button S", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_x/5 + txt_width / 1.5, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/down_arrow.png");
+        /* Player 2 */
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button DOWN", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_width/2 + txt_width / 1.5 + 70, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/down_arrow.png");
+
+        /* Controls Right */
+        /* Player 1 */
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button D", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_x/5 + txt_width / 1.5, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/right_arrow.png");
+        /* Player 2 */
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button RIGHT", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_width/2 + txt_width / 1.5 + 100, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/right_arrow.png");
+
+        /* Controls Left */
+        /* Player 1 */
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button Q", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_x/5 + txt_width / 1.5, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/left_arrow.png");
+        /* Player 2 */
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button LEFT", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_width/2 + txt_width / 1.5 + 70, box_y + last_height, 60, txt_height);
+        set_animation(element, "resources/buttons/left_arrow.png");
+
+        /* Controls Ultimate */
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button A : Ultimate", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button ENTER : Ultimate", settings->medium_font, MLV_COLOR_WHITE);
+
+        /* Controls Shoot */
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button E : Shoot", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button SPACE : Shoot", settings->medium_font, MLV_COLOR_WHITE);
+
+        /* Controls Sprint */
+        last_height = last_height + txt_height;
+        element = create_element(&main_menu, game, box_x + box_x/5, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button SHIFT : Sprint", settings->medium_font, MLV_COLOR_WHITE);
+        element = create_element(&main_menu, game, box_x + box_width/2, box_y + last_height, txt_width, txt_height); 
+        set_text(element, "Button EXCLAIM : Sprint", settings->medium_font, MLV_COLOR_WHITE);
     } else if(type == CREDITS_MENU) {
 
         MLV_get_size_of_text_with_font("Crédits", &txt_width, &txt_height, settings->medium_font);

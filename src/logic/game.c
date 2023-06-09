@@ -21,8 +21,6 @@
 Game* init_game() {
     Menu main_menu;
     Game *game = malloc(sizeof(Game));
-    MLV_Music *music;
-    MLV_init_audio();
     set_level(game, NULL);
     game->entities = NULL;
 
@@ -35,15 +33,7 @@ Game* init_game() {
     game->match_status = NOT_STARTED;
     game->last_click_action_time = 0;
 
-    music = MLV_load_music("resources/sound/music.mp3");
-    
-    if(music == NULL) {
-        fprintf(stderr, "Erreur: la musique n'a pas été chargé\n");
-        exit(EXIT_FAILURE);
-    }
-    else {
-        MLV_play_music(music, settings->volume, -1);
-    }
+    MLV_play_music(settings->music, settings->volume, -1);    
 
     return game;
 }
@@ -271,8 +261,11 @@ int entity_count(Game *game) {
 
 void remove_entity(Game* game, Entity* entity, int explose) {
     EntityLink* current, *next;
-    if(explose) create_one_shot_animation(game, entity->destruction_img_path, entity);
-
+    if(explose) {
+        create_one_shot_animation(game, entity->destruction_img_path, entity);
+        MLV_play_sound(settings->explosion_sound, settings->volume*0.005);
+    }
+    
     for(current = game->entities; current != NULL; current = next) {
         next = current->next;
         if(current->entity == entity) {

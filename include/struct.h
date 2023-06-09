@@ -123,7 +123,11 @@ typedef struct _Settings {
     MLV_Font *medium_font;
     MLV_Font *big_font;
     MLV_Font *huge_font;
-    
+
+    MLV_Music *music;
+    MLV_Sound *explosion_sound;
+    MLV_Sound *click_sound;
+        
     struct _Difficulty *difficulty;
     int coop_mode;
     int volume;

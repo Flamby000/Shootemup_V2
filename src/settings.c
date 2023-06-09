@@ -16,6 +16,7 @@ void load_settings() {
     char value[200];
     char line[400];
 
+    MLV_init_audio();
     MLV_get_desktop_size(&width, &height);
     width -= width/25;
     height -= height/10;
@@ -58,13 +59,36 @@ void load_settings() {
             }
         }
 
-
     settings->difficulty = difficulty;
+
+    settings->music = MLV_load_music("resources/sound/music.mp3");
+
+    if(settings->music == NULL) {
+        fprintf(stderr, "Erreur: la musique n'a pas été chargé\n");
+        exit(EXIT_FAILURE);
+    }
+
+    settings->click_sound = MLV_load_sound("resources/sound/Highlight.wav");
+
+    if(settings->click_sound == NULL) {
+        fprintf(stderr, "Erreur: le click sound n'a pas été chargé\n");
+        exit(EXIT_FAILURE);
+    }
+
+    settings->explosion_sound = MLV_load_sound("resources/sound/Explosion.wav");
+
+    if(settings->explosion_sound == NULL) {
+        fprintf(stderr, "Erreur: le son d'explosion n'a pas été chargé\n");
+        exit(EXIT_FAILURE);
+    }
 }
 
 
 void free_settings() {
     free(settings->difficulty);
+    free(settings->music);
+    free(settings->explosion_sound);
+    free(settings->click_sound);
     free(settings);
 }
 

@@ -171,13 +171,11 @@ int set_difficulty_custom(Game* game, Button* button) {
 }
 
 int set_volume(Game *game, Button *button) {
-    MLV_Music *music;
     MLV_stop_music();
-    music = MLV_load_music("resources/sound/music.mp3");
-    printf("Set music\n");
+
     settings->volume = button->value;
 
-    MLV_play_music(music, settings->volume*0.01, -1);
+    MLV_play_music(settings->music, settings->volume*0.01, -1);
 
     update_setting_menu(game);
     return 1;
@@ -332,7 +330,7 @@ int set_selected_level(Game* game, Button* button) {
         set_text(level_name, "Mars", settings->medium_font, MLV_COLOR_ORANGE);
 
     } else if(get_by_id(button, "level-3") != NULL) {
-        settings->selected_level = 3;
+        settings->selected_level = 2;
         set_text(level_name, "Moon", settings->medium_font, MLV_COLOR_ORANGE);
     }
 
