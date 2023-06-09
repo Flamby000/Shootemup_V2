@@ -81,3 +81,16 @@ invincible:false
 explosion:resources/explosions/explosion%d.png
 animation:resources/missiles/missile5.png
 movement:10
+
+
+====Missile directional====
+id:7
+width:15
+height:15
+speed:6
+damage:1
+fuel:0
+invincible:false
+explosion:resources/explosions/explosion%d.png
+animation:resources/missiles/missile5.png
+movement:11

@@ -127,7 +127,11 @@ typedef struct _Settings {
     MLV_Music *music;
     MLV_Sound *explosion_sound;
     MLV_Sound *click_sound;
+<<<<<<< HEAD
     
+=======
+        
+>>>>>>> branch2
     struct _Difficulty *difficulty;
     int coop_mode;
     int volume;

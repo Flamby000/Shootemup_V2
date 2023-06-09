@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 volume:6
 coop_mode:true
+=======
+volume:0
+coop_mode:false
+>>>>>>> branch2
 waves_spawn_cooldown:2500
 ennemy_life_multiplicator:1
 ennemy_shoot_cooldown_multiplicator:1

@@ -53,6 +53,13 @@
  */
 #define SUPER_LASER_MISSILE 5
 
+
+/**
+ * @brief 
+ * 
+ */
+#define DIRECTIONAL_MISSILE 7
+
 /**
  * @brief Free the memory allocated for the missile
  * 
@@ -100,4 +107,6 @@ int on_collide_missile(Game *game, Missile *missile, Entity *collide, Direction 
  */
 int update_missile(Game *game, Missile *missile);
 
+
+Missile* create_directional_missile(Game *game, Entity *sender, int direction);
 #endif 
