@@ -1597,18 +1597,18 @@ Menu create_main_menu_sample(Game *game, int selected_button) {
     button_count++;
 
     /* Garage button */
-    MLV_get_size_of_text_with_font("Garage", &txt_width, &txt_height, settings->medium_font);
+    MLV_get_size_of_text_with_font("", &txt_width, &txt_height, settings->medium_font);
     insert_button(&menu, 
         create_button(game, 
             win_width / 20, win_height / 4 + space_between_buttons * button_count, 
             txt_width, txt_height, 
-            "Garage", 
+            "", 
             MLV_rgba(0, 0, 0, 0),
-            selected_button == button_count ? MLV_COLOR_GREEN : MLV_COLOR_WHITE,
-            selected_button == button_count ? MLV_COLOR_GREEN : MLV_COLOR_ORANGE,
+            selected_button == button_count ? MLV_COLOR_GREEN : MLV_rgba(0, 0, 0, 0),
+            selected_button == button_count ? MLV_COLOR_GREEN : MLV_rgba(0, 0, 0, 0),
             MLV_rgba(0, 0, 0, 0),
             settings->medium_font,
-            open_garage, 
+            NULL, 
             selected_button == button_count ? 0 : 1
         )
     );
