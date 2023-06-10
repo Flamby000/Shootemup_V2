@@ -1597,7 +1597,7 @@ Menu create_main_menu_sample(Game *game, int selected_button) {
     button_count++;
 
     /* Garage button */
-    MLV_get_size_of_text_with_font("", &txt_width, &txt_height, settings->medium_font);
+    /*MLV_get_size_of_text_with_font("", &txt_width, &txt_height, settings->medium_font);
     insert_button(&menu, 
         create_button(game, 
             win_width / 20, win_height / 4 + space_between_buttons * button_count, 
@@ -1612,7 +1612,7 @@ Menu create_main_menu_sample(Game *game, int selected_button) {
             selected_button == button_count ? 0 : 1
         )
     );
-    button_count++;
+    button_count++;*/
 
     /* Settings button */
     MLV_get_size_of_text_with_font("Settings", &txt_width, &txt_height, settings->medium_font);

@@ -180,25 +180,25 @@ typedef struct _Button {
  * @brief The ID of the garage menu
  * 
  */
-#define GARAGE_MENU 2
+/*#define GARAGE_MENU 2*/
 
 /**
  * @brief The ID of the settings menu
  * 
  */
-#define SETTINGS_MENU 3
+#define SETTINGS_MENU 2
 
 /**
  * @brief The ID of the tutorial menu
  * 
  */
-#define TUTORIAL_MENU 4
+#define TUTORIAL_MENU 3
 
 /**
  * @brief The ID of the credits menu
  * 
  */
-#define CREDITS_MENU 5
+#define CREDITS_MENU 4
 
 
 /**

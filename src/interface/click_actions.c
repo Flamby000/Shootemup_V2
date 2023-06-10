@@ -60,12 +60,12 @@ int open_settings(Game* game, Button* button) {
 }
 
 
-int open_garage(Game* game, Button* button) {
+/*int open_garage(Game* game, Button* button) {
     Menu garage_menu = create_main_menu(game, GARAGE_MENU);
     set_menu(game, &garage_menu);
 
     return 1;
-}
+}*/
 
 int open_tutorial(Game* game, Button* button) {
     Menu tutorial_menu = create_main_menu(game, TUTORIAL_MENU);
