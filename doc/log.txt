@@ -1,0 +1,72 @@
+* 523963f - Max Ducoudré (maxouducoudre@gmail.com): Update makefile
+* 4a853f1 - adammehdaoui (adam.mehdaouijorge@gmail.com): no spaces between buttons (abandoned garage)
+* f3750c8 - Flamby000 (maxouducoudre@gmail.com): Disable garage
+* 4a9d093 - Flamby000 (maxouducoudre@gmail.com): Final commit ?
+* 9d45336 - Flamby000 (maxouducoudre@gmail.com): J'ai fait n'importe quoi avec les versions mais là c'est FIX
+* 688f19d - Flamby000 (maxouducoudre@gmail.com): Fix conflicts
+*   9791d5b - Flamby000 (maxouducoudre@gmail.com): Update branch masteré
+|\  
+| * 89cfe12 - Flamby000 (maxouducoudre@gmail.com): Merge branch2 to master
+| * a322eb0 - DUCOUDRE MAX (max.ducoudre@heckel02.u-pem.fr): Ajout d'un menu credits
+* | a6eccec - Adam (adam.mehdaouijorge@gmail.com): Manuel utilisateur
+* | c0bbd8f - MEHDAOUI--JORGE ADAM (adam.mehdaoui-jorge2@heckel02.u-pem.fr): tutorial screen
+* | 961a71c - MEHDAOUI--JORGE ADAM (adam.mehdaoui-jorge2@heckel02.u-pem.fr): add buttons files
+* | d3e25c4 - MEHDAOUI--JORGE ADAM (adam.mehdaoui-jorge2@heckel02.u-pem.fr): add explosion sound + click sound + setting structure
+|/  
+* c02e6a5 - Flamby000 (maxouducoudre@gmail.com): On est presque au bout !
+* 8919186 - Flamby000 (maxouducoudre@gmail.com): fix merge
+*   4894a20 - Flamby000 (maxouducoudre@gmail.com): merge things
+|\  
+| * 6c1a08e - Adam (90783059+adammehdaoui@users.noreply.github.com): Update README.md
+| * d03ffe5 - adammehdaoui (adam.mehdaouijorge@gmail.com): description des modes
+| * f1de408 - Adam (adam.mehdaouijorge@gmail.com): rm vscode garbage
+| * 8f4a1af - Adam (adam.mehdaouijorge@gmail.com): doc
+| * 7eb9417 - Adam (adam.mehdaouijorge@gmail.com): adding graphics to the doc
+* | 5d46662 - Flamby000 (maxouducoudre@gmail.com): graphic change
+|/  
+* 3793b61 - DUCOUDRE MAX (max.ducoudre@heckel02.u-pem.fr): salut
+* 7c3cd33 - adammehdaoui (adam.mehdaouijorge@gmail.com): adding doc
+* 5f259fd - MEHDAOUI--JORGE ADAM (adam.mehdaoui-jorge2@heckel02.u-pem.fr): stopping all sounds/music
+* e26af42 - Adam (adam.mehdaouijorge@gmail.com): change on volume
+* b33fbd0 - adammehdaoui (adam.mehdaouijorge@gmail.com): music depending on the volume + make run patch
+* 082fe12 - adammehdaoui (adam.mehdaouijorge@gmail.com): added music to the game
+* 8858d4d - Flamby000 (maxouducoudre@gmail.com): fix segfault and change buffer
+* 5072078 - Flamby000 (maxouducoudre@gmail.com): some push
+* 64d6ee8 - Flamby000 (maxouducoudre@gmail.com): Adding settings
+* 0c7eac4 - Flamby000 (maxouducoudre@gmail.com): Ajout du mode coop & de documentation
+* b93e5e5 - Flamby000 (maxouducoudre@gmail.com): Amélioration de l'arborescence de fichier
+* eaa9dd9 - Flamby000 (maxouducoudre@gmail.com): Ajout d'un menu settings
+* e414541 - Flamby000 (maxouducoudre@gmail.com): Ajout d'un menu PAUSE/GAMEOVER/WIN
+* 5dfda8d - Flamby000 (maxouducoudre@gmail.com): Configuration de la vitesse de défillement, amélioration de la détéction de fin, ajout d'une structure pour les menus & ajout de documentation
+* 2161303 - Flamby000 (maxouducoudre@gmail.com): Add life bars, multishot bonus and multishot ennemy
+* 7196dd8 - adammehdaoui (adam.mehdaouijorge@gmail.com): delete texture pack from repo
+* acabd2d - adammehdaoui (adam.mehdaouijorge@gmail.com): deleted .vscode
+* 1068879 - adammehdaoui (adam.mehdaouijorge@gmail.com): added second boss
+* 7fbd783 - adammehdaoui (adam.mehdaouijorge@gmail.com): suppression des fichiers inutiles
+* dc11fb1 - adammehdaoui (adam.mehdaouijorge@gmail.com): added new levels
+* 57abbae - Flamby000 (maxouducoudre@gmail.com): Ajout du boost du joueur
+* da789fb - Flamby000 (maxouducoudre@gmail.com): Ajout des boss
+* a32d524 - Flamby000 (maxouducoudre@gmail.com): Meilleure gestion des explosions & ajout d'un missile laser ultime
+* 61e64db - Flamby000 (maxouducoudre@gmail.com): Adding missiles
+* 9095b9f - DUCOUDRE MAX (max.ducoudre@heckel02.u-pem.fr): fix
+* c751fde - Flamby000 (maxouducoudre@gmail.com): Ajout bonus/ennemies
+* bbec5a0 - Flamby000 (maxouducoudre@gmail.com): Ajout bonus & life bar
+* a550835 - Flamby000 (maxouducoudre@gmail.com): Ajout de bouclier
+* 5548b60 - Flamby000 (maxouducoudre@gmail.com): Ajout des bonus
+* 463ab29 - Flamby000 (maxouducoudre@gmail.com): Mouvement du joueur plus 'smooth'. Fonction pour repousser le joueur lors de domages
+* c5f8e40 - Flamby000 (maxouducoudre@gmail.com): Ajout de missiles qui suivent le joueur
+* a6b664c - Flamby000 (maxouducoudre@gmail.com): Amélioration de la fonction closest et ajout de la lecture de fichier par niveau
+* c45267b - Flamby000 (maxouducoudre@gmail.com): merge fix
+* 304bc6b - Flamby000 (maxouducoudre@gmail.com): Début lecture de niveau
+* c8ca526 - Flamby000 (maxouducoudre@gmail.com): Correction d'un seg fault due au collisions
+* c2e738b - Flamby000 (maxouducoudre@gmail.com): Ajout d'un système de collision & de point de vie
+* b57f1e0 - Flamby000 (maxouducoudre@gmail.com): Merge branch to master
+* 8b798d5 - Flamby000 (maxouducoudre@gmail.com): Ajout de fichiers ennemies.data et missiles.data pour stocker les données des entity directement dans un fichier
+* 732e33c - Flamby000 (maxouducoudre@gmail.com): Fix et optimisation des free/malloc
+* bd49db5 - adammehdaoui (adam.mehdaouijorge@gmail.com): added bin repo for *.o
+* 5ba9d72 - Flamby000 (maxouducoudre@gmail.com): Ajout ressources
+* e9dfa03 - Flamby000 (maxouducoudre@gmail.com): Ajout de missiles
+* d9fa7eb - Flamby000 (maxouducoudre@gmail.com): Ajout ennemies
+* 08f1a38 - Flamby000 (maxouducoudre@gmail.com): Ajout animations
+* 67afaa5 - Flamby000 (maxouducoudre@gmail.com): Ajout d'un background & d'une variable global settings
+* af28065 - Flamby000 (maxouducoudre@gmail.com): Ajout de structures
